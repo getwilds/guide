@@ -1,0 +1,31 @@
+# Style {#sec-style}
+
+What is code style? It has to do with how you organize your code. The end goal of styling your code is that your code is more consistent. Styling code by definition has to be opinionated. You may not agree with every decision made in a style guide, but having style be done automatically for you gives you more time to think about the important decisions in your code.
+
+If you always write code by yourself and you're the only one that will ever look at it, that's one thing. But that's rarely the case, especially if you consider that yourself 6 months or 5 years from now is a user that is keenly interested in readable, consistent code. Readable, consistent code will be especially appreciated by other users and contributors.
+
+## Package styler
+
+The [styler][] package allows you to interactively format your code according to the [tidyverse style guide][tidystyle].
+
+The [lintr][] package does automated checks of your code according to the style guide.
+
+## IDE and Text editor support
+
+RStudio supports styler via the Addins drop down; see the [RStudio User Guide][rstudioguide].
+
+Support for `styler` in other editors is provided via the [R languageserver][languageserver]:
+
+* VSCode: [vscode-R](https://github.com/REditorSupport/vscode-R)
+* Atom: [atom-ide-r](https://github.com/REditorSupport/atom-ide-r)
+* Sublime Text: [R-IDE](https://github.com/REditorSupport/sublime-ide-r)
+* Vim/NeoVim: [LanguageClient-neovim](https://github.com/autozimu/LanguageClient-neovim)
+
+See the [R languageserver][languageserver] GitHub repository for more information on using the R languageserver.
+
+
+[tidystyle]: https://style.tidyverse.org/
+[styler]: https://styler.r-lib.org/
+[lintr]: https://lintr.r-lib.org/
+[languageserver]: https://github.com/REditorSupport/languageserver
+[rstudioguide]: https://docs.posit.co/ide/user/ide/guide/productivity/add-ins.html

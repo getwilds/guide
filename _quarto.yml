@@ -1,0 +1,28 @@
+project:
+  type: book
+
+book:
+  title: "DaSL Developer Guide"
+  author: "Scott Chamberlain"
+  date: "10/17/2023"
+  chapters:
+    - index.qmd
+    - intro.qmd
+    - help.qmd
+    - contributing.qmd
+    - style.qmd
+    - codereview.qmd
+    - packagedocs.qmd
+    - references.qmd
+
+bibliography: references.bib
+
+format:
+  html:
+    theme: solar
+    fontsize: 1.2em
+  pdf:
+    documentclass: scrreprt
+
+
+

@@ -1,0 +1,15 @@
+# Contributing {#sec-contributing}
+
+Contributing guidelines ....
+
+## Code of Conduct
+
+xxxx
+
+## Communication Channels
+
+* Slack
+
+## xxx
+
+xxxx

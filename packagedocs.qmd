@@ -1,0 +1,4 @@
+# Package documentation {#sec-docs}
+
+Package documentation ....
+
