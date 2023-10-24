@@ -2,3 +2,6 @@
 
 Package documentation ....
 
+We use the R package `pkgdown` to create documentation for DaSL R packages.
+
+## DaSL pkgdown template

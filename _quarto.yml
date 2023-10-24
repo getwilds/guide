@@ -3,7 +3,8 @@ project:
 
 book:
   title: "DaSL Developer Guide"
-  author: "Scott Chamberlain"
+  author:
+    - Scott Chamberlain
   date: "10/17/2023"
   chapters:
     - index.qmd
@@ -23,6 +24,3 @@ format:
     fontsize: 1.2em
   pdf:
     documentclass: scrreprt
-
-
-
