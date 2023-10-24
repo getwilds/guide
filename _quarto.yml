@@ -3,9 +3,15 @@ project:
 
 book:
   title: "DaSL Developer Guide"
+  reader-mode: true
   author:
     - Scott Chamberlain
-  date: "10/17/2023"
+  page-footer:
+    right: |
+      This book was built with <a href="https://quarto.org/">Quarto</a>.
+  repo-branch: main
+  repo-actions: [edit, issue]
+  repo-url: https://github.com/fhdsl/devguide/
   chapters:
     - index.qmd
     - intro.qmd
@@ -20,7 +26,9 @@ bibliography: references.bib
 
 format:
   html:
-    theme: solar
+    theme:
+      light: sandstone
+      dark: darkly
     fontsize: 1.2em
   pdf:
     documentclass: scrreprt
