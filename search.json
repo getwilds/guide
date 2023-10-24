@@ -1,0 +1,86 @@
+[
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "DaSL Developer Guide",
+    "section": "",
+    "text": "Preface\nThis is a Quarto book.\nNot sure what to put here. Seems like we have to have a preface for a quarto book?\nWe could move the intro content here and remove intro chapter?"
+  },
+  {
+    "objectID": "intro.html",
+    "href": "intro.html",
+    "title": "1  Introduction",
+    "section": "",
+    "text": "This book details all things having to do with code within DaSL. It includes both internal facing guidelines as well as for any contributions from folks other than DaSL staff.\n\nGetting help: Chapter 2\nContributing guidelines: Chapter 3\nStyle guidelines: Chapter 4\nCode review guidelines: Chapter 5\nPackage documentation guidelines: Chapter 6"
+  },
+  {
+    "objectID": "help.html#house-calls",
+    "href": "help.html#house-calls",
+    "title": "2  Help",
+    "section": "2.1 House Calls",
+    "text": "2.1 House Calls\nxxxx"
+  },
+  {
+    "objectID": "help.html#slack",
+    "href": "help.html#slack",
+    "title": "2  Help",
+    "section": "2.2 Slack",
+    "text": "2.2 Slack\nxxxx"
+  },
+  {
+    "objectID": "contributing.html#code-of-conduct",
+    "href": "contributing.html#code-of-conduct",
+    "title": "3  Contributing",
+    "section": "3.1 Code of Conduct",
+    "text": "3.1 Code of Conduct\nxxxx"
+  },
+  {
+    "objectID": "contributing.html#communication-channels",
+    "href": "contributing.html#communication-channels",
+    "title": "3  Contributing",
+    "section": "3.2 Communication Channels",
+    "text": "3.2 Communication Channels\n\nSlack"
+  },
+  {
+    "objectID": "contributing.html#xxx",
+    "href": "contributing.html#xxx",
+    "title": "3  Contributing",
+    "section": "3.3 xxx",
+    "text": "3.3 xxx\nxxxx"
+  },
+  {
+    "objectID": "style.html#package-styler",
+    "href": "style.html#package-styler",
+    "title": "4  Style",
+    "section": "4.1 Package styler",
+    "text": "4.1 Package styler\nThe styler package allows you to interactively format your code according to the tidyverse style guide.\nThe lintr package does automated checks of your code according to the style guide."
+  },
+  {
+    "objectID": "style.html#ide-and-text-editor-support",
+    "href": "style.html#ide-and-text-editor-support",
+    "title": "4  Style",
+    "section": "4.2 IDE and Text editor support",
+    "text": "4.2 IDE and Text editor support\nRStudio supports styler via the Addins drop down; see the RStudio User Guide.\nSupport for styler in other editors is provided via the R languageserver:\n\nVSCode: vscode-R\nAtom: atom-ide-r\nSublime Text: R-IDE\nVim/NeoVim: LanguageClient-neovim\n\nSee the R languageserver GitHub repository for more information on using the R languageserver."
+  },
+  {
+    "objectID": "codereview.html#dasl-interal-guidelines",
+    "href": "codereview.html#dasl-interal-guidelines",
+    "title": "5  Code review",
+    "section": "5.1 DaSL interal guidelines",
+    "text": "5.1 DaSL interal guidelines\nxxxx"
+  },
+  {
+    "objectID": "codereview.html#community-guidelines",
+    "href": "codereview.html#community-guidelines",
+    "title": "5  Code review",
+    "section": "5.2 Community guidelines",
+    "text": "5.2 Community guidelines\nxxxx"
+  },
+  {
+    "objectID": "packagedocs.html#dasl-pkgdown-template",
+    "href": "packagedocs.html#dasl-pkgdown-template",
+    "title": "6  Package documentation",
+    "section": "6.1 DaSL pkgdown template",
+    "text": "6.1 DaSL pkgdown template"
+  }
+]
