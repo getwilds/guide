@@ -1,7 +1,39 @@
 # Package documentation {#sec-docs}
 
-Package documentation ....
+All formally supported DaSL R and Python packages should have package documentation.
 
-We use the R package `pkgdown` to create documentation for DaSL R packages.
+## R
 
-## DaSL pkgdown template
+We use the package [pkgdown][] to create documentation for R packages.
+
+For R packages, docs should be hosted on GitHub pages.
+
+### DaSL pkgdown template
+
+We are planning to have a DaSL specific `pkgdown` "package template" (see [pkgdown docs][pkgdowntemp] for what this means) - but it's not ready to use yet. When it is ready, you will be able to specify our template like:
+
+```yml
+template:
+  package: dasltemplate
+```
+
+For now just use the default theme that `pkgdown` provides.
+
+## Python
+
+We use the package [Sphinx][] to create documentation for Python packages.
+
+For Python packages, docs should be hosted on [ReadTheDocs][rtd].
+
+`Sphinx` is less automatic relative to `pkgdown`, so just be prepared for more manual work with `Sphinx`.
+
+## Guidelines
+
+- README: This is most likely the first place potential users will interact with your package. Make sure the README clearly states what the package does, and how to get started.
+- Examples: All user facing functions should have examples. Make sure to be careful about how examples are run if there's any sensitive data or connections to remote services.
+- (anything else?)
+
+[pkgdown]: https://pkgdown.r-lib.org/
+[rtd]: https://about.readthedocs.com/
+[Sphinx]: https://www.sphinx-doc.org/
+[pkgdowntemp]: https://pkgdown.r-lib.org/articles/customise.html#template-packages
