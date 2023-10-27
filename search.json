@@ -16,84 +16,84 @@
   {
     "objectID": "help.html#house-calls",
     "href": "help.html#house-calls",
-    "title": "1  Help",
+    "title": "1  Help ",
     "section": "1.1 House Calls",
     "text": "1.1 House Calls\nxxxx"
   },
   {
     "objectID": "help.html#slack",
     "href": "help.html#slack",
-    "title": "1  Help",
+    "title": "1  Help ",
     "section": "1.2 Slack",
     "text": "1.2 Slack\nxxxx"
   },
   {
     "objectID": "contributing.html#code-of-conduct",
     "href": "contributing.html#code-of-conduct",
-    "title": "2  Contributing",
+    "title": "2  Contributing ",
     "section": "2.1 Code of Conduct",
     "text": "2.1 Code of Conduct\nxxxx"
   },
   {
     "objectID": "contributing.html#communication-channels",
     "href": "contributing.html#communication-channels",
-    "title": "2  Contributing",
+    "title": "2  Contributing ",
     "section": "2.2 Communication Channels",
     "text": "2.2 Communication Channels\n\nSlack"
   },
   {
     "objectID": "contributing.html#xxx",
     "href": "contributing.html#xxx",
-    "title": "2  Contributing",
+    "title": "2  Contributing ",
     "section": "2.3 xxx",
     "text": "2.3 xxx\nxxxx"
   },
   {
     "objectID": "style.html#package-styler",
     "href": "style.html#package-styler",
-    "title": "3  Style",
+    "title": "3  Style ",
     "section": "3.1 Package styler",
     "text": "3.1 Package styler\nThe styler package allows you to interactively format your code according to the tidyverse style guide.\nThe lintr package does automated checks of your code according to the style guide."
   },
   {
     "objectID": "style.html#ide-and-text-editor-support",
     "href": "style.html#ide-and-text-editor-support",
-    "title": "3  Style",
+    "title": "3  Style ",
     "section": "3.2 IDE and Text editor support",
     "text": "3.2 IDE and Text editor support\nRStudio supports styler via the Addins drop down; see the RStudio User Guide.\nSupport for styler in other editors is provided via the R languageserver:\n\nVSCode: vscode-R\nAtom: atom-ide-r\nSublime Text: R-IDE\nVim/NeoVim: LanguageClient-neovim\n\nSee the R languageserver GitHub repository for more information on using the R languageserver."
   },
   {
     "objectID": "codereview.html#dasl-interal-guidelines",
     "href": "codereview.html#dasl-interal-guidelines",
-    "title": "4  Code review",
+    "title": "4  Code review ",
     "section": "4.1 DaSL interal guidelines",
     "text": "4.1 DaSL interal guidelines\nxxxx"
   },
   {
     "objectID": "codereview.html#community-guidelines",
     "href": "codereview.html#community-guidelines",
-    "title": "4  Code review",
+    "title": "4  Code review ",
     "section": "4.2 Community guidelines",
     "text": "4.2 Community guidelines\nxxxx"
   },
   {
     "objectID": "packagedocs.html#r",
     "href": "packagedocs.html#r",
-    "title": "5  Package documentation",
+    "title": "5  Documentation ",
     "section": "5.1 R",
     "text": "5.1 R\nWe use the package pkgdown to create documentation for R packages.\nFor R packages, docs should be hosted on GitHub pages.\n\n5.1.1 DaSL pkgdown template\nWe are planning to have a DaSL specific pkgdown “package template” (see pkgdown docs for what this means) - but it’s not ready to use yet. When it is ready, you will be able to specify our template like:\ntemplate:\n  package: dasltemplate\nFor now just use the default theme that pkgdown provides."
   },
   {
     "objectID": "packagedocs.html#python",
     "href": "packagedocs.html#python",
-    "title": "5  Package documentation",
+    "title": "5  Documentation ",
     "section": "5.2 Python",
     "text": "5.2 Python\nWe use the package Sphinx to create documentation for Python packages.\nFor Python packages, docs should be hosted on ReadTheDocs.\nSphinx is less automatic relative to pkgdown, so just be prepared for more manual work with Sphinx."
   },
   {
     "objectID": "packagedocs.html#guidelines",
     "href": "packagedocs.html#guidelines",
-    "title": "5  Package documentation",
+    "title": "5  Documentation ",
     "section": "5.3 Guidelines",
     "text": "5.3 Guidelines\n\nREADME: This is most likely the first place potential users will interact with your package. Make sure the README clearly states what the package does, and how to get started.\nExamples: All user facing functions should have examples. Make sure to be careful about how examples are run if there’s any sensitive data or connections to remote services.\n(anything else?)"
   }
