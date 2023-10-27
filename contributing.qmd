@@ -1,4 +1,4 @@
-# Contributing {#sec-contributing}
+# Contributing {{< iconify fa6-solid hammer >}} {#sec-contributing}
 
 Contributing guidelines ....
 

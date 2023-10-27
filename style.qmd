@@ -1,4 +1,4 @@
-# Style {#sec-style}
+# Style {{< iconify fa6-solid code >}} {#sec-style}
 
 What is code style? It has to do with how you organize your code. The end goal of styling your code is that your code is more consistent. Styling code by definition has to be opinionated. You may not agree with every decision made in a style guide, but having style be done automatically for you gives you more time to think about the important decisions in your code.
 

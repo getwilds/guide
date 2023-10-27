@@ -1,4 +1,4 @@
-# Package documentation {#sec-docs}
+# Documentation {{< iconify fa6-solid book >}} {#sec-docs}
 
 All formally supported DaSL R and Python packages should have package documentation.
 

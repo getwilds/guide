@@ -1,4 +1,4 @@
-# Code review {#sec-review}
+# Code review {{< iconify fa6-solid pencil >}} {#sec-review}
 
 Code review ....
 
