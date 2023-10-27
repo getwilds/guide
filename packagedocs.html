@@ -229,8 +229,9 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p>All formally supported DaSL R and Python packages should have package documentation.</p>
 <section id="r" class="level2" data-number="5.1">
 <h2 data-number="5.1" class="anchored" data-anchor-id="r"><span class="header-section-number">5.1</span> R</h2>
-<p>We use the package <a href="https://pkgdown.r-lib.org/">pkgdown</a> to create documentation for R packages.</p>
-<p>For R packages, docs should be hosted on GitHub pages.</p>
+<p>We use the <a href="https://pkgdown.r-lib.org/">pkgdown</a> package to create documentation for R packages, and host it on <a href="https://pages.github.com/">GitHub Pages</a>. To get started with <code>pkgdown</code>, in R within the root of your package run <a href="https://usethis.r-lib.org/reference/use_pkgdown.html">usethis::use_pkgdown_github_pages()</a> - it will set up a <code>_pkgdown.yml</code> file in the root of your repo used to configure <code>pkgdown</code>, and add a <code>.github/workflows/publish.yml</code> file to build the package documentation on each push, pull request, or release. See <a href="https://pkgdown.r-lib.org/">pkgdown documentation</a> for details on configuring documentation.</p>
+<p>After pushing the above changes up to your repository, go to the Actions tab and you should see the new <code>publish</code> action running. It will build and then deploy the rendered package docs. The URL for your docs will vary depending on the GitHub organization your repository lives within. For WILDS, the base URL for now is <code>https://getwilds.github.io</code>. If your pacakge was in the WILDS org (at <code>https://github.com/getwilds</code>) your package (named <code>mypkg</code>) docs would live at <code>https://getwilds.github.io/mypkg</code>.</p>
+<p>You can also build <code>pkgdown</code> docs locally - after running <code>usethis::use_pkgdown()</code> or <code>usethis::use_pkgdown_github_pages()</code> - by running <code>pkgdown::build_site()</code>. If you run <code>build_site()</code> within RStudio it should open up your site in your default browser, but may not do so if you run in a terminal. You can open the site in your browser by navigating to and opening the file <code>docs/index.html</code> within your repo.</p>
 <section id="dasl-pkgdown-template" class="level3" data-number="5.1.1">
 <h3 data-number="5.1.1" class="anchored" data-anchor-id="dasl-pkgdown-template"><span class="header-section-number">5.1.1</span> DaSL pkgdown template</h3>
 <p>We are planning to have a DaSL specific <code>pkgdown</code> “package template” (see <a href="https://pkgdown.r-lib.org/articles/customise.html#template-packages">pkgdown docs</a> for what this means) - but it’s not ready to use yet. When it is ready, you will be able to specify our template like:</p>
@@ -241,9 +242,13 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </section>
 <section id="python" class="level2" data-number="5.2">
 <h2 data-number="5.2" class="anchored" data-anchor-id="python"><span class="header-section-number">5.2</span> Python</h2>
-<p>We use the package <a href="https://www.sphinx-doc.org/">Sphinx</a> to create documentation for Python packages.</p>
-<p>For Python packages, docs should be hosted on <a href="https://about.readthedocs.com/">ReadTheDocs</a>.</p>
-<p><code>Sphinx</code> is less automatic relative to <code>pkgdown</code>, so just be prepared for more manual work with <code>Sphinx</code>.</p>
+<p>Just like there’s a variety of ways to do packing in Python there’s a variety of documentation options. Two of the well known options are:</p>
+<ul>
+<li><a href="https://www.sphinx-doc.org/">Sphinx</a> - been around longer, uses <a href="https://docutils.sourceforge.io/rst.html">reStructuredText</a></li>
+<li><a href="https://www.mkdocs.org/">MkDocs</a> - newcomer, used <a href="https://www.markdownguide.org/">Markdown</a></li>
+</ul>
+<p>For either of the options above, they can be hosted in many places, including <a href="https://pages.github.com/">GitHub Pages</a> and <a href="https://about.readthedocs.com/">ReadTheDocs</a>.</p>
+<p><code>Sphinx</code> and <code>MkDocs</code> are less automatic relative to <code>pkgdown</code>, so just be prepared for a bit more manual work.</p>
 </section>
 <section id="guidelines" class="level2" data-number="5.3">
 <h2 data-number="5.3" class="anchored" data-anchor-id="guidelines"><span class="header-section-number">5.3</span> Guidelines</h2>

@@ -81,14 +81,14 @@
     "href": "packagedocs.html#r",
     "title": "5  Documentation ",
     "section": "5.1 R",
-    "text": "5.1 R\nWe use the package pkgdown to create documentation for R packages.\nFor R packages, docs should be hosted on GitHub pages.\n\n5.1.1 DaSL pkgdown template\nWe are planning to have a DaSL specific pkgdown “package template” (see pkgdown docs for what this means) - but it’s not ready to use yet. When it is ready, you will be able to specify our template like:\ntemplate:\n  package: dasltemplate\nFor now just use the default theme that pkgdown provides."
+    "text": "5.1 R\nWe use the pkgdown package to create documentation for R packages, and host it on GitHub Pages. To get started with pkgdown, in R within the root of your package run usethis::use_pkgdown_github_pages() - it will set up a _pkgdown.yml file in the root of your repo used to configure pkgdown, and add a .github/workflows/publish.yml file to build the package documentation on each push, pull request, or release. See pkgdown documentation for details on configuring documentation.\nAfter pushing the above changes up to your repository, go to the Actions tab and you should see the new publish action running. It will build and then deploy the rendered package docs. The URL for your docs will vary depending on the GitHub organization your repository lives within. For WILDS, the base URL for now is https://getwilds.github.io. If your pacakge was in the WILDS org (at https://github.com/getwilds) your package (named mypkg) docs would live at https://getwilds.github.io/mypkg.\nYou can also build pkgdown docs locally - after running usethis::use_pkgdown() or usethis::use_pkgdown_github_pages() - by running pkgdown::build_site(). If you run build_site() within RStudio it should open up your site in your default browser, but may not do so if you run in a terminal. You can open the site in your browser by navigating to and opening the file docs/index.html within your repo.\n\n5.1.1 DaSL pkgdown template\nWe are planning to have a DaSL specific pkgdown “package template” (see pkgdown docs for what this means) - but it’s not ready to use yet. When it is ready, you will be able to specify our template like:\ntemplate:\n  package: dasltemplate\nFor now just use the default theme that pkgdown provides."
   },
   {
     "objectID": "packagedocs.html#python",
     "href": "packagedocs.html#python",
     "title": "5  Documentation ",
     "section": "5.2 Python",
-    "text": "5.2 Python\nWe use the package Sphinx to create documentation for Python packages.\nFor Python packages, docs should be hosted on ReadTheDocs.\nSphinx is less automatic relative to pkgdown, so just be prepared for more manual work with Sphinx."
+    "text": "5.2 Python\nJust like there’s a variety of ways to do packing in Python there’s a variety of documentation options. Two of the well known options are:\n\nSphinx - been around longer, uses reStructuredText\nMkDocs - newcomer, used Markdown\n\nFor either of the options above, they can be hosted in many places, including GitHub Pages and ReadTheDocs.\nSphinx and MkDocs are less automatic relative to pkgdown, so just be prepared for a bit more manual work."
   },
   {
     "objectID": "packagedocs.html#guidelines",
