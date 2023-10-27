@@ -4,9 +4,11 @@ All formally supported DaSL R and Python packages should have package documentat
 
 ## R
 
-We use the package [pkgdown][] to create documentation for R packages.
+We use the [pkgdown][] package to create documentation for R packages, and host it on [GitHub Pages][ghpages]. To get started with `pkgdown`, in R within the root of your package run [usethis::use_pkgdown_github_pages()](https://usethis.r-lib.org/reference/use_pkgdown.html) - it will set up a `_pkgdown.yml` file in the root of your repo used to configure `pkgdown`, and add a `.github/workflows/publish.yml` file to build the package documentation on each push, pull request, or release. See [pkgdown documentation][pkgdown] for details on configuring documentation.
 
-For R packages, docs should be hosted on GitHub pages.
+After pushing the above changes up to your repository, go to the Actions tab and you should see the new `publish` action running. It will build and then deploy the rendered package docs. The URL for your docs will vary depending on the GitHub organization your repository lives within. For WILDS, the base URL for now is `https://getwilds.github.io`. If your pacakge was in the WILDS org (at `https://github.com/getwilds`) your package (named `mypkg`) docs would live at `https://getwilds.github.io/mypkg`.
+
+You can also build `pkgdown` docs locally - after running `usethis::use_pkgdown()` or `usethis::use_pkgdown_github_pages()` - by running `pkgdown::build_site()`. If you run `build_site()` within RStudio it should open up your site in your default browser, but may not do so if you run in a terminal. You can open the site in your browser by navigating to and opening the file `docs/index.html` within your repo.
 
 ### DaSL pkgdown template
 
@@ -21,11 +23,14 @@ For now just use the default theme that `pkgdown` provides.
 
 ## Python
 
-We use the package [Sphinx][] to create documentation for Python packages.
+Just like there's a variety of ways to do packing in Python there's a variety of documentation options. Two of the well known options are:
 
-For Python packages, docs should be hosted on [ReadTheDocs][rtd].
+- [Sphinx][] - been around longer, uses [reStructuredText][rst]
+- [MkDocs][] - newcomer, used [Markdown][md]
 
-`Sphinx` is less automatic relative to `pkgdown`, so just be prepared for more manual work with `Sphinx`.
+For either of the options above, they can be hosted in many places, including [GitHub Pages][ghpages] and [ReadTheDocs][rtd].
+
+`Sphinx` and `MkDocs` are less automatic relative to `pkgdown`, so just be prepared for a bit more manual work.
 
 ## Guidelines
 
@@ -36,4 +41,8 @@ For Python packages, docs should be hosted on [ReadTheDocs][rtd].
 [pkgdown]: https://pkgdown.r-lib.org/
 [rtd]: https://about.readthedocs.com/
 [Sphinx]: https://www.sphinx-doc.org/
+[mkdocs]: https://www.mkdocs.org/
 [pkgdowntemp]: https://pkgdown.r-lib.org/articles/customise.html#template-packages
+[ghpages]: https://pages.github.com/
+[rst]: https://docutils.sourceforge.io/rst.html
+[md]: https://www.markdownguide.org/
