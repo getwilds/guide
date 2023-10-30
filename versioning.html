@@ -6,9 +6,8 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="author" content="Scott Chamberlain">
 
-<title>DaSL Contributor Guide</title>
+<title>DaSL Contributor Guide - 6&nbsp; Package versioning </title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -21,6 +20,40 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
 </style>
 
 
@@ -31,7 +64,8 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
-<link href="./help.html" rel="next">
+<link href="./references.html" rel="next">
+<link href="./packagedocs.html" rel="prev">
 <script src="site_libs/quarto-html/quarto.js"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
@@ -77,7 +111,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./index.html">Welcome</a></li></ol></nav>
+      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./versioning.html">Package Maintenance</a></li><li class="breadcrumb-item"><a href="./versioning.html"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Package versioning {{&lt; iconify fa6-solid code-compare &gt;}}</span></a></li></ol></nav>
       <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
       </a>
       <button type="button" class="btn quarto-search-button" aria-label="" onclick="window.quartoOpenSearch();">
@@ -113,7 +147,7 @@ ul.task-list li input[type="checkbox"] {
     <ul class="list-unstyled mt-1">
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./index.html" class="sidebar-item-text sidebar-link active">
+  <a href="./index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Welcome</span></a>
   </div>
 </li>
@@ -158,7 +192,7 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./versioning.html" class="sidebar-item-text sidebar-link">
+  <a href="./versioning.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Package versioning <iconify-icon inline="" icon="fa6-solid:code-compare"></iconify-icon></span></span></a>
   </div>
 </li>
@@ -180,31 +214,26 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">Table of contents</h2>
    
   <ul>
-  <li><a href="#welcome" id="toc-welcome" class="nav-link active" data-scroll-target="#welcome">Welcome</a>
+  <li><a href="#package-version-numbers" id="toc-package-version-numbers" class="nav-link active" data-scroll-target="#package-version-numbers"><span class="header-section-number">6.1</span> Package version numbers</a>
   <ul class="collapse">
-  <li><a href="#inspiration" id="toc-inspiration" class="nav-link" data-scroll-target="#inspiration">Inspiration</a></li>
+  <li><a href="#dasl-conventions" id="toc-dasl-conventions" class="nav-link" data-scroll-target="#dasl-conventions"><span class="header-section-number">6.1.1</span> DaSL Conventions</a></li>
   </ul></li>
+  <li><a href="#ignore-these" id="toc-ignore-these" class="nav-link" data-scroll-target="#ignore-these"><span class="header-section-number">6.2</span> Ignore these</a></li>
   </ul>
-<div class="toc-actions"><div><i class="bi bi-github"></i></div><div class="action-links"><p><a href="https://github.com/getwilds/guide/edit/main/index.qmd" class="toc-action">Edit this page</a></p><p><a href="https://github.com/getwilds/guide/issues/new" class="toc-action">Report an issue</a></p></div></div></nav>
+<div class="toc-actions"><div><i class="bi bi-github"></i></div><div class="action-links"><p><a href="https://github.com/getwilds/guide/edit/main/versioning.qmd" class="toc-action">Edit this page</a></p><p><a href="https://github.com/getwilds/guide/issues/new" class="toc-action">Report an issue</a></p></div></div></nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">DaSL Contributor Guide</h1>
+<h1 class="title"><span id="sec-version" class="quarto-section-identifier"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Package versioning <iconify-icon inline="" icon="fa6-solid:code-compare"></iconify-icon></span></span></h1>
 </div>
 
 
 
 <div class="quarto-title-meta">
 
-    <div>
-    <div class="quarto-title-meta-heading">Author</div>
-    <div class="quarto-title-meta-contents">
-             <p>Scott Chamberlain </p>
-          </div>
-  </div>
     
   
     
@@ -213,27 +242,32 @@ ul.task-list li input[type="checkbox"] {
 
 </header>
 
-<section id="welcome" class="level1 unnumbered">
-<h1 class="unnumbered">Welcome</h1>
-<p>This book is a resource for anyone in the <a href="https://hutchdatascience.org/">Fred Hutch Cancer Center Data Science Lab</a> community contributing to or using software.</p>
-<p>The book attempts to cover all important aspects of software development, including how to get involved in software as a user or contributor, code style, code review, package documentation, and more. It includes both internal facing guidelines as well as for any contributions from folks other than DaSL staff.</p>
+<p>There is a detailed discussion of versioning R packages in the <a href="https://r-pkgs.org/lifecycle.html">lifecycle</a> chapter of the <a href="https://r-pkgs.org">R Packages book</a> by Hadley Wickham and Jenny Bryan. Please follow that chapter in general for versioning of R and Python packages within DaSL. To make it easier to grok, below are some of the highlights, and some exceptions to that chapter.</p>
+<section id="package-version-numbers" class="level2" data-number="6.1">
+<h2 data-number="6.1" class="anchored" data-anchor-id="package-version-numbers"><span class="header-section-number">6.1</span> Package version numbers</h2>
+<p>There’s quite a bit of nuance - and surprises - to package version numbers - see the <a href="https://r-pkgs.org/lifecycle.html#sec-lifecycle-version-number">Package version number section</a> for details. For example, using the <code>utils::package_version()</code> function, which parses package version strings into S3 classes, we get a suprising result:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="st">"2.0"</span> <span class="sc">&gt;</span> <span class="st">"10.0"</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; [1] TRUE</span></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="fu">package_version</span>(<span class="st">"2.0"</span>) <span class="sc">&gt;</span> <span class="fu">package_version</span>(<span class="st">"10.0"</span>)</span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; [1] FALSE</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>With that example, please do think about your package versions before setting them.</p>
+<section id="dasl-conventions" class="level3" data-number="6.1.1">
+<h3 data-number="6.1.1" class="anchored" data-anchor-id="dasl-conventions"><span class="header-section-number">6.1.1</span> DaSL Conventions</h3>
+<p>Following the <a href="https://r-pkgs.org/lifecycle.html#sec-lifecycle-version-number-tidyverse">Tidyverse package version conventions</a>, DaSL packages will use the following conventions (see the link for more details):</p>
 <ul>
-<li>Getting help: <a href="help.html"><span>Chapter&nbsp;1</span></a></li>
-<li>Contributing guidelines: <a href="contributing.html"><span>Chapter&nbsp;2</span></a></li>
-<li>Style guidelines: <a href="style.html"><span>Chapter&nbsp;3</span></a></li>
-<li>Code review guidelines: <a href="codereview.html"><span>Chapter&nbsp;4</span></a></li>
-<li>Package documentation guidelines: <a href="packagedocs.html"><span>Chapter&nbsp;5</span></a></li>
+<li>Always use <code>.</code> as the separator, never use <code>-</code>.</li>
+<li>A released version number consists of three components, <code>&lt;major&gt;</code>.<code>&lt;minor&gt;</code>.<code>&lt;patch&gt;</code></li>
+<li>While a package is in between releases, there is a fourth component: the development version, starting at 9000 (e.g., <code>0.2.2.9000</code>), and incrementing from there until the package has another release at which point return to three components.</li>
 </ul>
-<section id="inspiration" class="level2">
-<h2 class="anchored" data-anchor-id="inspiration">Inspiration</h2>
-<p>Inspiration for this guide is taken in part from:</p>
-<ul>
-<li><a href="https://style.tidyverse.org/">Tidyverse Style Guide</a></li>
-<li><a href="https://devguide.ropensci.org/">rOpenSci Dev Guide</a></li>
-</ul>
-
-
 </section>
+</section>
+<section id="ignore-these" class="level2" data-number="6.2">
+<h2 data-number="6.2" class="anchored" data-anchor-id="ignore-these"><span class="header-section-number">6.2</span> Ignore these</h2>
+<p>We are not following or enforcing any rules about changes at the function/class/etc level below the package level. For example, the R Packages book <a href="https://r-pkgs.org/lifecycle.html#sec-lifecycle-stages-and-package">talks about</a> using the <code>lifecycle</code> package to deal with function changes.</p>
+
+
 </section>
 
 </main> <!-- /main -->
@@ -587,10 +621,13 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
+      <a href="./packagedocs.html" class="pagination-link">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Documentation <iconify-icon inline="" icon="fa6-solid:book"></iconify-icon></span></span>
+      </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./help.html" class="pagination-link">
-        <span class="nav-page-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Help <iconify-icon inline="" icon="fa6-solid:circle-info"></iconify-icon></span></span> <i class="bi bi-arrow-right-short"></i>
+      <a href="./references.html" class="pagination-link">
+        <span class="nav-page-text">References</span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>

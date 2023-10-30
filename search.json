@@ -96,5 +96,19 @@
     "title": "5  Documentation ",
     "section": "5.3 Guidelines",
     "text": "5.3 Guidelines\n\nREADME: This is most likely the first place potential users will interact with your package. Make sure the README clearly states what the package does, and how to get started.\nExamples: All user facing functions should have examples. Make sure to be careful about how examples are run if there’s any sensitive data or connections to remote services.\n(anything else?)"
+  },
+  {
+    "objectID": "versioning.html#package-version-numbers",
+    "href": "versioning.html#package-version-numbers",
+    "title": "6  Package versioning ",
+    "section": "6.1 Package version numbers",
+    "text": "6.1 Package version numbers\nThere’s quite a bit of nuance - and surprises - to package version numbers - see the Package version number section for details. For example, using the utils::package_version() function, which parses package version strings into S3 classes, we get a suprising result:\n\n\"2.0\" &gt; \"10.0\"\n#&gt; [1] TRUE\npackage_version(\"2.0\") &gt; package_version(\"10.0\")\n#&gt; [1] FALSE\n\nWith that example, please do think about your package versions before setting them.\n\n6.1.1 DaSL Conventions\nFollowing the Tidyverse package version conventions, DaSL packages will use the following conventions (see the link for more details):\n\nAlways use . as the separator, never use -.\nA released version number consists of three components, &lt;major&gt;.&lt;minor&gt;.&lt;patch&gt;\nWhile a package is in between releases, there is a fourth component: the development version, starting at 9000 (e.g., 0.2.2.9000), and incrementing from there until the package has another release at which point return to three components."
+  },
+  {
+    "objectID": "versioning.html#ignore-these",
+    "href": "versioning.html#ignore-these",
+    "title": "6  Package versioning ",
+    "section": "6.2 Ignore these",
+    "text": "6.2 Ignore these\nWe are not following or enforcing any rules about changes at the function/class/etc level below the package level. For example, the R Packages book talks about using the lifecycle package to deal with function changes."
   }
 ]
