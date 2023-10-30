@@ -2,14 +2,14 @@
   {
     "objectID": "index.html",
     "href": "index.html",
-    "title": "DaSL Developer Guide",
+    "title": "DaSL Contributor Guide",
     "section": "",
     "text": "Welcome\nThis book is a resource for anyone in the Fred Hutch Cancer Center Data Science Lab community contributing to or using software.\nThe book attempts to cover all important aspects of software development, including how to get involved in software as a user or contributor, code style, code review, package documentation, and more. It includes both internal facing guidelines as well as for any contributions from folks other than DaSL staff."
   },
   {
     "objectID": "index.html#inspiration",
     "href": "index.html#inspiration",
-    "title": "DaSL Developer Guide",
+    "title": "DaSL Contributor Guide",
     "section": "Inspiration",
     "text": "Inspiration\nInspiration for this guide is taken in part from:\n\nTidyverse Style Guide\nrOpenSci Dev Guide"
   },
@@ -42,11 +42,11 @@
     "text": "2.2 Communication Channels\n\nSlack"
   },
   {
-    "objectID": "contributing.html#xxx",
-    "href": "contributing.html#xxx",
+    "objectID": "contributing.html#github-repositories",
+    "href": "contributing.html#github-repositories",
     "title": "2  Contributing ",
-    "section": "2.3 xxx",
-    "text": "2.3 xxx\nxxxx"
+    "section": "2.3 GitHub Repositories",
+    "text": "2.3 GitHub Repositories\nxxxx"
   },
   {
     "objectID": "style.html#package-styler",
