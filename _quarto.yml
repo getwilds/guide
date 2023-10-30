@@ -2,7 +2,7 @@ project:
   type: book
 
 book:
-  title: "DaSL Developer Guide"
+  title: "DaSL Contributor Guide"
   reader-mode: true
   author:
     - Scott Chamberlain
@@ -11,7 +11,7 @@ book:
       This book was built with <a href="https://quarto.org/">Quarto</a>.
   repo-branch: main
   repo-actions: [edit, issue]
-  repo-url: https://github.com/fhdsl/devguide/
+  repo-url: https://github.com/getwilds/guide/
   chapters:
     - index.qmd
     - help.qmd
