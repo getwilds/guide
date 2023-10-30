@@ -1,0 +1,37 @@
+# Package versioning {{< iconify fa6-solid code-compare >}} {#sec-version}
+
+```{r, echo = FALSE}
+source("common.R")
+```
+
+There is a detailed discussion of versioning R packages in the [lifecycle][] chapter of the [R Packages book][rpkgs] by Hadley Wickham and Jenny Bryan. Please follow that chapter in general for versioning of R and Python packages within DaSL. To make it easier to grok, below are some of the highlights, and some exceptions to that chapter.
+
+## Package version numbers
+
+There's quite a bit of nuance - and surprises - to package version numbers - see the [Package version number section](https://r-pkgs.org/lifecycle.html#sec-lifecycle-version-number) for details. For example, using the `utils::package_version()` function, which parses package version strings into S3 classes, we get a suprising result:
+
+```{r}
+"2.0" > "10.0"
+package_version("2.0") > package_version("10.0")
+```
+
+With that example, please do think about your package versions before setting them.
+
+### DaSL Conventions
+
+Following the [Tidyverse package version conventions](https://r-pkgs.org/lifecycle.html#sec-lifecycle-version-number-tidyverse), DaSL packages will use the following conventions (see the link for more details):
+
+- Always use `.` as the separator, never use `-`.
+- A released version number consists of three components, `<major>`.`<minor>`.`<patch>`
+- While a package is in between releases, there is a fourth component: the development version, starting at 9000 (e.g., `0.2.2.9000`), and incrementing from there until the package has another release at which point return to three components.
+
+
+## Ignore these
+
+We are not following or enforcing any rules about changes at the function/class/etc level below the package level. For example, the R Packages book [talks about][funcx] using the `lifecycle` package to deal with function changes.
+
+
+
+[rpkgs]: https://r-pkgs.org
+[lifecycle]: https://r-pkgs.org/lifecycle.html
+[funcx]:https://r-pkgs.org/lifecycle.html#sec-lifecycle-stages-and-package
