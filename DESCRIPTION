@@ -1,0 +1,11 @@
+Package: guide
+Title: DaSL Contributor Guide
+Version: 0.1.0
+Authors@R: c(
+  person("Scott", "Chamberlain", , "sachamber@fredhutch.org", c("aut", "cre"))
+  )
+Imports:
+    rmarkdown
+Remotes: r-lib/testthat
+URL: https://github.com/getwilds/guide
+BugReports: https://github.com/getwilds/guide/issues
