@@ -1,16 +1,22 @@
 # Contributing {{< iconify fa6-solid hammer >}} {#sec-contributing}
 
-Contributing guidelines ....
-
-## Code of Conduct
-
-xxxx
+Contributing guidelines ... write somethig smart here {{< iconify fa6-solid lightbulb >}}
 
 ## Communication Channels
 
-* Slack
+* Slack: Fred Hutch folks can chat with other community members and DaSL and Fred Hutch SciComp staff in the Fred Hutch Data Slack. Join our Slack here {{< iconify fa6-solid hand-point-right >}} <https://hutchdatascience.org/joinslack/>
+* Are there others?
 
-## GitHub Repositories
+## Software
 
-xxxx
+This section concerns any software created in the GitHub repositories under the [WILDS GitHub organization](https://github.com/getwilds).
 
+**Question**: If you have a question you can ask in the Slack linked above, or open an issue in any of the GitHub repositories.
+
+**Bug**: If you want to report a bug, open an issue in the appropriate GitHub repository.
+
+**Feature**: If you want to request a feature, open an issue in the appropriate GitHub repository.
+
+**Contribute code/docs**: If you want to contribute to software - whether code, documentation or something else - open an issue in the appropriate GitHub repository to discuss, then open a pull request to make your contribution.
+
+**Code of Conduct**: Note that most GitHub repositories should have their own code of conduct. If they do not then ...
