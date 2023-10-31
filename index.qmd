@@ -9,6 +9,9 @@ The book attempts to cover all important aspects of software development, includ
 - Style guidelines: @sec-style
 - Code review guidelines: @sec-review
 - Package documentation guidelines: @sec-docs
+- Package maintenance: @sec-maintenance
+- Security: @sec-security
+
 
 
 ## Inspiration
