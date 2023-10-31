@@ -28,25 +28,18 @@
     "text": "1.2 Slack\nFred Hutch folks can chat with other community members and DaSL and Fred Hutch SciComp staff in the Fred Hutch Data Slack.\nJoin our Slack here  https://hutchdatascience.org/joinslack/"
   },
   {
-    "objectID": "contributing.html#code-of-conduct",
-    "href": "contributing.html#code-of-conduct",
-    "title": "2  Contributing ",
-    "section": "2.1 Code of Conduct",
-    "text": "2.1 Code of Conduct\nxxxx"
-  },
-  {
     "objectID": "contributing.html#communication-channels",
     "href": "contributing.html#communication-channels",
     "title": "2  Contributing ",
-    "section": "2.2 Communication Channels",
-    "text": "2.2 Communication Channels\n\nSlack"
+    "section": "2.1 Communication Channels",
+    "text": "2.1 Communication Channels\n\nSlack: Fred Hutch folks can chat with other community members and DaSL and Fred Hutch SciComp staff in the Fred Hutch Data Slack. Join our Slack here  https://hutchdatascience.org/joinslack/\nAre there others?"
   },
   {
-    "objectID": "contributing.html#github-repositories",
-    "href": "contributing.html#github-repositories",
+    "objectID": "contributing.html#software",
+    "href": "contributing.html#software",
     "title": "2  Contributing ",
-    "section": "2.3 GitHub Repositories",
-    "text": "2.3 GitHub Repositories\nxxxx"
+    "section": "2.2 Software",
+    "text": "2.2 Software\nThis section concerns any software created in the GitHub repositories under the WILDS GitHub organization.\nQuestion: If you have a question you can ask in the Slack linked above, or open an issue in any of the GitHub repositories.\nBug: If you want to report a bug, open an issue in the appropriate GitHub repository.\nFeature: If you want to request a feature, open an issue in the appropriate GitHub repository.\nContribute code/docs: If you want to contribute to software - whether code, documentation or something else - open an issue in the appropriate GitHub repository to discuss, then open a pull request to make your contribution.\nCode of Conduct: Note that most GitHub repositories should have their own code of conduct. If they do not then …"
   },
   {
     "objectID": "style.html#package-styler",
