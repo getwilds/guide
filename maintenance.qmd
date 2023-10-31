@@ -1,12 +1,14 @@
-# Package versioning {{< iconify fa6-solid code-compare >}} {#sec-version}
+# Package maintenance {{< iconify fa6-solid code-compare >}} {#sec-maintenance}
 
 ```{r, echo = FALSE}
 source("common.R")
 ```
 
+## Package versioning
+
 There is a detailed discussion of versioning R packages in the [lifecycle][] chapter of the [R Packages book][rpkgs] by Hadley Wickham and Jenny Bryan. Please follow that chapter in general for versioning of R and Python packages within DaSL. To make it easier to grok, below are some of the highlights, and some exceptions to that chapter.
 
-## Package version numbers
+### Package version numbers
 
 There's quite a bit of nuance - and surprises - to package version numbers - see the [Package version number section](https://r-pkgs.org/lifecycle.html#sec-lifecycle-version-number) for details. For example, using the `utils::package_version()` function, which parses package version strings into S3 classes, we get a suprising result:
 
@@ -17,7 +19,7 @@ package_version("2.0") > package_version("10.0")
 
 With that example, please do think about your package versions before setting them.
 
-### DaSL Conventions
+#### DaSL Conventions
 
 Following the [Tidyverse package version conventions](https://r-pkgs.org/lifecycle.html#sec-lifecycle-version-number-tidyverse), DaSL packages will use the following conventions (see the link for more details):
 
@@ -26,12 +28,22 @@ Following the [Tidyverse package version conventions](https://r-pkgs.org/lifecyc
 - While a package is in between releases, there is a fourth component: the development version, starting at 9000 (e.g., `0.2.2.9000`), and incrementing from there until the package has another release at which point return to three components.
 
 
-## Ignore these
+### Ignore these
 
 We are not following or enforcing any rules about changes at the function/class/etc level below the package level. For example, the R Packages book [talks about][funcx] using the `lifecycle` package to deal with function changes.
 
+## Package releases
+
+In general follow the [Releasing to CRAN chapter](https://r-pkgs.org/release.html) in the book [R Packages][rpkgs] for R, and the [Releasing and versioning chapter](https://py-pkgs.org/07-releasing-versioning) in the book [Python Packages][pypkgs] for Python. Those chapters don't have to be followed to the letter, but in general they provide really good guidance.
+
+There are a few aspects of releases we are opinionated about and would like DaSL R and Python packages to follow:
+
+- Follow our versioning guidelines above
+- Git tag released versions, and push the tag to GitHub
+- Add the associated NEWS/Changelog items to a release associated with the tag on GitHub
 
 
 [rpkgs]: https://r-pkgs.org
+[pypkgs]: https://py-pkgs.org
 [lifecycle]: https://r-pkgs.org/lifecycle.html
 [funcx]:https://r-pkgs.org/lifecycle.html#sec-lifecycle-stages-and-package

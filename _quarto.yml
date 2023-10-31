@@ -19,9 +19,7 @@ book:
     - style.qmd
     - codereview.qmd
     - packagedocs.qmd
-    - part: Package Maintenance
-      chapters:
-        - versioning.qmd
+    - maintenance.qmd
     - references.qmd
 
 bibliography: references.bib
