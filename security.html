@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>DaSL Contributor Guide - 4&nbsp; Code review </title>
+<title>DaSL Contributor Guide - 7&nbsp; Security </title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -30,8 +30,8 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
-<link href="./packagedocs.html" rel="next">
-<link href="./style.html" rel="prev">
+<link href="./references.html" rel="next">
+<link href="./maintenance.html" rel="prev">
 <script src="site_libs/quarto-html/quarto.js"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
@@ -77,7 +77,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./codereview.html"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Code review {{&lt; iconify fa6-solid pencil &gt;}}</span></a></li></ol></nav>
+      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./security.html"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Security {{&lt; iconify fa6-solid lock &gt;}}</span></a></li></ol></nav>
       <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
       </a>
       <button type="button" class="btn quarto-search-button" aria-label="" onclick="window.quartoOpenSearch();">
@@ -137,7 +137,7 @@ ul.task-list li input[type="checkbox"] {
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./codereview.html" class="sidebar-item-text sidebar-link active">
+  <a href="./codereview.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Code review <iconify-icon inline="" icon="fa6-solid:pencil"></iconify-icon></span></span></a>
   </div>
 </li>
@@ -155,7 +155,7 @@ ul.task-list li input[type="checkbox"] {
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./security.html" class="sidebar-item-text sidebar-link">
+  <a href="./security.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Security <iconify-icon inline="" icon="fa6-solid:lock"></iconify-icon></span></span></a>
   </div>
 </li>
@@ -175,17 +175,21 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">Table of contents</h2>
    
   <ul>
-  <li><a href="#dasl-interal-guidelines" id="toc-dasl-interal-guidelines" class="nav-link active" data-scroll-target="#dasl-interal-guidelines"><span class="header-section-number">4.1</span> DaSL interal guidelines</a></li>
-  <li><a href="#community-guidelines" id="toc-community-guidelines" class="nav-link" data-scroll-target="#community-guidelines"><span class="header-section-number">4.2</span> Community guidelines</a></li>
+  <li><a href="#package-security" id="toc-package-security" class="nav-link active" data-scroll-target="#package-security"><span class="header-section-number">7.1</span> Package security</a></li>
+  <li><a href="#data" id="toc-data" class="nav-link" data-scroll-target="#data"><span class="header-section-number">7.2</span> Data</a>
+  <ul class="collapse">
+  <li><a href="#package-data" id="toc-package-data" class="nav-link" data-scroll-target="#package-data"><span class="header-section-number">7.2.1</span> Package Data</a></li>
+  <li><a href="#examples" id="toc-examples" class="nav-link" data-scroll-target="#examples"><span class="header-section-number">7.2.2</span> Examples</a></li>
+  </ul></li>
   </ul>
-<div class="toc-actions"><div><i class="bi bi-github"></i></div><div class="action-links"><p><a href="https://github.com/getwilds/guide/edit/main/codereview.qmd" class="toc-action">Edit this page</a></p><p><a href="https://github.com/getwilds/guide/issues/new" class="toc-action">Report an issue</a></p></div></div></nav>
+<div class="toc-actions"><div><i class="bi bi-github"></i></div><div class="action-links"><p><a href="https://github.com/getwilds/guide/edit/main/security.qmd" class="toc-action">Edit this page</a></p><p><a href="https://github.com/getwilds/guide/issues/new" class="toc-action">Report an issue</a></p></div></div></nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title"><span id="sec-review" class="quarto-section-identifier"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Code review <iconify-icon inline="" icon="fa6-solid:pencil"></iconify-icon></span></span></h1>
+<h1 class="title"><span id="sec-security" class="quarto-section-identifier"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Security <iconify-icon inline="" icon="fa6-solid:lock"></iconify-icon></span></span></h1>
 </div>
 
 
@@ -200,16 +204,28 @@ ul.task-list li input[type="checkbox"] {
 
 </header>
 
-<p>Code review ….</p>
-<section id="dasl-interal-guidelines" class="level2" data-number="4.1">
-<h2 data-number="4.1" class="anchored" data-anchor-id="dasl-interal-guidelines"><span class="header-section-number">4.1</span> DaSL interal guidelines</h2>
-<p>xxxx</p>
+<section id="package-security" class="level2" data-number="7.1">
+<h2 data-number="7.1" class="anchored" data-anchor-id="package-security"><span class="header-section-number">7.1</span> Package security</h2>
+<p>Keeping secrets a secret is an important task and should not be an afterthought - but instead considered from the beginning of a package.</p>
+<p>In general, the rOpenSci Development Guide has good advice on <a href="https://devguide.ropensci.org/package-development-security-best-practices.html">package security</a>.</p>
+<p>As time goes on we’ll document here if we have any strong opinions about security related aspects of packages.</p>
 </section>
-<section id="community-guidelines" class="level2" data-number="4.2">
-<h2 data-number="4.2" class="anchored" data-anchor-id="community-guidelines"><span class="header-section-number">4.2</span> Community guidelines</h2>
-<p>xxxx</p>
+<section id="data" class="level2" data-number="7.2">
+<h2 data-number="7.2" class="anchored" data-anchor-id="data"><span class="header-section-number">7.2</span> Data</h2>
+<p>Software created in the WILDS may touch PII/PHI data.</p>
+<section id="package-data" class="level3" data-number="7.2.1">
+<h3 data-number="7.2.1" class="anchored" data-anchor-id="package-data"><span class="header-section-number">7.2.1</span> Package Data</h3>
+<p>Do not include any PII/PHI data within a package. If data needs to be included in a package for tests, examples, etc., use fake data that is similar enough to be able to run tests/examples, etc.</p>
+<p>There’s many packages in both R (e.g.&nbsp;<a href="https://github.com/ropensci/charlatan">charlatan</a>, <a href="https://github.com/trinker/wakefield">wakefield</a>. <a href="https://github.com/Thinkr-open/fakir/">fakir</a>) and Python (e.g.&nbsp;<a href="https://github.com/joke2k/faker">faker</a>) for creating fake data.</p>
+</section>
+<section id="examples" class="level3" data-number="7.2.2">
+<h3 data-number="7.2.2" class="anchored" data-anchor-id="examples"><span class="header-section-number">7.2.2</span> Examples</h3>
+<p>We strongly encourage all exported, user-facing functions, to have examples. However, when PII/PHI data is a crucial part of an example for a function/class/etc. we need to take extra precautions.</p>
+<p>In package documentation created with pkgdown (see <a href="packagedocs.html"><span>Chapter&nbsp;5</span></a>) examples should use fake data included with the package.</p>
+<p>If it makes sense to have examples that run with real data that might be PII/PHI data, those examples should xxxx</p>
 
 
+</section>
 </section>
 
 </main> <!-- /main -->
@@ -563,13 +579,13 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="./style.html" class="pagination-link">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Style <iconify-icon inline="" icon="fa6-solid:code"></iconify-icon></span></span>
+      <a href="./maintenance.html" class="pagination-link">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Package maintenance <iconify-icon inline="" icon="fa6-solid:code-compare"></iconify-icon></span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./packagedocs.html" class="pagination-link">
-        <span class="nav-page-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Documentation <iconify-icon inline="" icon="fa6-solid:book"></iconify-icon></span></span> <i class="bi bi-arrow-right-short"></i>
+      <a href="./references.html" class="pagination-link">
+        <span class="nav-page-text">References</span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>
