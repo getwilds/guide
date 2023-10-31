@@ -98,17 +98,17 @@
     "text": "5.3 Guidelines\n\nREADME: This is most likely the first place potential users will interact with your package. Make sure the README clearly states what the package does, and how to get started.\nExamples: All user facing functions should have examples. Make sure to be careful about how examples are run if there’s any sensitive data or connections to remote services.\n(anything else?)"
   },
   {
-    "objectID": "versioning.html#package-version-numbers",
-    "href": "versioning.html#package-version-numbers",
-    "title": "6  Package versioning ",
-    "section": "6.1 Package version numbers",
-    "text": "6.1 Package version numbers\nThere’s quite a bit of nuance - and surprises - to package version numbers - see the Package version number section for details. For example, using the utils::package_version() function, which parses package version strings into S3 classes, we get a suprising result:\n\n\"2.0\" &gt; \"10.0\"\n#&gt; [1] TRUE\npackage_version(\"2.0\") &gt; package_version(\"10.0\")\n#&gt; [1] FALSE\n\nWith that example, please do think about your package versions before setting them.\n\n6.1.1 DaSL Conventions\nFollowing the Tidyverse package version conventions, DaSL packages will use the following conventions (see the link for more details):\n\nAlways use . as the separator, never use -.\nA released version number consists of three components, &lt;major&gt;.&lt;minor&gt;.&lt;patch&gt;\nWhile a package is in between releases, there is a fourth component: the development version, starting at 9000 (e.g., 0.2.2.9000), and incrementing from there until the package has another release at which point return to three components."
+    "objectID": "maintenance.html#package-versioning",
+    "href": "maintenance.html#package-versioning",
+    "title": "6  Package maintenance ",
+    "section": "6.1 Package versioning",
+    "text": "6.1 Package versioning\nThere is a detailed discussion of versioning R packages in the lifecycle chapter of the R Packages book by Hadley Wickham and Jenny Bryan. Please follow that chapter in general for versioning of R and Python packages within DaSL. To make it easier to grok, below are some of the highlights, and some exceptions to that chapter.\n\n6.1.1 Package version numbers\nThere’s quite a bit of nuance - and surprises - to package version numbers - see the Package version number section for details. For example, using the utils::package_version() function, which parses package version strings into S3 classes, we get a suprising result:\n\n\"2.0\" &gt; \"10.0\"\n#&gt; [1] TRUE\npackage_version(\"2.0\") &gt; package_version(\"10.0\")\n#&gt; [1] FALSE\n\nWith that example, please do think about your package versions before setting them.\n\n6.1.1.1 DaSL Conventions\nFollowing the Tidyverse package version conventions, DaSL packages will use the following conventions (see the link for more details):\n\nAlways use . as the separator, never use -.\nA released version number consists of three components, &lt;major&gt;.&lt;minor&gt;.&lt;patch&gt;\nWhile a package is in between releases, there is a fourth component: the development version, starting at 9000 (e.g., 0.2.2.9000), and incrementing from there until the package has another release at which point return to three components.\n\n\n\n\n6.1.2 Ignore these\nWe are not following or enforcing any rules about changes at the function/class/etc level below the package level. For example, the R Packages book talks about using the lifecycle package to deal with function changes."
   },
   {
-    "objectID": "versioning.html#ignore-these",
-    "href": "versioning.html#ignore-these",
-    "title": "6  Package versioning ",
-    "section": "6.2 Ignore these",
-    "text": "6.2 Ignore these\nWe are not following or enforcing any rules about changes at the function/class/etc level below the package level. For example, the R Packages book talks about using the lifecycle package to deal with function changes."
+    "objectID": "maintenance.html#package-releases",
+    "href": "maintenance.html#package-releases",
+    "title": "6  Package maintenance ",
+    "section": "6.2 Package releases",
+    "text": "6.2 Package releases\nIn general follow the Releasing to CRAN chapter in the book R Packages for R, and the Releasing and versioning chapter in the book Python Packages for Python. Those chapters don’t have to be followed to the letter, but in general they provide really good guidance.\nThere are a few aspects of releases we are opinionated about and would like DaSL R and Python packages to follow:\n\nFollow our versioning guidelines above\nGit tag released versions, and push the tag to GitHub\nAdd the associated NEWS/Changelog items to a release associated with the tag on GitHub"
   }
 ]
