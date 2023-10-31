@@ -1,9 +1,5 @@
 # Security {{< iconify fa6-solid lock >}} {#sec-security}
 
-```{r, echo = FALSE}
-source("common.R")
-```
-
 ## Package security
 
 Keeping secrets a secret is an important task and should not be an afterthought - but instead considered from the beginning of a package.
