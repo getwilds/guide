@@ -29,5 +29,6 @@ format:
       light: sandstone
       dark: darkly
     fontsize: 1.2em
+    link-external-newwindow: true
   pdf:
     documentclass: scrreprt
