@@ -60,14 +60,14 @@
     "href": "codereview.html#dasl-interal-guidelines",
     "title": "4  Code review ",
     "section": "4.1 DaSL interal guidelines",
-    "text": "4.1 DaSL interal guidelines\nxxxx"
+    "text": "4.1 DaSL interal guidelines\nstill discussing this internally …"
   },
   {
     "objectID": "codereview.html#community-guidelines",
     "href": "codereview.html#community-guidelines",
     "title": "4  Code review ",
     "section": "4.2 Community guidelines",
-    "text": "4.2 Community guidelines\nxxxx"
+    "text": "4.2 Community guidelines\nWe have code review guidance for labs at https://hutchdatascience.org/code_review/. The site contains higher level code review guidance broken down by lab roles, including lab leader, lab manager and lab developer.\nIf you want lower level code review guidance the Advanced Reproducibility in Cancer Informatics course has two chapters that will be helpful:\n\nEngaging in Code Review - as an author\nEngaging in Code Review - as a reviewer"
   },
   {
     "objectID": "packagedocs.html#r",
