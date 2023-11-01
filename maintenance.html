@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>DaSL Contributor Guide - 6&nbsp; Package maintenance </title>
+<title>DaSL Contributor Guide - 5&nbsp; Package maintenance </title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -111,7 +111,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./maintenance.html"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Package maintenance {{&lt; iconify fa6-solid code-compare &gt;}}</span></a></li></ol></nav>
+      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./maintenance.html"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Package maintenance {{&lt; iconify fa6-solid code-compare &gt;}}</span></a></li></ol></nav>
       <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
       </a>
       <button type="button" class="btn quarto-search-button" aria-label="" onclick="window.quartoOpenSearch();">
@@ -153,44 +153,38 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./help.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Help <iconify-icon inline="" icon="fa6-solid:circle-info"></iconify-icon></span></span></a>
-  </div>
-</li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
   <a href="./contributing.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Contributing <iconify-icon inline="" icon="fa6-solid:hammer"></iconify-icon></span></span></a>
+ <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Contributing <iconify-icon inline="" icon="fa6-solid:hammer"></iconify-icon></span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./style.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Style <iconify-icon inline="" icon="fa6-solid:code"></iconify-icon></span></span></a>
+ <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Style <iconify-icon inline="" icon="fa6-solid:code"></iconify-icon></span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./codereview.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Code review <iconify-icon inline="" icon="fa6-solid:pencil"></iconify-icon></span></span></a>
+ <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Code review <iconify-icon inline="" icon="fa6-solid:pencil"></iconify-icon></span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./packagedocs.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Documentation <iconify-icon inline="" icon="fa6-solid:book"></iconify-icon></span></span></a>
+ <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Documentation <iconify-icon inline="" icon="fa6-solid:book"></iconify-icon></span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./maintenance.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Package maintenance <iconify-icon inline="" icon="fa6-solid:code-compare"></iconify-icon></span></span></a>
+ <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Package maintenance <iconify-icon inline="" icon="fa6-solid:code-compare"></iconify-icon></span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./security.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Security <iconify-icon inline="" icon="fa6-solid:lock"></iconify-icon></span></span></a>
+ <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Security <iconify-icon inline="" icon="fa6-solid:lock"></iconify-icon></span></span></a>
   </div>
 </li>
     </ul>
@@ -203,12 +197,12 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <h2 id="toc-title">Table of contents</h2>
    
   <ul>
-  <li><a href="#package-versioning" id="toc-package-versioning" class="nav-link active" data-scroll-target="#package-versioning"><span class="header-section-number">6.1</span> Package versioning</a>
+  <li><a href="#package-versioning" id="toc-package-versioning" class="nav-link active" data-scroll-target="#package-versioning"><span class="header-section-number">5.1</span> Package versioning</a>
   <ul class="collapse">
-  <li><a href="#package-version-numbers" id="toc-package-version-numbers" class="nav-link" data-scroll-target="#package-version-numbers"><span class="header-section-number">6.1.1</span> Package version numbers</a></li>
-  <li><a href="#ignore-these" id="toc-ignore-these" class="nav-link" data-scroll-target="#ignore-these"><span class="header-section-number">6.1.2</span> Ignore these</a></li>
+  <li><a href="#package-version-numbers" id="toc-package-version-numbers" class="nav-link" data-scroll-target="#package-version-numbers"><span class="header-section-number">5.1.1</span> Package version numbers</a></li>
+  <li><a href="#ignore-these" id="toc-ignore-these" class="nav-link" data-scroll-target="#ignore-these"><span class="header-section-number">5.1.2</span> Ignore these</a></li>
   </ul></li>
-  <li><a href="#package-releases" id="toc-package-releases" class="nav-link" data-scroll-target="#package-releases"><span class="header-section-number">6.2</span> Package releases</a></li>
+  <li><a href="#package-releases" id="toc-package-releases" class="nav-link" data-scroll-target="#package-releases"><span class="header-section-number">5.2</span> Package releases</a></li>
   </ul>
 <div class="toc-actions"><div><i class="bi bi-github"></i></div><div class="action-links"><p><a href="https://github.com/getwilds/guide/edit/main/maintenance.qmd" class="toc-action">Edit this page</a></p><p><a href="https://github.com/getwilds/guide/issues/new" class="toc-action">Report an issue</a></p></div></div></nav>
     </div>
@@ -217,7 +211,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title"><span id="sec-maintenance" class="quarto-section-identifier"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Package maintenance <iconify-icon inline="" icon="fa6-solid:code-compare"></iconify-icon></span></span></h1>
+<h1 class="title"><span id="sec-maintenance" class="quarto-section-identifier"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Package maintenance <iconify-icon inline="" icon="fa6-solid:code-compare"></iconify-icon></span></span></h1>
 </div>
 
 
@@ -232,11 +226,11 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 </header>
 
-<section id="package-versioning" class="level2" data-number="6.1">
-<h2 data-number="6.1" class="anchored" data-anchor-id="package-versioning"><span class="header-section-number">6.1</span> Package versioning</h2>
+<section id="package-versioning" class="level2" data-number="5.1">
+<h2 data-number="5.1" class="anchored" data-anchor-id="package-versioning"><span class="header-section-number">5.1</span> Package versioning</h2>
 <p>There is a detailed discussion of versioning R packages in the <a href="https://r-pkgs.org/lifecycle.html">lifecycle</a> chapter of the <a href="https://r-pkgs.org">R Packages book</a> by Hadley Wickham and Jenny Bryan. Please follow that chapter in general for versioning of R and Python packages within DaSL. To make it easier to grok, below are some of the highlights, and some exceptions to that chapter.</p>
-<section id="package-version-numbers" class="level3" data-number="6.1.1">
-<h3 data-number="6.1.1" class="anchored" data-anchor-id="package-version-numbers"><span class="header-section-number">6.1.1</span> Package version numbers</h3>
+<section id="package-version-numbers" class="level3" data-number="5.1.1">
+<h3 data-number="5.1.1" class="anchored" data-anchor-id="package-version-numbers"><span class="header-section-number">5.1.1</span> Package version numbers</h3>
 <p>There’s quite a bit of nuance - and surprises - to package version numbers - see the <a href="https://r-pkgs.org/lifecycle.html#sec-lifecycle-version-number">Package version number section</a> for details. For example, using the <code>utils::package_version()</code> function, which parses package version strings into S3 classes, we get a suprising result:</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="st">"2.0"</span> <span class="sc">&gt;</span> <span class="st">"10.0"</span></span>
@@ -245,8 +239,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; [1] FALSE</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>With that example, please do think about your package versions before setting them.</p>
-<section id="dasl-conventions" class="level4" data-number="6.1.1.1">
-<h4 data-number="6.1.1.1" class="anchored" data-anchor-id="dasl-conventions"><span class="header-section-number">6.1.1.1</span> DaSL Conventions</h4>
+<section id="dasl-conventions" class="level4" data-number="5.1.1.1">
+<h4 data-number="5.1.1.1" class="anchored" data-anchor-id="dasl-conventions"><span class="header-section-number">5.1.1.1</span> DaSL Conventions</h4>
 <p>Following the <a href="https://r-pkgs.org/lifecycle.html#sec-lifecycle-version-number-tidyverse">Tidyverse package version conventions</a>, DaSL packages will use the following conventions (see the link for more details):</p>
 <ul>
 <li>Always use <code>.</code> as the separator, never use <code>-</code>.</li>
@@ -255,13 +249,13 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </ul>
 </section>
 </section>
-<section id="ignore-these" class="level3" data-number="6.1.2">
-<h3 data-number="6.1.2" class="anchored" data-anchor-id="ignore-these"><span class="header-section-number">6.1.2</span> Ignore these</h3>
+<section id="ignore-these" class="level3" data-number="5.1.2">
+<h3 data-number="5.1.2" class="anchored" data-anchor-id="ignore-these"><span class="header-section-number">5.1.2</span> Ignore these</h3>
 <p>We are not following or enforcing any rules about changes at the function/class/etc level below the package level. For example, the R Packages book <a href="https://r-pkgs.org/lifecycle.html#sec-lifecycle-stages-and-package">talks about</a> using the <code>lifecycle</code> package to deal with function changes.</p>
 </section>
 </section>
-<section id="package-releases" class="level2" data-number="6.2">
-<h2 data-number="6.2" class="anchored" data-anchor-id="package-releases"><span class="header-section-number">6.2</span> Package releases</h2>
+<section id="package-releases" class="level2" data-number="5.2">
+<h2 data-number="5.2" class="anchored" data-anchor-id="package-releases"><span class="header-section-number">5.2</span> Package releases</h2>
 <p>In general follow the <a href="https://r-pkgs.org/release.html">Releasing to CRAN chapter</a> in the book <a href="https://r-pkgs.org">R Packages</a> for R, and the <a href="https://py-pkgs.org/07-releasing-versioning">Releasing and versioning chapter</a> in the book <a href="https://py-pkgs.org">Python Packages</a> for Python. Those chapters don’t have to be followed to the letter, but in general they provide really good guidance.</p>
 <p>There are a few aspects of releases we are opinionated about and would like DaSL R and Python packages to follow:</p>
 <ul>
@@ -625,12 +619,12 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
       <a href="./packagedocs.html" class="pagination-link">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Documentation <iconify-icon inline="" icon="fa6-solid:book"></iconify-icon></span></span>
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Documentation <iconify-icon inline="" icon="fa6-solid:book"></iconify-icon></span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
       <a href="./security.html" class="pagination-link">
-        <span class="nav-page-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Security <iconify-icon inline="" icon="fa6-solid:lock"></iconify-icon></span></span> <i class="bi bi-arrow-right-short"></i>
+        <span class="nav-page-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Security <iconify-icon inline="" icon="fa6-solid:lock"></iconify-icon></span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>
