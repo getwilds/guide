@@ -21,7 +21,6 @@ book:
     - packagedocs.qmd
     - maintenance.qmd
     - security.qmd
-    - references.qmd
 
 bibliography: references.bib
 
