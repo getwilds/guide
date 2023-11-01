@@ -1,18 +1,21 @@
 # Welcome {.unnumbered}
 
-This book is a resource for anyone in the [Fred Hutch Cancer Center Data Science Lab](https://hutchdatascience.org/) community contributing to or using software.
+::: {.callout-warning}
+This guide is under construction - content changes often.
+:::
 
-The book attempts to cover all important aspects of software development, including how to get involved in software as a user or contributor, code style, code review, package documentation, and more. It includes both internal facing guidelines as well as for any contributions from folks other than DaSL staff.
+This book is a resource for the community of people using, contributing to, and maintaining software at the Fred Hutch Cancer Center Data Science Lab ([DaSL][]).
 
-- Getting help: @sec-help
-- Contributing guidelines: @sec-contributing
-- Style guidelines: @sec-style
-- Code review guidelines: @sec-review
-- Package documentation guidelines: @sec-docs
+The book covers important aspects of software development, including how to get involved in software as a user or contributor, code style, code review, package documentation, and more. It includes both internal facing guidelines as well as for any contributions from folks other than DaSL staff.
+
+- Contributing: @sec-contributing
+- Style: @sec-style
+- Code review: @sec-review
+- Package documentation: @sec-docs
 - Package maintenance: @sec-maintenance
 - Security: @sec-security
 
-
+[DaSL][] primarily develops software in the [R][] and [Python][] programming languages. Where necessary, we'll discuss a topic with respect to both languages.
 
 ## Inspiration
 
@@ -20,3 +23,8 @@ Inspiration for this guide is taken in part from:
 
 - [Tidyverse Style Guide](https://style.tidyverse.org/)
 - [rOpenSci Dev Guide](https://devguide.ropensci.org/)
+
+
+[DaSL]: https://hutchdatascience.org/
+[R]: https://www.r-project.org/
+[Python]: https://www.python.org/

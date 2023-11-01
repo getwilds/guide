@@ -14,7 +14,6 @@ book:
   repo-url: https://github.com/getwilds/guide/
   chapters:
     - index.qmd
-    - help.qmd
     - contributing.qmd
     - style.qmd
     - codereview.qmd

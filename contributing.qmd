@@ -1,15 +1,18 @@
 # Contributing {{< iconify fa6-solid hammer >}} {#sec-contributing}
 
-Contributing guidelines ... write somethig smart here {{< iconify fa6-solid lightbulb >}}
+This chapter is intended to direct you to the place you want to be, whether you want to get help, use software, contribute to software, and more. Reminder: the scope of this guide is software maintained by DaSL in the [WILDS GitHub organization][ghwilds]. If you'd like help with your own software schedule a [house call](https://calendly.com/data-house-calls).
 
 ## Communication Channels
 
 * Slack: Fred Hutch folks can chat with other community members and DaSL and Fred Hutch SciComp staff in the Fred Hutch Data Slack. Join our Slack here {{< iconify fa6-solid hand-point-right >}} <https://hutchdatascience.org/joinslack/>
+* GitHub Issues: Each GitHub repository has an issues tab where you can ask questions, propose a feature, and more. See below for more details.
 * Are there others?
 
 ## Software
 
 This section concerns any software created in the GitHub repositories under the [WILDS GitHub organization](https://github.com/getwilds).
+
+Find the thing you would like to do below and follow its instructions.
 
 **Question**: If you have a question you can ask in the Slack linked above, or open an issue in any of the GitHub repositories.
 
@@ -19,4 +22,10 @@ This section concerns any software created in the GitHub repositories under the 
 
 **Contribute code/docs**: If you want to contribute to software - whether code, documentation or something else - open an issue in the appropriate GitHub repository to discuss, then open a pull request to make your contribution.
 
-**Code of Conduct**: Note that most GitHub repositories should have their own code of conduct. If they do not then ...
+**Code of Conduct**: DaSL GitHub repositories should have their own code of conduct - likely some version of the [Contributor Covenant][coc]. Refer to the COC in the repository for specific guidance.
+
+
+
+[DaSL]: https://hutchdatascience.org/
+[ghwilds]: https://github.com/getwilds
+[coc]: https://www.contributor-covenant.org/version/2/1/code_of_conduct/
