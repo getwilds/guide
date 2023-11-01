@@ -105,17 +105,10 @@
     "text": "6.2 Package releases\nIn general follow the Releasing to CRAN chapter in the book R Packages for R, and the Releasing and versioning chapter in the book Python Packages for Python. Those chapters don’t have to be followed to the letter, but in general they provide really good guidance.\nThere are a few aspects of releases we are opinionated about and would like DaSL R and Python packages to follow:\n\nFollow our versioning guidelines above\nGit tag released versions, and push the tag to GitHub\nAdd the associated NEWS/Changelog items to a release associated with the tag on GitHub"
   },
   {
-    "objectID": "security.html#package-security",
-    "href": "security.html#package-security",
+    "objectID": "security.html",
+    "href": "security.html",
     "title": "7  Security ",
-    "section": "7.1 Package security",
-    "text": "7.1 Package security\nKeeping secrets a secret is an important task and should not be an afterthought - but instead considered from the beginning of a package.\nIn general, the rOpenSci Development Guide has good advice on package security.\nAs time goes on we’ll document here if we have any strong opinions about security related aspects of packages."
-  },
-  {
-    "objectID": "security.html#data",
-    "href": "security.html#data",
-    "title": "7  Security ",
-    "section": "7.2 Data",
-    "text": "7.2 Data\nSoftware created in the WILDS may touch PII/PHI data.\n\n7.2.1 Package Data\nDo not include any PII/PHI data within a package. If data needs to be included in a package for tests, examples, etc., use fake data that is similar enough to be able to run tests/examples, etc.\nThere’s many packages in both R (e.g. charlatan, wakefield. fakir) and Python (e.g. faker) for creating fake data.\n\n\n7.2.2 Examples\nWe strongly encourage all exported, user-facing functions, to have examples. However, when PII/PHI data is a crucial part of an example for a function/class/etc. we need to take extra precautions.\nIn package documentation created with pkgdown (see Chapter 5) examples should use fake data included with the package.\nIf it makes sense to have examples that run with real data that might be PII/PHI data, those examples should xxxx"
+    "section": "",
+    "text": "xxx"
   }
 ]
