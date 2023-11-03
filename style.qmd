@@ -87,6 +87,13 @@ In the [getwilds/makefiles repo](https://github.com/getwilds/makefiles) we have 
 There's a few different options for `Ruff` for GitHub Actions. See [Ruff docs](https://docs.astral.sh/ruff/integrations/#github-actions) for details.
 
 
+## Resources
+
+Some other resources for writing better code:
+
+- [Tidy design principles](https://design.tidyverse.org/) by Hadley Wickham
+
+
 [tidystyle]: https://style.tidyverse.org/
 [styler]: https://styler.r-lib.org/
 [lintr]: https://lintr.r-lib.org/
