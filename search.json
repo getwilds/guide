@@ -28,18 +28,18 @@
     "text": "1.2 Software\nThis section concerns any software created in the GitHub repositories under the WILDS GitHub organization.\nFind the thing you would like to do below and follow its instructions.\nQuestion: If you have a question you can ask in the Slack linked above, or open an issue in any of the GitHub repositories.\nBug: If you want to report a bug, open an issue in the appropriate GitHub repository.\nFeature: If you want to request a feature, open an issue in the appropriate GitHub repository.\nContribute code/docs: If you want to contribute to software - whether code, documentation or something else - open an issue in the appropriate GitHub repository to discuss, then open a pull request to make your contribution.\nCode of Conduct: DaSL GitHub repositories should have their own code of conduct - likely some version of the Contributor Covenant. Refer to the COC in the repository for specific guidance."
   },
   {
-    "objectID": "style.html#package-styler",
-    "href": "style.html#package-styler",
+    "objectID": "style.html#r",
+    "href": "style.html#r",
     "title": "2  Style ",
-    "section": "2.1 Package styler",
-    "text": "2.1 Package styler\nThe styler package allows you to interactively format your code according to the tidyverse style guide.\nThe lintr package does automated checks of your code according to the style guide."
+    "section": "2.1 R",
+    "text": "2.1 R\n\n2.1.1 Package styler\nThe styler package allows you to interactively format your code according to the tidyverse style guide.\nThe lintr package does automated checks of your code according to the style guide.\n\n\n2.1.2 IDE and Text editor support\nRStudio supports styler via the Addins drop down; see the RStudio User Guide.\nSupport for styler in other editors is provided via the R languageserver:\n\nVSCode: vscode-R\nAtom: atom-ide-r\nSublime Text: R-IDE\nVim/NeoVim: LanguageClient-neovim\n\nSee the R languageserver GitHub repository for more information on using the R languageserver.\n\n\n2.1.3 Command line/Terminal/R\nIn the getwilds/makefiles repo we have an R package Makefile template with three make targets for styling package code: lint_package, style_file, and style_package. With that Makefile in the root of your package you can run lint_package to check for any problems, and run style_file or style_package to fix any problems. You can also just run the R code in those make targets in a terminal or within R.\n\n\n2.1.4 GitHub Actions\nTo get setup with GitHub Actions and lintr and styler, first install lintr if you don’t have it:\nif (!requireNamespace(\"pak\", quietly=TRUE)) {\n  install.packages(\"pak\")\n}\npak::pkg_install(\"lintr\")\nAnd then run:\nlintr::use_lintr()\nTo create a configuration file for lintr. In the file created (.lintr) you can set custom congifuration as needed for your package (see the lintr vignette).\nNext, run:\nusethis::use_github_action(\"lint\")\nwhich creates a file .github/workflows/lint.yaml in your package to run lintr checks on your package. This action only reports problems and does not fix them for you. If you want to have any problems fixed automatically and committed to your main branch, run:\nusethis::use_github_action(\"style\")\nNote that the above action will create commits all with the same message: \"Style code (GHA)\".\nWe think in most cases it makes sense to only use the lint action and not he style action, but you’re free to use either or both."
   },
   {
-    "objectID": "style.html#ide-and-text-editor-support",
-    "href": "style.html#ide-and-text-editor-support",
+    "objectID": "style.html#python",
+    "href": "style.html#python",
     "title": "2  Style ",
-    "section": "2.2 IDE and Text editor support",
-    "text": "2.2 IDE and Text editor support\nRStudio supports styler via the Addins drop down; see the RStudio User Guide.\nSupport for styler in other editors is provided via the R languageserver:\n\nVSCode: vscode-R\nAtom: atom-ide-r\nSublime Text: R-IDE\nVim/NeoVim: LanguageClient-neovim\n\nSee the R languageserver GitHub repository for more information on using the R languageserver."
+    "section": "2.2 Python",
+    "text": "2.2 Python\n\n2.2.1 Package Ruff\nThere are a number of different options for styling/formatting Python code, including Black, Flake8, isort, Ruff, and more. We recommend using Ruff as it’s extremely fast and encompasses all the things that the other tools do, and more.\n\n\n2.2.2 IDE and Text editor support\n\nVSCode: Ruff VS Code Extension\nSublime Text: via ruff-lsp\nVim/NeoVim: via ruff-lsp\n\nRuff supports the Language Server Protocol via the ruff-lsp.\n\n\n2.2.3 Command line/Terminal\nIn the getwilds/makefiles repo we have a Python package Makefile template with two make targets for styling package code: lint-fix and lint-check. With that Makefile in the root of your package you can run lint-check to check for any problems, and lint-fix to fix any problems. You can also just run the command line tools in a terminal (e.g., ruff check .).\n\n\n2.2.4 GitHub Actions\nThere’s a few different options for Ruff for GitHub Actions. See Ruff docs for details."
   },
   {
     "objectID": "codereview.html#dasl-interal-guidelines",
