@@ -42,6 +42,13 @@
     "text": "2.2 Python\n\n2.2.1 Package Ruff\nThere are a number of different options for styling/formatting Python code, including Black, Flake8, isort, Ruff, and more. We recommend using Ruff as it’s extremely fast and encompasses all the things that the other tools do, and more.\n\n\n2.2.2 IDE and Text editor support\n\nVSCode: Ruff VS Code Extension\nSublime Text: via ruff-lsp\nVim/NeoVim: via ruff-lsp\n\nRuff supports the Language Server Protocol via the ruff-lsp.\n\n\n2.2.3 Command line/Terminal\nIn the getwilds/makefiles repo we have a Python package Makefile template with two make targets for styling package code: lint-fix and lint-check. With that Makefile in the root of your package you can run lint-check to check for any problems, and lint-fix to fix any problems. You can also just run the command line tools in a terminal (e.g., ruff check .).\n\n\n2.2.4 GitHub Actions\nThere’s a few different options for Ruff for GitHub Actions. See Ruff docs for details."
   },
   {
+    "objectID": "style.html#resources",
+    "href": "style.html#resources",
+    "title": "2  Style ",
+    "section": "2.3 Resources",
+    "text": "2.3 Resources\nSome other resources for writing better code:\n\nTidy design principles by Hadley Wickham"
+  },
+  {
     "objectID": "codereview.html#dasl-interal-guidelines",
     "href": "codereview.html#dasl-interal-guidelines",
     "title": "3  Code review ",
