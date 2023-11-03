@@ -4,13 +4,15 @@ What is code style? It has to do with how you organize your code. The end goal o
 
 If you always write code by yourself and you're the only one that will ever look at it, that's one thing. But that's rarely the case, especially if you consider that yourself 6 months or 5 years from now is a user that is keenly interested in readable, consistent code. Readable, consistent code will be especially appreciated by other users and contributors.
 
-## Package styler
+## R
+
+### Package styler
 
 The [styler][] package allows you to interactively format your code according to the [tidyverse style guide][tidystyle].
 
 The [lintr][] package does automated checks of your code according to the style guide.
 
-## IDE and Text editor support
+### IDE and Text editor support
 
 RStudio supports styler via the Addins drop down; see the [RStudio User Guide][rstudioguide].
 
@@ -23,9 +25,75 @@ Support for `styler` in other editors is provided via the [R languageserver][lan
 
 See the [R languageserver][languageserver] GitHub repository for more information on using the R languageserver.
 
+### Command line/Terminal/R
+
+In the [getwilds/makefiles repo](https://github.com/getwilds/makefiles) we have an R package Makefile template with [three make targets](https://github.com/getwilds/makefiles/blob/main/R/Makefile#L31-L40) for styling package code: `lint_package`, `style_file`, and `style_package`. With that Makefile in the root of your package you can run `lint_package` to check for any problems, and run `style_file` or `style_package` to fix any problems. You can also just run the R code in those make targets in a terminal or within R.
+
+### GitHub Actions
+
+To get setup with GitHub Actions and `lintr` and `styler`, first install `lintr` if you don't have it:
+
+```r
+if (!requireNamespace("pak", quietly=TRUE)) {
+  install.packages("pak")
+}
+pak::pkg_install("lintr")
+```
+
+And then run:
+
+```r
+lintr::use_lintr()
+```
+
+To create a configuration file for `lintr`. In the file created (`.lintr`) you can set custom congifuration as needed for your package (see the [lintr vignette](https://lintr.r-lib.org/articles/lintr.html)).
+
+Next, run:
+
+```r
+usethis::use_github_action("lint")
+```
+
+which creates a file `.github/workflows/lint.yaml` in your package to run `lintr` checks on your package. This action only reports problems and does not fix them for you. If you want to have any problems fixed automatically and committed to your main branch, run:
+
+```r
+usethis::use_github_action("style")
+```
+
+Note that the above action will create commits all with the same message: `"Style code (GHA)"`.
+
+We think in most cases it makes sense to only use the `lint` action and not he `style` action, but you're free to use either or both.
+
+## Python
+
+### Package Ruff
+
+There are a number of different options for styling/formatting Python code, including [Black][], [Flake8][], [isort][], [Ruff][], and more. We recommend using `Ruff` as it's extremely fast and encompasses all the things that the other tools do, and more.
+
+### IDE and Text editor support
+
+* VSCode: [Ruff VS Code Extension](https://docs.astral.sh/ruff/integrations/#vs-code-official)
+* Sublime Text: [via ruff-lsp][ruff-lsp]
+* Vim/NeoVim: [via ruff-lsp](https://docs.astral.sh/ruff/integrations/#vim-neovim)
+
+Ruff supports the Language Server Protocol via the [ruff-lsp][].
+
+### Command line/Terminal
+
+In the [getwilds/makefiles repo](https://github.com/getwilds/makefiles) we have a Python package Makefile template with [two make targets](https://github.com/getwilds/makefiles/blob/main/Python/Makefile#L40-L48) for styling package code: `lint-fix` and `lint-check`. With that Makefile in the root of your package you can run `lint-check` to check for any problems, and `lint-fix` to fix any problems. You can also just run the command line tools in a terminal (e.g., `ruff check .`).
+
+### GitHub Actions
+
+There's a few different options for `Ruff` for GitHub Actions. See [Ruff docs](https://docs.astral.sh/ruff/integrations/#github-actions) for details.
+
 
 [tidystyle]: https://style.tidyverse.org/
 [styler]: https://styler.r-lib.org/
 [lintr]: https://lintr.r-lib.org/
 [languageserver]: https://github.com/REditorSupport/languageserver
 [rstudioguide]: https://docs.posit.co/ide/user/ide/guide/productivity/add-ins.html
+[Ruff]: https://docs.astral.sh/ruff
+[Black]: https://github.com/psf/black
+[Flake8]: https://pypi.org/project/flake8/
+[isort]: https://pypi.org/project/isort/
+[ruff-lsp]: https://docs.astral.sh/ruff/integrations/#language-server-protocol-official
