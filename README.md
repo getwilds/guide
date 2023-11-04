@@ -1,6 +1,6 @@
 # DaSL Contributor Guide
 
-<https://getwilds.github.io/guide/>
+<https://getwilds.org/guide/>
 
 The Fred Hutch Data Science Laboratory Contributor guide.
 
