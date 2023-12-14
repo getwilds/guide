@@ -1,3 +1,34 @@
 # Security {{< iconify fa6-solid lock >}} {#sec-security}
 
-xxx
+## Package security
+
+Keeping secrets a secret is an important task and should not be an afterthought - but instead considered from the beginning of a package.
+
+In general, the rOpenSci Development Guide has good advice on [package security](https://devguide.ropensci.org/package-development-security-best-practices.html).
+
+As time goes on we'll document here if we have any strong opinions about security related aspects of packages.
+
+## Data
+
+Software created in the WILDS may touch PII/PHI data.
+
+### Package Data
+
+Do not include any PII/PHI data within a package. If data needs to be included in a package for tests, examples, etc., use fake data that is similar enough to be able to run tests/examples, etc.
+
+There's many packages in both R (e.g. [charlatan][], [wakefield][]. [fakir][]) and Python (e.g. [faker][]) for creating fake data.
+
+### Examples
+
+We strongly encourage all exported, user-facing functions, to have examples. However, when PII/PHI data is a crucial part of an example for a function/class/etc. we need to take extra precautions.
+
+In package documentation created with pkgdown (see @sec-docs) examples should use fake data included with the package.
+
+If it makes sense to have examples that run with real data that might be PII/PHI data, those examples should xxxx
+
+
+
+[faker]: https://github.com/joke2k/faker
+[charlatan]: https://github.com/ropensci/charlatan
+[wakefield]: https://github.com/trinker/wakefield
+[fakir]: https://github.com/Thinkr-open/fakir/
