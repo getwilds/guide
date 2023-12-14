@@ -1,6 +1,6 @@
 # Contributing {{< iconify fa6-solid hammer >}} {#sec-contributing}
 
-This chapter is intended to direct you to the place you want to be, whether you want to get help, use software, contribute to software, and more. Reminder: the scope of this guide is software maintained by DaSL in the [WILDS GitHub organization][ghwilds]. If you'd like help with your own software schedule a [house call](https://calendly.com/data-house-calls).
+This chapter is intended to direct you to the place you want to be, whether you want to get help, use software, contribute to software, and more. Reminder: the scope of this guide is software maintained by DaSL in the [WILDS GitHub organization][ghwilds]. "Contributors" as used in this book includes DaSL staff as we are also contributors! If you'd like help with your own software schedule a [house call](https://calendly.com/data-house-calls).
 
 ## Communication Channels
 
@@ -10,7 +10,7 @@ This chapter is intended to direct you to the place you want to be, whether you 
 
 ## Software
 
-This section concerns any software created in the GitHub repositories under the [WILDS GitHub organization](https://github.com/getwilds).
+This book concerns any software created in the GitHub repositories under the [WILDS GitHub organization](https://github.com/getwilds).
 
 Find the thing you would like to do below and follow its instructions.
 
