@@ -8,6 +8,8 @@ This chapter is intended to direct you to the place you want to be, whether you 
 * GitHub Issues: Each GitHub repository has an issues tab where you can ask questions, propose a feature, and more. See below for more details.
 * Are there others?
 
+(HB) Maybe include the Data House Calls in this section? https://calendly.com/data-house-calls I know they are brought up in the previous section, but would be nice to reiterate in this section.
+
 ## Software
 
 This book concerns any software created in the GitHub repositories under the [WILDS GitHub organization](https://github.com/getwilds).

@@ -62,7 +62,7 @@ usethis::use_github_action("style")
 
 Note that the above action will create commits all with the same message: `"Style code (GHA)"`.
 
-We think in most cases it makes sense to only use the `lint` action and not he `style` action, but you're free to use either or both.
+We think in most cases it makes sense to only use the `lint` action and not the `style` action, but you're free to use either or both.
 
 ## Python
 
