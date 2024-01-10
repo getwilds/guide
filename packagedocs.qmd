@@ -36,7 +36,8 @@ For either of the options above, they can be hosted in many places, including [G
 
 - README: This is most likely the first place potential users will interact with your package. Make sure the README clearly states what the package does, and how to get started.
 - Examples: All user facing functions should have examples. Make sure to be careful about how examples are run if there's any sensitive data or connections to remote services.
-- (anything else?)
+- Vignettes: From the R Packages [book](https://r-pkgs.org/vignettes.html), a vignette is a long-form guide to your package. Function documentation is great if you know the name of the function you need, but it’s useless otherwise. In contrast, a vignette can be framed around a target problem that your package is designed to solve. The vignette format is perfect for showing a workflow that solves that particular problem, start to finish. Vignettes afford you different opportunities than help topics: you have much more control over the integration of code and prose and it’s a better setting for showing how multiple functions work together.
+
 
 [pkgdown]: https://pkgdown.r-lib.org/
 [rtd]: https://about.readthedocs.com/
