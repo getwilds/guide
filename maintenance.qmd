@@ -4,6 +4,32 @@
 source("common.R")
 ```
 
+The following discussions on this page apply to both R and Python software unless otherwise noted.
+
+## Licenses
+
+All software (R, Python, etc.) in the WILDS should by default use the [MIT license][mit].
+
+If there are circumstances which prevent using MIT, please do discuss with Sean or Scott.
+
+### R
+
+In R, you can add the MIT license to your repository with the following code:
+
+```{r use-license-mit, eval=FALSE}
+if (!requireNamespace("usethis", quietly = TRUE)) {
+  install.packages("usethis")
+}
+usethis::use_mit_license()
+```
+
+Note that `usethis::use_mit_license` adds two files to your repository (`LICENSE` and `LICENSE.md`, and adds entries to the `.Rbuildignore` file so that `R CMD CHECK` doesn't complain).
+
+### Python
+
+There's no widely accepted single tool for dealing with licenses in Python similar to the above for R. For Python packages, simply include the license type (e.g., `MIT`) in your setup.py, setup.cfg, pyproject.toml, etc., and include the text of the license in a `LICENSE` file in the root of your repository.
+
+
 ## Package versioning
 
 There is a detailed discussion of versioning R packages in the [lifecycle][] chapter of the [R Packages book][rpkgs] by Hadley Wickham and Jenny Bryan. Please follow that chapter in general for versioning of R and Python packages within DaSL. To make it easier to grok, below are some of the highlights, and some exceptions to that chapter.
@@ -38,6 +64,7 @@ In general follow the [Releasing to CRAN chapter](https://r-pkgs.org/release.htm
 
 There are a few aspects of releases we are opinionated about and would like DaSL R and Python packages to follow:
 
+- Use the MIT license unless there's good reason not to
 - Follow our versioning guidelines above
 - Git tag released versions, and push the tag to GitHub
 - Add the associated NEWS/Changelog items to a release associated with the tag on GitHub
@@ -47,3 +74,4 @@ There are a few aspects of releases we are opinionated about and would like DaSL
 [pypkgs]: https://py-pkgs.org
 [lifecycle]: https://r-pkgs.org/lifecycle.html
 [funcx]:https://r-pkgs.org/lifecycle.html#sec-lifecycle-stages-and-package
+[mit]: https://choosealicense.com/licenses/mit/
