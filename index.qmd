@@ -24,7 +24,12 @@ Inspiration for this guide is taken in part from:
 - [Tidyverse Style Guide](https://style.tidyverse.org/)
 - [rOpenSci Dev Guide](https://devguide.ropensci.org/)
 
+## License
+
+This book is licensed to you under [Creative Commons CC0 1.0 Universal (CC0 1.0)][cc0], i.e. public domain.
+
 
 [DaSL]: https://hutchdatascience.org/
 [R]: https://www.r-project.org/
 [Python]: https://www.python.org/
+[cc0]: https://creativecommons.org/publicdomain/zero/1.0/

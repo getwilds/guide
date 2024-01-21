@@ -9,3 +9,4 @@ Imports:
 Remotes: r-lib/testthat
 URL: https://github.com/getwilds/guide
 BugReports: https://github.com/getwilds/guide/issues
+License: CC0
