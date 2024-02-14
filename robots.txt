@@ -1,0 +1,1 @@
+Sitemap: https://getwilds.org/guide/sitemap.xml
