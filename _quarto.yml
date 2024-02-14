@@ -20,6 +20,7 @@ book:
     - packagedocs.qmd
     - maintenance.qmd
     - security.qmd
+    - conventions.qmd
   site-url: https://getwilds.org/guide/
 
 bibliography: references.bib

@@ -1,0 +1,23 @@
+# Conventions {{< iconify fa6-solid person-digging >}} {#sec-conventions}
+
+## GitHub Repositories
+
+### Issue labels
+
+In the WILDS repo `sixtyfour` there's [a set of 9 labels](https://github.com/getwilds/sixtyfour/labels) that have been proposed as common labels across WILDS repos. These aren't necessarily enforced across WILDS repos, but can be used.
+
+Though we have not done this, one can set default labels for all repositories in WILDS - [instructions here](https://docs.github.com/en/organizations/managing-organization-settings/managing-default-labels-for-repositories-in-your-organization).
+
+A [blogpost](https://napjose.ph/posts/copy-issue-labels-from-another-github-repository) shows how to copy labels from one repository to another using the [gh command line tool](https://cli.github.com/) from GitHub. This command line method may be a better choice if we’re not sure we want to go all in on default labels for every new repo. Here's the command:
+
+```r
+gh label clone getwilds/source-repo-name --repo getwilds/destination-repo-name --force
+```
+
+### Badges
+
+WILDS projects will use badges to indicate their status. Badges are a widely used standard in source code repositories, and help quickly indicate to a potential user something typically important about the repository.
+
+WILDS badges are maintained in a GitHub repository at <https://github.com/getwilds/badges>. There's a website for these badges and an easy click to copy interface at <https://getwilds.org/badges/>.
+
+An example badge: [![](https://getwilds.org/badges/badges/stable.svg)](https://getwilds.org/badges/#stable)

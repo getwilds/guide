@@ -14,6 +14,7 @@ The book covers important aspects of software development, including how to get 
 - Package documentation: @sec-docs
 - Package maintenance: @sec-maintenance
 - Security: @sec-security
+- Conventions: @sec-conventions
 
 [DaSL][] primarily develops software in the [R][] and [Python][] programming languages. Where necessary, we'll discuss a topic with respect to both languages.
 
