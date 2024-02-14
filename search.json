@@ -4,118 +4,209 @@
     "href": "index.html",
     "title": "DaSL Contributor Guide",
     "section": "",
-    "text": "Welcome\nThis book is a resource for the community of people using, contributing to, and maintaining software at the Fred Hutch Cancer Center Data Science Lab (DaSL).\nThe book covers important aspects of software development, including how to get involved in software as a user or contributor, code style, code review, package documentation, and more. It includes both internal facing guidelines as well as for any contributions from folks other than DaSL staff.\nDaSL primarily develops software in the R and Python programming languages. Where necessary, we’ll discuss a topic with respect to both languages."
+    "text": "Welcome\nThis book is a resource for the community of people using, contributing to, and maintaining software at the Fred Hutch Cancer Center Data Science Lab (DaSL).\nThe book covers important aspects of software development, including how to get involved in software as a user or contributor, code style, code review, package documentation, and more. It includes both internal facing guidelines as well as for any contributions from folks other than DaSL staff.\nDaSL primarily develops software in the R and Python programming languages. Where necessary, we’ll discuss a topic with respect to both languages.",
+    "crumbs": [
+      "Welcome"
+    ]
   },
   {
     "objectID": "index.html#inspiration",
     "href": "index.html#inspiration",
     "title": "DaSL Contributor Guide",
     "section": "Inspiration",
-    "text": "Inspiration\nInspiration for this guide is taken in part from:\n\nTidyverse Style Guide\nrOpenSci Dev Guide"
+    "text": "Inspiration\nInspiration for this guide is taken in part from:\n\nTidyverse Style Guide\nrOpenSci Dev Guide",
+    "crumbs": [
+      "Welcome"
+    ]
   },
   {
     "objectID": "index.html#license",
     "href": "index.html#license",
     "title": "DaSL Contributor Guide",
     "section": "License",
-    "text": "License\nThis book is licensed to you under Creative Commons CC0 1.0 Universal (CC0 1.0), i.e. public domain."
+    "text": "License\nThis book is licensed to you under Creative Commons CC0 1.0 Universal (CC0 1.0), i.e. public domain.",
+    "crumbs": [
+      "Welcome"
+    ]
+  },
+  {
+    "objectID": "contributing.html",
+    "href": "contributing.html",
+    "title": "1  Contributing ",
+    "section": "",
+    "text": "1.1 Communication Channels",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Contributing {{< iconify fa6-solid hammer >}}</span>"
+    ]
   },
   {
     "objectID": "contributing.html#communication-channels",
     "href": "contributing.html#communication-channels",
     "title": "1  Contributing ",
-    "section": "1.1 Communication Channels",
-    "text": "1.1 Communication Channels\n\nSlack: Fred Hutch folks can chat with other community members and DaSL and Fred Hutch SciComp staff in the Fred Hutch Data Slack. Join our Slack here  https://hutchdatascience.org/joinslack/\nGitHub Issues: Each GitHub repository has an issues tab where you can ask questions, propose a feature, and more. See below for more details.\nAre there others?"
+    "section": "",
+    "text": "Slack: Fred Hutch folks can chat with other community members and DaSL and Fred Hutch SciComp staff in the Fred Hutch Data Slack. Join our Slack here  https://hutchdatascience.org/joinslack/\nGitHub Issues: Each GitHub repository has an issues tab where you can ask questions, propose a feature, and more. See below for more details.\nData House Calls: https://calendly.com/data-house-calls",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Contributing {{< iconify fa6-solid hammer >}}</span>"
+    ]
   },
   {
     "objectID": "contributing.html#software",
     "href": "contributing.html#software",
     "title": "1  Contributing ",
     "section": "1.2 Software",
-    "text": "1.2 Software\nThis book concerns any software created in the GitHub repositories under the WILDS GitHub organization.\nFind the thing you would like to do below and follow its instructions.\nQuestion: If you have a question you can ask in the Slack linked above, or open an issue in any of the GitHub repositories.\nBug: If you want to report a bug, open an issue in the appropriate GitHub repository.\nFeature: If you want to request a feature, open an issue in the appropriate GitHub repository.\nContribute code/docs: If you want to contribute to software - whether code, documentation or something else - open an issue in the appropriate GitHub repository to discuss, then open a pull request to make your contribution.\nCode of Conduct: DaSL GitHub repositories should have their own code of conduct - likely some version of the Contributor Covenant. Refer to the COC in the repository for specific guidance."
+    "text": "1.2 Software\nThis book concerns any software created in the GitHub repositories under the WILDS GitHub organization.\nFind the thing you would like to do below and follow its instructions.\nQuestion: If you have a question you can ask in the Slack linked above, or open an issue in any of the GitHub repositories.\nBug: If you want to report a bug, open an issue in the appropriate GitHub repository.\nFeature: If you want to request a feature, open an issue in the appropriate GitHub repository.\nContribute code/docs: If you want to contribute to software - whether code, documentation or something else - open an issue in the appropriate GitHub repository to discuss, then open a pull request to make your contribution.\nCode of Conduct: DaSL GitHub repositories should have their own code of conduct - likely some version of the Contributor Covenant. Refer to the COC in the repository for specific guidance.",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Contributing {{< iconify fa6-solid hammer >}}</span>"
+    ]
+  },
+  {
+    "objectID": "style.html",
+    "href": "style.html",
+    "title": "2  Style ",
+    "section": "",
+    "text": "2.1 R",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Style {{< iconify fa6-solid code >}}</span>"
+    ]
   },
   {
     "objectID": "style.html#r",
     "href": "style.html#r",
     "title": "2  Style ",
-    "section": "2.1 R",
-    "text": "2.1 R\n\n2.1.1 Package styler\nThe styler package allows you to interactively format your code according to the tidyverse style guide.\nThe lintr package does automated checks of your code according to the style guide.\n\n\n2.1.2 IDE and Text editor support\nRStudio supports styler via the Addins drop down; see the RStudio User Guide.\nSupport for styler in other editors is provided via the R languageserver:\n\nVSCode: vscode-R\nAtom: atom-ide-r\nSublime Text: R-IDE\nVim/NeoVim: LanguageClient-neovim\n\nSee the R languageserver GitHub repository for more information on using the R languageserver.\n\n\n2.1.3 Command line/Terminal/R\nIn the getwilds/makefiles repo we have an R package Makefile template with three make targets for styling package code: lint_package, style_file, and style_package. With that Makefile in the root of your package you can run lint_package to check for any problems, and run style_file or style_package to fix any problems. You can also just run the R code in those make targets in a terminal or within R.\n\n\n2.1.4 GitHub Actions\nTo get setup with GitHub Actions and lintr and styler, first install lintr if you don’t have it:\nif (!requireNamespace(\"pak\", quietly=TRUE)) {\n  install.packages(\"pak\")\n}\npak::pkg_install(\"lintr\")\nAnd then run:\nlintr::use_lintr()\nTo create a configuration file for lintr. In the file created (.lintr) you can set custom congifuration as needed for your package (see the lintr vignette).\nNext, run:\nusethis::use_github_action(\"lint\")\nwhich creates a file .github/workflows/lint.yaml in your package to run lintr checks on your package. This action only reports problems and does not fix them for you. If you want to have any problems fixed automatically and committed to your main branch, run:\nusethis::use_github_action(\"style\")\nNote that the above action will create commits all with the same message: \"Style code (GHA)\".\nWe think in most cases it makes sense to only use the lint action and not he style action, but you’re free to use either or both."
+    "section": "",
+    "text": "2.1.1 Package styler\nThe styler package allows you to interactively format your code according to the tidyverse style guide.\nThe lintr package does automated checks of your code according to the style guide.\n\n\n2.1.2 IDE and Text editor support\nRStudio supports styler via the Addins drop down; see the RStudio User Guide.\nSupport for styler in other editors is provided via the R languageserver:\n\nVSCode: vscode-R\nAtom: atom-ide-r\nSublime Text: R-IDE\nVim/NeoVim: LanguageClient-neovim\n\nSee the R languageserver GitHub repository for more information on using the R languageserver.\n\n\n2.1.3 Command line/Terminal/R\nIn the getwilds/makefiles repo we have an R package Makefile template with three make targets for styling package code: lint_package, style_file, and style_package. With that Makefile in the root of your package you can run lint_package to check for any problems, and run style_file or style_package to fix any problems. You can also just run the R code in those make targets in a terminal or within R.\n\n\n2.1.4 GitHub Actions\nTo get setup with GitHub Actions and lintr and styler, first install lintr if you don’t have it:\nif (!requireNamespace(\"pak\", quietly=TRUE)) {\n  install.packages(\"pak\")\n}\npak::pkg_install(\"lintr\")\nAnd then run:\nlintr::use_lintr()\nTo create a configuration file for lintr. In the file created (.lintr) you can set custom congifuration as needed for your package (see the lintr vignette).\nNext, run:\nusethis::use_github_action(\"lint\")\nwhich creates a file .github/workflows/lint.yaml in your package to run lintr checks on your package. This action only reports problems and does not fix them for you. If you want to have any problems fixed automatically and committed to your main branch, run:\nusethis::use_github_action(\"style\")\nNote that the above action will create commits all with the same message: \"Style code (GHA)\".\nWe think in most cases it makes sense to only use the lint action and not the style action, but you’re free to use either or both.",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Style {{< iconify fa6-solid code >}}</span>"
+    ]
   },
   {
     "objectID": "style.html#python",
     "href": "style.html#python",
     "title": "2  Style ",
     "section": "2.2 Python",
-    "text": "2.2 Python\n\n2.2.1 Package Ruff\nThere are a number of different options for styling/formatting Python code, including Black, Flake8, isort, Ruff, and more. We recommend using Ruff as it’s extremely fast and encompasses all the things that the other tools do, and more.\n\n\n2.2.2 IDE and Text editor support\n\nVSCode: Ruff VS Code Extension\nSublime Text: via ruff-lsp\nVim/NeoVim: via ruff-lsp\n\nRuff supports the Language Server Protocol via the ruff-lsp.\n\n\n2.2.3 Command line/Terminal\nIn the getwilds/makefiles repo we have a Python package Makefile template with two make targets for styling package code: lint-fix and lint-check. With that Makefile in the root of your package you can run lint-check to check for any problems, and lint-fix to fix any problems. You can also just run the command line tools in a terminal (e.g., ruff check .).\n\n\n2.2.4 GitHub Actions\nThere’s a few different options for Ruff for GitHub Actions. See Ruff docs for details."
+    "text": "2.2 Python\n\n2.2.1 Package Ruff\nThere are a number of different options for styling/formatting Python code, including Black, Flake8, isort, Ruff, and more. We recommend using Ruff as it’s extremely fast and encompasses all the things that the other tools do, and more.\n\n\n2.2.2 IDE and Text editor support\n\nVSCode: Ruff VS Code Extension\nSublime Text: via ruff-lsp\nVim/NeoVim: via ruff-lsp\n\nRuff supports the Language Server Protocol via the ruff-lsp.\n\n\n2.2.3 Command line/Terminal\nIn the getwilds/makefiles repo we have a Python package Makefile template with two make targets for styling package code: lint-fix and lint-check. With that Makefile in the root of your package you can run lint-check to check for any problems, and lint-fix to fix any problems. You can also just run the command line tools in a terminal (e.g., ruff check .).\n\n\n2.2.4 GitHub Actions\nThere’s a few different options for Ruff for GitHub Actions. See Ruff docs for details.",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Style {{< iconify fa6-solid code >}}</span>"
+    ]
   },
   {
     "objectID": "style.html#resources",
     "href": "style.html#resources",
     "title": "2  Style ",
     "section": "2.3 Resources",
-    "text": "2.3 Resources\nSome other resources for writing better code:\n\nTidy design principles by Hadley Wickham"
+    "text": "2.3 Resources\nSome other resources for writing better code:\n\nTidy design principles by Hadley Wickham\nThe Programmatic Programmer by David Thomas, Andrew Hunt\nSoftware Engineering at Google curated by Titus Winters, Tom Manshreck and Hyrum Wright.",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Style {{< iconify fa6-solid code >}}</span>"
+    ]
   },
   {
-    "objectID": "codereview.html#dasl-interal-guidelines",
-    "href": "codereview.html#dasl-interal-guidelines",
+    "objectID": "codereview.html",
+    "href": "codereview.html",
     "title": "3  Code review ",
-    "section": "3.1 DaSL interal guidelines",
-    "text": "3.1 DaSL interal guidelines\nstill discussing this internally …"
+    "section": "",
+    "text": "3.1 DaSL interal guidelines\nstill discussing this internally …",
+    "crumbs": [
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Code review {{< iconify fa6-solid pencil >}}</span>"
+    ]
   },
   {
     "objectID": "codereview.html#community-guidelines",
     "href": "codereview.html#community-guidelines",
     "title": "3  Code review ",
     "section": "3.2 Community guidelines",
-    "text": "3.2 Community guidelines\nWe have code review guidance for labs at https://hutchdatascience.org/code_review/. The site contains higher level code review guidance broken down by lab roles, including lab leader, lab manager and lab developer.\nIf you want lower level code review guidance the Advanced Reproducibility in Cancer Informatics course has two chapters that will be helpful:\n\nEngaging in Code Review - as an author\nEngaging in Code Review - as a reviewer"
+    "text": "3.2 Community guidelines\nWe have code review guidance for labs at https://hutchdatascience.org/code_review/. The site contains higher level code review guidance broken down by lab roles, including lab leader, lab manager and lab developer.\nIf you want lower level code review guidance, the Advanced Reproducibility in Cancer Informatics course has two chapters that will be helpful:\n\nEngaging in Code Review - as an author\nEngaging in Code Review - as a reviewer",
+    "crumbs": [
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Code review {{< iconify fa6-solid pencil >}}</span>"
+    ]
+  },
+  {
+    "objectID": "packagedocs.html",
+    "href": "packagedocs.html",
+    "title": "4  Documentation ",
+    "section": "",
+    "text": "4.1 R\nWe use the pkgdown package to create documentation for R packages, and host it on GitHub Pages. To get started with pkgdown, in R within the root of your package run usethis::use_pkgdown_github_pages() - it will set up a _pkgdown.yml file in the root of your repo used to configure pkgdown, and add a .github/workflows/publish.yml file to build the package documentation on each push, pull request, or release. See pkgdown documentation for details on configuring documentation.\nAfter pushing the above changes up to your repository, go to the Actions tab and you should see the new publish action running. It will build and then deploy the rendered package docs. The URL for your docs will vary depending on the GitHub organization your repository lives within. For WILDS, the base URL is https://getwilds.org. If your package is in the WILDS org (at https://github.com/getwilds) your package (named mypkg) docs would live at https://getwilds.org/mypkg.\nYou can also build pkgdown docs locally - after running usethis::use_pkgdown() or usethis::use_pkgdown_github_pages() - by running pkgdown::build_site(). If you run build_site() within RStudio it should open up your site in your default browser, but may not do so if you run in a terminal. You can open the site in your browser by navigating to and opening the file docs/index.html within your repo.",
+    "crumbs": [
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Documentation {{< iconify fa6-solid book >}}</span>"
+    ]
   },
   {
     "objectID": "packagedocs.html#r",
     "href": "packagedocs.html#r",
     "title": "4  Documentation ",
-    "section": "4.1 R",
-    "text": "4.1 R\nWe use the pkgdown package to create documentation for R packages, and host it on GitHub Pages. To get started with pkgdown, in R within the root of your package run usethis::use_pkgdown_github_pages() - it will set up a _pkgdown.yml file in the root of your repo used to configure pkgdown, and add a .github/workflows/publish.yml file to build the package documentation on each push, pull request, or release. See pkgdown documentation for details on configuring documentation.\nAfter pushing the above changes up to your repository, go to the Actions tab and you should see the new publish action running. It will build and then deploy the rendered package docs. The URL for your docs will vary depending on the GitHub organization your repository lives within. For WILDS, the base URL is https://getwilds.org. If your package is in the WILDS org (at https://github.com/getwilds) your package (named mypkg) docs would live at https://getwilds.org/mypkg.\nYou can also build pkgdown docs locally - after running usethis::use_pkgdown() or usethis::use_pkgdown_github_pages() - by running pkgdown::build_site(). If you run build_site() within RStudio it should open up your site in your default browser, but may not do so if you run in a terminal. You can open the site in your browser by navigating to and opening the file docs/index.html within your repo.\n\n4.1.1 DaSL pkgdown template\nWe are planning to have a DaSL specific pkgdown “package template” (see pkgdown docs for what this means) - but it’s not ready to use yet. When it is ready, you will be able to specify our template like:\ntemplate:\n  package: dasltemplate\nFor now just use the default theme that pkgdown provides."
+    "section": "",
+    "text": "4.1.1 DaSL pkgdown template\nWe are planning to have a DaSL specific pkgdown “package template” (see pkgdown docs for what this means) - but it’s not ready to use yet. When it is ready, you will be able to specify our template like:\ntemplate:\n  package: dasltemplate\nFor now just use the default theme that pkgdown provides.",
+    "crumbs": [
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Documentation {{< iconify fa6-solid book >}}</span>"
+    ]
   },
   {
     "objectID": "packagedocs.html#python",
     "href": "packagedocs.html#python",
     "title": "4  Documentation ",
     "section": "4.2 Python",
-    "text": "4.2 Python\nJust like there’s a variety of ways to do packing in Python there’s a variety of documentation options. Two of the well known options are:\n\nSphinx - been around longer, uses reStructuredText\nMkDocs - newcomer, used Markdown\n\nFor either of the options above, they can be hosted in many places, including GitHub Pages and ReadTheDocs.\nSphinx and MkDocs are less automatic relative to pkgdown, so just be prepared for a bit more manual work."
+    "text": "4.2 Python\nJust like there’s a variety of ways to do packing in Python there’s a variety of documentation options. Two of the well known options are:\n\nSphinx - been around longer, uses reStructuredText\nMkDocs - newcomer, used Markdown\n\nFor either of the options above, they can be hosted in many places, including GitHub Pages and ReadTheDocs.\nSphinx and MkDocs are less automatic relative to pkgdown, so just be prepared for a bit more manual work.",
+    "crumbs": [
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Documentation {{< iconify fa6-solid book >}}</span>"
+    ]
   },
   {
     "objectID": "packagedocs.html#guidelines",
     "href": "packagedocs.html#guidelines",
     "title": "4  Documentation ",
     "section": "4.3 Guidelines",
-    "text": "4.3 Guidelines\n\nREADME: This is most likely the first place potential users will interact with your package. Make sure the README clearly states what the package does, and how to get started.\nExamples: All user facing functions should have examples. Make sure to be careful about how examples are run if there’s any sensitive data or connections to remote services.\n(anything else?)"
+    "text": "4.3 Guidelines\n\nREADME: This is most likely the first place potential users will interact with your package. Make sure the README clearly states what the package does, and how to get started.\nExamples: All user facing functions should have examples. Make sure to be careful about how examples are run if there’s any sensitive data or connections to remote services.\nVignettes: From the R Packages book, a vignette is a long-form guide to your package. Function documentation is great if you know the name of the function you need, but it’s useless otherwise. In contrast, a vignette can be framed around a target problem that your package is designed to solve. The vignette format is perfect for showing a workflow that solves that particular problem, start to finish. Vignettes afford you different opportunities than help topics: you have much more control over the integration of code and prose and it’s a better setting for showing how multiple functions work together.",
+    "crumbs": [
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Documentation {{< iconify fa6-solid book >}}</span>"
+    ]
+  },
+  {
+    "objectID": "maintenance.html",
+    "href": "maintenance.html",
+    "title": "5  Package maintenance ",
+    "section": "",
+    "text": "5.1 Licenses\nAll software (R, Python, etc.) in the WILDS should by default use the MIT license.\nIf there are circumstances which prevent using MIT, please do discuss with Sean or Scott.",
+    "crumbs": [
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Package maintenance {{< iconify fa6-solid code-compare >}}</span>"
+    ]
   },
   {
     "objectID": "maintenance.html#licenses",
     "href": "maintenance.html#licenses",
     "title": "5  Package maintenance ",
-    "section": "5.1 Licenses",
-    "text": "5.1 Licenses\nAll software (R, Python, etc.) in the WILDS should by default use the MIT license.\nIf there are circumstances which prevent using MIT, please do discuss with Sean or Scott.\n\n5.1.1 R\nIn R, you can add the MIT license to your repository with the following code:\n\nif (!requireNamespace(\"usethis\", quietly = TRUE)) {\n  install.packages(\"usethis\")\n}\nusethis::use_mit_license()\n\nNote that usethis::use_mit_license adds two files to your repository (LICENSE and LICENSE.md, and adds entries to the .Rbuildignore file so that R CMD CHECK doesn’t complain).\n\n\n5.1.2 Python\nThere’s no widely accepted single tool for dealing with licenses in Python similar to the above for R. For Python packages, simply include the license type (e.g., MIT) in your setup.py, setup.cfg, pyproject.toml, etc., and include the text of the license in a LICENSE file in the root of your repository."
+    "section": "",
+    "text": "5.1.1 R\nIn R, you can add the MIT license to your repository with the following code:\n\nif (!requireNamespace(\"usethis\", quietly = TRUE)) {\n  install.packages(\"usethis\")\n}\nusethis::use_mit_license()\n\nNote that usethis::use_mit_license adds two files to your repository (LICENSE and LICENSE.md, and adds entries to the .Rbuildignore file so that R CMD CHECK doesn’t complain).\n\n\n5.1.2 Python\nThere’s no widely accepted single tool for dealing with licenses in Python similar to the above for R. For Python packages, simply include the license type (e.g., MIT) in your setup.py, setup.cfg, pyproject.toml, etc., and include the text of the license in a LICENSE file in the root of your repository.",
+    "crumbs": [
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Package maintenance {{< iconify fa6-solid code-compare >}}</span>"
+    ]
   },
   {
     "objectID": "maintenance.html#package-versioning",
     "href": "maintenance.html#package-versioning",
     "title": "5  Package maintenance ",
     "section": "5.2 Package versioning",
-    "text": "5.2 Package versioning\nThere is a detailed discussion of versioning R packages in the lifecycle chapter of the R Packages book by Hadley Wickham and Jenny Bryan. Please follow that chapter in general for versioning of R and Python packages within DaSL. To make it easier to grok, below are some of the highlights, and some exceptions to that chapter.\n\n5.2.1 Package version numbers\nThere’s quite a bit of nuance - and surprises - to package version numbers - see the Package version number section for details. For example, using the utils::package_version() function, which parses package version strings into S3 classes, we get a suprising result:\n\n\"2.0\" &gt; \"10.0\"\n#&gt; [1] TRUE\npackage_version(\"2.0\") &gt; package_version(\"10.0\")\n#&gt; [1] FALSE\n\nWith that example, please do think about your package versions before setting them.\n\n5.2.1.1 DaSL Conventions\nFollowing the Tidyverse package version conventions, DaSL packages will use the following conventions (see the link for more details):\n\nAlways use . as the separator, never use -.\nA released version number consists of three components, &lt;major&gt;.&lt;minor&gt;.&lt;patch&gt;\nWhile a package is in between releases, there is a fourth component: the development version, starting at 9000 (e.g., 0.2.2.9000), and incrementing from there until the package has another release at which point return to three components.\n\n\n\n\n5.2.2 Ignore these\nWe are not following or enforcing any rules about changes at the function/class/etc level below the package level. For example, the R Packages book talks about using the lifecycle package to deal with function changes."
+    "text": "5.2 Package versioning\nThere is a detailed discussion of versioning R packages in the lifecycle chapter of the R Packages book by Hadley Wickham and Jenny Bryan. Please follow that chapter in general for versioning of R and Python packages within DaSL. To make it easier to grok, below are some of the highlights, and some exceptions to that chapter.\n\n5.2.1 Package version numbers\nThere’s quite a bit of nuance - and surprises - to package version numbers - see the Package version number section for details. For example, using the utils::package_version() function, which parses package version strings into S3 classes, we get a suprising result:\n\n\"2.0\" &gt; \"10.0\"\n#&gt; [1] TRUE\npackage_version(\"2.0\") &gt; package_version(\"10.0\")\n#&gt; [1] FALSE\n\nWith that example, please do think about your package versions before setting them.\n\n5.2.1.1 DaSL Conventions\nFollowing the Tidyverse package version conventions, DaSL packages will use the following conventions (see the link for more details):\n\nAlways use . as the separator, never use -.\nA released version number consists of three components, &lt;major&gt;.&lt;minor&gt;.&lt;patch&gt;\nWhile a package is in between releases, there is a fourth component: the development version, starting at 9000 (e.g., 0.2.2.9000), and incrementing from there until the package has another release at which point return to three components.\n\n\n\n\n5.2.2 Ignore these\nWe are not following or enforcing any rules about changes at the function/class/etc level below the package level. For example, the R Packages book talks about using the lifecycle package to deal with function changes.",
+    "crumbs": [
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Package maintenance {{< iconify fa6-solid code-compare >}}</span>"
+    ]
   },
   {
     "objectID": "maintenance.html#package-releases",
     "href": "maintenance.html#package-releases",
     "title": "5  Package maintenance ",
     "section": "5.3 Package releases",
-    "text": "5.3 Package releases\nIn general follow the Releasing to CRAN chapter in the book R Packages for R, and the Releasing and versioning chapter in the book Python Packages for Python. Those chapters don’t have to be followed to the letter, but in general they provide really good guidance.\nThere are a few aspects of releases we are opinionated about and would like DaSL R and Python packages to follow:\n\nUse the MIT license unless there’s good reason not to\nFollow our versioning guidelines above\nGit tag released versions, and push the tag to GitHub\nAdd the associated NEWS/Changelog items to a release associated with the tag on GitHub"
+    "text": "5.3 Package releases\nIn general follow the Releasing to CRAN chapter in the book R Packages for R, and the Releasing and versioning chapter in the book Python Packages for Python. Those chapters don’t have to be followed to the letter, but in general they provide really good guidance.\nThere are a few aspects of releases we are opinionated about and would like DaSL R and Python packages to follow:\n\nUse the MIT license unless there’s good reason not to\nFollow our versioning guidelines above\nGit tag released versions, and push the tag to GitHub\nAdd the associated NEWS/Changelog items to a release associated with the tag on GitHub",
+    "crumbs": [
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Package maintenance {{< iconify fa6-solid code-compare >}}</span>"
+    ]
   },
   {
     "objectID": "security.html",
     "href": "security.html",
     "title": "6  Security ",
     "section": "",
-    "text": "xxx"
+    "text": "xxx",
+    "crumbs": [
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Security {{< iconify fa6-solid lock >}}</span>"
+    ]
   }
 ]
