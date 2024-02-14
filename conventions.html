@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>DaSL Contributor Guide - 3&nbsp; Code review </title>
+<title>DaSL Contributor Guide - 7&nbsp; Conventions </title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -20,6 +20,40 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
 </style>
 
 
@@ -30,8 +64,7 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
-<link href="./packagedocs.html" rel="next">
-<link href="./style.html" rel="prev">
+<link href="./security.html" rel="prev">
 <script src="site_libs/quarto-html/quarto.js"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
@@ -84,7 +117,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./codereview.html"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Code review {{&lt; iconify fa6-solid pencil &gt;}}</span></a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./conventions.html"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Conventions {{&lt; iconify fa6-solid person-digging &gt;}}</span></a></li></ol></nav>
         <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="" onclick="window.quartoOpenSearch();">
@@ -138,7 +171,7 @@ ul.task-list li input[type="checkbox"] {
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./codereview.html" class="sidebar-item-text sidebar-link active">
+  <a href="./codereview.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Code review </span></span></a>
   </div>
 </li>
@@ -162,7 +195,7 @@ ul.task-list li input[type="checkbox"] {
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./conventions.html" class="sidebar-item-text sidebar-link">
+  <a href="./conventions.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Conventions </span></span></a>
   </div>
 </li>
@@ -176,17 +209,20 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">Table of contents</h2>
    
   <ul>
-  <li><a href="#dasl-interal-guidelines" id="toc-dasl-interal-guidelines" class="nav-link active" data-scroll-target="#dasl-interal-guidelines"><span class="header-section-number">3.1</span> DaSL interal guidelines</a></li>
-  <li><a href="#community-guidelines" id="toc-community-guidelines" class="nav-link" data-scroll-target="#community-guidelines"><span class="header-section-number">3.2</span> Community guidelines</a></li>
+  <li><a href="#github-repositories" id="toc-github-repositories" class="nav-link active" data-scroll-target="#github-repositories"><span class="header-section-number">7.1</span> GitHub Repositories</a>
+  <ul class="collapse">
+  <li><a href="#issue-labels" id="toc-issue-labels" class="nav-link" data-scroll-target="#issue-labels"><span class="header-section-number">7.1.1</span> Issue labels</a></li>
+  <li><a href="#badges" id="toc-badges" class="nav-link" data-scroll-target="#badges"><span class="header-section-number">7.1.2</span> Badges</a></li>
+  </ul></li>
   </ul>
-<div class="toc-actions"><ul><li><a href="https://github.com/getwilds/guide/edit/main/codereview.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/getwilds/guide/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
+<div class="toc-actions"><ul><li><a href="https://github.com/getwilds/guide/edit/main/conventions.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/getwilds/guide/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title"><span id="sec-review" class="quarto-section-identifier"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Code review <iconify-icon inline="" icon="fa6-solid:pencil"></iconify-icon></span></span></h1>
+<h1 class="title"><span id="sec-conventions" class="quarto-section-identifier"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Conventions <iconify-icon inline="" icon="fa6-solid:person-digging"></iconify-icon></span></span></h1>
 </div>
 
 
@@ -203,21 +239,23 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<p>Code review ….</p>
-<section id="dasl-interal-guidelines" class="level2" data-number="3.1">
-<h2 data-number="3.1" class="anchored" data-anchor-id="dasl-interal-guidelines"><span class="header-section-number">3.1</span> DaSL interal guidelines</h2>
-<p>still discussing this internally …</p>
+<section id="github-repositories" class="level2" data-number="7.1">
+<h2 data-number="7.1" class="anchored" data-anchor-id="github-repositories"><span class="header-section-number">7.1</span> GitHub Repositories</h2>
+<section id="issue-labels" class="level3" data-number="7.1.1">
+<h3 data-number="7.1.1" class="anchored" data-anchor-id="issue-labels"><span class="header-section-number">7.1.1</span> Issue labels</h3>
+<p>In the WILDS repo <code>sixtyfour</code> there’s <a href="https://github.com/getwilds/sixtyfour/labels">a set of 9 labels</a> that have been proposed as common labels across WILDS repos. These aren’t necessarily enforced across WILDS repos, but can be used.</p>
+<p>Though we have not done this, one can set default labels for all repositories in WILDS - <a href="https://docs.github.com/en/organizations/managing-organization-settings/managing-default-labels-for-repositories-in-your-organization">instructions here</a>.</p>
+<p>A <a href="https://napjose.ph/posts/copy-issue-labels-from-another-github-repository">blogpost</a> shows how to copy labels from one repository to another using the <a href="https://cli.github.com/">gh command line tool</a> from GitHub. This command line method may be a better choice if we’re not sure we want to go all in on default labels for every new repo. Here’s the command:</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>gh label clone getwilds<span class="sc">/</span>source<span class="sc">-</span>repo<span class="sc">-</span>name <span class="sc">--</span>repo getwilds<span class="sc">/</span>destination<span class="sc">-</span>repo<span class="sc">-</span>name <span class="sc">--</span>force</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </section>
-<section id="community-guidelines" class="level2" data-number="3.2">
-<h2 data-number="3.2" class="anchored" data-anchor-id="community-guidelines"><span class="header-section-number">3.2</span> Community guidelines</h2>
-<p>We have code review guidance for labs at <a href="https://hutchdatascience.org/code_review/" class="uri">https://hutchdatascience.org/code_review/</a>. The site contains higher level code review guidance broken down by lab roles, including lab leader, lab manager and lab developer.</p>
-<p>If you want lower level code review guidance, the <a href="https://jhudatascience.org/Adv_Reproducibility_in_Cancer_Informatics/">Advanced Reproducibility in Cancer Informatics</a> course has two chapters that will be helpful:</p>
-<ul>
-<li><a href="https://jhudatascience.org/Adv_Reproducibility_in_Cancer_Informatics/engaging-in-code-review---as-an-author.html">Engaging in Code Review - as an author</a></li>
-<li><a href="https://jhudatascience.org/Adv_Reproducibility_in_Cancer_Informatics/engaging-in-code-review---as-a-reviewer.html">Engaging in Code Review - as a reviewer</a></li>
-</ul>
+<section id="badges" class="level3" data-number="7.1.2">
+<h3 data-number="7.1.2" class="anchored" data-anchor-id="badges"><span class="header-section-number">7.1.2</span> Badges</h3>
+<p>WILDS projects will use badges to indicate their status. Badges are a widely used standard in source code repositories, and help quickly indicate to a potential user something typically important about the repository.</p>
+<p>WILDS badges are maintained in a GitHub repository at <a href="https://github.com/getwilds/badges" class="uri">https://github.com/getwilds/badges</a>. There’s a website for these badges and an easy click to copy interface at <a href="https://getwilds.org/badges/" class="uri">https://getwilds.org/badges/</a>.</p>
+<p>An example badge: <a href="https://getwilds.org/badges/#stable"><img src="https://getwilds.org/badges/badges/stable.svg" class="img-fluid"></a></p>
 
 
+</section>
 </section>
 
 </main> <!-- /main -->
@@ -772,14 +810,11 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="./style.html" class="pagination-link  aria-label=" &lt;span="" {{&lt;="" iconify="" fa6-solid="" code="" &gt;}}&lt;="" span&gt;"="">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Style <iconify-icon inline="" icon="fa6-solid:code"></iconify-icon></span></span>
+      <a href="./security.html" class="pagination-link  aria-label=" &lt;span="" {{&lt;="" iconify="" fa6-solid="" lock="" &gt;}}&lt;="" span&gt;"="">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Security <iconify-icon inline="" icon="fa6-solid:lock"></iconify-icon></span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./packagedocs.html" class="pagination-link" aria-label="<span class='chapter-number'>4</span>&nbsp; <span class='chapter-title'>Documentation {{< iconify fa6-solid book >}}</span>">
-        <span class="nav-page-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Documentation <iconify-icon inline="" icon="fa6-solid:book"></iconify-icon></span></span> <i class="bi bi-arrow-right-short"></i>
-      </a>
   </div>
 </nav>
 </div> <!-- /content -->
@@ -790,7 +825,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     </div>   
     <div class="nav-footer-center">
       &nbsp;
-    <div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/getwilds/guide/edit/main/codereview.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/getwilds/guide/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div>
+    <div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/getwilds/guide/edit/main/conventions.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/getwilds/guide/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div>
     <div class="nav-footer-right">
 <p>This book was built with <a href="https://quarto.org/">Quarto</a>.</p>
 </div>

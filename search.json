@@ -208,5 +208,25 @@
     "crumbs": [
       "<span class='chapter-number'>6</span>  <span class='chapter-title'>Security {{< iconify fa6-solid lock >}}</span>"
     ]
+  },
+  {
+    "objectID": "conventions.html",
+    "href": "conventions.html",
+    "title": "7  Conventions ",
+    "section": "",
+    "text": "7.1 GitHub Repositories",
+    "crumbs": [
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Conventions {{< iconify fa6-solid person-digging >}}</span>"
+    ]
+  },
+  {
+    "objectID": "conventions.html#github-repositories",
+    "href": "conventions.html#github-repositories",
+    "title": "7  Conventions ",
+    "section": "",
+    "text": "7.1.1 Issue labels\nIn the WILDS repo sixtyfour there’s a set of 9 labels that have been proposed as common labels across WILDS repos. These aren’t necessarily enforced across WILDS repos, but can be used.\nThough we have not done this, one can set default labels for all repositories in WILDS - instructions here.\nA blogpost shows how to copy labels from one repository to another using the gh command line tool from GitHub. This command line method may be a better choice if we’re not sure we want to go all in on default labels for every new repo. Here’s the command:\ngh label clone getwilds/source-repo-name --repo getwilds/destination-repo-name --force\n\n\n7.1.2 Badges\nWILDS projects will use badges to indicate their status. Badges are a widely used standard in source code repositories, and help quickly indicate to a potential user something typically important about the repository.\nWILDS badges are maintained in a GitHub repository at https://github.com/getwilds/badges. There’s a website for these badges and an easy click to copy interface at https://getwilds.org/badges/.\nAn example badge:",
+    "crumbs": [
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Conventions {{< iconify fa6-solid person-digging >}}</span>"
+    ]
   }
 ]
