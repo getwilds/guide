@@ -89,11 +89,10 @@ There's a few different options for `Ruff` for GitHub Actions. See [Ruff docs](h
 
 ## Resources
 
-Some other resources for writing better code:
+Some free resources for writing better code:
 
 - [Tidy design principles](https://design.tidyverse.org/) by Hadley Wickham
-- [The Programmatic Programmer](https://pragprog.com/titles/tpp20/the-pragmatic-programmer-20th-anniversary-edition/) by David Thomas, Andrew Hunt
-- [Software Engineering at Google](https://abseil.io/resources/swe-book) curated by Titus Winters, Tom Manshreck and Hyrum Wright.
+- [Software Engineering at Google](https://abseil.io/resources/swe-book) curated by Titus Winters, Tom Manshreck and Hyrum Wright
 
 
 [tidystyle]: https://style.tidyverse.org/
