@@ -94,7 +94,7 @@
     "href": "style.html#resources",
     "title": "2  Style ",
     "section": "2.3 Resources",
-    "text": "2.3 Resources\nSome other resources for writing better code:\n\nTidy design principles by Hadley Wickham\nThe Programmatic Programmer by David Thomas, Andrew Hunt\nSoftware Engineering at Google curated by Titus Winters, Tom Manshreck and Hyrum Wright.",
+    "text": "2.3 Resources\nSome free resources for writing better code:\n\nTidy design principles by Hadley Wickham\nSoftware Engineering at Google curated by Titus Winters, Tom Manshreck and Hyrum Wright",
     "crumbs": [
       "<span class='chapter-number'>2</span>  <span class='chapter-title'>Style {{< iconify fa6-solid code >}}</span>"
     ]
@@ -154,7 +154,7 @@
     "href": "packagedocs.html#guidelines",
     "title": "4  Documentation ",
     "section": "4.3 Guidelines",
-    "text": "4.3 Guidelines\n\nREADME: This is most likely the first place potential users will interact with your package. Make sure the README clearly states what the package does, and how to get started.\nExamples: All user facing functions should have examples. Make sure to be careful about how examples are run if there’s any sensitive data or connections to remote services.\nVignettes: From the R Packages book, a vignette is a long-form guide to your package. Function documentation is great if you know the name of the function you need, but it’s useless otherwise. In contrast, a vignette can be framed around a target problem that your package is designed to solve. The vignette format is perfect for showing a workflow that solves that particular problem, start to finish. Vignettes afford you different opportunities than help topics: you have much more control over the integration of code and prose and it’s a better setting for showing how multiple functions work together.",
+    "text": "4.3 Guidelines\n\nREADME: This is most likely the first place potential users will interact with your package. Make sure the README clearly states what the package does, and how to get started.\nExamples: All user facing functions should have examples. Make sure to be careful about how examples are run if there’s any sensitive data or connections to remote services.\nVignettes: From the R Packages book: “A vignette is a long-form guide to your package. Function documentation is great if you know the name of the function you need, but it’s useless otherwise. In contrast, a vignette can be framed around a target problem that your package is designed to solve. The vignette format is perfect for showing a workflow that solves that particular problem, start to finish. Vignettes afford you different opportunities than help topics: you have much more control over the integration of code and prose and it’s a better setting for showing how multiple functions work together.”",
     "crumbs": [
       "<span class='chapter-number'>4</span>  <span class='chapter-title'>Documentation {{< iconify fa6-solid book >}}</span>"
     ]
