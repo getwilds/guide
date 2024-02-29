@@ -32,3 +32,4 @@ format:
       dark: darkly
     fontsize: 1.2em
     link-external-newwindow: true
+    code-overflow: wrap
