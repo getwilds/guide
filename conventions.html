@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.4.549">
+<meta name="generator" content="quarto-1.4.550">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -209,10 +209,11 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <h2 id="toc-title">Table of contents</h2>
    
   <ul>
-  <li><a href="#github-repositories" id="toc-github-repositories" class="nav-link active" data-scroll-target="#github-repositories"><span class="header-section-number">7.1</span> GitHub Repositories</a>
+  <li><a href="#mention-our-employer" id="toc-mention-our-employer" class="nav-link active" data-scroll-target="#mention-our-employer"><span class="header-section-number">7.1</span> Mention our employer</a></li>
+  <li><a href="#github-repositories" id="toc-github-repositories" class="nav-link" data-scroll-target="#github-repositories"><span class="header-section-number">7.2</span> GitHub Repositories</a>
   <ul class="collapse">
-  <li><a href="#issue-labels" id="toc-issue-labels" class="nav-link" data-scroll-target="#issue-labels"><span class="header-section-number">7.1.1</span> Issue labels</a></li>
-  <li><a href="#badges" id="toc-badges" class="nav-link" data-scroll-target="#badges"><span class="header-section-number">7.1.2</span> Badges</a></li>
+  <li><a href="#issue-labels" id="toc-issue-labels" class="nav-link" data-scroll-target="#issue-labels"><span class="header-section-number">7.2.1</span> Issue labels</a></li>
+  <li><a href="#badges" id="toc-badges" class="nav-link" data-scroll-target="#badges"><span class="header-section-number">7.2.2</span> Badges</a></li>
   </ul></li>
   </ul>
 <div class="toc-actions"><ul><li><a href="https://github.com/getwilds/guide/edit/main/conventions.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/getwilds/guide/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
@@ -239,17 +240,39 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </header>
 
 
-<section id="github-repositories" class="level2" data-number="7.1">
-<h2 data-number="7.1" class="anchored" data-anchor-id="github-repositories"><span class="header-section-number">7.1</span> GitHub Repositories</h2>
-<section id="issue-labels" class="level3" data-number="7.1.1">
-<h3 data-number="7.1.1" class="anchored" data-anchor-id="issue-labels"><span class="header-section-number">7.1.1</span> Issue labels</h3>
+<section id="mention-our-employer" class="level2" data-number="7.1">
+<h2 data-number="7.1" class="anchored" data-anchor-id="mention-our-employer"><span class="header-section-number">7.1</span> Mention our employer</h2>
+<p>In all repositories in WILDS we will include mention of our employer. The following are examples for R and Python:</p>
+<ul>
+<li>R:
+<ul>
+<li>With the <code>usethis</code> package you can add an entry of type <code>person</code> to the DESCRIPTION file of your package</li>
+</ul>
+<div class="sourceCode" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>usethis<span class="sc">::</span><span class="fu">use_author</span>(<span class="st">"Fred Hutchinson Cancer Center"</span>, <span class="at">role =</span> <span class="st">"fnd"</span>, <span class="at">email =</span> <span class="st">"wilds@fredhutch.org"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div></li>
+<li>Python:
+<ul>
+<li>Add a dict in the authors block of the pyproject.toml file or other config file in your package</li>
+</ul>
+<pre class="python3"><code>{
+  name = "Fred Hutchinson Cancer Center"",
+  email = "wilds@fredhutch.org"
+}</code></pre></li>
+</ul>
+<p>For other types of WILDS repositories, perhaps just add a mention to the README.</p>
+</section>
+<section id="github-repositories" class="level2" data-number="7.2">
+<h2 data-number="7.2" class="anchored" data-anchor-id="github-repositories"><span class="header-section-number">7.2</span> GitHub Repositories</h2>
+<section id="issue-labels" class="level3" data-number="7.2.1">
+<h3 data-number="7.2.1" class="anchored" data-anchor-id="issue-labels"><span class="header-section-number">7.2.1</span> Issue labels</h3>
 <p>In the WILDS repo <code>sixtyfour</code> there’s <a href="https://github.com/getwilds/sixtyfour/labels">a set of 9 labels</a> that have been proposed as common labels across WILDS repos. These aren’t necessarily enforced across WILDS repos, but can be used.</p>
 <p>Though we have not done this, one can set default labels for all repositories in WILDS - <a href="https://docs.github.com/en/organizations/managing-organization-settings/managing-default-labels-for-repositories-in-your-organization">instructions here</a>.</p>
 <p>A <a href="https://napjose.ph/posts/copy-issue-labels-from-another-github-repository">blogpost</a> shows how to copy labels from one repository to another using the <a href="https://cli.github.com/">gh command line tool</a> from GitHub. This command line method may be a better choice if we’re not sure we want to go all in on default labels for every new repo. Here’s the command:</p>
-<div class="sourceCode" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>gh label clone getwilds<span class="sc">/</span>source<span class="sc">-</span>repo<span class="sc">-</span>name <span class="sc">--</span>repo getwilds<span class="sc">/</span>destination<span class="sc">-</span>repo<span class="sc">-</span>name <span class="sc">--</span>force</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>gh label clone getwilds<span class="sc">/</span>source<span class="sc">-</span>repo<span class="sc">-</span>name \</span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>  <span class="sc">--</span>repo getwilds<span class="sc">/</span>destination<span class="sc">-</span>repo<span class="sc">-</span>name \</span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>  <span class="sc">--</span>force</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </section>
-<section id="badges" class="level3" data-number="7.1.2">
-<h3 data-number="7.1.2" class="anchored" data-anchor-id="badges"><span class="header-section-number">7.1.2</span> Badges</h3>
+<section id="badges" class="level3" data-number="7.2.2">
+<h3 data-number="7.2.2" class="anchored" data-anchor-id="badges"><span class="header-section-number">7.2.2</span> Badges</h3>
 <p>WILDS projects will use badges to indicate their status. Badges are a widely used standard in source code repositories, and help quickly indicate to a potential user something typically important about the repository.</p>
 <p>WILDS badges are maintained in a GitHub repository at <a href="https://github.com/getwilds/badges" class="uri">https://github.com/getwilds/badges</a>. There’s a website for these badges and an easy click to copy interface at <a href="https://getwilds.org/badges/" class="uri">https://getwilds.org/badges/</a>.</p>
 <p>An example badge: <a href="https://getwilds.org/badges/#stable"><img src="https://getwilds.org/badges/badges/stable.svg" class="img-fluid"></a></p>
@@ -810,7 +833,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="./security.html" class="pagination-link  aria-label=" &lt;span="" {{&lt;="" iconify="" fa6-solid="" lock="" &gt;}}&lt;="" span&gt;"="">
+      <a href="./security.html" class="pagination-link" aria-label="Security {{< iconify fa6-solid lock >}}">
         <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Security <iconify-icon inline="" icon="fa6-solid:lock"></iconify-icon></span></span>
       </a>          
   </div>
