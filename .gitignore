@@ -1,2 +1,4 @@
 /.quarto/
 _book/
+# Local Netlify folder
+.netlify
