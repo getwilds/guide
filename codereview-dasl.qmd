@@ -1,0 +1,50 @@
+# DaSL internal {#sec-review-dasl}
+
+## High level approach
+
+At a high level we use the following approach:
+
+- Code review whenever possible - review is generally not required for every code change
+  - As a team grows, add in more code review
+  - Some projects in the WILDS may have changess pushed directly to main, while others may follow a pull request only approach
+- Follow our code review guidelines (@sec-review-guidelines) (TO BE AGEED UPON)
+- Testing must be used
+  - With a small team testing is crucial to ensuring software does what it is expected to do, AND facilitates code changes in the future
+  - When making a code contribution, make sure it is covered by existing tests, or write a new test if not
+- Automate the boring work / Have bots tell us to follow our own rules
+  - Styling
+  - Linting
+  - Running tests/checks/etc
+
+The approach above may change as the portion of the team grows that works on WILDS projects. In particular, our guidelines around human code review should change as we have more team members. For example, where we strive for just one reviewer of a pull request now, if we add a few new team members we may expect two reviewers.
+
+Another factor that may change the above approach is if a project gains significant external contributors - making it possible to do more human code review. We cannot however expect rapid response times for external contributors.
+
+## Patterns of collaboration
+
+The tidyverse team has a nice chapter in their code review guide on [patterns of collaboration](https://code-review.tidyverse.org/collaboration/). The exact scenarios may not apply here, but in general we need to consider different scenarios of how we work together, who the players are and what we can expect from them.
+
+### Close-knit collaboration
+
+On some projects there may be 2 or more contributors that are heavily involved in work on the project. In these cases, code review of PRs should be swift.
+
+### Solo developer
+
+There will be many cases within the WILDS where there is only one person working on the project - and there isn't anyone available within DASL to review code. In these cases, tests and automation are particularly important.
+
+These projects should strive to get other DASL staff to review code, but turnaround times on reviews are not likely to be fast.
+
+### Understudy
+
+This could be a more junior DASL staff member, or an external contributor that's still "learning the ropes". In these cases PR reviews should be swift to make sure the understudy is getting feedback quickly so they know the lead maintainer is interested in their work.
+
+### External
+
+External contributions may be one-off drive by contributions from someone that may not contribute again, or contributions from a regular external contributor. Although DASL staff need not fully address these immediately, we should make every effort to reply quickly so the external contributor knows a human at DASL is aware of their contribution and will address it soon.
+
+## What else?
+
+::: {.callout-warning}
+What else should we cover in this chapter?
+:::
+

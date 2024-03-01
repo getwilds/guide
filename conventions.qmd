@@ -22,7 +22,7 @@ In all repositories in WILDS we will include mention of our employer. The follow
 
 For other types of WILDS repositories, perhaps just add a mention to the README.
 
-## GitHub Repositories
+## GitHub Repositories {#sec-conventions-repos}
 
 ### Issue labels
 
@@ -45,4 +45,32 @@ WILDS projects will use badges to indicate their status. Badges are a widely use
 WILDS badges are maintained in a GitHub repository at <https://github.com/getwilds/badges>. There's a website for these badges and an easy click to copy interface at <https://getwilds.org/badges/>.
 
 An example badge: [![](https://getwilds.org/badges/badges/stable.svg)](https://getwilds.org/badges/#stable)
+
+### Contributing instructions
+
+All WILDS repos should have a `CONTRIBUTING.md` file. Although this file could live in many different places in a repository, in WILDS repositories it should live in the `.github/` directory.
+
+See also [GitHub's docs on CONTRIBUTING.md](https://docs.github.com/en/communities/setting-up-your-project-for-healthy-contributions/setting-guidelines-for-repository-contributors).
+
+### Pull request templates
+
+All WILDS repos should have one or more pull request templates. These help contributors include all the relavant information, and perform any required tasks, before submitting a pull request.
+
+See also [GitHub's docs on pull request templates](https://docs.github.com/en/communities/using-templates-to-encourage-useful-issues-and-pull-requests/creating-a-pull-request-template-for-your-repository)
+
+### Issue templates
+
+All WILDS repos should have one or more issue templates. These help contributors include all the relavant information, and perform any required tasks, before submitting an issue.
+
+See also [GitHub's docs on issue templates](https://docs.github.com/en/communities/using-templates-to-encourage-useful-issues-and-pull-requests/manually-creating-a-single-issue-template-for-your-repository)
+
+
+::: {.callout-warning}
+Question for the team: Should we have organization wide files (contributing, issues, PRs) for all WILDS repos? Or some other plan?
+:::
+
+
+### Reproducible examples
+
+We strongly encourage all repos that are R packages or projects/etc. to request a "reprex" - a reproducible example. The R package [reprex](https://www.tidyverse.org/help/#reprex) makes it easy to do.
 
