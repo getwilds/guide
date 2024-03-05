@@ -2,7 +2,7 @@ project:
   type: book
 
 book:
-  title: "DaSL Contributor Guide"
+  title: "WILDS Contributor Guide"
   reader-mode: true
   bread-crumbs: false
   author:
@@ -34,8 +34,8 @@ bibliography: references.bib
 format:
   html:
     theme:
-      light: sandstone
-      dark: darkly
+      light: [sandstone, light.scss]
+      dark: [slate, dark.scss]
     fontsize: 1.2em
     link-external-newwindow: true
     code-overflow: wrap

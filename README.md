@@ -1,8 +1,8 @@
-# DaSL Contributor Guide
+# WILDS Contributor Guide
 
 <https://getwilds.org/guide/>
 
-The Fred Hutch Data Science Laboratory Contributor guide.
+Contributor guide for the WILDS GitHub organization at Fred Hutch Data Science Laboratory.
 
 ## Contributing to this guide
 

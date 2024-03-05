@@ -4,7 +4,7 @@
 This guide is under construction - content changes often.
 :::
 
-This book is a resource for the community of people using, contributing to, and maintaining software at the Fred Hutch Cancer Center Data Science Lab ([DaSL][]).
+This book is a resource for the community of people using, contributing to, and maintaining software within the WILDS GitHub organization (<https://github.com/getwilds>) at the Fred Hutch Cancer Center Data Science Lab ([DaSL][]).
 
 The book covers important aspects of software development, including how to get involved in software as a user or contributor, code style, code review, package documentation, and more. It includes both internal facing guidelines as well as for any contributions from folks other than DaSL staff.
 
@@ -16,7 +16,7 @@ The book covers important aspects of software development, including how to get 
 - Security: @sec-security
 - Conventions: @sec-conventions
 
-[DaSL][] primarily develops software in the [R][] and [Python][] programming languages. Where necessary, we'll discuss a topic with respect to both languages.
+In the WILDS we primarily develop software in the [R][] and [Python][] programming languages. Where necessary, we'll discuss a topic with respect to both languages.
 
 ## Inspiration
 
