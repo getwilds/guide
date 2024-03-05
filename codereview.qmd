@@ -2,7 +2,7 @@
 
 Code review ....
 
-## DaSL interal guidelines
+## WILDS interal guidelines
 
 still discussing this internally ...
 

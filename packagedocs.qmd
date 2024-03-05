@@ -1,6 +1,6 @@
 # Documentation {{< iconify fa6-solid book >}} {#sec-docs}
 
-All formally supported DaSL R and Python packages should have package documentation.
+All formally supported WILDS R and Python packages should have package documentation.
 
 ## R
 
@@ -10,13 +10,13 @@ After pushing the above changes up to your repository, go to the Actions tab and
 
 You can also build `pkgdown` docs locally - after running `usethis::use_pkgdown()` or `usethis::use_pkgdown_github_pages()` - by running `pkgdown::build_site()`. If you run `build_site()` within RStudio it should open up your site in your default browser, but may not do so if you run in a terminal. You can open the site in your browser by navigating to and opening the file `docs/index.html` within your repo.
 
-### DaSL pkgdown template
+### WILDS pkgdown template
 
-We are planning to have a DaSL specific `pkgdown` "package template" (see [pkgdown docs][pkgdowntemp] for what this means) - but it's not ready to use yet. When it is ready, you will be able to specify our template like:
+We are planning to have a WILDS specific `pkgdown` "package template" (see [pkgdown docs][pkgdowntemp] for what this means) - but it's not ready to use yet. When it is ready, you will be able to specify our template like:
 
 ```yml
 template:
-  package: dasltemplate
+  package: wildstemplate
 ```
 
 For now just use the default theme that `pkgdown` provides.
