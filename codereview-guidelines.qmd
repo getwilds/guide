@@ -48,9 +48,9 @@ Adapted from:
   - You may want to consider before/after screenshots or screencasts whenever applicable.
 - Seek to understand the reviewer's perspective
 - View each comment as an opportunity to learn
-- If you're someone who says "sorry" frequently, think about removing this from your language (MG)
-- You can ask for clarification (MG)
-- It's OK to disagree. It's helpful to first look for things that you agree with and explain why you disagree (MG)
+- If you're someone who says "sorry" frequently, think about removing this from your language
+- You can ask for clarification 
+- It's OK to disagree. It's helpful to first look for things that you agree with and explain why you disagree
 
 ## Reviewing Code
 
