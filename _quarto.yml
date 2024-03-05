@@ -2,7 +2,7 @@ project:
   type: book
 
 book:
-  title: "DaSL Contributor Guide"
+  title: "WILDS Contributor Guide"
   reader-mode: true
   author:
     - Scott Chamberlain

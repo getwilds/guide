@@ -1,5 +1,5 @@
 Package: guide
-Title: DaSL Contributor Guide
+Title: WILDS Contributor Guide
 Version: 0.1.0
 Authors@R: c(
   person("Scott", "Chamberlain", , "sachamber@fredhutch.org", c("aut", "cre"))

@@ -22,7 +22,7 @@ Find the thing you would like to do below and follow its instructions.
 
 **Contribute code/docs**: If you want to contribute to software - whether code, documentation or something else - open an issue in the appropriate GitHub repository to discuss, then open a pull request to make your contribution.
 
-**Code of Conduct**: DaSL GitHub repositories should have their own code of conduct - likely some version of the [Contributor Covenant][coc]. Refer to the COC in the repository for specific guidance.
+**Code of Conduct**: WILDS GitHub repositories should have their own code of conduct - likely some version of the [Contributor Covenant][coc]. Refer to the COC in the repository for specific guidance.
 
 
 
