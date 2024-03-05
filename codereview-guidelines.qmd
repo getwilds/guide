@@ -9,7 +9,7 @@ Adapted from:
 
 - Accept that many programming decisions are opinions
   - Discuss tradeoffs, which you prefer, and reach a resolution quickly.
-- Offer positive comments (MG)
+- Offer positive comments
   - What did you learn? What did you think was neat?
 - Ask good questions; don't make demands
   - "What do you think about naming this function `fetch_user`?"
