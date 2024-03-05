@@ -2,9 +2,9 @@
   {
     "objectID": "index.html",
     "href": "index.html",
-    "title": "DaSL Contributor Guide",
+    "title": "WILDS Contributor Guide",
     "section": "",
-    "text": "Welcome\nThis book is a resource for the community of people using, contributing to, and maintaining software at the Fred Hutch Cancer Center Data Science Lab (DaSL).\nThe book covers important aspects of software development, including how to get involved in software as a user or contributor, code style, code review, package documentation, and more. It includes both internal facing guidelines as well as for any contributions from folks other than DaSL staff.\nDaSL primarily develops software in the R and Python programming languages. Where necessary, we’ll discuss a topic with respect to both languages.",
+    "text": "Welcome\nThis book is a resource for the community of people using, contributing to, and maintaining software within the WILDS GitHub organization (https://github.com/getwilds) at the Fred Hutch Cancer Center Data Science Lab (DaSL).\nThe book covers important aspects of software development, including how to get involved in software as a user or contributor, code style, code review, package documentation, and more. It includes both internal facing guidelines as well as for any contributions from folks other than DaSL staff.\nIn the WILDS we primarily develop software in the R and Python programming languages. Where necessary, we’ll discuss a topic with respect to both languages.",
     "crumbs": [
       "Welcome"
     ]
@@ -12,7 +12,7 @@
   {
     "objectID": "index.html#inspiration",
     "href": "index.html#inspiration",
-    "title": "DaSL Contributor Guide",
+    "title": "WILDS Contributor Guide",
     "section": "Inspiration",
     "text": "Inspiration\nInspiration for this guide is taken in part from:\n\nTidyverse Style Guide\nrOpenSci Dev Guide",
     "crumbs": [
@@ -22,7 +22,7 @@
   {
     "objectID": "index.html#license",
     "href": "index.html#license",
-    "title": "DaSL Contributor Guide",
+    "title": "WILDS Contributor Guide",
     "section": "License",
     "text": "License\nThis book is licensed to you under Creative Commons CC0 1.0 Universal (CC0 1.0), i.e. public domain.",
     "crumbs": [
@@ -54,7 +54,7 @@
     "href": "contributing.html#software",
     "title": "1  Contributing ",
     "section": "1.2 Software",
-    "text": "1.2 Software\nThis book concerns any software created in the GitHub repositories under the WILDS GitHub organization.\nFind the thing you would like to do below and follow its instructions.\nQuestion: If you have a question you can ask in the Slack linked above, or open an issue in any of the GitHub repositories.\nBug: If you want to report a bug, open an issue in the appropriate GitHub repository.\nFeature: If you want to request a feature, open an issue in the appropriate GitHub repository.\nContribute code/docs: If you want to contribute to software - whether code, documentation or something else - open an issue in the appropriate GitHub repository to discuss, then open a pull request to make your contribution.\nCode of Conduct: DaSL GitHub repositories should have their own code of conduct - likely some version of the Contributor Covenant. Refer to the COC in the repository for specific guidance.",
+    "text": "1.2 Software\nThis book concerns any software created in the GitHub repositories under the WILDS GitHub organization.\nFind the thing you would like to do below and follow its instructions.\nQuestion: If you have a question you can ask in the Slack linked above, or open an issue in any of the GitHub repositories.\nBug: If you want to report a bug, open an issue in the appropriate GitHub repository.\nFeature: If you want to request a feature, open an issue in the appropriate GitHub repository.\nContribute code/docs: If you want to contribute to software - whether code, documentation or something else - open an issue in the appropriate GitHub repository to discuss, then open a pull request to make your contribution.\nCode of Conduct: WILDS GitHub repositories should have their own code of conduct - likely some version of the Contributor Covenant. Refer to the COC in the repository for specific guidance.",
     "crumbs": [
       "<span class='chapter-number'>1</span>  <span class='chapter-title'>Contributing {{< iconify fa6-solid hammer >}}</span>"
     ]
@@ -104,7 +104,7 @@
     "href": "codereview.html",
     "title": "3  Code review ",
     "section": "",
-    "text": "3.1 DaSL interal guidelines\nstill discussing this internally …",
+    "text": "3.1 WILDS interal guidelines\nstill discussing this internally …",
     "crumbs": [
       "<span class='chapter-number'>3</span>  <span class='chapter-title'>Code review {{< iconify fa6-solid pencil >}}</span>"
     ]
@@ -134,7 +134,7 @@
     "href": "packagedocs.html#r",
     "title": "4  Documentation ",
     "section": "",
-    "text": "4.1.1 DaSL pkgdown template\nWe are planning to have a DaSL specific pkgdown “package template” (see pkgdown docs for what this means) - but it’s not ready to use yet. When it is ready, you will be able to specify our template like:\ntemplate:\n  package: dasltemplate\nFor now just use the default theme that pkgdown provides.",
+    "text": "4.1.1 WILDS pkgdown template\nWe are planning to have a WILDS specific pkgdown “package template” (see pkgdown docs for what this means) - but it’s not ready to use yet. When it is ready, you will be able to specify our template like:\ntemplate:\n  package: wildstemplate\nFor now just use the default theme that pkgdown provides.",
     "crumbs": [
       "<span class='chapter-number'>4</span>  <span class='chapter-title'>Documentation {{< iconify fa6-solid book >}}</span>"
     ]
@@ -184,7 +184,7 @@
     "href": "maintenance.html#package-versioning",
     "title": "5  Package maintenance ",
     "section": "5.2 Package versioning",
-    "text": "5.2 Package versioning\nThere is a detailed discussion of versioning R packages in the lifecycle chapter of the R Packages book by Hadley Wickham and Jenny Bryan. Please follow that chapter in general for versioning of R and Python packages within DaSL. To make it easier to grok, below are some of the highlights, and some exceptions to that chapter.\n\n5.2.1 Package version numbers\nThere’s quite a bit of nuance - and surprises - to package version numbers - see the Package version number section for details. For example, using the utils::package_version() function, which parses package version strings into S3 classes, we get a suprising result:\n\n\"2.0\" &gt; \"10.0\"\n#&gt; [1] TRUE\npackage_version(\"2.0\") &gt; package_version(\"10.0\")\n#&gt; [1] FALSE\n\nWith that example, please do think about your package versions before setting them.\n\n5.2.1.1 DaSL Conventions\nFollowing the Tidyverse package version conventions, DaSL packages will use the following conventions (see the link for more details):\n\nAlways use . as the separator, never use -.\nA released version number consists of three components, &lt;major&gt;.&lt;minor&gt;.&lt;patch&gt;\nWhile a package is in between releases, there is a fourth component: the development version, starting at 9000 (e.g., 0.2.2.9000), and incrementing from there until the package has another release at which point return to three components.\n\n\n\n\n5.2.2 Ignore these\nWe are not following or enforcing any rules about changes at the function/class/etc level below the package level. For example, the R Packages book talks about using the lifecycle package to deal with function changes.",
+    "text": "5.2 Package versioning\nThere is a detailed discussion of versioning R packages in the lifecycle chapter of the R Packages book by Hadley Wickham and Jenny Bryan. Please follow that chapter in general for versioning of R and Python packages within the WILDS. To make it easier to grok, below are some of the highlights, and some exceptions to that chapter.\n\n5.2.1 Package version numbers\nThere’s quite a bit of nuance - and surprises - to package version numbers - see the Package version number section for details. For example, using the utils::package_version() function, which parses package version strings into S3 classes, we get a suprising result:\n\n\"2.0\" &gt; \"10.0\"\n#&gt; [1] TRUE\npackage_version(\"2.0\") &gt; package_version(\"10.0\")\n#&gt; [1] FALSE\n\nWith that example, please do think about your package versions before setting them.\n\n5.2.1.1 WILDS Conventions\nFollowing the Tidyverse package version conventions, WILDS packages will use the following conventions (see the link for more details):\n\nAlways use . as the separator, never use -.\nA released version number consists of three components, &lt;major&gt;.&lt;minor&gt;.&lt;patch&gt;\nWhile a package is in between releases, there is a fourth component: the development version, starting at 9000 (e.g., 0.2.2.9000), and incrementing from there until the package has another release at which point return to three components.\n\n\n\n\n5.2.2 Ignore these\nWe are not following or enforcing any rules about changes at the function/class/etc level below the package level. For example, the R Packages book talks about using the lifecycle package to deal with function changes.",
     "crumbs": [
       "<span class='chapter-number'>5</span>  <span class='chapter-title'>Package maintenance {{< iconify fa6-solid code-compare >}}</span>"
     ]
@@ -194,7 +194,7 @@
     "href": "maintenance.html#package-releases",
     "title": "5  Package maintenance ",
     "section": "5.3 Package releases",
-    "text": "5.3 Package releases\nIn general follow the Releasing to CRAN chapter in the book R Packages for R, and the Releasing and versioning chapter in the book Python Packages for Python. Those chapters don’t have to be followed to the letter, but in general they provide really good guidance.\nThere are a few aspects of releases we are opinionated about and would like DaSL R and Python packages to follow:\n\nUse the MIT license unless there’s good reason not to\nFollow our versioning guidelines above\nGit tag released versions, and push the tag to GitHub\nAdd the associated NEWS/Changelog items to a release associated with the tag on GitHub",
+    "text": "5.3 Package releases\nIn general follow the Releasing to CRAN chapter in the book R Packages for R, and the Releasing and versioning chapter in the book Python Packages for Python. Those chapters don’t have to be followed to the letter, but in general they provide really good guidance.\nThere are a few aspects of releases we are opinionated about and would like all WILDS R and Python packages to follow:\n\nUse the MIT license unless there’s good reason not to\nFollow our versioning guidelines above\nGit tag released versions, and push the tag to GitHub\nAdd the associated NEWS/Changelog items to a release associated with the tag on GitHub",
     "crumbs": [
       "<span class='chapter-number'>5</span>  <span class='chapter-title'>Package maintenance {{< iconify fa6-solid code-compare >}}</span>"
     ]

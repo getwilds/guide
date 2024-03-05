@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>DaSL Contributor Guide - 5&nbsp; Package maintenance </title>
+<title>WILDS Contributor Guide - 5&nbsp; Package maintenance </title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -133,7 +133,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
     <div class="pt-lg-2 mt-2 text-left sidebar-header">
     <div class="sidebar-title mb-0 py-0">
-      <a href="./">DaSL Contributor Guide</a> 
+      <a href="./">WILDS Contributor Guide</a> 
         <div class="sidebar-tools-main tools-wide">
     <a href="https://github.com/getwilds/guide/" title="Source Code" class="quarto-navigation-tool px-1" aria-label="Source Code"><i class="bi bi-github"></i></a>
   <a href="" class="quarto-color-scheme-toggle quarto-navigation-tool  px-1" onclick="window.quartoToggleColorScheme(); return false;" title="Toggle dark mode"><i class="bi"></i></a>
@@ -269,7 +269,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </section>
 <section id="package-versioning" class="level2" data-number="5.2">
 <h2 data-number="5.2" class="anchored" data-anchor-id="package-versioning"><span class="header-section-number">5.2</span> Package versioning</h2>
-<p>There is a detailed discussion of versioning R packages in the <a href="https://r-pkgs.org/lifecycle.html">lifecycle</a> chapter of the <a href="https://r-pkgs.org">R Packages book</a> by Hadley Wickham and Jenny Bryan. Please follow that chapter in general for versioning of R and Python packages within DaSL. To make it easier to grok, below are some of the highlights, and some exceptions to that chapter.</p>
+<p>There is a detailed discussion of versioning R packages in the <a href="https://r-pkgs.org/lifecycle.html">lifecycle</a> chapter of the <a href="https://r-pkgs.org">R Packages book</a> by Hadley Wickham and Jenny Bryan. Please follow that chapter in general for versioning of R and Python packages within the WILDS. To make it easier to grok, below are some of the highlights, and some exceptions to that chapter.</p>
 <section id="package-version-numbers" class="level3" data-number="5.2.1">
 <h3 data-number="5.2.1" class="anchored" data-anchor-id="package-version-numbers"><span class="header-section-number">5.2.1</span> Package version numbers</h3>
 <p>There’s quite a bit of nuance - and surprises - to package version numbers - see the <a href="https://r-pkgs.org/lifecycle.html#sec-lifecycle-version-number">Package version number section</a> for details. For example, using the <code>utils::package_version()</code> function, which parses package version strings into S3 classes, we get a suprising result:</p>
@@ -280,9 +280,9 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; [1] FALSE</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>With that example, please do think about your package versions before setting them.</p>
-<section id="dasl-conventions" class="level4" data-number="5.2.1.1">
-<h4 data-number="5.2.1.1" class="anchored" data-anchor-id="dasl-conventions"><span class="header-section-number">5.2.1.1</span> DaSL Conventions</h4>
-<p>Following the <a href="https://r-pkgs.org/lifecycle.html#sec-lifecycle-version-number-tidyverse">Tidyverse package version conventions</a>, DaSL packages will use the following conventions (see the link for more details):</p>
+<section id="wilds-conventions" class="level4" data-number="5.2.1.1">
+<h4 data-number="5.2.1.1" class="anchored" data-anchor-id="wilds-conventions"><span class="header-section-number">5.2.1.1</span> WILDS Conventions</h4>
+<p>Following the <a href="https://r-pkgs.org/lifecycle.html#sec-lifecycle-version-number-tidyverse">Tidyverse package version conventions</a>, WILDS packages will use the following conventions (see the link for more details):</p>
 <ul>
 <li>Always use <code>.</code> as the separator, never use <code>-</code>.</li>
 <li>A released version number consists of three components, <code>&lt;major&gt;</code>.<code>&lt;minor&gt;</code>.<code>&lt;patch&gt;</code></li>
@@ -298,7 +298,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <section id="package-releases" class="level2" data-number="5.3">
 <h2 data-number="5.3" class="anchored" data-anchor-id="package-releases"><span class="header-section-number">5.3</span> Package releases</h2>
 <p>In general follow the <a href="https://r-pkgs.org/release.html">Releasing to CRAN chapter</a> in the book <a href="https://r-pkgs.org">R Packages</a> for R, and the <a href="https://py-pkgs.org/07-releasing-versioning">Releasing and versioning chapter</a> in the book <a href="https://py-pkgs.org">Python Packages</a> for Python. Those chapters don’t have to be followed to the letter, but in general they provide really good guidance.</p>
-<p>There are a few aspects of releases we are opinionated about and would like DaSL R and Python packages to follow:</p>
+<p>There are a few aspects of releases we are opinionated about and would like all WILDS R and Python packages to follow:</p>
 <ul>
 <li>Use the MIT license unless there’s good reason not to</li>
 <li>Follow our versioning guidelines above</li>
