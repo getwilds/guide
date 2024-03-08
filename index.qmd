@@ -14,6 +14,7 @@ The book covers important aspects of software development, including how to get 
 - Package documentation: @sec-docs
 - Package maintenance: @sec-maintenance
 - WDL Configuration: @sec-wdlconfig
+- Docker Configuration: @sec-docker
 - Security: @sec-security
 - Conventions: @sec-conventions
 

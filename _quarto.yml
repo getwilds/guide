@@ -20,6 +20,7 @@ book:
     - packagedocs.qmd
     - maintenance.qmd
     - wdlconfig.qmd
+    - docker.qmd
     - security.qmd
     - conventions.qmd
   site-url: https://getwilds.org/guide/
