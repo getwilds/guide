@@ -1,0 +1,58 @@
+
+# WDL Configuration Guide {{< iconify file-icons wdl >}} {#sec-wdlconfig}
+
+So as not to reinvent the wheel, WILDS WDL's should follow guidelines similar to the ones provided by [BioWDL](https://biowdl.github.io/styleGuidelines.html) and [WARP](https://broadinstitute.github.io/warp/docs/Best_practices/suggested_formats). However, because of the pedagogical "proof-of-concept" nature of the WILDS, they will not be identical and even differ significantly in a few places.
+
+## WILDS Philosophy
+
+- The mindset behind WILDS is for each repository to be a self-contained demonstration of a particular bioinformatic functionality:
+    1. Researcher scans the workflow to deem whether it is relevant to their needs.
+    2. Researcher clones the repository as is, makes minimal updates to the inputs, and easily executes the code locally or otherwise.
+    3. Researcher forks the repository and customizes it as necessary to fit their exact research needs.
+- To that end, WILDS WDL repositories will usually consist of a single WDL script containing the workflow as well as the tasks that make up the workflow.
+    - This contradicts the recommendations from BioWDL, i.e. tasks should be written in a separate script and imported into the workflow script as a module.
+    - We believe the "one-stop-shop" nature of this setup will aid from a readability/learning standpoint.
+
+## Structural Guidelines
+
+- Structs should be at the top of the WDL script, followed by the workflow itself, followed by all of its corresponding tasks.
+- Tasks should be broken down into as small of operations as possible.
+    - If a task uses more than one or two command line tools, it should probably be broken up into individual tasks.
+- Docker containers should be assigned to every task to ensure uniform execution, regardless of local context.
+    - Outside of very basic images from very trusted sources, Docker images should be pulled directly from [WILDS' Docker Library](https://github.com/getwilds/wilds-docker-library) whenever possible.
+    - If you think a particular tool should be added to that library, [submit an issue](https://github.com/getwilds/wilds-docker-library/issues) or email us at wilds@fredhutch.org.
+- In general, runtime attributes should be defined whenever possible in order to enable execution on as many backends as possible.
+
+## Stylistic Guidelines
+
+- **Indentation**: braces contents, inputs, and line continuations should all be indented by two spaces (not four).
+- **White Space**: different input groups and code blocks should be separated by a single blank line.
+- **Line Breaks**: line breaks should only occur in the following places:
+    - After a comma
+    - Following an opening parenthesis/bracket
+    - Before the `else` of an `if` statement
+    - Between inputs
+    - Opening and closing braces
+- **Line Character Limit**: lines should be a maximum of 100 characters.
+- **Expression Spacing**: spaces should surround operators to increase clarity and readability.
+- **Naming Conventions**:
+    - Tasks, workflows, and structs should follow upper camel case (`SuperAwesomeTask`)
+    - Call aliases should follow lower camel case (`superAwesomeCall`)
+    - Variables should follow lowercase underscore (`super_awesome_variable`)
+- **Descriptive Commenting**:
+    - Comments should be placed above each task in the workflow describing its function.
+    - Input descriptors should be provided in the `parameter_meta` component.
+
+## Repository Guidelines
+
+- As with all repositories, each workflow should include a detailed README containing:
+    - Purpose and functionality of the workflow
+    - Basic diagram illustration the flow of data
+    - Contact information in case issues pop up 
+    - [WILDS Badge](https://github.com/getwilds/badges) at the top describing the development status of the workflow
+- Make sure to include an example input json in the repository for users to modify and easily execute the workflow.
+    - For a skeleton template, try the `inputs` action of [WOMtool](https://cromwell.readthedocs.io/en/stable/WOMtool/#inputs).
+- A GitHub Action executing [WOMtool](https://cromwell.readthedocs.io/en/stable/WOMtool/#validate) `validate` is highly recommended as a check before merging new features into main.
+    - If you're feeling adventurous, try automating an entire test run using a very small validation dataset.
+
+

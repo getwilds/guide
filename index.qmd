@@ -13,6 +13,7 @@ The book covers important aspects of software development, including how to get 
 - Code review: @sec-review
 - Package documentation: @sec-docs
 - Package maintenance: @sec-maintenance
+- WDL Configuration: @sec-wdlconfig
 - Security: @sec-security
 - Conventions: @sec-conventions
 

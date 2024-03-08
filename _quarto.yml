@@ -19,6 +19,7 @@ book:
     - codereview.qmd
     - packagedocs.qmd
     - maintenance.qmd
+    - wdlconfig.qmd
     - security.qmd
     - conventions.qmd
   site-url: https://getwilds.org/guide/
