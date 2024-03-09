@@ -72,5 +72,7 @@ Question for the team: Should we have organization wide files (contributing, iss
 
 ### Reproducible examples
 
-We strongly encourage all repos that are R packages or projects/etc. to request a "reprex" - a reproducible example. The R package [reprex](https://www.tidyverse.org/help/#reprex) makes it easy to do.
+We strongly encourage all repositories that are R or Python packages or research compendia to request a "reprex" (reproducible example) in their issue and pull request templates.
 
+- R: [reprex](https://www.tidyverse.org/help/#reprex)
+- Python: [reprexlite](https://pypi.org/project/reprexlite/), [reprexpy](https://pypi.org/project/reprexpy/)
