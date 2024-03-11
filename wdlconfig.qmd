@@ -13,17 +13,19 @@ So as not to reinvent the wheel, WILDS WDL's should follow guidelines similar to
     - This contradicts the recommendations from BioWDL, i.e. tasks should be written in a separate script and imported into the workflow script as a module.
     - We believe the "one-stop-shop" nature of this setup will aid from a readability/learning standpoint.
 
-## Structural Guidelines
-
-- Structs should be at the top of the WDL script, followed by the workflow itself, followed by all of its corresponding tasks.
+## Guidelines to structure your WDL Workflow
+> Note: Give a graphical representation of the WDL workflow structure you would expect users should see
+- Structs will be at the top of the WDL script, followed by the workflow itself, followed by all of its corresponding tasks.
+    > Note: While the WDL workflow allows users to place structs anywhere in the workflow, to promote consistency we require that structs be placed right on top for easier readability. 
 - Tasks should be broken down into as small of operations as possible.
-    - If a task uses more than one or two command line tools, it should probably be broken up into individual tasks.
+    - If a task uses more than two tools, it should probably be broken up into individual tasks.
 - Docker containers should be assigned to every task to ensure uniform execution, regardless of local context.
     - Outside of very basic images from very trusted sources, Docker images should be pulled directly from [WILDS' Docker Library](https://github.com/getwilds/wilds-docker-library) whenever possible.
     - If you think a particular tool should be added to that library, [submit an issue](https://github.com/getwilds/wilds-docker-library/issues) or email us at wilds@fredhutch.org.
 - In general, runtime attributes should be defined whenever possible in order to enable execution on as many backends as possible.
+    > Note: Some runtime attributes will be ignored based on the backend/WDL engine being used to run your workflow. Refer to the WDL 101 guide for more details. 
 
-## Stylistic Guidelines
+## Stylistic Guidelines for WDL Workflows
 
 - **Indentation**: braces contents, inputs, and line continuations should all be indented by two spaces (not four).
 - **White Space**: different input groups and code blocks should be separated by a single blank line.
@@ -47,7 +49,7 @@ So as not to reinvent the wheel, WILDS WDL's should follow guidelines similar to
 
 - As with all repositories, each workflow should include a detailed README containing:
     - Purpose and functionality of the workflow
-    - Basic diagram illustration the flow of data
+    - Basic diagram illustration of the flow of data
     - Contact information in case issues pop up 
     - [WILDS Badge](https://github.com/getwilds/badges) at the top describing the development status of the workflow
 - Make sure to include an example input json in the repository for users to modify and easily execute the workflow.
