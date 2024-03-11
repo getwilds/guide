@@ -58,4 +58,8 @@ This WILDS WDL configuration guide was inspired by the [BioWDL](https://biowdl.g
 - A GitHub Action executing [WOMtool](https://cromwell.readthedocs.io/en/stable/WOMtool/#validate) `validate` is highly recommended as a check before merging new features into main.
     - If you're feeling adventurous, try automating an entire test run using a very small validation dataset.
 
+## Additional Resources
+
+- [Fred Hutch DaSL WDL 101 Online Course](https://hutchdatascience.org/WDL_Workflows_Guide/introduction-to-wdl.html)
+- [OpenWDL Documentation](https://docs.openwdl.org/en/latest/)
 
