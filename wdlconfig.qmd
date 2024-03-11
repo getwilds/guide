@@ -1,17 +1,20 @@
 
 # WDL Configuration Guide {{< iconify file-icons wdl >}} {#sec-wdlconfig}
 
-So as not to reinvent the wheel, WILDS WDL's should follow guidelines similar to the ones provided by [BioWDL](https://biowdl.github.io/styleGuidelines.html) and [WARP](https://broadinstitute.github.io/warp/docs/Best_practices/suggested_formats). However, because of the pedagogical "proof-of-concept" nature of the WILDS, they will not be identical and even differ significantly in a few places.
+This WILDS WDL configuration guide was inspired by the [BioWDL](https://biowdl.github.io/styleGuidelines.html) and [WARP](https://broadinstitute.github.io/warp/docs/Best_practices/suggested_formats) guidelines and is intended to cater to the pedagogical "proof-of-concept" nature of the WILDS.
 
-## WILDS Philosophy
+## WILDS WDL Philosophy
 
-- The mindset behind WILDS is for each repository to be a self-contained demonstration of a particular bioinformatic functionality:
-    1. Researcher scans the workflow to deem whether it is relevant to their needs.
-    2. Researcher clones the repository as is, makes minimal updates to the inputs, and easily executes the code locally or otherwise.
-    3. Researcher forks the repository and customizes it as necessary to fit their exact research needs.
-- To that end, WILDS WDL repositories will usually consist of a single WDL script containing the workflow as well as the tasks that make up the workflow.
-    - This contradicts the recommendations from BioWDL, i.e. tasks should be written in a separate script and imported into the workflow script as a module.
-    - We believe the "one-stop-shop" nature of this setup will aid from a readability/learning standpoint.
+- The mindset behind WILDS WDLs is for each repository to be a self-contained demonstration of a particular bioinformatic functionality. An ideal use-case would proceed as follows:
+    1. A researcher reviews the repository to deem whether it is relevant for their needs, starting with the README for the over-arching purpose of the workflow, but extending to the the input json and WDL script itself for specific questions about toolsets, settings, and input/output data types.
+    2. If the workflow seems useful, the researcher clones the repository locally, makes minimal updates to the input json, and executes the code with minimal effort using their favorite WDL executor.
+    3. If the researcher would like to add their own flavor to the workflow, they can fork the repository, customize it as necessary to fit their exact research needs, and even resubmit the changes back to the original repository for consideration and review.
+- To that end, WILDS WDL repositories are relatively minimal and will usually consist of:
+    - a detailed README describing the intended functionality and input/output file types
+    - a single WDL script containing the workflow as well as the tasks that make up the workflow
+    - a input json template providing examples of expected inputs
+    - a test case to ensure the workflow is running as expected
+- We believe the minimal nature of this setup will aid from a readability/ease-of-use standpoint.
 
 ## Structural Guidelines
 
