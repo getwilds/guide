@@ -52,11 +52,15 @@ All WILDS repos should have a `CONTRIBUTING.md` file. Although this file could l
 
 See also [GitHub's docs on CONTRIBUTING.md](https://docs.github.com/en/communities/setting-up-your-project-for-healthy-contributions/setting-guidelines-for-repository-contributors).
 
+There is a default CONTRIBUTING.md file for all WILDS repos at <https://github.com/getwilds/.github>. We encourage repo maintainers to add their own CONTRIBUTING.md file if the default is not adequate.
+
 ### Pull request templates
 
 All WILDS repos should have one or more pull request templates. These help contributors include all the relavant information, and perform any required tasks, before submitting a pull request.
 
 See also [GitHub's docs on pull request templates](https://docs.github.com/en/communities/using-templates-to-encourage-useful-issues-and-pull-requests/creating-a-pull-request-template-for-your-repository)
+
+There is a default pull request template for all WILDS repos at <https://github.com/getwilds/.github>. We encourage repo maintainers to add their own pull request template if the default is not adequate.
 
 ### Issue templates
 
@@ -64,10 +68,7 @@ All WILDS repos should have one or more issue templates. These help contributors
 
 See also [GitHub's docs on issue templates](https://docs.github.com/en/communities/using-templates-to-encourage-useful-issues-and-pull-requests/manually-creating-a-single-issue-template-for-your-repository)
 
-
-::: {.callout-warning}
-Question for the team: Should we have organization wide files (contributing, issues, PRs) for all WILDS repos? Or some other plan?
-:::
+There is a default issue template for all WILDS repos at <https://github.com/getwilds/.github>. We encourage repo maintainers to add their own issue template(s) if the default is not adequate.
 
 
 ### Reproducible examples
