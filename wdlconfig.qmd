@@ -10,53 +10,52 @@ This WILDS WDL configuration guide was inspired by the [BioWDL](https://biowdl.g
     2. If the workflow seems useful, the researcher clones the repository locally, makes minimal updates to the input json, and executes the code with minimal effort using their favorite WDL executor.
     3. If the researcher would like to add their own flavor to the workflow, they can fork the repository, customize it as necessary to fit their exact research needs, and even resubmit the changes back to the original repository for consideration and review.
 - To that end, WILDS WDL repositories are relatively minimal and will usually consist of:
-    - a detailed README describing the intended functionality and input/output file types
-    - a single WDL script containing the workflow as well as the tasks that make up the workflow
-    - a input json template providing examples of expected inputs
-    - a test case to ensure the workflow is running as expected
+    - a detailed [README](https://github.com/getwilds/fastq-to-cram/blob/guidelines-tf/README.md) describing the intended functionality and input/output file types
+    - a single [WDL script](https://github.com/getwilds/fastq-to-cram/blob/guidelines-tf/fastq-to-cram.wdl) containing the workflow as well as the tasks that make up the workflow
+    - a [input json](https://github.com/getwilds/fastq-to-cram/blob/guidelines-tf/fastq-to-cram-inputs.json) template providing examples of expected inputs
+    - a [test case](https://github.com/getwilds/fastq-to-cram/tree/guidelines-tf/tests/data) to ensure the workflow is running as expected
 - We believe the minimal nature of this setup will aid from a readability/ease-of-use standpoint.
 
 ## Structural Guidelines
 
-- Structs should be at the top of the WDL script, followed by the workflow itself, followed by all of its corresponding tasks.
+- [Structs](https://github.com/getwilds/fastq-to-cram/blob/489ccdf0697ab902ca6f775b8e51d4f0603c0c01/fastq-to-cram.wdl#L5) should be at the top of the WDL script, followed by the [workflow](https://github.com/getwilds/fastq-to-cram/blob/489ccdf0697ab902ca6f775b8e51d4f0603c0c01/fastq-to-cram.wdl#L21) itself, followed by all of its corresponding [tasks](https://github.com/getwilds/fastq-to-cram/blob/489ccdf0697ab902ca6f775b8e51d4f0603c0c01/fastq-to-cram.wdl#L80).
 - Tasks should be broken down into as small of operations as possible.
     - If a task uses more than one or two command line tools, it should probably be broken up into individual tasks.
-- Docker containers should be assigned to every task to ensure uniform execution, regardless of local context.
+- [Docker containers](https://hutchdatascience.org/WDL_Workflows_Guide/the-first-task.html#docker-images-and-containers) should be assigned to every task to ensure uniform execution, regardless of local context.
     - Outside of very basic images from very trusted sources, Docker images should be pulled directly from [WILDS' Docker Library](https://github.com/getwilds/wilds-docker-library) whenever possible.
     - If you think a particular tool should be added to that library, [submit an issue](https://github.com/getwilds/wilds-docker-library/issues) or email us at wilds@fredhutch.org.
-- In general, runtime attributes should be defined whenever possible in order to enable execution on as many backends as possible.
+- In general, [runtime attributes](https://hutchdatascience.org/WDL_Workflows_Guide/the-first-task.html#runtime-attributes) should be defined whenever possible in order to enable execution on as many backends as possible.
 
 ## Stylistic Guidelines
 
-- **Indentation**: braces contents, inputs, and line continuations should all be indented by two spaces (not four).
-- **White Space**: different input groups and code blocks should be separated by a single blank line.
+- **Indentation**: [braces contents](https://github.com/getwilds/fastq-to-cram/blob/489ccdf0697ab902ca6f775b8e51d4f0603c0c01/fastq-to-cram.wdl#L7C23-L11C2), [inputs](https://github.com/getwilds/fastq-to-cram/blob/489ccdf0697ab902ca6f775b8e51d4f0603c0c01/fastq-to-cram.wdl#L36C9-L44C31), and [line continuations](https://github.com/getwilds/fastq-to-cram/blob/489ccdf0697ab902ca6f775b8e51d4f0603c0c01/fastq-to-cram.wdl#L143C5-L147C67) should all be indented by two spaces (not four).
+- **White Space**: different [input groups](https://github.com/getwilds/fastq-to-cram/blob/489ccdf0697ab902ca6f775b8e51d4f0603c0c01/fastq-to-cram.wdl#L36C1-L44C31) and [code blocks](https://github.com/getwilds/fastq-to-cram/blob/489ccdf0697ab902ca6f775b8e51d4f0603c0c01/fastq-to-cram.wdl#L95C11-L107C6) should be separated by a single blank line.
 - **Line Breaks**: line breaks should only occur in the following places:
-    - After a comma
-    - Following an opening parenthesis/bracket
+    - After a [comma](https://github.com/getwilds/fastq-to-cram/blob/489ccdf0697ab902ca6f775b8e51d4f0603c0c01/fastq-to-cram.wdl#L37C49-L37C50)
     - Before the `else` of an `if` statement
-    - Between inputs
-    - Opening and closing braces
+    - [Between inputs](https://github.com/getwilds/fastq-to-cram/blob/489ccdf0697ab902ca6f775b8e51d4f0603c0c01/fastq-to-cram.wdl#L36C1-L44C31)
+    - [Opening](https://github.com/getwilds/fastq-to-cram/blob/489ccdf0697ab902ca6f775b8e51d4f0603c0c01/fastq-to-cram.wdl#L23C37-L23C38) and [closing](https://github.com/getwilds/fastq-to-cram/blob/489ccdf0697ab902ca6f775b8e51d4f0603c0c01/fastq-to-cram.wdl#L45C1-L46C29) braces
 - **Line Character Limit**: lines should be a maximum of 100 characters.
-- **Expression Spacing**: spaces should surround operators to increase clarity and readability.
+- **Expression Spacing**: spaces should surround [operators](https://github.com/getwilds/fastq-to-cram/blob/489ccdf0697ab902ca6f775b8e51d4f0603c0c01/fastq-to-cram.wdl#L39) to increase clarity and readability.
 - **Naming Conventions**:
-    - Tasks, workflows, and structs should follow upper camel case (`SuperAwesomeTask`)
-    - Call aliases should follow lower camel case (`superAwesomeCall`)
-    - Variables should follow lowercase underscore (`super_awesome_variable`)
+    - [Tasks](https://github.com/getwilds/fastq-to-cram/blob/489ccdf0697ab902ca6f775b8e51d4f0603c0c01/fastq-to-cram.wdl#L83C6-L83C24), [workflows](https://github.com/getwilds/fastq-to-cram/blob/489ccdf0697ab902ca6f775b8e51d4f0603c0c01/fastq-to-cram.wdl#L23C10-L23C36), and [structs](https://github.com/getwilds/fastq-to-cram/blob/489ccdf0697ab902ca6f775b8e51d4f0603c0c01/fastq-to-cram.wdl#L7C8-L7C22) should follow upper camel case (`SuperAwesomeTask`)
+    - Call [aliases](https://github.com/getwilds/wdl-101/blob/b1de97d360b524e1932368c04b6e2dec2c85f134/mutation_calling.wdl#L55C20-L55C31) should follow lower camel case (`superAwesomeCall`)
+    - [Variables](https://github.com/getwilds/fastq-to-cram/blob/489ccdf0697ab902ca6f775b8e51d4f0603c0c01/fastq-to-cram.wdl#L28C10-L28C21) should follow lowercase underscore (`super_awesome_variable`)
 - **Descriptive Commenting**:
-    - Comments should be placed above each task in the workflow describing its function.
-    - Input descriptors should be provided in the `parameter_meta` component.
+    - [Comments](https://github.com/getwilds/fastq-to-cram/blob/489ccdf0697ab902ca6f775b8e51d4f0603c0c01/fastq-to-cram.wdl#L82C1-L82C41) should be placed above each task in the workflow describing its function.
+    - Input descriptors should be provided in the [`parameter_meta`](https://github.com/getwilds/fastq-to-cram/blob/489ccdf0697ab902ca6f775b8e51d4f0603c0c01/fastq-to-cram.wdl#L71C3-L77C4) component.
 
 ## Repository Guidelines
 
-- As with all repositories, each workflow should include a detailed README containing:
+- As with all repositories, each workflow should include a detailed [README](https://github.com/getwilds/fastq-to-cram/tree/guidelines-tf?tab=readme-ov-file#fastq-to-cram) containing:
     - Purpose and functionality of the workflow
-    - Basic diagram illustration the flow of data
+    - Basic diagram illustrating the flow of data
     - Contact information in case issues pop up 
     - [WILDS Badge](https://github.com/getwilds/badges) at the top describing the development status of the workflow
 - Make sure to include an example input json in the repository for users to modify and easily execute the workflow.
     - For a skeleton template, try the `inputs` action of [WOMtool](https://cromwell.readthedocs.io/en/stable/WOMtool/#inputs).
-- A GitHub Action executing [WOMtool](https://cromwell.readthedocs.io/en/stable/WOMtool/#validate) `validate` is highly recommended as a check before merging new features into main.
-    - If you're feeling adventurous, try automating an entire test run using a very small validation dataset.
+- A GitHub Action executing [WOMtool](https://cromwell.readthedocs.io/en/stable/WOMtool/#validate) `validate` is highly recommended as a [check](https://github.com/getwilds/fastq-to-cram/blob/guidelines-tf/.github/workflows/womtools-validate.yml) before merging new features into main.
+    - If you're feeling adventurous, try automating an [entire test run](https://github.com/getwilds/fastq-to-cram/blob/guidelines-tf/.github/workflows/cromwell-test-run.yml) using a very small [validation dataset](https://github.com/getwilds/fastq-to-cram/tree/guidelines-tf/tests/data).
 
 ## Additional Resources
 
