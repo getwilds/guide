@@ -22,7 +22,7 @@ In all repositories in WILDS we will include mention of our employer. The follow
 
 For other types of WILDS repositories, perhaps just add a mention to the README.
 
-## GitHub Repositories
+## GitHub Repositories {#sec-conventions-repos}
 
 ### Issue labels
 
@@ -46,3 +46,44 @@ WILDS badges are maintained in a GitHub repository at <https://github.com/getwil
 
 An example badge: [![](https://getwilds.org/badges/badges/stable.svg)](https://getwilds.org/badges/#stable)
 
+### Contributing instructions
+
+All WILDS repos should have a `CONTRIBUTING.md` file. Although this file could live in many different places in a repository, in WILDS repositories it should live in the `.github/` directory.
+
+See also [GitHub's docs on CONTRIBUTING.md](https://docs.github.com/en/communities/setting-up-your-project-for-healthy-contributions/setting-guidelines-for-repository-contributors).
+
+There is a default CONTRIBUTING.md file for all WILDS repos at <https://github.com/getwilds/.github>. We encourage repo maintainers to add their own CONTRIBUTING.md file if the default is not adequate.
+
+### Pull request templates
+
+All WILDS repos should have one or more pull request templates. These help contributors include all the relavant information, and perform any required tasks, before submitting a pull request.
+
+See also [GitHub's docs on pull request templates](https://docs.github.com/en/communities/using-templates-to-encourage-useful-issues-and-pull-requests/creating-a-pull-request-template-for-your-repository)
+
+There is a default pull request template for all WILDS repos at <https://github.com/getwilds/.github>. We encourage repo maintainers to add their own pull request template if the default is not adequate.
+
+### Issue templates
+
+All WILDS repos should have one or more issue templates. These help contributors include all the relavant information, and perform any required tasks, before submitting an issue.
+
+See also [GitHub's docs on issue templates](https://docs.github.com/en/communities/using-templates-to-encourage-useful-issues-and-pull-requests/manually-creating-a-single-issue-template-for-your-repository)
+
+There is a default issue template for all WILDS repos at <https://github.com/getwilds/.github>. We encourage repo maintainers to add their own issue template(s) if the default is not adequate.
+
+
+### Reproducible examples
+
+We strongly encourage all repositories that are R or Python packages or research compendia to request a "reprex" (reproducible example) in their issue and pull request templates.
+
+- R: [reprex](https://www.tidyverse.org/help/#reprex)
+- Python: [reprexlite](https://pypi.org/project/reprexlite/), [reprexpy](https://pypi.org/project/reprexpy/)
+
+### GitHub Actions
+
+(For brevity we'll use the shorthand "GH actions")
+
+- R: The `usethis` function [use_github_actions](https://usethis.r-lib.org/reference/use_github_action.html) can be used to add many different GH actions, e.g., `use_github_action("pkgdown")`. For R packages, we recommend using the following three:
+  - `use_github_action("check-standard")`
+  - `use_github_action("lint")`
+  - `use_github_action("pkgdown")`
+- Python: There is no tool available for Python similar to `usethis` - one has to manually add workflow files. For Python packages we recommend following GitHub's guide on [Building and Testing Python](https://docs.github.com/en/actions/automating-builds-and-tests/building-and-testing-python). As there are many different ways to make and maintain Python packages, you will need to decide what steps are needed for your package.
