@@ -2,50 +2,46 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://getwilds.org/guide/index.html</loc>
-    <lastmod>2024-03-14T17:05:35.472Z</lastmod>
+    <lastmod>2024-03-14T17:07:58.288Z</lastmod>
   </url>
   <url>
     <loc>https://getwilds.org/guide/contributing.html</loc>
-    <lastmod>2024-03-14T17:05:35.472Z</lastmod>
+    <lastmod>2024-03-14T17:07:58.288Z</lastmod>
   </url>
   <url>
     <loc>https://getwilds.org/guide/style.html</loc>
-    <lastmod>2024-03-14T17:05:35.472Z</lastmod>
+    <lastmod>2024-03-14T17:07:58.292Z</lastmod>
   </url>
   <url>
     <loc>https://getwilds.org/guide/codereview.html</loc>
-    <lastmod>2024-03-14T17:05:35.472Z</lastmod>
+    <lastmod>2024-03-14T17:07:58.288Z</lastmod>
   </url>
   <url>
     <loc>https://getwilds.org/guide/codereview-dasl.html</loc>
-    <lastmod>2024-03-14T17:05:35.472Z</lastmod>
+    <lastmod>2024-03-14T17:07:58.288Z</lastmod>
   </url>
   <url>
     <loc>https://getwilds.org/guide/codereview-external.html</loc>
-    <lastmod>2024-03-14T17:05:35.472Z</lastmod>
+    <lastmod>2024-03-14T17:07:58.288Z</lastmod>
   </url>
   <url>
     <loc>https://getwilds.org/guide/codereview-general.html</loc>
-    <lastmod>2024-03-14T17:05:35.472Z</lastmod>
+    <lastmod>2024-03-14T17:07:58.288Z</lastmod>
   </url>
   <url>
     <loc>https://getwilds.org/guide/codereview-guidelines.html</loc>
-    <lastmod>2024-03-14T17:05:35.472Z</lastmod>
+    <lastmod>2024-03-14T17:07:58.288Z</lastmod>
   </url>
   <url>
     <loc>https://getwilds.org/guide/packagedocs.html</loc>
-    <lastmod>2024-03-14T17:05:35.472Z</lastmod>
+    <lastmod>2024-03-14T17:07:58.292Z</lastmod>
   </url>
   <url>
     <loc>https://getwilds.org/guide/maintenance.html</loc>
-    <lastmod>2024-03-14T17:05:35.472Z</lastmod>
-  </url>
-  <url>
-    <loc>https://getwilds.org/guide/security.html</loc>
-    <lastmod>2024-03-14T17:05:35.472Z</lastmod>
+    <lastmod>2024-03-14T17:07:58.288Z</lastmod>
   </url>
   <url>
     <loc>https://getwilds.org/guide/conventions.html</loc>
-    <lastmod>2024-03-14T17:05:35.472Z</lastmod>
+    <lastmod>2024-03-14T17:07:58.288Z</lastmod>
   </url>
 </urlset>
