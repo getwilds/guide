@@ -4,6 +4,7 @@ project:
 book:
   title: "WILDS Contributor Guide"
   reader-mode: true
+  bread-crumbs: false
   author:
     - Scott Chamberlain
   page-footer:
@@ -16,7 +17,12 @@ book:
     - index.qmd
     - contributing.qmd
     - style.qmd
-    - codereview.qmd
+    - part: codereview.qmd
+      chapters:
+        - codereview-dasl.qmd
+        - codereview-external.qmd
+        - codereview-general.qmd
+        - codereview-guidelines.qmd
     - packagedocs.qmd
     - maintenance.qmd
     - security.qmd
