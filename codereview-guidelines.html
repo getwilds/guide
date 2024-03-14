@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>WILDS Contributor Guide - 1&nbsp; Contributing </title>
+<title>WILDS Contributor Guide - 6&nbsp; Guidelines</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -30,8 +30,8 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
-<link href="./style.html" rel="next">
-<link href="./index.html" rel="prev">
+<link href="./packagedocs.html" rel="next">
+<link href="./codereview-general.html" rel="prev">
 <script src="site_libs/quarto-html/quarto.js"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
@@ -85,7 +85,7 @@ ul.task-list li input[type="checkbox"] {
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
         <a class="flex-grow-1 no-decor" role="button" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
-          <h1 class="quarto-secondary-nav-title"><span id="sec-contributing" class="quarto-section-identifier"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Contributing <iconify-icon inline="" icon="fa6-solid:hammer"></iconify-icon></span></span></h1>
+          <h1 class="quarto-secondary-nav-title"><span id="sec-review-guidelines" class="quarto-section-identifier"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Guidelines</span></span></h1>
         </a>     
       <button type="button" class="btn quarto-search-button" aria-label="" onclick="window.quartoOpenSearch();">
         <i class="bi bi-search"></i>
@@ -126,7 +126,7 @@ ul.task-list li input[type="checkbox"] {
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./contributing.html" class="sidebar-item-text sidebar-link active">
+  <a href="./contributing.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Contributing </span></span></a>
   </div>
 </li>
@@ -165,7 +165,7 @@ ul.task-list li input[type="checkbox"] {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./codereview-guidelines.html" class="sidebar-item-text sidebar-link">
+  <a href="./codereview-guidelines.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Guidelines</span></span></a>
   </div>
 </li>
@@ -205,17 +205,18 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">Table of contents</h2>
    
   <ul>
-  <li><a href="#communication-channels" id="toc-communication-channels" class="nav-link active" data-scroll-target="#communication-channels"><span class="header-section-number">1.1</span> Communication Channels</a></li>
-  <li><a href="#software" id="toc-software" class="nav-link" data-scroll-target="#software"><span class="header-section-number">1.2</span> Software</a></li>
+  <li><a href="#everyone" id="toc-everyone" class="nav-link active" data-scroll-target="#everyone"><span class="header-section-number">6.1</span> Everyone</a></li>
+  <li><a href="#having-your-code-reviewed" id="toc-having-your-code-reviewed" class="nav-link" data-scroll-target="#having-your-code-reviewed"><span class="header-section-number">6.2</span> Having Your Code Reviewed</a></li>
+  <li><a href="#reviewing-code" id="toc-reviewing-code" class="nav-link" data-scroll-target="#reviewing-code"><span class="header-section-number">6.3</span> Reviewing Code</a></li>
   </ul>
-<div class="toc-actions"><ul><li><a href="https://github.com/getwilds/guide/edit/main/contributing.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/getwilds/guide/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
+<div class="toc-actions"><ul><li><a href="https://github.com/getwilds/guide/edit/main/codereview-guidelines.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/getwilds/guide/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title d-none d-lg-block"><span id="sec-contributing" class="quarto-section-identifier"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Contributing <iconify-icon inline="" icon="fa6-solid:hammer"></iconify-icon></span></span></h1>
+<h1 class="title d-none d-lg-block"><span id="sec-review-guidelines" class="quarto-section-identifier"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Guidelines</span></span></h1>
 </div>
 
 
@@ -232,24 +233,118 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<p>This chapter is intended to direct you to the place you want to be, whether you want to get help, use software, contribute to software, and more. Reminder: the scope of this guide is software maintained by DaSL in the <a href="https://github.com/getwilds">WILDS GitHub organization</a>. “Contributors” as used in this book includes DaSL staff as we are also contributors! If you’d like help with your own software schedule a <a href="https://calendly.com/data-house-calls">house call</a>.</p>
-<section id="communication-channels" class="level2" data-number="1.1">
-<h2 data-number="1.1" class="anchored" data-anchor-id="communication-channels"><span class="header-section-number">1.1</span> Communication Channels</h2>
+<p>Adapted from:</p>
 <ul>
-<li>Slack: Fred Hutch folks can chat with other community members and DaSL and Fred Hutch SciComp staff in the Fred Hutch Data Slack. Join our Slack here <iconify-icon inline="" icon="fa6-solid:hand-point-right"></iconify-icon> <a href="https://hutchdatascience.org/joinslack/" class="uri">https://hutchdatascience.org/joinslack/</a></li>
-<li>GitHub Issues: Each GitHub repository has an issues tab where you can ask questions, propose a feature, and more. See below for more details.</li>
-<li>Data House Calls: <a href="https://calendly.com/data-house-calls" class="uri">https://calendly.com/data-house-calls</a></li>
+<li>ThoughtBot’s Playbook section on <a href="https://github.com/thoughtbot/guides/tree/main/code-review">code review</a> under a <a href="https://creativecommons.org/licenses/by/3.0/">CC Attribution License</a></li>
+<li>R-Ladies Seattle presentations by <a href="https://drive.google.com/file/d/1rvS7nvlQnVwHfvLFVogTVY2OQ0QFCRcV/view">Carrie Bennett</a> and <a href="https://drive.google.com/file/d/1vdVCNpPWutKmoXfHbhqV_5s3UmCAPGil/view">Lauren Wolfe</a></li>
+<li>SE Radio 400: <a href="https://se-radio.net/2020/02/episode-400-michaela-greiler-on-code-reviews/">Michaela Greiler on Code Reviews</a></li>
+</ul>
+<section id="everyone" class="level2" data-number="6.1">
+<h2 data-number="6.1" class="anchored" data-anchor-id="everyone"><span class="header-section-number">6.1</span> Everyone</h2>
+<ul>
+<li>Accept that many programming decisions are opinions
+<ul>
+<li>Discuss tradeoffs, which you prefer, and reach a resolution quickly.</li>
+</ul></li>
+<li>Offer positive comments
+<ul>
+<li>What did you learn? What did you think was neat?</li>
+</ul></li>
+<li>Ask good questions; don’t make demands
+<ul>
+<li>“What do you think about naming this function <code>fetch_user</code>?”</li>
+</ul></li>
+<li>Good questions avoid judgment and avoid assumptions about the author’s perspective</li>
+<li>Ask for clarification
+<ul>
+<li>“I didn’t understand. Can you clarify?”</li>
+</ul></li>
+<li>Avoid selective ownership of code
+<ul>
+<li>“Mine”, “not mine”, “yours”</li>
+</ul></li>
+<li>Avoid using terms that could be seen as referring to personal traits
+<ul>
+<li>“Dumb”, “stupid”.</li>
+<li>Assume everyone is intelligent and well-meaning.</li>
+</ul></li>
+<li>Be explicit
+<ul>
+<li>Remember people don’t always understand your intentions online.</li>
+</ul></li>
+<li>Be humble
+<ul>
+<li>“I’m not sure - let’s look it up.”</li>
+</ul></li>
+<li>Don’t use hyperbole
+<ul>
+<li>“Always”, “never”, “endlessly”, “nothing”</li>
+</ul></li>
+<li>Don’t use sarcasm</li>
+<li>Talk synchronously if there are too many “I didn’t understand” or “Alternative solution:” comments
+<ul>
+<li>Chat, screen-sharing, in person</li>
+<li>Post a follow-up comment summarizing the discussion.</li>
+</ul></li>
+<li>If you learned something new, share your appreciation
+<ul>
+<li>“I did not know about this. Thank you for sharing it.”</li>
+</ul></li>
 </ul>
 </section>
-<section id="software" class="level2" data-number="1.2">
-<h2 data-number="1.2" class="anchored" data-anchor-id="software"><span class="header-section-number">1.2</span> Software</h2>
-<p>This book concerns any software created in the GitHub repositories under the <a href="https://github.com/getwilds">WILDS GitHub organization</a>.</p>
-<p>Find the thing you would like to do below and follow its instructions.</p>
-<p><strong>Question</strong>: If you have a question you can ask in the Slack linked above, or open an issue in any of the GitHub repositories.</p>
-<p><strong>Bug</strong>: If you want to report a bug, open an issue in the appropriate GitHub repository.</p>
-<p><strong>Feature</strong>: If you want to request a feature, open an issue in the appropriate GitHub repository.</p>
-<p><strong>Contribute code/docs</strong>: If you want to contribute to software - whether code, documentation or something else - open an issue in the appropriate GitHub repository to discuss, then open a pull request to make your contribution.</p>
-<p><strong>Code of Conduct</strong>: WILDS GitHub repositories should have their own code of conduct - likely some version of the <a href="https://www.contributor-covenant.org/version/2/1/code_of_conduct/">Contributor Covenant</a>. Refer to the COC in the repository for specific guidance.</p>
+<section id="having-your-code-reviewed" class="level2" data-number="6.2">
+<h2 data-number="6.2" class="anchored" data-anchor-id="having-your-code-reviewed"><span class="header-section-number">6.2</span> Having Your Code Reviewed</h2>
+<ul>
+<li>Be grateful for the reviewer’s suggestions
+<ul>
+<li>“Good call. I’ll make that change.”</li>
+</ul></li>
+<li>Be aware that it can be challenging to convey emotion and intention online
+<ul>
+<li>You may want to consider using labels to convey intention and tone.</li>
+</ul></li>
+<li>Explain why the code exists
+<ul>
+<li>“It’s like that because of these reasons. Would it be more clear if I rename this class/file/method/variable?”</li>
+</ul></li>
+<li>Extract some changes and refactoring into future tickets/stories</li>
+<li>When making visual changes, include screenshots or screencasts to show the effect of the changes
+<ul>
+<li>You may want to consider before/after screenshots or screencasts whenever applicable.</li>
+</ul></li>
+<li>Seek to understand the reviewer’s perspective</li>
+<li>View each comment as an opportunity to learn</li>
+<li>If you’re someone who says “sorry” frequently, think about removing this from your language</li>
+<li>You can ask for clarification</li>
+<li>It’s OK to disagree. It’s helpful to first look for things that you agree with and explain why you disagree</li>
+</ul>
+</section>
+<section id="reviewing-code" class="level2" data-number="6.3">
+<h2 data-number="6.3" class="anchored" data-anchor-id="reviewing-code"><span class="header-section-number">6.3</span> Reviewing Code</h2>
+<ul>
+<li>Communicate which ideas you feel strongly about and those you don’t</li>
+<li>Identify ways to simplify the code while still solving the problem</li>
+<li>If discussions turn too philosophical or academic, move the discussion offline
+<ul>
+<li>In the meantime, let the author make the final decision on alternative implementations.</li>
+</ul></li>
+<li>Offer alternative implementations
+<ul>
+<li>But assume the author already considered them.</li>
+<li>“What do you think about using a custom validator here?”</li>
+</ul></li>
+<li>Seek to understand the author’s perspective</li>
+<li>Remember that you are here to provide feedback, not to be a gatekeeper</li>
+<li>When suggesting changes using the “Add a suggestion” feature (look for this icon: <iconify-icon inline="" icon="octicon:file-diff-24"></iconify-icon>):
+<ul>
+<li>Communicate clearly which lines you suggest adding/removing</li>
+<li>Test the suggested changes to validate it works whenever possible
+<ul>
+<li>When not possible, let the pull request author know that you did not test the suggestion</li>
+</ul></li>
+<li>Provide some context to let the author know why you’re suggesting the change</li>
+</ul></li>
+</ul>
 
 
 </section>
@@ -815,13 +910,13 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="./index.html" class="pagination-link" aria-label="Welcome">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Welcome</span>
+      <a href="./codereview-general.html" class="pagination-link" aria-label="General">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">General</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./style.html" class="pagination-link" aria-label="Style {{< iconify fa6-solid code >}}">
-        <span class="nav-page-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Style <iconify-icon inline="" icon="fa6-solid:code"></iconify-icon></span></span> <i class="bi bi-arrow-right-short"></i>
+      <a href="./packagedocs.html" class="pagination-link" aria-label="Documentation {{< iconify fa6-solid book >}}">
+        <span class="nav-page-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Documentation <iconify-icon inline="" icon="fa6-solid:book"></iconify-icon></span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>
@@ -833,7 +928,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     </div>   
     <div class="nav-footer-center">
       &nbsp;
-    <div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/getwilds/guide/edit/main/contributing.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/getwilds/guide/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div>
+    <div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/getwilds/guide/edit/main/codereview-guidelines.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/getwilds/guide/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div>
     <div class="nav-footer-right">
 <p>This book was built with <a href="https://quarto.org/">Quarto</a>.</p>
 </div>

@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>WILDS Contributor Guide - 1&nbsp; Contributing </title>
+<title>WILDS Contributor Guide - 3&nbsp; DaSL internal</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -30,8 +30,8 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
-<link href="./style.html" rel="next">
-<link href="./index.html" rel="prev">
+<link href="./codereview-external.html" rel="next">
+<link href="./codereview.html" rel="prev">
 <script src="site_libs/quarto-html/quarto.js"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
@@ -85,7 +85,7 @@ ul.task-list li input[type="checkbox"] {
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
         <a class="flex-grow-1 no-decor" role="button" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
-          <h1 class="quarto-secondary-nav-title"><span id="sec-contributing" class="quarto-section-identifier"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Contributing <iconify-icon inline="" icon="fa6-solid:hammer"></iconify-icon></span></span></h1>
+          <h1 class="quarto-secondary-nav-title"><span id="sec-review-dasl" class="quarto-section-identifier"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">DaSL internal</span></span></h1>
         </a>     
       <button type="button" class="btn quarto-search-button" aria-label="" onclick="window.quartoOpenSearch();">
         <i class="bi bi-search"></i>
@@ -126,7 +126,7 @@ ul.task-list li input[type="checkbox"] {
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./contributing.html" class="sidebar-item-text sidebar-link active">
+  <a href="./contributing.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Contributing </span></span></a>
   </div>
 </li>
@@ -147,7 +147,7 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./codereview-dasl.html" class="sidebar-item-text sidebar-link">
+  <a href="./codereview-dasl.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">DaSL internal</span></span></a>
   </div>
 </li>
@@ -205,17 +205,24 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">Table of contents</h2>
    
   <ul>
-  <li><a href="#communication-channels" id="toc-communication-channels" class="nav-link active" data-scroll-target="#communication-channels"><span class="header-section-number">1.1</span> Communication Channels</a></li>
-  <li><a href="#software" id="toc-software" class="nav-link" data-scroll-target="#software"><span class="header-section-number">1.2</span> Software</a></li>
+  <li><a href="#high-level-approach" id="toc-high-level-approach" class="nav-link active" data-scroll-target="#high-level-approach"><span class="header-section-number">3.1</span> High level approach</a></li>
+  <li><a href="#patterns-of-collaboration" id="toc-patterns-of-collaboration" class="nav-link" data-scroll-target="#patterns-of-collaboration"><span class="header-section-number">3.2</span> Patterns of collaboration</a>
+  <ul class="collapse">
+  <li><a href="#close-knit-collaboration" id="toc-close-knit-collaboration" class="nav-link" data-scroll-target="#close-knit-collaboration"><span class="header-section-number">3.2.1</span> Close-knit collaboration</a></li>
+  <li><a href="#solo-developer" id="toc-solo-developer" class="nav-link" data-scroll-target="#solo-developer"><span class="header-section-number">3.2.2</span> Solo developer</a></li>
+  <li><a href="#understudy" id="toc-understudy" class="nav-link" data-scroll-target="#understudy"><span class="header-section-number">3.2.3</span> Understudy</a></li>
+  <li><a href="#external" id="toc-external" class="nav-link" data-scroll-target="#external"><span class="header-section-number">3.2.4</span> External</a></li>
+  </ul></li>
+  <li><a href="#what-else" id="toc-what-else" class="nav-link" data-scroll-target="#what-else"><span class="header-section-number">3.3</span> What else?</a></li>
   </ul>
-<div class="toc-actions"><ul><li><a href="https://github.com/getwilds/guide/edit/main/contributing.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/getwilds/guide/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
+<div class="toc-actions"><ul><li><a href="https://github.com/getwilds/guide/edit/main/codereview-dasl.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/getwilds/guide/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title d-none d-lg-block"><span id="sec-contributing" class="quarto-section-identifier"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Contributing <iconify-icon inline="" icon="fa6-solid:hammer"></iconify-icon></span></span></h1>
+<h1 class="title d-none d-lg-block"><span id="sec-review-dasl" class="quarto-section-identifier"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">DaSL internal</span></span></h1>
 </div>
 
 
@@ -232,24 +239,67 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<p>This chapter is intended to direct you to the place you want to be, whether you want to get help, use software, contribute to software, and more. Reminder: the scope of this guide is software maintained by DaSL in the <a href="https://github.com/getwilds">WILDS GitHub organization</a>. “Contributors” as used in this book includes DaSL staff as we are also contributors! If you’d like help with your own software schedule a <a href="https://calendly.com/data-house-calls">house call</a>.</p>
-<section id="communication-channels" class="level2" data-number="1.1">
-<h2 data-number="1.1" class="anchored" data-anchor-id="communication-channels"><span class="header-section-number">1.1</span> Communication Channels</h2>
+<section id="high-level-approach" class="level2" data-number="3.1">
+<h2 data-number="3.1" class="anchored" data-anchor-id="high-level-approach"><span class="header-section-number">3.1</span> High level approach</h2>
+<p>At a high level we use the following approach:</p>
 <ul>
-<li>Slack: Fred Hutch folks can chat with other community members and DaSL and Fred Hutch SciComp staff in the Fred Hutch Data Slack. Join our Slack here <iconify-icon inline="" icon="fa6-solid:hand-point-right"></iconify-icon> <a href="https://hutchdatascience.org/joinslack/" class="uri">https://hutchdatascience.org/joinslack/</a></li>
-<li>GitHub Issues: Each GitHub repository has an issues tab where you can ask questions, propose a feature, and more. See below for more details.</li>
-<li>Data House Calls: <a href="https://calendly.com/data-house-calls" class="uri">https://calendly.com/data-house-calls</a></li>
+<li>Code review whenever possible - review is generally not required for every code change
+<ul>
+<li>As a team grows, add in more code review</li>
+<li>Some projects in the WILDS may have changess pushed directly to main, while others may follow a pull request only approach</li>
+</ul></li>
+<li>Follow our code review guidelines (<a href="codereview-guidelines.html" class="quarto-xref"><span>Chapter 6</span></a>)</li>
+<li>Testing must be used
+<ul>
+<li>With a small team testing is crucial to ensuring software does what it is expected to do, AND facilitates code changes in the future</li>
+<li>When making a code contribution, make sure it is covered by existing tests, or write a new test if not</li>
+</ul></li>
+<li>Automate the boring work / Have bots tell us to follow our own rules
+<ul>
+<li>Styling</li>
+<li>Linting</li>
+<li>Running tests/checks/etc</li>
+</ul></li>
 </ul>
+<p>The approach above may change as the portion of the team grows that works on WILDS projects. In particular, our guidelines around human code review should change as we have more team members. For example, where we strive for just one reviewer of a pull request now, if we add a few new team members we may expect two reviewers.</p>
+<p>Another factor that may change the above approach is if a project gains significant external contributors - making it possible to do more human code review. We cannot however expect rapid response times for external contributors.</p>
 </section>
-<section id="software" class="level2" data-number="1.2">
-<h2 data-number="1.2" class="anchored" data-anchor-id="software"><span class="header-section-number">1.2</span> Software</h2>
-<p>This book concerns any software created in the GitHub repositories under the <a href="https://github.com/getwilds">WILDS GitHub organization</a>.</p>
-<p>Find the thing you would like to do below and follow its instructions.</p>
-<p><strong>Question</strong>: If you have a question you can ask in the Slack linked above, or open an issue in any of the GitHub repositories.</p>
-<p><strong>Bug</strong>: If you want to report a bug, open an issue in the appropriate GitHub repository.</p>
-<p><strong>Feature</strong>: If you want to request a feature, open an issue in the appropriate GitHub repository.</p>
-<p><strong>Contribute code/docs</strong>: If you want to contribute to software - whether code, documentation or something else - open an issue in the appropriate GitHub repository to discuss, then open a pull request to make your contribution.</p>
-<p><strong>Code of Conduct</strong>: WILDS GitHub repositories should have their own code of conduct - likely some version of the <a href="https://www.contributor-covenant.org/version/2/1/code_of_conduct/">Contributor Covenant</a>. Refer to the COC in the repository for specific guidance.</p>
+<section id="patterns-of-collaboration" class="level2" data-number="3.2">
+<h2 data-number="3.2" class="anchored" data-anchor-id="patterns-of-collaboration"><span class="header-section-number">3.2</span> Patterns of collaboration</h2>
+<p>The tidyverse team has a nice chapter in their code review guide on <a href="https://code-review.tidyverse.org/collaboration/">patterns of collaboration</a>. The exact scenarios may not apply here, but in general we need to consider different scenarios of how we work together, who the players are and what we can expect from them.</p>
+<section id="close-knit-collaboration" class="level3" data-number="3.2.1">
+<h3 data-number="3.2.1" class="anchored" data-anchor-id="close-knit-collaboration"><span class="header-section-number">3.2.1</span> Close-knit collaboration</h3>
+<p>On some projects there may be 2 or more contributors that are heavily involved in work on the project. In these cases, code review of PRs should be swift.</p>
+</section>
+<section id="solo-developer" class="level3" data-number="3.2.2">
+<h3 data-number="3.2.2" class="anchored" data-anchor-id="solo-developer"><span class="header-section-number">3.2.2</span> Solo developer</h3>
+<p>There will be many cases within the WILDS where there is only one person working on the project - and there isn’t anyone available within DASL to review code. In these cases, tests and automation are particularly important.</p>
+<p>These projects should strive to get other DASL staff to review code, but turnaround times on reviews are not likely to be fast.</p>
+</section>
+<section id="understudy" class="level3" data-number="3.2.3">
+<h3 data-number="3.2.3" class="anchored" data-anchor-id="understudy"><span class="header-section-number">3.2.3</span> Understudy</h3>
+<p>This could be a more junior DASL staff member, or an external contributor that’s still “learning the ropes”. In these cases PR reviews should be swift to make sure the understudy is getting feedback quickly so they know the lead maintainer is interested in their work.</p>
+</section>
+<section id="external" class="level3" data-number="3.2.4">
+<h3 data-number="3.2.4" class="anchored" data-anchor-id="external"><span class="header-section-number">3.2.4</span> External</h3>
+<p>External contributions may be one-off drive by contributions from someone that may not contribute again, or contributions from a regular external contributor. Although DASL staff need not fully address these immediately, we should make every effort to reply quickly so the external contributor knows a human at DASL is aware of their contribution and will address it soon.</p>
+</section>
+</section>
+<section id="what-else" class="level2" data-number="3.3">
+<h2 data-number="3.3" class="anchored" data-anchor-id="what-else"><span class="header-section-number">3.3</span> What else?</h2>
+<div class="callout callout-style-default callout-warning callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Warning
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>What else should we cover in this chapter?</p>
+</div>
+</div>
 
 
 </section>
@@ -815,13 +865,13 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="./index.html" class="pagination-link" aria-label="Welcome">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Welcome</span>
+      <a href="./codereview.html" class="pagination-link" aria-label="Code review {{< iconify fa6-solid pencil >}}">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Code review <iconify-icon inline="" icon="fa6-solid:pencil"></iconify-icon></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./style.html" class="pagination-link" aria-label="Style {{< iconify fa6-solid code >}}">
-        <span class="nav-page-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Style <iconify-icon inline="" icon="fa6-solid:code"></iconify-icon></span></span> <i class="bi bi-arrow-right-short"></i>
+      <a href="./codereview-external.html" class="pagination-link" aria-label="DaSL external">
+        <span class="nav-page-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">DaSL external</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>
@@ -833,7 +883,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     </div>   
     <div class="nav-footer-center">
       &nbsp;
-    <div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/getwilds/guide/edit/main/contributing.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/getwilds/guide/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div>
+    <div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/getwilds/guide/edit/main/codereview-dasl.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/getwilds/guide/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div>
     <div class="nav-footer-right">
 <p>This book was built with <a href="https://quarto.org/">Quarto</a>.</p>
 </div>

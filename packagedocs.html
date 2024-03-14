@@ -2,12 +2,12 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.4.550">
+<meta name="generator" content="quarto-1.4.551">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>WILDS Contributor Guide - 4&nbsp; Documentation </title>
+<title>WILDS Contributor Guide - 7&nbsp; Documentation </title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -65,7 +65,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
 <link href="./maintenance.html" rel="next">
-<link href="./codereview.html" rel="prev">
+<link href="./codereview-guidelines.html" rel="prev">
 <script src="site_libs/quarto-html/quarto.js"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
@@ -118,9 +118,9 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./packagedocs.html"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Documentation {{&lt; iconify fa6-solid book &gt;}}</span></a></li></ol></nav>
-        <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
-        </a>
+        <a class="flex-grow-1 no-decor" role="button" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+          <h1 class="quarto-secondary-nav-title"><span id="sec-docs" class="quarto-section-identifier"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Documentation <iconify-icon inline="" icon="fa6-solid:book"></iconify-icon></span></span></h1>
+        </a>     
       <button type="button" class="btn quarto-search-button" aria-label="" onclick="window.quartoOpenSearch();">
         <i class="bi bi-search"></i>
       </button>
@@ -170,34 +170,63 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
  <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Style </span></span></a>
   </div>
 </li>
-        <li class="sidebar-item">
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="./codereview.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Code review </span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./codereview.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Code review </span></span></a>
+  <a href="./codereview-dasl.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">DaSL internal</span></span></a>
   </div>
 </li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./codereview-external.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">DaSL external</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./codereview-general.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">General</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./codereview-guidelines.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Guidelines</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./packagedocs.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Documentation </span></span></a>
+ <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Documentation </span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./maintenance.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Package maintenance </span></span></a>
+ <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Package maintenance </span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./security.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Security </span></span></a>
+ <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Security </span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./conventions.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Conventions </span></span></a>
+ <span class="menu-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Conventions </span></span></a>
   </div>
 </li>
     </ul>
@@ -210,12 +239,12 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <h2 id="toc-title">Table of contents</h2>
    
   <ul>
-  <li><a href="#r" id="toc-r" class="nav-link active" data-scroll-target="#r"><span class="header-section-number">4.1</span> R</a>
+  <li><a href="#r" id="toc-r" class="nav-link active" data-scroll-target="#r"><span class="header-section-number">7.1</span> R</a>
   <ul class="collapse">
-  <li><a href="#wilds-pkgdown-template" id="toc-wilds-pkgdown-template" class="nav-link" data-scroll-target="#wilds-pkgdown-template"><span class="header-section-number">4.1.1</span> WILDS pkgdown template</a></li>
+  <li><a href="#wilds-pkgdown-template" id="toc-wilds-pkgdown-template" class="nav-link" data-scroll-target="#wilds-pkgdown-template"><span class="header-section-number">7.1.1</span> WILDS pkgdown template</a></li>
   </ul></li>
-  <li><a href="#python" id="toc-python" class="nav-link" data-scroll-target="#python"><span class="header-section-number">4.2</span> Python</a></li>
-  <li><a href="#guidelines" id="toc-guidelines" class="nav-link" data-scroll-target="#guidelines"><span class="header-section-number">4.3</span> Guidelines</a></li>
+  <li><a href="#python" id="toc-python" class="nav-link" data-scroll-target="#python"><span class="header-section-number">7.2</span> Python</a></li>
+  <li><a href="#guidelines" id="toc-guidelines" class="nav-link" data-scroll-target="#guidelines"><span class="header-section-number">7.3</span> Guidelines</a></li>
   </ul>
 <div class="toc-actions"><ul><li><a href="https://github.com/getwilds/guide/edit/main/packagedocs.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/getwilds/guide/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
     </div>
@@ -224,7 +253,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title"><span id="sec-docs" class="quarto-section-identifier"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Documentation <iconify-icon inline="" icon="fa6-solid:book"></iconify-icon></span></span></h1>
+<h1 class="title d-none d-lg-block"><span id="sec-docs" class="quarto-section-identifier"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Documentation <iconify-icon inline="" icon="fa6-solid:book"></iconify-icon></span></span></h1>
 </div>
 
 
@@ -242,21 +271,21 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 
 <p>All formally supported WILDS R and Python packages should have package documentation.</p>
-<section id="r" class="level2" data-number="4.1">
-<h2 data-number="4.1" class="anchored" data-anchor-id="r"><span class="header-section-number">4.1</span> R</h2>
+<section id="r" class="level2" data-number="7.1">
+<h2 data-number="7.1" class="anchored" data-anchor-id="r"><span class="header-section-number">7.1</span> R</h2>
 <p>We use the <a href="https://pkgdown.r-lib.org/">pkgdown</a> package to create documentation for R packages, and host it on <a href="https://pages.github.com/">GitHub Pages</a>. To get started with <code>pkgdown</code>, in R within the root of your package run <a href="https://usethis.r-lib.org/reference/use_pkgdown.html">usethis::use_pkgdown_github_pages()</a> - it will set up a <code>_pkgdown.yml</code> file in the root of your repo used to configure <code>pkgdown</code>, and add a <code>.github/workflows/publish.yml</code> file to build the package documentation on each push, pull request, or release. See <a href="https://pkgdown.r-lib.org/">pkgdown documentation</a> for details on configuring documentation.</p>
 <p>After pushing the above changes up to your repository, go to the Actions tab and you should see the new <code>publish</code> action running. It will build and then deploy the rendered package docs. The URL for your docs will vary depending on the GitHub organization your repository lives within. For WILDS, the base URL is <code>https://getwilds.org</code>. If your package is in the WILDS org (at <code>https://github.com/getwilds</code>) your package (named <code>mypkg</code>) docs would live at <code>https://getwilds.org/mypkg</code>.</p>
 <p>You can also build <code>pkgdown</code> docs locally - after running <code>usethis::use_pkgdown()</code> or <code>usethis::use_pkgdown_github_pages()</code> - by running <code>pkgdown::build_site()</code>. If you run <code>build_site()</code> within RStudio it should open up your site in your default browser, but may not do so if you run in a terminal. You can open the site in your browser by navigating to and opening the file <code>docs/index.html</code> within your repo.</p>
-<section id="wilds-pkgdown-template" class="level3" data-number="4.1.1">
-<h3 data-number="4.1.1" class="anchored" data-anchor-id="wilds-pkgdown-template"><span class="header-section-number">4.1.1</span> WILDS pkgdown template</h3>
+<section id="wilds-pkgdown-template" class="level3" data-number="7.1.1">
+<h3 data-number="7.1.1" class="anchored" data-anchor-id="wilds-pkgdown-template"><span class="header-section-number">7.1.1</span> WILDS pkgdown template</h3>
 <p>We are planning to have a WILDS specific <code>pkgdown</code> “package template” (see <a href="https://pkgdown.r-lib.org/articles/customise.html#template-packages">pkgdown docs</a> for what this means) - but it’s not ready to use yet. When it is ready, you will be able to specify our template like:</p>
 <div class="sourceCode" id="cb1"><pre class="sourceCode yml code-with-copy"><code class="sourceCode yaml"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">template</span><span class="kw">:</span></span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="fu">package</span><span class="kw">:</span><span class="at"> wildstemplate</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>For now just use the default theme that <code>pkgdown</code> provides.</p>
 </section>
 </section>
-<section id="python" class="level2" data-number="4.2">
-<h2 data-number="4.2" class="anchored" data-anchor-id="python"><span class="header-section-number">4.2</span> Python</h2>
+<section id="python" class="level2" data-number="7.2">
+<h2 data-number="7.2" class="anchored" data-anchor-id="python"><span class="header-section-number">7.2</span> Python</h2>
 <p>Just like there’s a variety of ways to do packing in Python there’s a variety of documentation options. Two of the well known options are:</p>
 <ul>
 <li><a href="https://www.sphinx-doc.org/">Sphinx</a> - been around longer, uses <a href="https://docutils.sourceforge.io/rst.html">reStructuredText</a></li>
@@ -265,8 +294,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p>For either of the options above, they can be hosted in many places, including <a href="https://pages.github.com/">GitHub Pages</a> and <a href="https://about.readthedocs.com/">ReadTheDocs</a>.</p>
 <p><code>Sphinx</code> and <code>MkDocs</code> are less automatic relative to <code>pkgdown</code>, so just be prepared for a bit more manual work.</p>
 </section>
-<section id="guidelines" class="level2" data-number="4.3">
-<h2 data-number="4.3" class="anchored" data-anchor-id="guidelines"><span class="header-section-number">4.3</span> Guidelines</h2>
+<section id="guidelines" class="level2" data-number="7.3">
+<h2 data-number="7.3" class="anchored" data-anchor-id="guidelines"><span class="header-section-number">7.3</span> Guidelines</h2>
 <ul>
 <li>README: This is most likely the first place potential users will interact with your package. Make sure the README clearly states what the package does, and how to get started.</li>
 <li>Examples: All user facing functions should have examples. Make sure to be careful about how examples are run if there’s any sensitive data or connections to remote services.</li>
@@ -511,6 +540,11 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     for (var i=0; i<links.length; i++) {
       const link = links[i];
       if (!isInternal(link.href)) {
+        // undo the damage that might have been done by quarto-nav.js in the case of
+        // links that we want to consider external
+        if (link.dataset.originalHref !== undefined) {
+          link.href = link.dataset.originalHref;
+        }
           // target, if specified
           link.setAttribute("target", "_blank");
           if (link.getAttribute("rel") === null) {
@@ -552,7 +586,11 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       try { href = new URL(href).hash; } catch {}
       const id = href.replace(/^#\/?/, "");
       const note = window.document.getElementById(id);
-      return note.innerHTML;
+      if (note) {
+        return note.innerHTML;
+      } else {
+        return "";
+      }
     });
   }
   const xrefs = window.document.querySelectorAll('a.quarto-xref');
@@ -828,13 +866,13 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="./codereview.html" class="pagination-link" aria-label="Code review {{< iconify fa6-solid pencil >}}">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Code review <iconify-icon inline="" icon="fa6-solid:pencil"></iconify-icon></span></span>
+      <a href="./codereview-guidelines.html" class="pagination-link" aria-label="Guidelines">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Guidelines</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
       <a href="./maintenance.html" class="pagination-link" aria-label="Package maintenance {{< iconify fa6-solid code-compare >}}">
-        <span class="nav-page-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Package maintenance <iconify-icon inline="" icon="fa6-solid:code-compare"></iconify-icon></span></span> <i class="bi bi-arrow-right-short"></i>
+        <span class="nav-page-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Package maintenance <iconify-icon inline="" icon="fa6-solid:code-compare"></iconify-icon></span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>

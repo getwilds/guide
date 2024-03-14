@@ -102,141 +102,283 @@
   {
     "objectID": "codereview.html",
     "href": "codereview.html",
-    "title": "3  Code review ",
+    "title": "Code review ",
     "section": "",
-    "text": "3.1 WILDS interal guidelines\nstill discussing this internally …",
+    "text": "Scope\nThe scope of this guide is for work within the WILDS GitHub organization (https://github.com/getwilds/). In chapters within Code review we have the following sections:\nContributions to the WILDS:\nAnd",
     "crumbs": [
-      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Code review {{< iconify fa6-solid pencil >}}</span>"
+      "Code review {{< iconify fa6-solid pencil >}}"
     ]
   },
   {
-    "objectID": "codereview.html#community-guidelines",
-    "href": "codereview.html#community-guidelines",
-    "title": "3  Code review ",
-    "section": "3.2 Community guidelines",
-    "text": "3.2 Community guidelines\nWe have code review guidance for labs at https://hutchdatascience.org/code_review/. The site contains higher level code review guidance broken down by lab roles, including lab leader, lab manager and lab developer.\nIf you want lower level code review guidance, the Advanced Reproducibility in Cancer Informatics course has two chapters that will be helpful:\n\nEngaging in Code Review - as an author\nEngaging in Code Review - as a reviewer",
+    "objectID": "codereview.html#scope",
+    "href": "codereview.html#scope",
+    "title": "Code review ",
+    "section": "",
+    "text": "from within team DASL (3  DaSL internal)\nfrom non-DASL folks, and (4  DaSL external)\n\n\n\nadvice for broader Fred Hutch community (5  General)",
     "crumbs": [
-      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Code review {{< iconify fa6-solid pencil >}}</span>"
+      "Code review {{< iconify fa6-solid pencil >}}"
+    ]
+  },
+  {
+    "objectID": "codereview.html#infrastructure",
+    "href": "codereview.html#infrastructure",
+    "title": "Code review ",
+    "section": "Infrastructure",
+    "text": "Infrastructure\nWe use a number of helpful tools to facilitate code changes, including code review:\n\nContributing instructions in the file CONTRIBUTING.md\nPull request instructions in a file pull_request_template.md\nIssue instructions in a file issue_template.md\n\nRead more about these files in the section 10.2 GitHub Repositories.",
+    "crumbs": [
+      "Code review {{< iconify fa6-solid pencil >}}"
+    ]
+  },
+  {
+    "objectID": "codereview-dasl.html",
+    "href": "codereview-dasl.html",
+    "title": "3  DaSL internal",
+    "section": "",
+    "text": "3.1 High level approach\nAt a high level we use the following approach:\nThe approach above may change as the portion of the team grows that works on WILDS projects. In particular, our guidelines around human code review should change as we have more team members. For example, where we strive for just one reviewer of a pull request now, if we add a few new team members we may expect two reviewers.\nAnother factor that may change the above approach is if a project gains significant external contributors - making it possible to do more human code review. We cannot however expect rapid response times for external contributors.",
+    "crumbs": [
+      "Code review {{< iconify fa6-solid pencil >}}",
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>DaSL internal</span>"
+    ]
+  },
+  {
+    "objectID": "codereview-dasl.html#high-level-approach",
+    "href": "codereview-dasl.html#high-level-approach",
+    "title": "3  DaSL internal",
+    "section": "",
+    "text": "Code review whenever possible - review is generally not required for every code change\n\nAs a team grows, add in more code review\nSome projects in the WILDS may have changess pushed directly to main, while others may follow a pull request only approach\n\nFollow our code review guidelines (Chapter 6)\nTesting must be used\n\nWith a small team testing is crucial to ensuring software does what it is expected to do, AND facilitates code changes in the future\nWhen making a code contribution, make sure it is covered by existing tests, or write a new test if not\n\nAutomate the boring work / Have bots tell us to follow our own rules\n\nStyling\nLinting\nRunning tests/checks/etc",
+    "crumbs": [
+      "Code review {{< iconify fa6-solid pencil >}}",
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>DaSL internal</span>"
+    ]
+  },
+  {
+    "objectID": "codereview-dasl.html#patterns-of-collaboration",
+    "href": "codereview-dasl.html#patterns-of-collaboration",
+    "title": "3  DaSL internal",
+    "section": "3.2 Patterns of collaboration",
+    "text": "3.2 Patterns of collaboration\nThe tidyverse team has a nice chapter in their code review guide on patterns of collaboration. The exact scenarios may not apply here, but in general we need to consider different scenarios of how we work together, who the players are and what we can expect from them.\n\n3.2.1 Close-knit collaboration\nOn some projects there may be 2 or more contributors that are heavily involved in work on the project. In these cases, code review of PRs should be swift.\n\n\n3.2.2 Solo developer\nThere will be many cases within the WILDS where there is only one person working on the project - and there isn’t anyone available within DASL to review code. In these cases, tests and automation are particularly important.\nThese projects should strive to get other DASL staff to review code, but turnaround times on reviews are not likely to be fast.\n\n\n3.2.3 Understudy\nThis could be a more junior DASL staff member, or an external contributor that’s still “learning the ropes”. In these cases PR reviews should be swift to make sure the understudy is getting feedback quickly so they know the lead maintainer is interested in their work.\n\n\n3.2.4 External\nExternal contributions may be one-off drive by contributions from someone that may not contribute again, or contributions from a regular external contributor. Although DASL staff need not fully address these immediately, we should make every effort to reply quickly so the external contributor knows a human at DASL is aware of their contribution and will address it soon.",
+    "crumbs": [
+      "Code review {{< iconify fa6-solid pencil >}}",
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>DaSL internal</span>"
+    ]
+  },
+  {
+    "objectID": "codereview-dasl.html#what-else",
+    "href": "codereview-dasl.html#what-else",
+    "title": "3  DaSL internal",
+    "section": "3.3 What else?",
+    "text": "3.3 What else?\n\n\n\n\n\n\nWarning\n\n\n\nWhat else should we cover in this chapter?",
+    "crumbs": [
+      "Code review {{< iconify fa6-solid pencil >}}",
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>DaSL internal</span>"
+    ]
+  },
+  {
+    "objectID": "codereview-external.html",
+    "href": "codereview-external.html",
+    "title": "4  DaSL external",
+    "section": "",
+    "text": "4.1 Follow code review guidelines\nFollow our code review guidelines (Chapter 6)",
+    "crumbs": [
+      "Code review {{< iconify fa6-solid pencil >}}",
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>DaSL external</span>"
+    ]
+  },
+  {
+    "objectID": "codereview-external.html#discuss-first",
+    "href": "codereview-external.html#discuss-first",
+    "title": "4  DaSL external",
+    "section": "4.2 Discuss first",
+    "text": "4.2 Discuss first\nIn most cases it’s a good idea to start a discussion before opening a pull request.\nYou can do this by opening an issue in the relavant GitHub repository, starting a discusison in the FH-Data Slack or emailing the maintainer. The best option is opening an issue as that keeps the discussion of the code paired with the code.\nIf you open an issue, there should be an issue template that will give instructions.\nMake sure to include a reproducible example!",
+    "crumbs": [
+      "Code review {{< iconify fa6-solid pencil >}}",
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>DaSL external</span>"
+    ]
+  },
+  {
+    "objectID": "codereview-external.html#open-a-pull-request",
+    "href": "codereview-external.html#open-a-pull-request",
+    "title": "4  DaSL external",
+    "section": "4.3 Open a pull request",
+    "text": "4.3 Open a pull request\nAfter discussing a change, feature request, bug, or soemthing else, open a pull request.\nADD MORE TEXT ABOUT DOING A PR …",
+    "crumbs": [
+      "Code review {{< iconify fa6-solid pencil >}}",
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>DaSL external</span>"
+    ]
+  },
+  {
+    "objectID": "codereview-general.html",
+    "href": "codereview-general.html",
+    "title": "5  General",
+    "section": "",
+    "text": "We have code review guidance for labs at https://hutchdatascience.org/code_review/. The site contains higher level code review guidance broken down by lab roles, including lab leader, lab manager and lab developer.\nIf you want lower level code review guidance, the Advanced Reproducibility in Cancer Informatics course has two chapters that will be helpful:\n\nEngaging in Code Review - as an author\nEngaging in Code Review - as a reviewer\n\nThe Tidyverse team at Posit (that makes the R packages dplyr, purrr and so on) has made public their code review principles. Check it out at https://code-review.tidyverse.org/",
+    "crumbs": [
+      "Code review {{< iconify fa6-solid pencil >}}",
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>General</span>"
+    ]
+  },
+  {
+    "objectID": "codereview-guidelines.html",
+    "href": "codereview-guidelines.html",
+    "title": "6  Guidelines",
+    "section": "",
+    "text": "6.1 Everyone",
+    "crumbs": [
+      "Code review {{< iconify fa6-solid pencil >}}",
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Guidelines</span>"
+    ]
+  },
+  {
+    "objectID": "codereview-guidelines.html#everyone",
+    "href": "codereview-guidelines.html#everyone",
+    "title": "6  Guidelines",
+    "section": "",
+    "text": "Accept that many programming decisions are opinions\n\nDiscuss tradeoffs, which you prefer, and reach a resolution quickly.\n\nOffer positive comments\n\nWhat did you learn? What did you think was neat?\n\nAsk good questions; don’t make demands\n\n“What do you think about naming this function fetch_user?”\n\nGood questions avoid judgment and avoid assumptions about the author’s perspective\nAsk for clarification\n\n“I didn’t understand. Can you clarify?”\n\nAvoid selective ownership of code\n\n“Mine”, “not mine”, “yours”\n\nAvoid using terms that could be seen as referring to personal traits\n\n“Dumb”, “stupid”.\nAssume everyone is intelligent and well-meaning.\n\nBe explicit\n\nRemember people don’t always understand your intentions online.\n\nBe humble\n\n“I’m not sure - let’s look it up.”\n\nDon’t use hyperbole\n\n“Always”, “never”, “endlessly”, “nothing”\n\nDon’t use sarcasm\nTalk synchronously if there are too many “I didn’t understand” or “Alternative solution:” comments\n\nChat, screen-sharing, in person\nPost a follow-up comment summarizing the discussion.\n\nIf you learned something new, share your appreciation\n\n“I did not know about this. Thank you for sharing it.”",
+    "crumbs": [
+      "Code review {{< iconify fa6-solid pencil >}}",
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Guidelines</span>"
+    ]
+  },
+  {
+    "objectID": "codereview-guidelines.html#having-your-code-reviewed",
+    "href": "codereview-guidelines.html#having-your-code-reviewed",
+    "title": "6  Guidelines",
+    "section": "6.2 Having Your Code Reviewed",
+    "text": "6.2 Having Your Code Reviewed\n\nBe grateful for the reviewer’s suggestions\n\n“Good call. I’ll make that change.”\n\nBe aware that it can be challenging to convey emotion and intention online\n\nYou may want to consider using labels to convey intention and tone.\n\nExplain why the code exists\n\n“It’s like that because of these reasons. Would it be more clear if I rename this class/file/method/variable?”\n\nExtract some changes and refactoring into future tickets/stories\nWhen making visual changes, include screenshots or screencasts to show the effect of the changes\n\nYou may want to consider before/after screenshots or screencasts whenever applicable.\n\nSeek to understand the reviewer’s perspective\nView each comment as an opportunity to learn\nIf you’re someone who says “sorry” frequently, think about removing this from your language\nYou can ask for clarification\nIt’s OK to disagree. It’s helpful to first look for things that you agree with and explain why you disagree",
+    "crumbs": [
+      "Code review {{< iconify fa6-solid pencil >}}",
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Guidelines</span>"
+    ]
+  },
+  {
+    "objectID": "codereview-guidelines.html#reviewing-code",
+    "href": "codereview-guidelines.html#reviewing-code",
+    "title": "6  Guidelines",
+    "section": "6.3 Reviewing Code",
+    "text": "6.3 Reviewing Code\n\nCommunicate which ideas you feel strongly about and those you don’t\nIdentify ways to simplify the code while still solving the problem\nIf discussions turn too philosophical or academic, move the discussion offline\n\nIn the meantime, let the author make the final decision on alternative implementations.\n\nOffer alternative implementations\n\nBut assume the author already considered them.\n“What do you think about using a custom validator here?”\n\nSeek to understand the author’s perspective\nRemember that you are here to provide feedback, not to be a gatekeeper\nWhen suggesting changes using the “Add a suggestion” feature (look for this icon: ):\n\nCommunicate clearly which lines you suggest adding/removing\nTest the suggested changes to validate it works whenever possible\n\nWhen not possible, let the pull request author know that you did not test the suggestion\n\nProvide some context to let the author know why you’re suggesting the change",
+    "crumbs": [
+      "Code review {{< iconify fa6-solid pencil >}}",
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Guidelines</span>"
     ]
   },
   {
     "objectID": "packagedocs.html",
     "href": "packagedocs.html",
-    "title": "4  Documentation ",
+    "title": "7  Documentation ",
     "section": "",
-    "text": "4.1 R\nWe use the pkgdown package to create documentation for R packages, and host it on GitHub Pages. To get started with pkgdown, in R within the root of your package run usethis::use_pkgdown_github_pages() - it will set up a _pkgdown.yml file in the root of your repo used to configure pkgdown, and add a .github/workflows/publish.yml file to build the package documentation on each push, pull request, or release. See pkgdown documentation for details on configuring documentation.\nAfter pushing the above changes up to your repository, go to the Actions tab and you should see the new publish action running. It will build and then deploy the rendered package docs. The URL for your docs will vary depending on the GitHub organization your repository lives within. For WILDS, the base URL is https://getwilds.org. If your package is in the WILDS org (at https://github.com/getwilds) your package (named mypkg) docs would live at https://getwilds.org/mypkg.\nYou can also build pkgdown docs locally - after running usethis::use_pkgdown() or usethis::use_pkgdown_github_pages() - by running pkgdown::build_site(). If you run build_site() within RStudio it should open up your site in your default browser, but may not do so if you run in a terminal. You can open the site in your browser by navigating to and opening the file docs/index.html within your repo.",
+    "text": "7.1 R\nWe use the pkgdown package to create documentation for R packages, and host it on GitHub Pages. To get started with pkgdown, in R within the root of your package run usethis::use_pkgdown_github_pages() - it will set up a _pkgdown.yml file in the root of your repo used to configure pkgdown, and add a .github/workflows/publish.yml file to build the package documentation on each push, pull request, or release. See pkgdown documentation for details on configuring documentation.\nAfter pushing the above changes up to your repository, go to the Actions tab and you should see the new publish action running. It will build and then deploy the rendered package docs. The URL for your docs will vary depending on the GitHub organization your repository lives within. For WILDS, the base URL is https://getwilds.org. If your package is in the WILDS org (at https://github.com/getwilds) your package (named mypkg) docs would live at https://getwilds.org/mypkg.\nYou can also build pkgdown docs locally - after running usethis::use_pkgdown() or usethis::use_pkgdown_github_pages() - by running pkgdown::build_site(). If you run build_site() within RStudio it should open up your site in your default browser, but may not do so if you run in a terminal. You can open the site in your browser by navigating to and opening the file docs/index.html within your repo.",
     "crumbs": [
-      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Documentation {{< iconify fa6-solid book >}}</span>"
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Documentation {{< iconify fa6-solid book >}}</span>"
     ]
   },
   {
     "objectID": "packagedocs.html#r",
     "href": "packagedocs.html#r",
-    "title": "4  Documentation ",
+    "title": "7  Documentation ",
     "section": "",
-    "text": "4.1.1 WILDS pkgdown template\nWe are planning to have a WILDS specific pkgdown “package template” (see pkgdown docs for what this means) - but it’s not ready to use yet. When it is ready, you will be able to specify our template like:\ntemplate:\n  package: wildstemplate\nFor now just use the default theme that pkgdown provides.",
+    "text": "7.1.1 WILDS pkgdown template\nWe are planning to have a WILDS specific pkgdown “package template” (see pkgdown docs for what this means) - but it’s not ready to use yet. When it is ready, you will be able to specify our template like:\ntemplate:\n  package: wildstemplate\nFor now just use the default theme that pkgdown provides.",
     "crumbs": [
-      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Documentation {{< iconify fa6-solid book >}}</span>"
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Documentation {{< iconify fa6-solid book >}}</span>"
     ]
   },
   {
     "objectID": "packagedocs.html#python",
     "href": "packagedocs.html#python",
-    "title": "4  Documentation ",
-    "section": "4.2 Python",
-    "text": "4.2 Python\nJust like there’s a variety of ways to do packing in Python there’s a variety of documentation options. Two of the well known options are:\n\nSphinx - been around longer, uses reStructuredText\nMkDocs - newcomer, used Markdown\n\nFor either of the options above, they can be hosted in many places, including GitHub Pages and ReadTheDocs.\nSphinx and MkDocs are less automatic relative to pkgdown, so just be prepared for a bit more manual work.",
+    "title": "7  Documentation ",
+    "section": "7.2 Python",
+    "text": "7.2 Python\nJust like there’s a variety of ways to do packing in Python there’s a variety of documentation options. Two of the well known options are:\n\nSphinx - been around longer, uses reStructuredText\nMkDocs - newcomer, used Markdown\n\nFor either of the options above, they can be hosted in many places, including GitHub Pages and ReadTheDocs.\nSphinx and MkDocs are less automatic relative to pkgdown, so just be prepared for a bit more manual work.",
     "crumbs": [
-      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Documentation {{< iconify fa6-solid book >}}</span>"
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Documentation {{< iconify fa6-solid book >}}</span>"
     ]
   },
   {
     "objectID": "packagedocs.html#guidelines",
     "href": "packagedocs.html#guidelines",
-    "title": "4  Documentation ",
-    "section": "4.3 Guidelines",
-    "text": "4.3 Guidelines\n\nREADME: This is most likely the first place potential users will interact with your package. Make sure the README clearly states what the package does, and how to get started.\nExamples: All user facing functions should have examples. Make sure to be careful about how examples are run if there’s any sensitive data or connections to remote services.\nVignettes: From the R Packages book: “A vignette is a long-form guide to your package. Function documentation is great if you know the name of the function you need, but it’s useless otherwise. In contrast, a vignette can be framed around a target problem that your package is designed to solve. The vignette format is perfect for showing a workflow that solves that particular problem, start to finish. Vignettes afford you different opportunities than help topics: you have much more control over the integration of code and prose and it’s a better setting for showing how multiple functions work together.”",
+    "title": "7  Documentation ",
+    "section": "7.3 Guidelines",
+    "text": "7.3 Guidelines\n\nREADME: This is most likely the first place potential users will interact with your package. Make sure the README clearly states what the package does, and how to get started.\nExamples: All user facing functions should have examples. Make sure to be careful about how examples are run if there’s any sensitive data or connections to remote services.\nVignettes: From the R Packages book: “A vignette is a long-form guide to your package. Function documentation is great if you know the name of the function you need, but it’s useless otherwise. In contrast, a vignette can be framed around a target problem that your package is designed to solve. The vignette format is perfect for showing a workflow that solves that particular problem, start to finish. Vignettes afford you different opportunities than help topics: you have much more control over the integration of code and prose and it’s a better setting for showing how multiple functions work together.”",
     "crumbs": [
-      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Documentation {{< iconify fa6-solid book >}}</span>"
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Documentation {{< iconify fa6-solid book >}}</span>"
     ]
   },
   {
     "objectID": "maintenance.html",
     "href": "maintenance.html",
-    "title": "5  Package maintenance ",
+    "title": "8  Package maintenance ",
     "section": "",
-    "text": "5.1 Licenses\nAll software (R, Python, etc.) in the WILDS should by default use the MIT license.\nIf there are circumstances which prevent using MIT, please do discuss with Sean or Scott.",
+    "text": "8.1 Licenses\nAll software (R, Python, etc.) in the WILDS should by default use the MIT license.\nIf there are circumstances which prevent using MIT, please do discuss with Sean or Scott.",
     "crumbs": [
-      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Package maintenance {{< iconify fa6-solid code-compare >}}</span>"
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Package maintenance {{< iconify fa6-solid code-compare >}}</span>"
     ]
   },
   {
     "objectID": "maintenance.html#licenses",
     "href": "maintenance.html#licenses",
-    "title": "5  Package maintenance ",
+    "title": "8  Package maintenance ",
     "section": "",
-    "text": "5.1.1 R\nIn R, you can add the MIT license to your repository with the following code:\n\nif (!requireNamespace(\"usethis\", quietly = TRUE)) {\n  install.packages(\"usethis\")\n}\nusethis::use_mit_license()\n\nNote that usethis::use_mit_license adds two files to your repository (LICENSE and LICENSE.md, and adds entries to the .Rbuildignore file so that R CMD CHECK doesn’t complain).\n\n\n5.1.2 Python\nThere’s no widely accepted single tool for dealing with licenses in Python similar to the above for R. For Python packages, simply include the license type (e.g., MIT) in your setup.py, setup.cfg, pyproject.toml, etc., and include the text of the license in a LICENSE file in the root of your repository.",
+    "text": "8.1.1 R\nIn R, you can add the MIT license to your repository with the following code:\n\nif (!requireNamespace(\"usethis\", quietly = TRUE)) {\n  install.packages(\"usethis\")\n}\nusethis::use_mit_license()\n\nNote that usethis::use_mit_license adds two files to your repository (LICENSE and LICENSE.md, and adds entries to the .Rbuildignore file so that R CMD CHECK doesn’t complain).\n\n\n8.1.2 Python\nThere’s no widely accepted single tool for dealing with licenses in Python similar to the above for R. For Python packages, simply include the license type (e.g., MIT) in your setup.py, setup.cfg, pyproject.toml, etc., and include the text of the license in a LICENSE file in the root of your repository.",
     "crumbs": [
-      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Package maintenance {{< iconify fa6-solid code-compare >}}</span>"
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Package maintenance {{< iconify fa6-solid code-compare >}}</span>"
     ]
   },
   {
     "objectID": "maintenance.html#package-versioning",
     "href": "maintenance.html#package-versioning",
-    "title": "5  Package maintenance ",
-    "section": "5.2 Package versioning",
-    "text": "5.2 Package versioning\nThere is a detailed discussion of versioning R packages in the lifecycle chapter of the R Packages book by Hadley Wickham and Jenny Bryan. Please follow that chapter in general for versioning of R and Python packages within the WILDS. To make it easier to grok, below are some of the highlights, and some exceptions to that chapter.\n\n5.2.1 Package version numbers\nThere’s quite a bit of nuance - and surprises - to package version numbers - see the Package version number section for details. For example, using the utils::package_version() function, which parses package version strings into S3 classes, we get a suprising result:\n\n\"2.0\" &gt; \"10.0\"\n#&gt; [1] TRUE\npackage_version(\"2.0\") &gt; package_version(\"10.0\")\n#&gt; [1] FALSE\n\nWith that example, please do think about your package versions before setting them.\n\n5.2.1.1 WILDS Conventions\nFollowing the Tidyverse package version conventions, WILDS packages will use the following conventions (see the link for more details):\n\nAlways use . as the separator, never use -.\nA released version number consists of three components, &lt;major&gt;.&lt;minor&gt;.&lt;patch&gt;\nWhile a package is in between releases, there is a fourth component: the development version, starting at 9000 (e.g., 0.2.2.9000), and incrementing from there until the package has another release at which point return to three components.\n\n\n\n\n5.2.2 Ignore these\nWe are not following or enforcing any rules about changes at the function/class/etc level below the package level. For example, the R Packages book talks about using the lifecycle package to deal with function changes.",
+    "title": "8  Package maintenance ",
+    "section": "8.2 Package versioning",
+    "text": "8.2 Package versioning\nThere is a detailed discussion of versioning R packages in the lifecycle chapter of the R Packages book by Hadley Wickham and Jenny Bryan. Please follow that chapter in general for versioning of R and Python packages within the WILDS. To make it easier to grok, below are some of the highlights, and some exceptions to that chapter.\n\n8.2.1 Package version numbers\nThere’s quite a bit of nuance - and surprises - to package version numbers - see the Package version number section for details. For example, using the utils::package_version() function, which parses package version strings into S3 classes, we get a suprising result:\n\n\"2.0\" &gt; \"10.0\"\n#&gt; [1] TRUE\npackage_version(\"2.0\") &gt; package_version(\"10.0\")\n#&gt; [1] FALSE\n\nWith that example, please do think about your package versions before setting them.\n\n8.2.1.1 WILDS Conventions\nFollowing the Tidyverse package version conventions, WILDS packages will use the following conventions (see the link for more details):\n\nAlways use . as the separator, never use -.\nA released version number consists of three components, &lt;major&gt;.&lt;minor&gt;.&lt;patch&gt;\nWhile a package is in between releases, there is a fourth component: the development version, starting at 9000 (e.g., 0.2.2.9000), and incrementing from there until the package has another release at which point return to three components.\n\n\n\n\n8.2.2 Ignore these\nWe are not following or enforcing any rules about changes at the function/class/etc level below the package level. For example, the R Packages book talks about using the lifecycle package to deal with function changes.",
     "crumbs": [
-      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Package maintenance {{< iconify fa6-solid code-compare >}}</span>"
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Package maintenance {{< iconify fa6-solid code-compare >}}</span>"
     ]
   },
   {
     "objectID": "maintenance.html#package-releases",
     "href": "maintenance.html#package-releases",
-    "title": "5  Package maintenance ",
-    "section": "5.3 Package releases",
-    "text": "5.3 Package releases\nIn general follow the Releasing to CRAN chapter in the book R Packages for R, and the Releasing and versioning chapter in the book Python Packages for Python. Those chapters don’t have to be followed to the letter, but in general they provide really good guidance.\nThere are a few aspects of releases we are opinionated about and would like all WILDS R and Python packages to follow:\n\nUse the MIT license unless there’s good reason not to\nFollow our versioning guidelines above\nGit tag released versions, and push the tag to GitHub\nAdd the associated NEWS/Changelog items to a release associated with the tag on GitHub",
+    "title": "8  Package maintenance ",
+    "section": "8.3 Package releases",
+    "text": "8.3 Package releases\nIn general follow the Releasing to CRAN chapter in the book R Packages for R, and the Releasing and versioning chapter in the book Python Packages for Python. Those chapters don’t have to be followed to the letter, but in general they provide really good guidance.\nThere are a few aspects of releases we are opinionated about and would like all WILDS R and Python packages to follow:\n\nUse the MIT license unless there’s good reason not to\nFollow our versioning guidelines above\nGit tag released versions, and push the tag to GitHub\nAdd the associated NEWS/Changelog items to a release associated with the tag on GitHub",
     "crumbs": [
-      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Package maintenance {{< iconify fa6-solid code-compare >}}</span>"
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Package maintenance {{< iconify fa6-solid code-compare >}}</span>"
     ]
   },
   {
     "objectID": "security.html",
     "href": "security.html",
-    "title": "6  Security ",
+    "title": "9  Security ",
     "section": "",
     "text": "xxx",
     "crumbs": [
-      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Security {{< iconify fa6-solid lock >}}</span>"
+      "<span class='chapter-number'>9</span>  <span class='chapter-title'>Security {{< iconify fa6-solid lock >}}</span>"
     ]
   },
   {
     "objectID": "conventions.html",
     "href": "conventions.html",
-    "title": "7  Conventions ",
+    "title": "10  Conventions ",
     "section": "",
-    "text": "7.1 Mention our employer\nIn all repositories in WILDS we will include mention of our employer. The following are examples for R and Python:\nFor other types of WILDS repositories, perhaps just add a mention to the README.",
+    "text": "10.1 Mention our employer\nIn all repositories in WILDS we will include mention of our employer. The following are examples for R and Python:\nFor other types of WILDS repositories, perhaps just add a mention to the README.",
     "crumbs": [
-      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Conventions {{< iconify fa6-solid person-digging >}}</span>"
+      "<span class='chapter-number'>10</span>  <span class='chapter-title'>Conventions {{< iconify fa6-solid person-digging >}}</span>"
     ]
   },
   {
     "objectID": "conventions.html#mention-our-employer",
     "href": "conventions.html#mention-our-employer",
-    "title": "7  Conventions ",
+    "title": "10  Conventions ",
     "section": "",
     "text": "R:\n\nWith the usethis package you can add an entry of type person to the DESCRIPTION file of your package\n\nusethis::use_author(\"Fred Hutchinson Cancer Center\", role = \"fnd\", email = \"wilds@fredhutch.org\")\nPython:\n\nAdd a dict in the authors block of the pyproject.toml file or other config file in your package\n\n{\n  name = \"Fred Hutchinson Cancer Center\"\",\n  email = \"wilds@fredhutch.org\"\n}",
     "crumbs": [
-      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Conventions {{< iconify fa6-solid person-digging >}}</span>"
+      "<span class='chapter-number'>10</span>  <span class='chapter-title'>Conventions {{< iconify fa6-solid person-digging >}}</span>"
     ]
   },
   {
-    "objectID": "conventions.html#github-repositories",
-    "href": "conventions.html#github-repositories",
-    "title": "7  Conventions ",
-    "section": "7.2 GitHub Repositories",
-    "text": "7.2 GitHub Repositories\n\n7.2.1 Issue labels\nIn the WILDS repo sixtyfour there’s a set of 9 labels that have been proposed as common labels across WILDS repos. These aren’t necessarily enforced across WILDS repos, but can be used.\nThough we have not done this, one can set default labels for all repositories in WILDS - instructions here.\nA blogpost shows how to copy labels from one repository to another using the gh command line tool from GitHub. This command line method may be a better choice if we’re not sure we want to go all in on default labels for every new repo. Here’s the command:\ngh label clone getwilds/source-repo-name \\\n  --repo getwilds/destination-repo-name \\\n  --force\n\n\n7.2.2 Badges\nWILDS projects will use badges to indicate their status. Badges are a widely used standard in source code repositories, and help quickly indicate to a potential user something typically important about the repository.\nWILDS badges are maintained in a GitHub repository at https://github.com/getwilds/badges. There’s a website for these badges and an easy click to copy interface at https://getwilds.org/badges/.\nAn example badge:",
+    "objectID": "conventions.html#sec-conventions-repos",
+    "href": "conventions.html#sec-conventions-repos",
+    "title": "10  Conventions ",
+    "section": "10.2 GitHub Repositories",
+    "text": "10.2 GitHub Repositories\n\n10.2.1 Issue labels\nIn the WILDS repo sixtyfour there’s a set of 9 labels that have been proposed as common labels across WILDS repos. These aren’t necessarily enforced across WILDS repos, but can be used.\nThough we have not done this, one can set default labels for all repositories in WILDS - instructions here.\nA blogpost shows how to copy labels from one repository to another using the gh command line tool from GitHub. This command line method may be a better choice if we’re not sure we want to go all in on default labels for every new repo. Here’s the command:\ngh label clone getwilds/source-repo-name \\\n  --repo getwilds/destination-repo-name \\\n  --force\n\n\n10.2.2 Badges\nWILDS projects will use badges to indicate their status. Badges are a widely used standard in source code repositories, and help quickly indicate to a potential user something typically important about the repository.\nWILDS badges are maintained in a GitHub repository at https://github.com/getwilds/badges. There’s a website for these badges and an easy click to copy interface at https://getwilds.org/badges/.\nAn example badge: \n\n\n10.2.3 Contributing instructions\nAll WILDS repos should have a CONTRIBUTING.md file. Although this file could live in many different places in a repository, in WILDS repositories it should live in the .github/ directory.\nSee also GitHub’s docs on CONTRIBUTING.md.\nThere is a default CONTRIBUTING.md file for all WILDS repos at https://github.com/getwilds/.github. We encourage repo maintainers to add their own CONTRIBUTING.md file if the default is not adequate.\n\n\n10.2.4 Pull request templates\nAll WILDS repos should have one or more pull request templates. These help contributors include all the relavant information, and perform any required tasks, before submitting a pull request.\nSee also GitHub’s docs on pull request templates\nThere is a default pull request template for all WILDS repos at https://github.com/getwilds/.github. We encourage repo maintainers to add their own pull request template if the default is not adequate.\n\n\n10.2.5 Issue templates\nAll WILDS repos should have one or more issue templates. These help contributors include all the relavant information, and perform any required tasks, before submitting an issue.\nSee also GitHub’s docs on issue templates\nThere is a default issue template for all WILDS repos at https://github.com/getwilds/.github. We encourage repo maintainers to add their own issue template(s) if the default is not adequate.\n\n\n10.2.6 Reproducible examples\nWe strongly encourage all repositories that are R or Python packages or research compendia to request a “reprex” (reproducible example) in their issue and pull request templates.\n\nR: reprex\nPython: reprexlite, reprexpy\n\n\n\n10.2.7 GitHub Actions\n(For brevity we’ll use the shorthand “GH actions”)\n\nR: The usethis function use_github_actions can be used to add many different GH actions, e.g., use_github_action(\"pkgdown\"). For R packages, we recommend using the following three:\n\nuse_github_action(\"check-standard\")\nuse_github_action(\"lint\")\nuse_github_action(\"pkgdown\")\n\nPython: There is no tool available for Python similar to usethis - one has to manually add workflow files. For Python packages we recommend following GitHub’s guide on Building and Testing Python. As there are many different ways to make and maintain Python packages, you will need to decide what steps are needed for your package.",
     "crumbs": [
-      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Conventions {{< iconify fa6-solid person-digging >}}</span>"
+      "<span class='chapter-number'>10</span>  <span class='chapter-title'>Conventions {{< iconify fa6-solid person-digging >}}</span>"
     ]
   }
 ]
