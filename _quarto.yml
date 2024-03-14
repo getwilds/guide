@@ -25,6 +25,8 @@ book:
         - codereview-guidelines.qmd
     - packagedocs.qmd
     - maintenance.qmd
+    - wdlconfig.qmd
+    - docker.qmd
     - conventions.qmd
   site-url: https://getwilds.org/guide/
 
