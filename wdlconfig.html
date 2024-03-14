@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>WILDS Contributor Guide - 6&nbsp; Guidelines</title>
+<title>WILDS Contributor Guide - 9&nbsp; WDL Configuration Guide </title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -30,8 +30,8 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
-<link href="./packagedocs.html" rel="next">
-<link href="./codereview-general.html" rel="prev">
+<link href="./docker.html" rel="next">
+<link href="./maintenance.html" rel="prev">
 <script src="site_libs/quarto-html/quarto.js"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
@@ -85,7 +85,7 @@ ul.task-list li input[type="checkbox"] {
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
         <a class="flex-grow-1 no-decor" role="button" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
-          <h1 class="quarto-secondary-nav-title"><span id="sec-review-guidelines" class="quarto-section-identifier"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Guidelines</span></span></h1>
+          <h1 class="quarto-secondary-nav-title"><span id="sec-wdlconfig" class="quarto-section-identifier"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">WDL Configuration Guide <iconify-icon inline="" icon="file-icons:wdl"></iconify-icon></span></span></h1>
         </a>     
       <button type="button" class="btn quarto-search-button" aria-label="" onclick="window.quartoOpenSearch();">
         <i class="bi bi-search"></i>
@@ -165,7 +165,7 @@ ul.task-list li input[type="checkbox"] {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./codereview-guidelines.html" class="sidebar-item-text sidebar-link active">
+  <a href="./codereview-guidelines.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Guidelines</span></span></a>
   </div>
 </li>
@@ -185,7 +185,7 @@ ul.task-list li input[type="checkbox"] {
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./wdlconfig.html" class="sidebar-item-text sidebar-link">
+  <a href="./wdlconfig.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">WDL Configuration Guide </span></span></a>
   </div>
 </li>
@@ -211,18 +211,20 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">Table of contents</h2>
    
   <ul>
-  <li><a href="#everyone" id="toc-everyone" class="nav-link active" data-scroll-target="#everyone"><span class="header-section-number">6.1</span> Everyone</a></li>
-  <li><a href="#having-your-code-reviewed" id="toc-having-your-code-reviewed" class="nav-link" data-scroll-target="#having-your-code-reviewed"><span class="header-section-number">6.2</span> Having Your Code Reviewed</a></li>
-  <li><a href="#reviewing-code" id="toc-reviewing-code" class="nav-link" data-scroll-target="#reviewing-code"><span class="header-section-number">6.3</span> Reviewing Code</a></li>
+  <li><a href="#wilds-wdl-philosophy" id="toc-wilds-wdl-philosophy" class="nav-link active" data-scroll-target="#wilds-wdl-philosophy"><span class="header-section-number">9.1</span> WILDS WDL Philosophy</a></li>
+  <li><a href="#structural-guidelines" id="toc-structural-guidelines" class="nav-link" data-scroll-target="#structural-guidelines"><span class="header-section-number">9.2</span> Structural Guidelines</a></li>
+  <li><a href="#stylistic-guidelines" id="toc-stylistic-guidelines" class="nav-link" data-scroll-target="#stylistic-guidelines"><span class="header-section-number">9.3</span> Stylistic Guidelines</a></li>
+  <li><a href="#repository-guidelines" id="toc-repository-guidelines" class="nav-link" data-scroll-target="#repository-guidelines"><span class="header-section-number">9.4</span> Repository Guidelines</a></li>
+  <li><a href="#additional-resources" id="toc-additional-resources" class="nav-link" data-scroll-target="#additional-resources"><span class="header-section-number">9.5</span> Additional Resources</a></li>
   </ul>
-<div class="toc-actions"><ul><li><a href="https://github.com/getwilds/guide/edit/main/codereview-guidelines.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/getwilds/guide/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
+<div class="toc-actions"><ul><li><a href="https://github.com/getwilds/guide/edit/main/wdlconfig.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/getwilds/guide/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title d-none d-lg-block"><span id="sec-review-guidelines" class="quarto-section-identifier"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Guidelines</span></span></h1>
+<h1 class="title d-none d-lg-block"><span id="sec-wdlconfig" class="quarto-section-identifier"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">WDL Configuration Guide <iconify-icon inline="" icon="file-icons:wdl"></iconify-icon></span></span></h1>
 </div>
 
 
@@ -239,117 +241,100 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<p>Adapted from:</p>
+<p>This WILDS WDL configuration guide was inspired by the <a href="https://biowdl.github.io/styleGuidelines.html">BioWDL</a> and <a href="https://broadinstitute.github.io/warp/docs/Best_practices/suggested_formats">WARP</a> guidelines and is intended to cater to the pedagogical “proof-of-concept” nature of the WILDS.</p>
+<section id="wilds-wdl-philosophy" class="level2" data-number="9.1">
+<h2 data-number="9.1" class="anchored" data-anchor-id="wilds-wdl-philosophy"><span class="header-section-number">9.1</span> WILDS WDL Philosophy</h2>
 <ul>
-<li>ThoughtBot’s Playbook section on <a href="https://github.com/thoughtbot/guides/tree/main/code-review">code review</a> under a <a href="https://creativecommons.org/licenses/by/3.0/">CC Attribution License</a></li>
-<li>R-Ladies Seattle presentations by <a href="https://drive.google.com/file/d/1rvS7nvlQnVwHfvLFVogTVY2OQ0QFCRcV/view">Carrie Bennett</a> and <a href="https://drive.google.com/file/d/1vdVCNpPWutKmoXfHbhqV_5s3UmCAPGil/view">Lauren Wolfe</a></li>
-<li>SE Radio 400: <a href="https://se-radio.net/2020/02/episode-400-michaela-greiler-on-code-reviews/">Michaela Greiler on Code Reviews</a></li>
+<li>The mindset behind WILDS WDLs is for each repository to be a self-contained demonstration of a particular bioinformatic functionality. An ideal use-case would proceed as follows:
+<ol type="1">
+<li>A researcher reviews the repository to deem whether it is relevant for their needs, starting with the README for the over-arching purpose of the workflow, but extending to the the input json and WDL script itself for specific questions about toolsets, settings, and input/output data types.</li>
+<li>If the workflow seems useful, the researcher clones the repository locally, makes minimal updates to the input json, and executes the code with minimal effort using their favorite WDL executor.</li>
+<li>If the researcher would like to add their own flavor to the workflow, they can fork the repository, customize it as necessary to fit their exact research needs, and even resubmit the changes back to the original repository for consideration and review.</li>
+</ol></li>
+<li>To that end, WILDS WDL repositories are relatively minimal and will usually consist of:
+<ul>
+<li>a detailed <a href="https://github.com/getwilds/fastq-to-cram/blob/489ccdf0697ab902ca6f775b8e51d4f0603c0c01/README.md">README</a> describing the intended functionality and input/output file types</li>
+<li>a single <a href="https://github.com/getwilds/fastq-to-cram/blob/489ccdf0697ab902ca6f775b8e51d4f0603c0c01/fastq-to-cram.wdl">WDL script</a> containing the workflow as well as the tasks that make up the workflow</li>
+<li>a <a href="https://github.com/getwilds/fastq-to-cram/blob/489ccdf0697ab902ca6f775b8e51d4f0603c0c01/fastq-to-cram-inputs.json">input json</a> template providing examples of expected inputs</li>
+<li>a <a href="https://github.com/getwilds/fastq-to-cram/tree/489ccdf0697ab902ca6f775b8e51d4f0603c0c01/tests/data">test case</a> to ensure the workflow is running as expected</li>
+</ul></li>
+<li>We believe the minimal nature of this setup will aid from a readability/ease-of-use standpoint.</li>
 </ul>
-<section id="everyone" class="level2" data-number="6.1">
-<h2 data-number="6.1" class="anchored" data-anchor-id="everyone"><span class="header-section-number">6.1</span> Everyone</h2>
+</section>
+<section id="structural-guidelines" class="level2" data-number="9.2">
+<h2 data-number="9.2" class="anchored" data-anchor-id="structural-guidelines"><span class="header-section-number">9.2</span> Structural Guidelines</h2>
 <ul>
-<li>Accept that many programming decisions are opinions
+<li><a href="https://github.com/getwilds/fastq-to-cram/blob/489ccdf0697ab902ca6f775b8e51d4f0603c0c01/fastq-to-cram.wdl#L5">Structs</a> should be at the top of the WDL script, followed by the <a href="https://github.com/getwilds/fastq-to-cram/blob/489ccdf0697ab902ca6f775b8e51d4f0603c0c01/fastq-to-cram.wdl#L21">workflow</a> itself, followed by all of its corresponding <a href="https://github.com/getwilds/fastq-to-cram/blob/489ccdf0697ab902ca6f775b8e51d4f0603c0c01/fastq-to-cram.wdl#L80">tasks</a>.</li>
+<li>Tasks should be broken down into as small of operations as possible.
 <ul>
-<li>Discuss tradeoffs, which you prefer, and reach a resolution quickly.</li>
+<li>If a task uses more than one or two command line tools, it should probably be broken up into individual tasks.</li>
 </ul></li>
-<li>Offer positive comments
+<li><a href="https://hutchdatascience.org/WDL_Workflows_Guide/the-first-task.html#docker-images-and-containers">Docker containers</a> should be assigned to every task to ensure uniform execution, regardless of local context.
 <ul>
-<li>What did you learn? What did you think was neat?</li>
+<li>Outside of very basic images from very trusted sources, Docker images should be pulled directly from <a href="https://github.com/getwilds/wilds-docker-library">WILDS’ Docker Library</a> whenever possible.</li>
+<li>If you think a particular tool should be added to that library, <a href="https://github.com/getwilds/wilds-docker-library/issues">submit an issue</a> or email us at wilds@fredhutch.org.</li>
 </ul></li>
-<li>Ask good questions; don’t make demands
+<li>In general, <a href="https://hutchdatascience.org/WDL_Workflows_Guide/the-first-task.html#runtime-attributes">runtime attributes</a> should be defined whenever possible in order to enable execution on as many <a href="https://hutchdatascience.org/WDL_Workflows_Guide/appendix-backends-and-executors.html">backends</a> as possible.</li>
+</ul>
+</section>
+<section id="stylistic-guidelines" class="level2" data-number="9.3">
+<h2 data-number="9.3" class="anchored" data-anchor-id="stylistic-guidelines"><span class="header-section-number">9.3</span> Stylistic Guidelines</h2>
 <ul>
-<li>“What do you think about naming this function <code>fetch_user</code>?”</li>
+<li><strong>Indentation</strong>: <a href="https://github.com/getwilds/fastq-to-cram/blob/489ccdf0697ab902ca6f775b8e51d4f0603c0c01/fastq-to-cram.wdl#L7C23-L11C2">braces contents</a>, <a href="https://github.com/getwilds/fastq-to-cram/blob/489ccdf0697ab902ca6f775b8e51d4f0603c0c01/fastq-to-cram.wdl#L36C9-L44C31">inputs</a>, and <a href="https://github.com/getwilds/fastq-to-cram/blob/489ccdf0697ab902ca6f775b8e51d4f0603c0c01/fastq-to-cram.wdl#L143C5-L147C67">line continuations</a> should all be indented by two spaces (not four).</li>
+<li><strong>White Space</strong>: different <a href="https://github.com/getwilds/fastq-to-cram/blob/489ccdf0697ab902ca6f775b8e51d4f0603c0c01/fastq-to-cram.wdl#L36C1-L44C31">input groups</a> and <a href="https://github.com/getwilds/fastq-to-cram/blob/489ccdf0697ab902ca6f775b8e51d4f0603c0c01/fastq-to-cram.wdl#L95C11-L107C6">code blocks</a> should be separated by a single blank line.</li>
+<li><strong>Line Breaks</strong>: line breaks should only occur in the following places:
+<ul>
+<li>After a <a href="https://github.com/getwilds/fastq-to-cram/blob/489ccdf0697ab902ca6f775b8e51d4f0603c0c01/fastq-to-cram.wdl#L37C49-L37C50">comma</a></li>
+<li>Before the <code>else</code> of an <code>if</code> statement</li>
+<li><a href="https://github.com/getwilds/fastq-to-cram/blob/489ccdf0697ab902ca6f775b8e51d4f0603c0c01/fastq-to-cram.wdl#L36C1-L44C31">Between inputs</a></li>
+<li><a href="https://github.com/getwilds/fastq-to-cram/blob/489ccdf0697ab902ca6f775b8e51d4f0603c0c01/fastq-to-cram.wdl#L23C37-L23C38">Opening</a> and <a href="https://github.com/getwilds/fastq-to-cram/blob/489ccdf0697ab902ca6f775b8e51d4f0603c0c01/fastq-to-cram.wdl#L45C1-L46C29">closing</a> braces</li>
 </ul></li>
-<li>Good questions avoid judgment and avoid assumptions about the author’s perspective</li>
-<li>Ask for clarification
+<li><strong>Line Character Limit</strong>: lines should be a maximum of 100 characters.</li>
+<li><strong>Expression Spacing</strong>: spaces should surround <a href="https://github.com/getwilds/fastq-to-cram/blob/489ccdf0697ab902ca6f775b8e51d4f0603c0c01/fastq-to-cram.wdl#L39">operators</a> to increase clarity and readability.</li>
+<li><strong>Naming Conventions</strong>:
 <ul>
-<li>“I didn’t understand. Can you clarify?”</li>
+<li><a href="https://github.com/getwilds/fastq-to-cram/blob/489ccdf0697ab902ca6f775b8e51d4f0603c0c01/fastq-to-cram.wdl#L83C6-L83C24">Tasks</a>, <a href="https://github.com/getwilds/fastq-to-cram/blob/489ccdf0697ab902ca6f775b8e51d4f0603c0c01/fastq-to-cram.wdl#L23C10-L23C36">workflows</a>, and <a href="https://github.com/getwilds/fastq-to-cram/blob/489ccdf0697ab902ca6f775b8e51d4f0603c0c01/fastq-to-cram.wdl#L7C8-L7C22">structs</a> should follow upper camel case (<code>SuperAwesomeTask</code>)</li>
+<li>Call <a href="https://github.com/getwilds/wdl-101/blob/b1de97d360b524e1932368c04b6e2dec2c85f134/mutation_calling.wdl#L55C20-L55C31">aliases</a> should follow lower camel case (<code>superAwesomeCall</code>)</li>
+<li><a href="https://github.com/getwilds/fastq-to-cram/blob/489ccdf0697ab902ca6f775b8e51d4f0603c0c01/fastq-to-cram.wdl#L28C10-L28C21">Variables</a> should follow lowercase underscore (<code>super_awesome_variable</code>)</li>
 </ul></li>
-<li>Avoid selective ownership of code
+<li><strong>Descriptive Commenting</strong>:
 <ul>
-<li>“Mine”, “not mine”, “yours”</li>
+<li><a href="https://github.com/getwilds/fastq-to-cram/blob/489ccdf0697ab902ca6f775b8e51d4f0603c0c01/fastq-to-cram.wdl#L82C1-L82C41">Comments</a> should be placed above each task in the workflow describing its function.</li>
+<li>Input descriptors should be provided in the <a href="https://github.com/getwilds/fastq-to-cram/blob/489ccdf0697ab902ca6f775b8e51d4f0603c0c01/fastq-to-cram.wdl#L71C3-L77C4"><code>parameter_meta</code></a> component.</li>
 </ul></li>
-<li>Avoid using terms that could be seen as referring to personal traits
+<li><strong>Command Syntax</strong>:
 <ul>
-<li>“Dumb”, “stupid”.</li>
-<li>Assume everyone is intelligent and well-meaning.</li>
-</ul></li>
-<li>Be explicit
-<ul>
-<li>Remember people don’t always understand your intentions online.</li>
-</ul></li>
-<li>Be humble
-<ul>
-<li>“I’m not sure - let’s look it up.”</li>
-</ul></li>
-<li>Don’t use hyperbole
-<ul>
-<li>“Always”, “never”, “endlessly”, “nothing”</li>
-</ul></li>
-<li>Don’t use sarcasm</li>
-<li>Talk synchronously if there are too many “I didn’t understand” or “Alternative solution:” comments
-<ul>
-<li>Chat, screen-sharing, in person</li>
-<li>Post a follow-up comment summarizing the discussion.</li>
-</ul></li>
-<li>If you learned something new, share your appreciation
-<ul>
-<li>“I did not know about this. Thank you for sharing it.”</li>
+<li>Command sections within a WDL task should use <a href="https://hutchdatascience.org/WDL_Workflows_Guide/the-first-task.html#referencing-inputs-in-the-command-section">Heredoc syntax</a> for added clarity in terms of input variables.</li>
+<li>Quotation marks around string/file variables are recommended within the command section to avoid confusion involving spaces.</li>
+<li>While it is usually not an issue within the context of Cromwell, <a href="https://hutchdatascience.org/WDL_Workflows_Guide/the-first-task.html#file-localization">file localization</a> is also recommended in order to maximize the utility of the workflow across different WDL executors.</li>
 </ul></li>
 </ul>
 </section>
-<section id="having-your-code-reviewed" class="level2" data-number="6.2">
-<h2 data-number="6.2" class="anchored" data-anchor-id="having-your-code-reviewed"><span class="header-section-number">6.2</span> Having Your Code Reviewed</h2>
+<section id="repository-guidelines" class="level2" data-number="9.4">
+<h2 data-number="9.4" class="anchored" data-anchor-id="repository-guidelines"><span class="header-section-number">9.4</span> Repository Guidelines</h2>
 <ul>
-<li>Be grateful for the reviewer’s suggestions
+<li>As with all repositories, each workflow should include a detailed <a href="https://github.com/getwilds/fastq-to-cram/blob/489ccdf0697ab902ca6f775b8e51d4f0603c0c01/README.md">README</a> containing:
 <ul>
-<li>“Good call. I’ll make that change.”</li>
+<li>Purpose and functionality of the workflow</li>
+<li>Basic diagram illustrating the flow of data</li>
+<li>Contact information in case issues pop up</li>
+<li><a href="https://github.com/getwilds/badges">WILDS Badge</a> at the top describing the development status of the workflow</li>
 </ul></li>
-<li>Be aware that it can be challenging to convey emotion and intention online
+<li>Make sure to include an example input json in the repository for users to modify and easily execute the workflow.
 <ul>
-<li>You may want to consider using labels to convey intention and tone.</li>
+<li>For a skeleton template, try the <code>inputs</code> action of <a href="https://cromwell.readthedocs.io/en/stable/WOMtool/#inputs">WOMtool</a>.</li>
 </ul></li>
-<li>Explain why the code exists
+<li>A GitHub Action executing <a href="https://cromwell.readthedocs.io/en/stable/WOMtool/#validate">WOMtool</a> <code>validate</code> is highly recommended as a <a href="https://github.com/getwilds/fastq-to-cram/blob/489ccdf0697ab902ca6f775b8e51d4f0603c0c01/.github/workflows/womtools-validate.yml">check</a> before merging new features into the main branch.
 <ul>
-<li>“It’s like that because of these reasons. Would it be more clear if I rename this class/file/method/variable?”</li>
+<li>If you’re feeling adventurous, try automating an <a href="https://github.com/getwilds/fastq-to-cram/blob/489ccdf0697ab902ca6f775b8e51d4f0603c0c01/.github/workflows/cromwell-test-run.yml">entire test run</a> using a very small <a href="https://github.com/getwilds/fastq-to-cram/tree/489ccdf0697ab902ca6f775b8e51d4f0603c0c01/tests/data">validation dataset</a>.</li>
 </ul></li>
-<li>Extract some changes and refactoring into future tickets/stories</li>
-<li>When making visual changes, include screenshots or screencasts to show the effect of the changes
-<ul>
-<li>You may want to consider before/after screenshots or screencasts whenever applicable.</li>
-</ul></li>
-<li>Seek to understand the reviewer’s perspective</li>
-<li>View each comment as an opportunity to learn</li>
-<li>If you’re someone who says “sorry” frequently, think about removing this from your language</li>
-<li>You can ask for clarification</li>
-<li>It’s OK to disagree. It’s helpful to first look for things that you agree with and explain why you disagree</li>
 </ul>
 </section>
-<section id="reviewing-code" class="level2" data-number="6.3">
-<h2 data-number="6.3" class="anchored" data-anchor-id="reviewing-code"><span class="header-section-number">6.3</span> Reviewing Code</h2>
+<section id="additional-resources" class="level2" data-number="9.5">
+<h2 data-number="9.5" class="anchored" data-anchor-id="additional-resources"><span class="header-section-number">9.5</span> Additional Resources</h2>
 <ul>
-<li>Communicate which ideas you feel strongly about and those you don’t</li>
-<li>Identify ways to simplify the code while still solving the problem</li>
-<li>If discussions turn too philosophical or academic, move the discussion offline
-<ul>
-<li>In the meantime, let the author make the final decision on alternative implementations.</li>
-</ul></li>
-<li>Offer alternative implementations
-<ul>
-<li>But assume the author already considered them.</li>
-<li>“What do you think about using a custom validator here?”</li>
-</ul></li>
-<li>Seek to understand the author’s perspective</li>
-<li>Remember that you are here to provide feedback, not to be a gatekeeper</li>
-<li>When suggesting changes using the “Add a suggestion” feature (look for this icon: <iconify-icon inline="" icon="octicon:file-diff-24"></iconify-icon>):
-<ul>
-<li>Communicate clearly which lines you suggest adding/removing</li>
-<li>Test the suggested changes to validate it works whenever possible
-<ul>
-<li>When not possible, let the pull request author know that you did not test the suggestion</li>
-</ul></li>
-<li>Provide some context to let the author know why you’re suggesting the change</li>
-</ul></li>
+<li><a href="https://hutchdatascience.org/WDL_Workflows_Guide/introduction-to-wdl.html">Fred Hutch DaSL WDL 101 Online Course</a></li>
+<li><a href="https://docs.openwdl.org/en/latest/">OpenWDL Documentation</a></li>
 </ul>
 
 
@@ -916,13 +901,13 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="./codereview-general.html" class="pagination-link" aria-label="General">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">General</span></span>
+      <a href="./maintenance.html" class="pagination-link" aria-label="Package maintenance {{< iconify fa6-solid code-compare >}}">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Package maintenance <iconify-icon inline="" icon="fa6-solid:code-compare"></iconify-icon></span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./packagedocs.html" class="pagination-link" aria-label="Documentation {{< iconify fa6-solid book >}}">
-        <span class="nav-page-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Documentation <iconify-icon inline="" icon="fa6-solid:book"></iconify-icon></span></span> <i class="bi bi-arrow-right-short"></i>
+      <a href="./docker.html" class="pagination-link" aria-label="Docker Configuration Guide {{< iconify mdi docker >}}">
+        <span class="nav-page-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Docker Configuration Guide <iconify-icon inline="" icon="mdi:docker"></iconify-icon></span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>
@@ -934,7 +919,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     </div>   
     <div class="nav-footer-center">
       &nbsp;
-    <div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/getwilds/guide/edit/main/codereview-guidelines.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/getwilds/guide/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div>
+    <div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/getwilds/guide/edit/main/wdlconfig.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/getwilds/guide/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div>
     <div class="nav-footer-right">
 <p>This book was built with <a href="https://quarto.org/">Quarto</a>.</p>
 </div>

@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>WILDS Contributor Guide - 6&nbsp; Guidelines</title>
+<title>WILDS Contributor Guide - 10&nbsp; Docker Configuration Guide </title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -30,8 +30,8 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
-<link href="./packagedocs.html" rel="next">
-<link href="./codereview-general.html" rel="prev">
+<link href="./conventions.html" rel="next">
+<link href="./wdlconfig.html" rel="prev">
 <script src="site_libs/quarto-html/quarto.js"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
@@ -85,7 +85,7 @@ ul.task-list li input[type="checkbox"] {
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
         <a class="flex-grow-1 no-decor" role="button" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
-          <h1 class="quarto-secondary-nav-title"><span id="sec-review-guidelines" class="quarto-section-identifier"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Guidelines</span></span></h1>
+          <h1 class="quarto-secondary-nav-title"><span id="sec-docker" class="quarto-section-identifier"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Docker Configuration Guide <iconify-icon inline="" icon="mdi:docker"></iconify-icon></span></span></h1>
         </a>     
       <button type="button" class="btn quarto-search-button" aria-label="" onclick="window.quartoOpenSearch();">
         <i class="bi bi-search"></i>
@@ -165,7 +165,7 @@ ul.task-list li input[type="checkbox"] {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./codereview-guidelines.html" class="sidebar-item-text sidebar-link active">
+  <a href="./codereview-guidelines.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Guidelines</span></span></a>
   </div>
 </li>
@@ -191,7 +191,7 @@ ul.task-list li input[type="checkbox"] {
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./docker.html" class="sidebar-item-text sidebar-link">
+  <a href="./docker.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Docker Configuration Guide </span></span></a>
   </div>
 </li>
@@ -211,18 +211,18 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">Table of contents</h2>
    
   <ul>
-  <li><a href="#everyone" id="toc-everyone" class="nav-link active" data-scroll-target="#everyone"><span class="header-section-number">6.1</span> Everyone</a></li>
-  <li><a href="#having-your-code-reviewed" id="toc-having-your-code-reviewed" class="nav-link" data-scroll-target="#having-your-code-reviewed"><span class="header-section-number">6.2</span> Having Your Code Reviewed</a></li>
-  <li><a href="#reviewing-code" id="toc-reviewing-code" class="nav-link" data-scroll-target="#reviewing-code"><span class="header-section-number">6.3</span> Reviewing Code</a></li>
+  <li><a href="#docker-image-guidelines" id="toc-docker-image-guidelines" class="nav-link active" data-scroll-target="#docker-image-guidelines"><span class="header-section-number">10.1</span> Docker Image Guidelines</a></li>
+  <li><a href="#dockerfile-guidelines" id="toc-dockerfile-guidelines" class="nav-link" data-scroll-target="#dockerfile-guidelines"><span class="header-section-number">10.2</span> Dockerfile Guidelines</a></li>
+  <li><a href="#repository-guidelines" id="toc-repository-guidelines" class="nav-link" data-scroll-target="#repository-guidelines"><span class="header-section-number">10.3</span> Repository Guidelines</a></li>
   </ul>
-<div class="toc-actions"><ul><li><a href="https://github.com/getwilds/guide/edit/main/codereview-guidelines.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/getwilds/guide/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
+<div class="toc-actions"><ul><li><a href="https://github.com/getwilds/guide/edit/main/docker.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/getwilds/guide/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title d-none d-lg-block"><span id="sec-review-guidelines" class="quarto-section-identifier"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Guidelines</span></span></h1>
+<h1 class="title d-none d-lg-block"><span id="sec-docker" class="quarto-section-identifier"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Docker Configuration Guide <iconify-icon inline="" icon="mdi:docker"></iconify-icon></span></span></h1>
 </div>
 
 
@@ -239,116 +239,63 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<p>Adapted from:</p>
+<p>The mindset with regard to Docker images is different for WILDS WDLs compared to other projects. Normally, repositories are relatively self-contained and only need one image that can just be directly linked to that repository. However, WDL pipelines often require a different image for each step, creating the need for a laundry list of Docker images for each repository. In addition, our bioinformatics workflows will have a large amount of image overlap in that the same tools get used, just in a different fashion depending on the workflow. To avoid unnecessary image duplication, the <a href="https://github.com/getwilds/wilds-docker-library">WILDS Docker Library</a> will contain all Dockerfiles and images relevant to WILDS and all future workflows refer back to these images.</p>
+<section id="docker-image-guidelines" class="level2" data-number="10.1">
+<h2 data-number="10.1" class="anchored" data-anchor-id="docker-image-guidelines"><span class="header-section-number">10.1</span> Docker Image Guidelines</h2>
 <ul>
-<li>ThoughtBot’s Playbook section on <a href="https://github.com/thoughtbot/guides/tree/main/code-review">code review</a> under a <a href="https://creativecommons.org/licenses/by/3.0/">CC Attribution License</a></li>
-<li>R-Ladies Seattle presentations by <a href="https://drive.google.com/file/d/1rvS7nvlQnVwHfvLFVogTVY2OQ0QFCRcV/view">Carrie Bennett</a> and <a href="https://drive.google.com/file/d/1vdVCNpPWutKmoXfHbhqV_5s3UmCAPGil/view">Lauren Wolfe</a></li>
-<li>SE Radio 400: <a href="https://se-radio.net/2020/02/episode-400-michaela-greiler-on-code-reviews/">Michaela Greiler on Code Reviews</a></li>
-</ul>
-<section id="everyone" class="level2" data-number="6.1">
-<h2 data-number="6.1" class="anchored" data-anchor-id="everyone"><span class="header-section-number">6.1</span> Everyone</h2>
+<li>Because these Docker images will be used for individual steps within WDL workflows, they should be as minimal as possible in terms of the number of tools installed in each image (1 or 2 max).</li>
+<li>As a general (but flexible) rule, try to start from as basic of a <a href="https://github.com/getwilds/wilds-docker-library/blob/5b5aa0d936ad71267002c7df64638a16dcea02dc/samtools/Dockerfile_latest#L3">parent image</a> as possible, e.g.&nbsp;<code>scratch</code>, <code>ubuntu</code>, <code>python</code>, <code>r-base</code>, etc.
 <ul>
-<li>Accept that many programming decisions are opinions
-<ul>
-<li>Discuss tradeoffs, which you prefer, and reach a resolution quickly.</li>
+<li>Outside parent images are fine, as long as they are from a VERY trusted source, e.g.&nbsp;<a href="https://hub.docker.com/_/ubuntu">Ubuntu</a>, <a href="https://hub.docker.com/_/python">Python</a>, <a href="https://hub.docker.com/u/continuumio">Conda</a>, <a href="https://hub.docker.com/u/rocker">Rocker</a>, etc.</li>
 </ul></li>
-<li>Offer positive comments
+<li>To speed up build and deployment of containers, try to keep image sizes relatively small (a few hundred MB on average, 2GB max).
 <ul>
-<li>What did you learn? What did you think was neat?</li>
-</ul></li>
-<li>Ask good questions; don’t make demands
-<ul>
-<li>“What do you think about naming this function <code>fetch_user</code>?”</li>
-</ul></li>
-<li>Good questions avoid judgment and avoid assumptions about the author’s perspective</li>
-<li>Ask for clarification
-<ul>
-<li>“I didn’t understand. Can you clarify?”</li>
-</ul></li>
-<li>Avoid selective ownership of code
-<ul>
-<li>“Mine”, “not mine”, “yours”</li>
-</ul></li>
-<li>Avoid using terms that could be seen as referring to personal traits
-<ul>
-<li>“Dumb”, “stupid”.</li>
-<li>Assume everyone is intelligent and well-meaning.</li>
-</ul></li>
-<li>Be explicit
-<ul>
-<li>Remember people don’t always understand your intentions online.</li>
-</ul></li>
-<li>Be humble
-<ul>
-<li>“I’m not sure - let’s look it up.”</li>
-</ul></li>
-<li>Don’t use hyperbole
-<ul>
-<li>“Always”, “never”, “endlessly”, “nothing”</li>
-</ul></li>
-<li>Don’t use sarcasm</li>
-<li>Talk synchronously if there are too many “I didn’t understand” or “Alternative solution:” comments
-<ul>
-<li>Chat, screen-sharing, in person</li>
-<li>Post a follow-up comment summarizing the discussion.</li>
-</ul></li>
-<li>If you learned something new, share your appreciation
-<ul>
-<li>“I did not know about this. Thank you for sharing it.”</li>
+<li>For this reason, reference data should not be stored in an image unless absolutely necessary.</li>
+<li>Unnecessary tools should also be avoided, even if they serve a “just-in-case” functionality.</li>
 </ul></li>
 </ul>
 </section>
-<section id="having-your-code-reviewed" class="level2" data-number="6.2">
-<h2 data-number="6.2" class="anchored" data-anchor-id="having-your-code-reviewed"><span class="header-section-number">6.2</span> Having Your Code Reviewed</h2>
+<section id="dockerfile-guidelines" class="level2" data-number="10.2">
+<h2 data-number="10.2" class="anchored" data-anchor-id="dockerfile-guidelines"><span class="header-section-number">10.2</span> Dockerfile Guidelines</h2>
 <ul>
-<li>Be grateful for the reviewer’s suggestions
+<li>Every Dockerfile must contain the <a href="https://github.com/getwilds/wilds-docker-library/blob/5b5aa0d936ad71267002c7df64638a16dcea02dc/bwa/Dockerfile_0.7.17#L6C1-L13C44">labels below</a> at a minimum. This provides users with increased visibility in terms of where the image came from and open access to the necessary resources in case they have any questions or concerns.</li>
+</ul>
+<pre><code>LABEL org.opencontainers.image.title="awesomeimage" # Name of the image in question
+LABEL org.opencontainers.image.description="Short description of awesomeimage and its purpose"
+LABEL org.opencontainers.image.version="1.0" # Version tag of the image
+LABEL org.opencontainers.image.authors="johndoe@fredhutch.org" # Author email address
+LABEL org.opencontainers.image.url=https://hutchdatascience.org/ # Home page
+LABEL org.opencontainers.image.documentation=https://getwilds.org/ # Documentation page
+LABEL org.opencontainers.image.source=https://github.com/getwilds/wilds-docker-library # GitHub repo to link with
+LABEL org.opencontainers.image.licenses=MIT # License type for the image in question</code></pre>
 <ul>
-<li>“Good call. I’ll make that change.”</li>
+<li>When creating a different version of an existing image, use one of the other Dockerfiles as a starting template and modify it as needed.
+<ul>
+<li>This will help to ensure that the only thing that has changed between image versions is the version of tool in question, not any strange formatting/configuration issues.</li>
 </ul></li>
-<li>Be aware that it can be challenging to convey emotion and intention online
+<li>Try to be as specific as possible in terms of <a href="https://github.com/getwilds/wilds-docker-library/blob/5b5aa0d936ad71267002c7df64638a16dcea02dc/bwa/Dockerfile_0.7.17#L17C49-L20C64">tool versions</a> within the Dockerfile, especially the <a href="https://github.com/getwilds/wilds-docker-library/blob/5b5aa0d936ad71267002c7df64638a16dcea02dc/bwa/Dockerfile_0.7.17#L3">parent image</a>.
 <ul>
-<li>You may want to consider using labels to convey intention and tone.</li>
+<li>If you just specify “latest”, a tag that get updated frequently over time, your image could be completely different the next time you build it, even though it uses the exact same Dockerfile.</li>
+<li>On the other hand, specifying “v1.2.3” will always pull the same instance of the tool every time, providing greater reproducibility over time.</li>
 </ul></li>
-<li>Explain why the code exists
-<ul>
-<li>“It’s like that because of these reasons. Would it be more clear if I rename this class/file/method/variable?”</li>
-</ul></li>
-<li>Extract some changes and refactoring into future tickets/stories</li>
-<li>When making visual changes, include screenshots or screencasts to show the effect of the changes
-<ul>
-<li>You may want to consider before/after screenshots or screencasts whenever applicable.</li>
-</ul></li>
-<li>Seek to understand the reviewer’s perspective</li>
-<li>View each comment as an opportunity to learn</li>
-<li>If you’re someone who says “sorry” frequently, think about removing this from your language</li>
-<li>You can ask for clarification</li>
-<li>It’s OK to disagree. It’s helpful to first look for things that you agree with and explain why you disagree</li>
 </ul>
 </section>
-<section id="reviewing-code" class="level2" data-number="6.3">
-<h2 data-number="6.3" class="anchored" data-anchor-id="reviewing-code"><span class="header-section-number">6.3</span> Reviewing Code</h2>
+<section id="repository-guidelines" class="level2" data-number="10.3">
+<h2 data-number="10.3" class="anchored" data-anchor-id="repository-guidelines"><span class="header-section-number">10.3</span> Repository Guidelines</h2>
 <ul>
-<li>Communicate which ideas you feel strongly about and those you don’t</li>
-<li>Identify ways to simplify the code while still solving the problem</li>
-<li>If discussions turn too philosophical or academic, move the discussion offline
+<li>In terms of the repo organization, each image should have its own directory named after the tool being used in the image. Each version of the image should have its own Dockerfile in that directory following the naming convention of <code>[IMAGENAME]/Dockerfile_[VERSIONTAG]</code>.
 <ul>
-<li>In the meantime, let the author make the final decision on alternative implementations.</li>
+<li>If formatted correctly, a GitHub Action will <a href="https://github.com/getwilds/wilds-docker-library/blob/main/.github/workflows/docker-images.yml">automatically build and upload</a> the image to the <a href="https://github.com/orgs/getwilds/packages">WILDS GitHub container registry</a> upon merging into the <code>main</code> branch.</li>
 </ul></li>
-<li>Offer alternative implementations
+<li>Before merging your changes to <code>main</code> (and therefore uploading a new image to the WILDS package registry), try uploading it to your user-specific package registry using the command below and make sure it works for the WDL task in question.</li>
+</ul>
+<pre><code>docker build --platform linux/amd64 -t ghcr.io/GITHUBUSERNAME/IMAGENAME:VERSIONTAG -f IMAGENAME/Dockerfile_VERSIONTAG --push .</code></pre>
 <ul>
-<li>But assume the author already considered them.</li>
-<li>“What do you think about using a custom validator here?”</li>
-</ul></li>
-<li>Seek to understand the author’s perspective</li>
-<li>Remember that you are here to provide feedback, not to be a gatekeeper</li>
-<li>When suggesting changes using the “Add a suggestion” feature (look for this icon: <iconify-icon inline="" icon="octicon:file-diff-24"></iconify-icon>):
+<li>Upon creation or modification of a pull request in this repo, a GitHub Action will <a href="https://github.com/getwilds/wilds-docker-library/blob/main/.github/workflows/dockerfile-linting.yml">run a check</a> using a linting tool specific to Dockerfiles called <a href="https://github.com/hadolint/hadolint">Hadolint</a>.
 <ul>
-<li>Communicate clearly which lines you suggest adding/removing</li>
-<li>Test the suggested changes to validate it works whenever possible
-<ul>
-<li>When not possible, let the pull request author know that you did not test the suggestion</li>
-</ul></li>
-<li>Provide some context to let the author know why you’re suggesting the change</li>
+<li>If any major warnings pop up, the check will fail and the user will be unable to merge the branch into <code>main</code> until the warning is resolved.</li>
+<li>Smaller stylistic issues will still be reported, but they will not restrict you from merging your branch into <code>main</code>.</li>
+<li>Details about the location and root cause of each warning can be found in the details of the check via the <a href="https://github.com/getwilds/wilds-docker-library/actions">Actions tab</a> of the repo.</li>
 </ul></li>
 </ul>
 
@@ -916,13 +863,13 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="./codereview-general.html" class="pagination-link" aria-label="General">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">General</span></span>
+      <a href="./wdlconfig.html" class="pagination-link" aria-label="WDL Configuration Guide {{< iconify file-icons wdl >}}">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">WDL Configuration Guide <iconify-icon inline="" icon="file-icons:wdl"></iconify-icon></span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./packagedocs.html" class="pagination-link" aria-label="Documentation {{< iconify fa6-solid book >}}">
-        <span class="nav-page-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Documentation <iconify-icon inline="" icon="fa6-solid:book"></iconify-icon></span></span> <i class="bi bi-arrow-right-short"></i>
+      <a href="./conventions.html" class="pagination-link" aria-label="Conventions {{< iconify fa6-solid person-digging >}}">
+        <span class="nav-page-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Conventions <iconify-icon inline="" icon="fa6-solid:person-digging"></iconify-icon></span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>
@@ -934,7 +881,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     </div>   
     <div class="nav-footer-center">
       &nbsp;
-    <div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/getwilds/guide/edit/main/codereview-guidelines.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/getwilds/guide/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div>
+    <div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/getwilds/guide/edit/main/docker.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/getwilds/guide/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div>
     <div class="nav-footer-right">
 <p>This book was built with <a href="https://quarto.org/">Quarto</a>.</p>
 </div>
