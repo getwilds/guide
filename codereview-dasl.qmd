@@ -7,7 +7,7 @@ At a high level we use the following approach:
 - Code review whenever possible - review is generally not required for every code change
   - As a team grows, add in more code review
   - Some projects in the WILDS may have changess pushed directly to main, while others may follow a pull request only approach
-- Follow our code review guidelines (@sec-review-guidelines) (TO BE AGEED UPON)
+- Follow our code review guidelines (@sec-review-guidelines)
 - Testing must be used
   - With a small team testing is crucial to ensuring software does what it is expected to do, AND facilitates code changes in the future
   - When making a code contribution, make sure it is covered by existing tests, or write a new test if not

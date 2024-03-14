@@ -2,12 +2,9 @@
 
 As code review is a big topic, we will only discuss here what we strive for, what we'd like our community to do, and point people to relavant information. We're always open to feedback (see *Edit this page* to the right)!
 
-MORE STUFF ABOUT HIGH LEVEL CODE REVIEW ...
-
-
 ## Scope
 
-The scope of this guide is for work within the WILDS GitHub organization (<https://github.com/getwilds/>). In  chapters within **Code review** we have the following guidelines:
+The scope of this guide is for work within the WILDS GitHub organization (<https://github.com/getwilds/>). In  chapters within **Code review** we have the following sections:
 
 Contributions to the WILDS:
 

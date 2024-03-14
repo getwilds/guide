@@ -4,7 +4,7 @@ By external we are referring to anyone that is not a DASL employee.
 
 ## Follow code review guidelines
 
-Follow our code review guidelines (@sec-review-guidelines) (TO BE AGEED UPON)
+Follow our code review guidelines (@sec-review-guidelines)
 
 ## Discuss first
 

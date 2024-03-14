@@ -4,7 +4,7 @@ Adapted from:
 
 - ThoughtBot's Playbook section on [code review](https://github.com/thoughtbot/guides/tree/main/code-review) under a [CC Attribution License](https://creativecommons.org/licenses/by/3.0/)
 - R-Ladies Seattle presentations by [Carrie Bennett](https://drive.google.com/file/d/1rvS7nvlQnVwHfvLFVogTVY2OQ0QFCRcV/view) and [Lauren Wolfe](https://drive.google.com/file/d/1vdVCNpPWutKmoXfHbhqV_5s3UmCAPGil/view)
-- SE Radio 400: [Michaela Greiler on Code Reviews](https://se-radio.net/2020/02/episode-400-michaela-greiler-on-code-reviews/) (Interviewed by Felienne)
+- SE Radio 400: [Michaela Greiler on Code Reviews](https://se-radio.net/2020/02/episode-400-michaela-greiler-on-code-reviews/)
 
 ## Everyone
 
