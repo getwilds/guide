@@ -77,3 +77,13 @@ We strongly encourage all repositories that are R or Python packages or research
 
 - R: [reprex](https://www.tidyverse.org/help/#reprex)
 - Python: [reprexlite](https://pypi.org/project/reprexlite/), [reprexpy](https://pypi.org/project/reprexpy/)
+
+### GitHub Actions
+
+(For brevity we'll use the shorthand "GH actions")
+
+- R: The `usethis` function [use_github_actions](https://usethis.r-lib.org/reference/use_github_action.html) can be used to add many different GH actions, e.g., `use_github_action("pkgdown")`. For R packages, we recommend using the following three:
+  - `use_github_action("check-standard")`
+  - `use_github_action("lint")`
+  - `use_github_action("pkgdown")`
+- Python: There is no tool available for Python similar to `usethis` - one has to manually add workflow files. For Python packages we recommend following GitHub's guide on [Building and Testing Python](https://docs.github.com/en/actions/automating-builds-and-tests/building-and-testing-python). As there are many different ways to make and maintain Python packages, you will need to decide what steps are needed for your package.
