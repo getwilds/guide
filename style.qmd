@@ -46,7 +46,7 @@ And then run:
 lintr::use_lintr()
 ```
 
-To create a configuration file for `lintr`. In the file created (`.lintr`) you can set custom congifuration as needed for your package (see the [lintr vignette](https://lintr.r-lib.org/articles/lintr.html)).
+To create a configuration file for `lintr`. In the file created (`.lintr`), you can set a custom configuration as needed for your package (see the [lintr vignette](https://lintr.r-lib.org/articles/lintr.html)).
 
 Next, run:
 
