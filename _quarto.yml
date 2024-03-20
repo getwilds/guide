@@ -28,6 +28,7 @@ book:
     - wdlconfig.qmd
     - docker.qmd
     - conventions.qmd
+    - standards.qmd
   site-url: https://getwilds.org/guide/
 
 bibliography: references.bib

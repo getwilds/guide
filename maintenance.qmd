@@ -12,7 +12,7 @@ All software (R, Python, etc.) in the WILDS should by default use the [MIT licen
 
 If there are circumstances which prevent using MIT, please do discuss with Sean or Scott.
 
-### R
+### R {#sec-license-r}
 
 In R, you can add the MIT license to your repository with the following code:
 
@@ -25,12 +25,12 @@ usethis::use_mit_license()
 
 Note that `usethis::use_mit_license` adds two files to your repository (`LICENSE` and `LICENSE.md`, and adds entries to the `.Rbuildignore` file so that `R CMD CHECK` doesn't complain).
 
-### Python
+### Python {#sec-license-python}
 
 There's no widely accepted single tool for dealing with licenses in Python similar to the above for R. For Python packages, simply include the license type (e.g., `MIT`) in your setup.py, setup.cfg, pyproject.toml, etc., and include the text of the license in a `LICENSE` file in the root of your repository.
 
 
-## Package versioning
+## Package versioning {#sec-versioning}
 
 There is a detailed discussion of versioning R packages in the [lifecycle][] chapter of the [R Packages book][rpkgs] by Hadley Wickham and Jenny Bryan. Please follow that chapter in general for versioning of R and Python packages within the WILDS. To make it easier to grok, below are some of the highlights, and some exceptions to that chapter.
 
@@ -58,7 +58,7 @@ Following the [Tidyverse package version conventions](https://r-pkgs.org/lifecyc
 
 We are not following or enforcing any rules about changes at the function/class/etc level below the package level. For example, the R Packages book [talks about][funcx] using the `lifecycle` package to deal with function changes.
 
-## Package releases
+## Package releases {#sec-releases}
 
 In general follow the [Releasing to CRAN chapter](https://r-pkgs.org/release.html) in the book [R Packages][rpkgs] for R, and the [Releasing and versioning chapter](https://py-pkgs.org/07-releasing-versioning) in the book [Python Packages][pypkgs] for Python. Those chapters don't have to be followed to the letter, but in general they provide really good guidance.
 

@@ -1,0 +1,50 @@
+# Standards {{< iconify fa6-solid scale-balanced >}} {#sec-standards}
+
+::: {.callout-note}
+These are living standards. Have a question/concern/suggestion? [Let's chat](https://github.com/getwilds/guide/issues/new).
+:::
+
+Standards for each repository type ...
+
+In order to keep the standards easily digestable, for each repo type below we keep each standard short and simple and link out to other sections of the book for more information.
+
+## R
+
+Each R package in WILDS should follow the following standards:
+
+- Use package `pkgdown` to create package documentation (see @sec-docs-r)
+- Use an open source license; in most cases that means MIT (see @sec-license-r)
+- Follow our package versioning guidelines (see @sec-versioning)
+- Follow our package releases guidelines (see @sec-releases)
+- Follow all conventions in @sec-conventions
+
+## Python
+
+Each Python package in WILDS should follow the following standards:
+
+- Maintain package documentation (see @sec-docs-python)
+- Use an open source license; in most cases that means MIT (see @sec-license-python)
+- Follow our package versioning guidelines (see @sec-versioning)
+- Follow our package releases guidelines (see @sec-releases)
+- Follow all conventions in @sec-conventions
+
+## Docker
+
+Coming soon!
+
+## Research Compendia
+
+Coming soon!
+
+## WDL
+
+Coming soon!
+
+## NextFlow
+
+Coming soon!
+
+## Compliance with standards
+
+We're not sure how this will be done exactly. For now, we'll do compliance manually. Ideally the end state will be completely automated.
+
