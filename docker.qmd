@@ -3,7 +3,7 @@
 
 The mindset with regard to Docker images is different for WILDS WDLs compared to other projects. Normally, repositories are relatively self-contained and only need one image that can just be directly linked to that repository. However, WDL pipelines often require a different image for each step, creating the need for a laundry list of Docker images for each repository. In addition, our bioinformatics workflows will have a large amount of image overlap in that the same tools get used, just in a different fashion depending on the workflow. To avoid unnecessary image duplication, the [WILDS Docker Library](https://github.com/getwilds/wilds-docker-library) will contain all Dockerfiles and images relevant to WILDS and all future workflows refer back to these images.
 
-## Docker Image Guidelines
+## Docker Image Guidelines {#sec-docker-image}
 
 - Because these Docker images will be used for individual steps within WDL workflows, they should be as minimal as possible in terms of the number of tools installed in each image (1 or 2 max).
 - As a general (but flexible) rule, try to start from as basic of a [parent image](https://github.com/getwilds/wilds-docker-library/blob/5b5aa0d936ad71267002c7df64638a16dcea02dc/samtools/Dockerfile_latest#L3) as possible, e.g. `scratch`, `ubuntu`, `python`, `r-base`, etc.
@@ -12,7 +12,7 @@ The mindset with regard to Docker images is different for WILDS WDLs compared to
     - For this reason, reference data should not be stored in an image unless absolutely necessary.
     - Unnecessary tools should also be avoided, even if they serve a "just-in-case" functionality.
 
-## Dockerfile Guidelines
+## Dockerfile Guidelines {#sec-dockerfile}
 - Every Dockerfile must contain the [labels below](https://github.com/getwilds/wilds-docker-library/blob/5b5aa0d936ad71267002c7df64638a16dcea02dc/bwa/Dockerfile_0.7.17#L6C1-L13C44) at a minimum. This provides users with increased visibility in terms of where the image came from and open access to the necessary resources in case they have any questions or concerns.
 ```
 LABEL org.opencontainers.image.title="awesomeimage" # Name of the image in question
@@ -30,7 +30,7 @@ LABEL org.opencontainers.image.licenses=MIT # License type for the image in ques
     - If you just specify "latest", a tag that get updated frequently over time, your image could be completely different the next time you build it, even though it uses the exact same Dockerfile.
     - On the other hand, specifying "v1.2.3" will always pull the same instance of the tool every time, providing greater reproducibility over time.
 
-## Repository Guidelines
+## Repository Guidelines {#sec-docker-repo}
 
 - In terms of the repo organization, each image should have its own directory named after the tool being used in the image. Each version of the image should have its own Dockerfile in that directory following the naming convention of `[IMAGENAME]/Dockerfile_[VERSIONTAG]`.
     - If formatted correctly, a GitHub Action will [automatically build and upload](https://github.com/getwilds/wilds-docker-library/blob/main/.github/workflows/docker-images.yml) the image to the [WILDS GitHub container registry](https://github.com/orgs/getwilds/packages) upon merging into the `main` branch.

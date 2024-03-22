@@ -29,7 +29,7 @@ See the [R languageserver][languageserver] GitHub repository for more informatio
 
 In the [getwilds/makefiles repo](https://github.com/getwilds/makefiles) we have an R package Makefile template with [three make targets](https://github.com/getwilds/makefiles/blob/main/R/Makefile#L31-L40) for styling package code: `lint_package`, `style_file`, and `style_package`. With that Makefile in the root of your package you can run `lint_package` to check for any problems, and run `style_file` or `style_package` to fix any problems. You can also just run the R code in those make targets in a terminal or within R.
 
-### GitHub Actions
+### GitHub Actions {#sec-style-actions}
 
 To get setup with GitHub Actions and `lintr` and `styler`, first install `lintr` if you don't have it:
 

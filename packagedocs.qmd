@@ -2,7 +2,7 @@
 
 All formally supported WILDS R and Python packages should have package documentation.
 
-## R
+## R {#sec-docs-r}
 
 We use the [pkgdown][] package to create documentation for R packages, and host it on [GitHub Pages][ghpages]. To get started with `pkgdown`, in R within the root of your package run [usethis::use_pkgdown_github_pages()](https://usethis.r-lib.org/reference/use_pkgdown.html) - it will set up a `_pkgdown.yml` file in the root of your repo used to configure `pkgdown`, and add a `.github/workflows/publish.yml` file to build the package documentation on each push, pull request, or release. See [pkgdown documentation][pkgdown] for details on configuring documentation.
 
@@ -21,7 +21,7 @@ template:
 
 For now just use the default theme that `pkgdown` provides.
 
-## Python
+## Python {#sec-docs-python}
 
 Just like there's a variety of ways to do packing in Python there's a variety of documentation options. Two of the well known options are:
 
