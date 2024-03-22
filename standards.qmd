@@ -30,7 +30,12 @@ Each Python package in WILDS should follow the following standards:
 
 ## Docker
 
-Coming soon!
+Each Docker container in WILDS should follow the following standards:
+
+- Maintain necessary [labels](https://docs.docker.com/reference/dockerfile/#label) within the Dockerfile (see @sec-dockerfile)
+- Use an open source license; in most cases that means MIT (see @sec-license-docker)
+- Keep containers as minimal and specific as possible (see @sec-docker-image)
+- Follow all conventions in @sec-docker
 
 ## Research Compendia
 
@@ -38,7 +43,12 @@ Coming soon!
 
 ## WDL
 
-Coming soon!
+Each WDL workflow in WILDS should follow the following standards:
+
+- Maintain package documentation in the README of the repository at a minimum
+- Use an open source license; in most cases that means MIT (see @sec-license-wdl)
+- Follow our package versioning guidelines (see @sec-versioning)
+- Follow all conventions in @sec-wdlconfig
 
 ## NextFlow
 

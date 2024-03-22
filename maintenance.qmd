@@ -29,6 +29,16 @@ Note that `usethis::use_mit_license` adds two files to your repository (`LICENSE
 
 There's no widely accepted single tool for dealing with licenses in Python similar to the above for R. For Python packages, simply include the license type (e.g., `MIT`) in your setup.py, setup.cfg, pyproject.toml, etc., and include the text of the license in a `LICENSE` file in the root of your repository.
 
+### WDL {#sec-license-wdl}
+
+Similarly, there is currently no universal standard for incorporating licenses within WDL packages. We recommend stating the license type in a comment at the top of the workflow script, and including the text of the license in a `LICENSE` file in the root of your repository.
+
+### Docker {#sec-license-docker}
+
+License type can be specified within the corresponding Dockerfile of each container using the "license" label: 
+```
+LABEL org.opencontainers.image.licenses=MIT
+```
 
 ## Package versioning {#sec-versioning}
 
