@@ -28,7 +28,7 @@ This WILDS WDL configuration guide was inspired by the [BioWDL](https://biowdl.g
 - In general, [runtime attributes](https://hutchdatascience.org/WDL_Workflows_Guide/the-first-task.html#runtime-attributes) should be defined whenever possible in order to enable execution on as many [backends](https://hutchdatascience.org/WDL_Workflows_Guide/appendix-backends-and-executors.html) as possible.
     - Some runtime attributes will be ignored/required based on the backend/WDL engine being used to run your workflow. Refer to the [WDL 101 guide](https://hutchdatascience.org/WDL_Workflows_Guide/appendix-backends-and-executors.html#commonly-used-runtime-attributes) for more details.
 
-## Stylistic Guidelines for WDL Workflows
+## Stylistic Guidelines
 
 - **Indentation**: [braces contents](https://github.com/getwilds/fastq-to-cram/blob/489ccdf0697ab902ca6f775b8e51d4f0603c0c01/fastq-to-cram.wdl#L7C23-L11C2), [inputs](https://github.com/getwilds/fastq-to-cram/blob/489ccdf0697ab902ca6f775b8e51d4f0603c0c01/fastq-to-cram.wdl#L36C9-L44C31), and [line continuations](https://github.com/getwilds/fastq-to-cram/blob/489ccdf0697ab902ca6f775b8e51d4f0603c0c01/fastq-to-cram.wdl#L143C5-L147C67) should all be indented by two spaces (not four).
 - **White Space**: different [input groups](https://github.com/getwilds/fastq-to-cram/blob/489ccdf0697ab902ca6f775b8e51d4f0603c0c01/fastq-to-cram.wdl#L36C1-L44C31) and [code blocks](https://github.com/getwilds/fastq-to-cram/blob/489ccdf0697ab902ca6f775b8e51d4f0603c0c01/fastq-to-cram.wdl#L95C11-L107C6) should be separated by a single blank line.
