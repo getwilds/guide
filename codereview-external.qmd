@@ -1,0 +1,23 @@
+# DaSL external {#sec-review-external}
+
+By external we are referring to anyone that is not a DASL employee.
+
+## Follow code review guidelines
+
+Follow our code review guidelines (@sec-review-guidelines)
+
+## Discuss first
+
+In most cases it's a good idea to start a discussion before opening a pull request.
+
+You can do this by opening an issue in the relavant GitHub repository, starting a discusison in the [FH-Data Slack](https://fhdata.slack.com/) or emailing the maintainer. The best option is opening an issue as that keeps the discussion of the code paired with the code.
+
+If you open an issue, there should be an issue template that will give instructions.
+
+Make sure to include a [reproducible example](https://www.tidyverse.org/help/#reprex)!
+
+## Open a pull request
+
+After discussing a change, feature request, bug, or soemthing else, open a pull request.
+
+ADD MORE TEXT ABOUT DOING A PR ...

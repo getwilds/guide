@@ -1,0 +1,10 @@
+# General {#sec-review-general}
+
+We have code review guidance for labs at <https://hutchdatascience.org/code_review/>. The site contains higher level code review guidance broken down by lab roles, including lab leader, lab manager and lab developer.
+
+If you want lower level code review guidance, the [Advanced Reproducibility in Cancer Informatics](https://jhudatascience.org/Adv_Reproducibility_in_Cancer_Informatics/) course has two chapters that will be helpful:
+
+- [Engaging in Code Review - as an author](https://jhudatascience.org/Adv_Reproducibility_in_Cancer_Informatics/engaging-in-code-review---as-an-author.html)
+- [Engaging in Code Review - as a reviewer](https://jhudatascience.org/Adv_Reproducibility_in_Cancer_Informatics/engaging-in-code-review---as-a-reviewer.html)
+
+The Tidyverse team at Posit (that makes the R packages `dplyr`, `purrr` and so on) has made public their code review principles. Check it out at <https://code-review.tidyverse.org/>
