@@ -19,12 +19,14 @@ This WILDS WDL configuration guide was inspired by the [BioWDL](https://biowdl.g
 ## Structural Guidelines
 
 - [Structs](https://github.com/getwilds/fastq-to-cram/blob/489ccdf0697ab902ca6f775b8e51d4f0603c0c01/fastq-to-cram.wdl#L5) should be at the top of the WDL script, followed by the [workflow](https://github.com/getwilds/fastq-to-cram/blob/489ccdf0697ab902ca6f775b8e51d4f0603c0c01/fastq-to-cram.wdl#L21) itself, followed by all of its corresponding [tasks](https://github.com/getwilds/fastq-to-cram/blob/489ccdf0697ab902ca6f775b8e51d4f0603c0c01/fastq-to-cram.wdl#L80).
+    - While any order is technically allowed, we recommend this arrangement to promote consistency and improve readability.
 - Tasks should be broken down into as small of operations as possible.
-    - If a task uses more than one or two command line tools, it should probably be broken up into individual tasks.
+    - If a task uses more than two command line tools, it should probably be broken up into individual tasks.
 - [Docker containers](https://hutchdatascience.org/WDL_Workflows_Guide/the-first-task.html#docker-images-and-containers) should be assigned to every task to ensure uniform execution, regardless of local context.
     - Outside of very basic images from very trusted sources, Docker images should be pulled directly from [WILDS' Docker Library](https://github.com/getwilds/wilds-docker-library) whenever possible.
     - If you think a particular tool should be added to that library, [submit an issue](https://github.com/getwilds/wilds-docker-library/issues) or email us at wilds@fredhutch.org.
 - In general, [runtime attributes](https://hutchdatascience.org/WDL_Workflows_Guide/the-first-task.html#runtime-attributes) should be defined whenever possible in order to enable execution on as many [backends](https://hutchdatascience.org/WDL_Workflows_Guide/appendix-backends-and-executors.html) as possible.
+    - Some runtime attributes will be ignored/required based on the backend/WDL engine being used to run your workflow. Refer to the [WDL 101 guide](https://hutchdatascience.org/WDL_Workflows_Guide/appendix-backends-and-executors.html#commonly-used-runtime-attributes) for more details.
 
 ## Stylistic Guidelines
 
