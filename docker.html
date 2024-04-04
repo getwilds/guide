@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.4.552">
+<meta name="generator" content="quarto-1.4.553">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -201,6 +201,12 @@ ul.task-list li input[type="checkbox"] {
  <span class="menu-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Conventions </span></span></a>
   </div>
 </li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./standards.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">Standards </span></span></a>
+  </div>
+</li>
     </ul>
     </div>
 </nav>
@@ -211,9 +217,9 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">Table of contents</h2>
    
   <ul>
-  <li><a href="#docker-image-guidelines" id="toc-docker-image-guidelines" class="nav-link active" data-scroll-target="#docker-image-guidelines"><span class="header-section-number">10.1</span> Docker Image Guidelines</a></li>
-  <li><a href="#dockerfile-guidelines" id="toc-dockerfile-guidelines" class="nav-link" data-scroll-target="#dockerfile-guidelines"><span class="header-section-number">10.2</span> Dockerfile Guidelines</a></li>
-  <li><a href="#repository-guidelines" id="toc-repository-guidelines" class="nav-link" data-scroll-target="#repository-guidelines"><span class="header-section-number">10.3</span> Repository Guidelines</a></li>
+  <li><a href="#sec-docker-image" id="toc-sec-docker-image" class="nav-link active" data-scroll-target="#sec-docker-image"><span class="header-section-number">10.1</span> Docker Image Guidelines</a></li>
+  <li><a href="#sec-dockerfile" id="toc-sec-dockerfile" class="nav-link" data-scroll-target="#sec-dockerfile"><span class="header-section-number">10.2</span> Dockerfile Guidelines</a></li>
+  <li><a href="#sec-docker-repo" id="toc-sec-docker-repo" class="nav-link" data-scroll-target="#sec-docker-repo"><span class="header-section-number">10.3</span> Repository Guidelines</a></li>
   </ul>
 <div class="toc-actions"><ul><li><a href="https://github.com/getwilds/guide/edit/main/docker.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/getwilds/guide/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
     </div>
@@ -240,8 +246,8 @@ ul.task-list li input[type="checkbox"] {
 
 
 <p>The mindset with regard to Docker images is different for WILDS WDLs compared to other projects. Normally, repositories are relatively self-contained and only need one image that can just be directly linked to that repository. However, WDL pipelines often require a different image for each step, creating the need for a laundry list of Docker images for each repository. In addition, our bioinformatics workflows will have a large amount of image overlap in that the same tools get used, just in a different fashion depending on the workflow. To avoid unnecessary image duplication, the <a href="https://github.com/getwilds/wilds-docker-library">WILDS Docker Library</a> will contain all Dockerfiles and images relevant to WILDS and all future workflows refer back to these images.</p>
-<section id="docker-image-guidelines" class="level2" data-number="10.1">
-<h2 data-number="10.1" class="anchored" data-anchor-id="docker-image-guidelines"><span class="header-section-number">10.1</span> Docker Image Guidelines</h2>
+<section id="sec-docker-image" class="level2" data-number="10.1">
+<h2 data-number="10.1" class="anchored" data-anchor-id="sec-docker-image"><span class="header-section-number">10.1</span> Docker Image Guidelines</h2>
 <ul>
 <li>Because these Docker images will be used for individual steps within WDL workflows, they should be as minimal as possible in terms of the number of tools installed in each image (1 or 2 max).</li>
 <li>As a general (but flexible) rule, try to start from as basic of a <a href="https://github.com/getwilds/wilds-docker-library/blob/5b5aa0d936ad71267002c7df64638a16dcea02dc/samtools/Dockerfile_latest#L3">parent image</a> as possible, e.g.&nbsp;<code>scratch</code>, <code>ubuntu</code>, <code>python</code>, <code>r-base</code>, etc.
@@ -255,8 +261,8 @@ ul.task-list li input[type="checkbox"] {
 </ul></li>
 </ul>
 </section>
-<section id="dockerfile-guidelines" class="level2" data-number="10.2">
-<h2 data-number="10.2" class="anchored" data-anchor-id="dockerfile-guidelines"><span class="header-section-number">10.2</span> Dockerfile Guidelines</h2>
+<section id="sec-dockerfile" class="level2" data-number="10.2">
+<h2 data-number="10.2" class="anchored" data-anchor-id="sec-dockerfile"><span class="header-section-number">10.2</span> Dockerfile Guidelines</h2>
 <ul>
 <li>Every Dockerfile must contain the <a href="https://github.com/getwilds/wilds-docker-library/blob/5b5aa0d936ad71267002c7df64638a16dcea02dc/bwa/Dockerfile_0.7.17#L6C1-L13C44">labels below</a> at a minimum. This provides users with increased visibility in terms of where the image came from and open access to the necessary resources in case they have any questions or concerns.</li>
 </ul>
@@ -280,8 +286,8 @@ LABEL org.opencontainers.image.licenses=MIT # License type for the image in ques
 </ul></li>
 </ul>
 </section>
-<section id="repository-guidelines" class="level2" data-number="10.3">
-<h2 data-number="10.3" class="anchored" data-anchor-id="repository-guidelines"><span class="header-section-number">10.3</span> Repository Guidelines</h2>
+<section id="sec-docker-repo" class="level2" data-number="10.3">
+<h2 data-number="10.3" class="anchored" data-anchor-id="sec-docker-repo"><span class="header-section-number">10.3</span> Repository Guidelines</h2>
 <ul>
 <li>In terms of the repo organization, each image should have its own directory named after the tool being used in the image. Each version of the image should have its own Dockerfile in that directory following the naming convention of <code>[IMAGENAME]/Dockerfile_[VERSIONTAG]</code>.
 <ul>

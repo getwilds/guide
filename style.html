@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.4.552">
+<meta name="generator" content="quarto-1.4.553">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -235,6 +235,12 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
  <span class="menu-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Conventions </span></span></a>
   </div>
 </li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./standards.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">Standards </span></span></a>
+  </div>
+</li>
     </ul>
     </div>
 </nav>
@@ -250,14 +256,14 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <li><a href="#package-styler" id="toc-package-styler" class="nav-link" data-scroll-target="#package-styler"><span class="header-section-number">2.1.1</span> Package styler</a></li>
   <li><a href="#ide-and-text-editor-support" id="toc-ide-and-text-editor-support" class="nav-link" data-scroll-target="#ide-and-text-editor-support"><span class="header-section-number">2.1.2</span> IDE and Text editor support</a></li>
   <li><a href="#command-lineterminalr" id="toc-command-lineterminalr" class="nav-link" data-scroll-target="#command-lineterminalr"><span class="header-section-number">2.1.3</span> Command line/Terminal/R</a></li>
-  <li><a href="#github-actions" id="toc-github-actions" class="nav-link" data-scroll-target="#github-actions"><span class="header-section-number">2.1.4</span> GitHub Actions</a></li>
+  <li><a href="#sec-style-actions" id="toc-sec-style-actions" class="nav-link" data-scroll-target="#sec-style-actions"><span class="header-section-number">2.1.4</span> GitHub Actions</a></li>
   </ul></li>
   <li><a href="#python" id="toc-python" class="nav-link" data-scroll-target="#python"><span class="header-section-number">2.2</span> Python</a>
   <ul class="collapse">
   <li><a href="#package-ruff" id="toc-package-ruff" class="nav-link" data-scroll-target="#package-ruff"><span class="header-section-number">2.2.1</span> Package Ruff</a></li>
   <li><a href="#ide-and-text-editor-support-1" id="toc-ide-and-text-editor-support-1" class="nav-link" data-scroll-target="#ide-and-text-editor-support-1"><span class="header-section-number">2.2.2</span> IDE and Text editor support</a></li>
   <li><a href="#command-lineterminal" id="toc-command-lineterminal" class="nav-link" data-scroll-target="#command-lineterminal"><span class="header-section-number">2.2.3</span> Command line/Terminal</a></li>
-  <li><a href="#github-actions-1" id="toc-github-actions-1" class="nav-link" data-scroll-target="#github-actions-1"><span class="header-section-number">2.2.4</span> GitHub Actions</a></li>
+  <li><a href="#github-actions" id="toc-github-actions" class="nav-link" data-scroll-target="#github-actions"><span class="header-section-number">2.2.4</span> GitHub Actions</a></li>
   </ul></li>
   <li><a href="#resources" id="toc-resources" class="nav-link" data-scroll-target="#resources"><span class="header-section-number">2.3</span> Resources</a></li>
   </ul>
@@ -310,8 +316,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <h3 data-number="2.1.3" class="anchored" data-anchor-id="command-lineterminalr"><span class="header-section-number">2.1.3</span> Command line/Terminal/R</h3>
 <p>In the <a href="https://github.com/getwilds/makefiles">getwilds/makefiles repo</a> we have an R package Makefile template with <a href="https://github.com/getwilds/makefiles/blob/main/R/Makefile#L31-L40">three make targets</a> for styling package code: <code>lint_package</code>, <code>style_file</code>, and <code>style_package</code>. With that Makefile in the root of your package you can run <code>lint_package</code> to check for any problems, and run <code>style_file</code> or <code>style_package</code> to fix any problems. You can also just run the R code in those make targets in a terminal or within R.</p>
 </section>
-<section id="github-actions" class="level3" data-number="2.1.4">
-<h3 data-number="2.1.4" class="anchored" data-anchor-id="github-actions"><span class="header-section-number">2.1.4</span> GitHub Actions</h3>
+<section id="sec-style-actions" class="level3" data-number="2.1.4">
+<h3 data-number="2.1.4" class="anchored" data-anchor-id="sec-style-actions"><span class="header-section-number">2.1.4</span> GitHub Actions</h3>
 <p>To get setup with GitHub Actions and <code>lintr</code> and <code>styler</code>, first install <code>lintr</code> if you don’t have it:</p>
 <div class="sourceCode" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> (<span class="sc">!</span><span class="fu">requireNamespace</span>(<span class="st">"pak"</span>, <span class="at">quietly=</span><span class="cn">TRUE</span>)) {</span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">install.packages</span>(<span class="st">"pak"</span>)</span>
@@ -347,8 +353,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <h3 data-number="2.2.3" class="anchored" data-anchor-id="command-lineterminal"><span class="header-section-number">2.2.3</span> Command line/Terminal</h3>
 <p>In the <a href="https://github.com/getwilds/makefiles">getwilds/makefiles repo</a> we have a Python package Makefile template with <a href="https://github.com/getwilds/makefiles/blob/main/Python/Makefile#L40-L48">two make targets</a> for styling package code: <code>lint-fix</code> and <code>lint-check</code>. With that Makefile in the root of your package you can run <code>lint-check</code> to check for any problems, and <code>lint-fix</code> to fix any problems. You can also just run the command line tools in a terminal (e.g., <code>ruff check .</code>).</p>
 </section>
-<section id="github-actions-1" class="level3" data-number="2.2.4">
-<h3 data-number="2.2.4" class="anchored" data-anchor-id="github-actions-1"><span class="header-section-number">2.2.4</span> GitHub Actions</h3>
+<section id="github-actions" class="level3" data-number="2.2.4">
+<h3 data-number="2.2.4" class="anchored" data-anchor-id="github-actions"><span class="header-section-number">2.2.4</span> GitHub Actions</h3>
 <p>There’s a few different options for <code>Ruff</code> for GitHub Actions. See <a href="https://docs.astral.sh/ruff/integrations/#github-actions">Ruff docs</a> for details.</p>
 </section>
 </section>

@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>WILDS Contributor Guide - 4&nbsp; DaSL external</title>
+<title>WILDS Contributor Guide - 12&nbsp; Standards </title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -30,8 +30,7 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
-<link href="./codereview-general.html" rel="next">
-<link href="./codereview-dasl.html" rel="prev">
+<link href="./conventions.html" rel="prev">
 <script src="site_libs/quarto-html/quarto.js"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
@@ -85,7 +84,7 @@ ul.task-list li input[type="checkbox"] {
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
         <a class="flex-grow-1 no-decor" role="button" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
-          <h1 class="quarto-secondary-nav-title"><span id="sec-review-external" class="quarto-section-identifier"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">DaSL external</span></span></h1>
+          <h1 class="quarto-secondary-nav-title"><span id="sec-standards" class="quarto-section-identifier"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">Standards <iconify-icon inline="" icon="fa6-solid:scale-balanced"></iconify-icon></span></span></h1>
         </a>     
       <button type="button" class="btn quarto-search-button" aria-label="" onclick="window.quartoOpenSearch();">
         <i class="bi bi-search"></i>
@@ -153,7 +152,7 @@ ul.task-list li input[type="checkbox"] {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./codereview-external.html" class="sidebar-item-text sidebar-link active">
+  <a href="./codereview-external.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">DaSL external</span></span></a>
   </div>
 </li>
@@ -203,7 +202,7 @@ ul.task-list li input[type="checkbox"] {
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./standards.html" class="sidebar-item-text sidebar-link">
+  <a href="./standards.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">Standards </span></span></a>
   </div>
 </li>
@@ -217,18 +216,22 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">Table of contents</h2>
    
   <ul>
-  <li><a href="#follow-code-review-guidelines" id="toc-follow-code-review-guidelines" class="nav-link active" data-scroll-target="#follow-code-review-guidelines"><span class="header-section-number">4.1</span> Follow code review guidelines</a></li>
-  <li><a href="#discuss-first" id="toc-discuss-first" class="nav-link" data-scroll-target="#discuss-first"><span class="header-section-number">4.2</span> Discuss first</a></li>
-  <li><a href="#open-a-pull-request" id="toc-open-a-pull-request" class="nav-link" data-scroll-target="#open-a-pull-request"><span class="header-section-number">4.3</span> Open a pull request</a></li>
+  <li><a href="#r" id="toc-r" class="nav-link active" data-scroll-target="#r"><span class="header-section-number">12.1</span> R</a></li>
+  <li><a href="#python" id="toc-python" class="nav-link" data-scroll-target="#python"><span class="header-section-number">12.2</span> Python</a></li>
+  <li><a href="#docker" id="toc-docker" class="nav-link" data-scroll-target="#docker"><span class="header-section-number">12.3</span> Docker</a></li>
+  <li><a href="#research-compendia" id="toc-research-compendia" class="nav-link" data-scroll-target="#research-compendia"><span class="header-section-number">12.4</span> Research Compendia</a></li>
+  <li><a href="#wdl" id="toc-wdl" class="nav-link" data-scroll-target="#wdl"><span class="header-section-number">12.5</span> WDL</a></li>
+  <li><a href="#nextflow" id="toc-nextflow" class="nav-link" data-scroll-target="#nextflow"><span class="header-section-number">12.6</span> NextFlow</a></li>
+  <li><a href="#compliance-with-standards" id="toc-compliance-with-standards" class="nav-link" data-scroll-target="#compliance-with-standards"><span class="header-section-number">12.7</span> Compliance with standards</a></li>
   </ul>
-<div class="toc-actions"><ul><li><a href="https://github.com/getwilds/guide/edit/main/codereview-external.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/getwilds/guide/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
+<div class="toc-actions"><ul><li><a href="https://github.com/getwilds/guide/edit/main/standards.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/getwilds/guide/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title d-none d-lg-block"><span id="sec-review-external" class="quarto-section-identifier"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">DaSL external</span></span></h1>
+<h1 class="title d-none d-lg-block"><span id="sec-standards" class="quarto-section-identifier"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">Standards <iconify-icon inline="" icon="fa6-solid:scale-balanced"></iconify-icon></span></span></h1>
 </div>
 
 
@@ -245,22 +248,74 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<p>By external we are referring to anyone that is not a DASL employee.</p>
-<section id="follow-code-review-guidelines" class="level2" data-number="4.1">
-<h2 data-number="4.1" class="anchored" data-anchor-id="follow-code-review-guidelines"><span class="header-section-number">4.1</span> Follow code review guidelines</h2>
-<p>Follow our code review guidelines (<a href="codereview-guidelines.html" class="quarto-xref"><span>Chapter 6</span></a>)</p>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Note
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>These are living standards. Have a question/concern/suggestion? <a href="https://github.com/getwilds/guide/issues/new">Let’s chat</a>.</p>
+</div>
+</div>
+<p>Standards for each repository type …</p>
+<p>In order to keep the standards easily digestable, for each repo type below we keep each standard short and simple and link out to other sections of the book for more information.</p>
+<section id="r" class="level2" data-number="12.1">
+<h2 data-number="12.1" class="anchored" data-anchor-id="r"><span class="header-section-number">12.1</span> R</h2>
+<p>Each R package in WILDS should follow the following standards:</p>
+<ul>
+<li>Use package <code>pkgdown</code> to create package documentation (see <a href="packagedocs.html#sec-docs-r" class="quarto-xref"><span>Section 7.1</span></a>)</li>
+<li>Use an open source license; in most cases that means MIT (see <a href="maintenance.html#sec-license-r" class="quarto-xref"><span>Section 8.1.1</span></a>)</li>
+<li>Follow our package versioning guidelines (see <a href="maintenance.html#sec-versioning" class="quarto-xref"><span>Section 8.2</span></a>)</li>
+<li>Follow our package releases guidelines (see <a href="maintenance.html#sec-releases" class="quarto-xref"><span>Section 8.3</span></a>)</li>
+<li>Follow all conventions in <a href="conventions.html" class="quarto-xref"><span>Chapter 11</span></a></li>
+</ul>
 </section>
-<section id="discuss-first" class="level2" data-number="4.2">
-<h2 data-number="4.2" class="anchored" data-anchor-id="discuss-first"><span class="header-section-number">4.2</span> Discuss first</h2>
-<p>In most cases it’s a good idea to start a discussion before opening a pull request.</p>
-<p>You can do this by opening an issue in the relavant GitHub repository, starting a discusison in the <a href="https://fhdata.slack.com/">FH-Data Slack</a> or emailing the maintainer. The best option is opening an issue as that keeps the discussion of the code paired with the code.</p>
-<p>If you open an issue, there should be an issue template that will give instructions.</p>
-<p>Make sure to include a <a href="https://www.tidyverse.org/help/#reprex">reproducible example</a>!</p>
+<section id="python" class="level2" data-number="12.2">
+<h2 data-number="12.2" class="anchored" data-anchor-id="python"><span class="header-section-number">12.2</span> Python</h2>
+<p>Each Python package in WILDS should follow the following standards:</p>
+<ul>
+<li>Maintain package documentation (see <a href="packagedocs.html#sec-docs-python" class="quarto-xref"><span>Section 7.2</span></a>)</li>
+<li>Use an open source license; in most cases that means MIT (see <a href="maintenance.html#sec-license-python" class="quarto-xref"><span>Section 8.1.2</span></a>)</li>
+<li>Follow our package versioning guidelines (see <a href="maintenance.html#sec-versioning" class="quarto-xref"><span>Section 8.2</span></a>)</li>
+<li>Follow our package releases guidelines (see <a href="maintenance.html#sec-releases" class="quarto-xref"><span>Section 8.3</span></a>)</li>
+<li>Follow all conventions in <a href="conventions.html" class="quarto-xref"><span>Chapter 11</span></a></li>
+</ul>
 </section>
-<section id="open-a-pull-request" class="level2" data-number="4.3">
-<h2 data-number="4.3" class="anchored" data-anchor-id="open-a-pull-request"><span class="header-section-number">4.3</span> Open a pull request</h2>
-<p>After discussing a change, feature request, bug, or soemthing else, open a pull request.</p>
-<p>ADD MORE TEXT ABOUT DOING A PR …</p>
+<section id="docker" class="level2" data-number="12.3">
+<h2 data-number="12.3" class="anchored" data-anchor-id="docker"><span class="header-section-number">12.3</span> Docker</h2>
+<p>Each Docker container in WILDS should follow the following standards:</p>
+<ul>
+<li>Maintain necessary <a href="https://docs.docker.com/reference/dockerfile/#label">labels</a> within the Dockerfile (see <a href="docker.html#sec-dockerfile" class="quarto-xref"><span>Section 10.2</span></a>)</li>
+<li>Use an open source license; in most cases that means MIT (see <a href="maintenance.html#sec-license-docker" class="quarto-xref"><span>Section 8.1.4</span></a>)</li>
+<li>Keep containers as minimal and specific as possible (see <a href="docker.html#sec-docker-image" class="quarto-xref"><span>Section 10.1</span></a>)</li>
+<li>Follow all conventions in <a href="docker.html" class="quarto-xref"><span>Chapter 10</span></a></li>
+</ul>
+</section>
+<section id="research-compendia" class="level2" data-number="12.4">
+<h2 data-number="12.4" class="anchored" data-anchor-id="research-compendia"><span class="header-section-number">12.4</span> Research Compendia</h2>
+<p>Coming soon!</p>
+</section>
+<section id="wdl" class="level2" data-number="12.5">
+<h2 data-number="12.5" class="anchored" data-anchor-id="wdl"><span class="header-section-number">12.5</span> WDL</h2>
+<p>Each WDL workflow in WILDS should follow the following standards:</p>
+<ul>
+<li>Maintain package documentation in the README of the repository at a minimum</li>
+<li>Use an open source license; in most cases that means MIT (see <a href="maintenance.html#sec-license-wdl" class="quarto-xref"><span>Section 8.1.3</span></a>)</li>
+<li>Follow our package versioning guidelines (see <a href="maintenance.html#sec-versioning" class="quarto-xref"><span>Section 8.2</span></a>)</li>
+<li>Follow all conventions in <a href="wdlconfig.html" class="quarto-xref"><span>Chapter 9</span></a></li>
+</ul>
+</section>
+<section id="nextflow" class="level2" data-number="12.6">
+<h2 data-number="12.6" class="anchored" data-anchor-id="nextflow"><span class="header-section-number">12.6</span> NextFlow</h2>
+<p>Coming soon!</p>
+</section>
+<section id="compliance-with-standards" class="level2" data-number="12.7">
+<h2 data-number="12.7" class="anchored" data-anchor-id="compliance-with-standards"><span class="header-section-number">12.7</span> Compliance with standards</h2>
+<p>We’re not sure how this will be done exactly. For now, we’ll do compliance manually. Ideally the end state will be completely automated.</p>
 
 
 </section>
@@ -826,14 +881,11 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="./codereview-dasl.html" class="pagination-link" aria-label="DaSL internal">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">DaSL internal</span></span>
+      <a href="./conventions.html" class="pagination-link" aria-label="Conventions {{< iconify fa6-solid person-digging >}}">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Conventions <iconify-icon inline="" icon="fa6-solid:person-digging"></iconify-icon></span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./codereview-general.html" class="pagination-link" aria-label="General">
-        <span class="nav-page-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">General</span></span> <i class="bi bi-arrow-right-short"></i>
-      </a>
   </div>
 </nav>
 </div> <!-- /content -->
@@ -844,7 +896,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     </div>   
     <div class="nav-footer-center">
       &nbsp;
-    <div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/getwilds/guide/edit/main/codereview-external.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/getwilds/guide/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div>
+    <div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/getwilds/guide/edit/main/standards.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/getwilds/guide/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div>
     <div class="nav-footer-right">
 <p>This book was built with <a href="https://quarto.org/">Quarto</a>.</p>
 </div>

@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.4.552">
+<meta name="generator" content="quarto-1.4.553">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -235,6 +235,12 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
  <span class="menu-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Conventions </span></span></a>
   </div>
 </li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./standards.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">Standards </span></span></a>
+  </div>
+</li>
     </ul>
     </div>
 </nav>
@@ -247,15 +253,17 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <ul>
   <li><a href="#licenses" id="toc-licenses" class="nav-link active" data-scroll-target="#licenses"><span class="header-section-number">8.1</span> Licenses</a>
   <ul class="collapse">
-  <li><a href="#r" id="toc-r" class="nav-link" data-scroll-target="#r"><span class="header-section-number">8.1.1</span> R</a></li>
-  <li><a href="#python" id="toc-python" class="nav-link" data-scroll-target="#python"><span class="header-section-number">8.1.2</span> Python</a></li>
+  <li><a href="#sec-license-r" id="toc-sec-license-r" class="nav-link" data-scroll-target="#sec-license-r"><span class="header-section-number">8.1.1</span> R</a></li>
+  <li><a href="#sec-license-python" id="toc-sec-license-python" class="nav-link" data-scroll-target="#sec-license-python"><span class="header-section-number">8.1.2</span> Python</a></li>
+  <li><a href="#sec-license-wdl" id="toc-sec-license-wdl" class="nav-link" data-scroll-target="#sec-license-wdl"><span class="header-section-number">8.1.3</span> WDL</a></li>
+  <li><a href="#sec-license-docker" id="toc-sec-license-docker" class="nav-link" data-scroll-target="#sec-license-docker"><span class="header-section-number">8.1.4</span> Docker</a></li>
   </ul></li>
-  <li><a href="#package-versioning" id="toc-package-versioning" class="nav-link" data-scroll-target="#package-versioning"><span class="header-section-number">8.2</span> Package versioning</a>
+  <li><a href="#sec-versioning" id="toc-sec-versioning" class="nav-link" data-scroll-target="#sec-versioning"><span class="header-section-number">8.2</span> Package versioning</a>
   <ul class="collapse">
   <li><a href="#package-version-numbers" id="toc-package-version-numbers" class="nav-link" data-scroll-target="#package-version-numbers"><span class="header-section-number">8.2.1</span> Package version numbers</a></li>
   <li><a href="#ignore-these" id="toc-ignore-these" class="nav-link" data-scroll-target="#ignore-these"><span class="header-section-number">8.2.2</span> Ignore these</a></li>
   </ul></li>
-  <li><a href="#package-releases" id="toc-package-releases" class="nav-link" data-scroll-target="#package-releases"><span class="header-section-number">8.3</span> Package releases</a></li>
+  <li><a href="#sec-releases" id="toc-sec-releases" class="nav-link" data-scroll-target="#sec-releases"><span class="header-section-number">8.3</span> Package releases</a></li>
   </ul>
 <div class="toc-actions"><ul><li><a href="https://github.com/getwilds/guide/edit/main/maintenance.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/getwilds/guide/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
     </div>
@@ -286,8 +294,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <h2 data-number="8.1" class="anchored" data-anchor-id="licenses"><span class="header-section-number">8.1</span> Licenses</h2>
 <p>All software (R, Python, etc.) in the WILDS should by default use the <a href="https://choosealicense.com/licenses/mit/">MIT license</a>.</p>
 <p>If there are circumstances which prevent using MIT, please do discuss with Sean or Scott.</p>
-<section id="r" class="level3" data-number="8.1.1">
-<h3 data-number="8.1.1" class="anchored" data-anchor-id="r"><span class="header-section-number">8.1.1</span> R</h3>
+<section id="sec-license-r" class="level3" data-number="8.1.1">
+<h3 data-number="8.1.1" class="anchored" data-anchor-id="sec-license-r"><span class="header-section-number">8.1.1</span> R</h3>
 <p>In R, you can add the MIT license to your repository with the following code:</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> (<span class="sc">!</span><span class="fu">requireNamespace</span>(<span class="st">"usethis"</span>, <span class="at">quietly =</span> <span class="cn">TRUE</span>)) {</span>
@@ -297,22 +305,31 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 <p>Note that <code>usethis::use_mit_license</code> adds two files to your repository (<code>LICENSE</code> and <code>LICENSE.md</code>, and adds entries to the <code>.Rbuildignore</code> file so that <code>R CMD CHECK</code> doesn’t complain).</p>
 </section>
-<section id="python" class="level3" data-number="8.1.2">
-<h3 data-number="8.1.2" class="anchored" data-anchor-id="python"><span class="header-section-number">8.1.2</span> Python</h3>
+<section id="sec-license-python" class="level3" data-number="8.1.2">
+<h3 data-number="8.1.2" class="anchored" data-anchor-id="sec-license-python"><span class="header-section-number">8.1.2</span> Python</h3>
 <p>There’s no widely accepted single tool for dealing with licenses in Python similar to the above for R. For Python packages, simply include the license type (e.g., <code>MIT</code>) in your setup.py, setup.cfg, pyproject.toml, etc., and include the text of the license in a <code>LICENSE</code> file in the root of your repository.</p>
 </section>
+<section id="sec-license-wdl" class="level3" data-number="8.1.3">
+<h3 data-number="8.1.3" class="anchored" data-anchor-id="sec-license-wdl"><span class="header-section-number">8.1.3</span> WDL</h3>
+<p>Similarly, there is currently no universal standard for incorporating licenses within WDL packages. We recommend stating the license type in a comment at the top of the workflow script, and including the text of the license in a <code>LICENSE</code> file in the root of your repository.</p>
 </section>
-<section id="package-versioning" class="level2" data-number="8.2">
-<h2 data-number="8.2" class="anchored" data-anchor-id="package-versioning"><span class="header-section-number">8.2</span> Package versioning</h2>
+<section id="sec-license-docker" class="level3" data-number="8.1.4">
+<h3 data-number="8.1.4" class="anchored" data-anchor-id="sec-license-docker"><span class="header-section-number">8.1.4</span> Docker</h3>
+<p>License type can be specified within the corresponding Dockerfile of each container using the “license” label:</p>
+<pre><code>LABEL org.opencontainers.image.licenses=MIT</code></pre>
+</section>
+</section>
+<section id="sec-versioning" class="level2" data-number="8.2">
+<h2 data-number="8.2" class="anchored" data-anchor-id="sec-versioning"><span class="header-section-number">8.2</span> Package versioning</h2>
 <p>There is a detailed discussion of versioning R packages in the <a href="https://r-pkgs.org/lifecycle.html">lifecycle</a> chapter of the <a href="https://r-pkgs.org">R Packages book</a> by Hadley Wickham and Jenny Bryan. Please follow that chapter in general for versioning of R and Python packages within the WILDS. To make it easier to grok, below are some of the highlights, and some exceptions to that chapter.</p>
 <section id="package-version-numbers" class="level3" data-number="8.2.1">
 <h3 data-number="8.2.1" class="anchored" data-anchor-id="package-version-numbers"><span class="header-section-number">8.2.1</span> Package version numbers</h3>
 <p>There’s quite a bit of nuance - and surprises - to package version numbers - see the <a href="https://r-pkgs.org/lifecycle.html#sec-lifecycle-version-number">Package version number section</a> for details. For example, using the <code>utils::package_version()</code> function, which parses package version strings into S3 classes, we get a suprising result:</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="st">"2.0"</span> <span class="sc">&gt;</span> <span class="st">"10.0"</span></span>
-<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; [1] TRUE</span></span>
-<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="fu">package_version</span>(<span class="st">"2.0"</span>) <span class="sc">&gt;</span> <span class="fu">package_version</span>(<span class="st">"10.0"</span>)</span>
-<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; [1] FALSE</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="st">"2.0"</span> <span class="sc">&gt;</span> <span class="st">"10.0"</span></span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; [1] TRUE</span></span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="fu">package_version</span>(<span class="st">"2.0"</span>) <span class="sc">&gt;</span> <span class="fu">package_version</span>(<span class="st">"10.0"</span>)</span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; [1] FALSE</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>With that example, please do think about your package versions before setting them.</p>
 <section id="wilds-conventions" class="level4" data-number="8.2.1.1">
@@ -330,8 +347,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p>We are not following or enforcing any rules about changes at the function/class/etc level below the package level. For example, the R Packages book <a href="https://r-pkgs.org/lifecycle.html#sec-lifecycle-stages-and-package">talks about</a> using the <code>lifecycle</code> package to deal with function changes.</p>
 </section>
 </section>
-<section id="package-releases" class="level2" data-number="8.3">
-<h2 data-number="8.3" class="anchored" data-anchor-id="package-releases"><span class="header-section-number">8.3</span> Package releases</h2>
+<section id="sec-releases" class="level2" data-number="8.3">
+<h2 data-number="8.3" class="anchored" data-anchor-id="sec-releases"><span class="header-section-number">8.3</span> Package releases</h2>
 <p>In general follow the <a href="https://r-pkgs.org/release.html">Releasing to CRAN chapter</a> in the book <a href="https://r-pkgs.org">R Packages</a> for R, and the <a href="https://py-pkgs.org/07-releasing-versioning">Releasing and versioning chapter</a> in the book <a href="https://py-pkgs.org">Python Packages</a> for Python. Those chapters don’t have to be followed to the letter, but in general they provide really good guidance.</p>
 <p>There are a few aspects of releases we are opinionated about and would like all WILDS R and Python packages to follow:</p>
 <ul>
