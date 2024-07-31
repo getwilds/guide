@@ -24,6 +24,7 @@ book:
         - codereview-general.qmd
         - codereview-guidelines.qmd
     - packagedocs.qmd
+    - testing.qmd
     - maintenance.qmd
     - wdlconfig.qmd
     - docker.qmd

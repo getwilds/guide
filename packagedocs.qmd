@@ -34,9 +34,18 @@ For either of the options above, they can be hosted in many places, including [G
 
 ## Guidelines
 
-- README: This is most likely the first place potential users will interact with your package. Make sure the README clearly states what the package does, and how to get started.
+- README:
+  - All repositories must have a README.md file.
+  - All repositories must have a project status badge (see below for badge specific guidelines).
+  - This is most likely the first place potential users will interact with your package. Make sure the README clearly states what the package does, and how to get started.
 - Examples: All user facing functions should have examples. Make sure to be careful about how examples are run if there's any sensitive data or connections to remote services.
 - Vignettes: From the [R Packages book](https://r-pkgs.org/vignettes.html): "A vignette is a long-form guide to your package. Function documentation is great if you know the name of the function you need, but it’s useless otherwise. In contrast, a vignette can be framed around a target problem that your package is designed to solve. The vignette format is perfect for showing a workflow that solves that particular problem, start to finish. Vignettes afford you different opportunities than help topics: you have much more control over the integration of code and prose and it’s a better setting for showing how multiple functions work together."
+
+Badge specific guidelines
+
+- [**Experimental**](#statuses) status projects should have a README that describes what the software does and how to install it. At the Experimental level and above, all functions should have accompanying docstrings (in the case of Python), roxygen2 comments (in the case of R), or equivalent function-level documentation. See Google’s style guide on [Python docstrings](https://google.github.io/styleguide/pyguide.html#38-comments-and-docstrings) and the R Packages chapter on [function documentation](https://r-pkgs.org/man.html).
+- [**Prototype**](#statuses) status projects should have all of the above and a README that contains examples of how to use the software.
+- [**Stable**](#statuses) status projects should have all the above and mature, fully-featured READMEs with badges for automated testing outcomes and software repository availability. They should also feature detailed information about who the software is intended for, how it’s intended to be used, with fully-worked examples of how to install and use the software. Stable status projects should also have a standalone website that contains more detailed information about the software.
 
 
 [pkgdown]: https://pkgdown.r-lib.org/

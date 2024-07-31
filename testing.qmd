@@ -1,0 +1,12 @@
+# Testing {{< iconify fa6-solid bug >}} {#sec-testing}
+
+- All [**Stable**](#statuses) projects need automated software testing set up via GitHub Actions with a status badge in the README.md
+- Software that interacts with the internet should use the [vcr][] or [webmockr][] package for testing whenever possible and appropriate.
+- When writing a test suite, you should aspire to as much [code coverage](https://en.wikipedia.org/wiki/Code_coverage) as is appropriate, although usually higher code coverage is better. When thinking about code coverage, consider this blog post from Google Engineering [
+Code Coverage Best Practices](https://testing.googleblog.com/2020/08/code-coverage-best-practices.html) and the [advice of the ancient master Testivus](https://www.artima.com/forums/flat.jsp?forum=106&thread=204677).
+- Whenever possible use a well established testing framework like [pytest][] for Python, or [testthat][] for R.
+
+[vcr]: https://docs.ropensci.org/vcr
+[webmockr]: https://docs.ropensci.org/webmockr
+[pytest]: https://docs.pytest.org
+[testthat]: https://testthat.r-lib.org/
