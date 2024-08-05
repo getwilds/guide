@@ -6,9 +6,8 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="author" content="Scott Chamberlain">
 
-<title>WILDS Contributor Guide</title>
+<title>8&nbsp; Testing  – WILDS Contributor Guide</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -31,7 +30,8 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
-<link href="./contributing.html" rel="next">
+<link href="./maintenance.html" rel="next">
+<link href="./packagedocs.html" rel="prev">
 <script src="site_libs/quarto-html/quarto.js"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
@@ -85,7 +85,7 @@ ul.task-list li input[type="checkbox"] {
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
         <a class="flex-grow-1 no-decor" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
-          <h1 class="quarto-secondary-nav-title">WILDS Contributor Guide</h1>
+          <h1 class="quarto-secondary-nav-title"><span id="sec-testing" class="quarto-section-identifier"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Testing <iconify-icon inline="" icon="fa6-solid:bug"></iconify-icon></span></span></h1>
         </a>     
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
         <i class="bi bi-search"></i>
@@ -120,7 +120,7 @@ ul.task-list li input[type="checkbox"] {
     <ul class="list-unstyled mt-1">
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./index.html" class="sidebar-item-text sidebar-link active">
+  <a href="./index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Welcome</span></a>
   </div>
 </li>
@@ -179,7 +179,7 @@ ul.task-list li input[type="checkbox"] {
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./testing.html" class="sidebar-item-text sidebar-link">
+  <a href="./testing.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Testing </span></span></a>
   </div>
 </li>
@@ -218,37 +218,21 @@ ul.task-list li input[type="checkbox"] {
 </nav>
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        <nav id="TOC" role="doc-toc" class="toc-active">
-    <h2 id="toc-title">Table of contents</h2>
-   
-  <ul>
-  <li><a href="#welcome" id="toc-welcome" class="nav-link active" data-scroll-target="#welcome">Welcome</a>
-  <ul class="collapse">
-  <li><a href="#inspiration" id="toc-inspiration" class="nav-link" data-scroll-target="#inspiration">Inspiration</a></li>
-  <li><a href="#license" id="toc-license" class="nav-link" data-scroll-target="#license">License</a></li>
-  </ul></li>
-  </ul>
-<div class="toc-actions"><ul><li><a href="https://github.com/getwilds/guide/edit/main/index.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/getwilds/guide/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
+        
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title d-none d-lg-block">WILDS Contributor Guide</h1>
+<h1 class="title d-none d-lg-block"><span id="sec-testing" class="quarto-section-identifier"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Testing <iconify-icon inline="" icon="fa6-solid:bug"></iconify-icon></span></span></h1>
 </div>
 
 
 
 <div class="quarto-title-meta">
 
-    <div>
-    <div class="quarto-title-meta-heading">Author</div>
-    <div class="quarto-title-meta-contents">
-             <p>Scott Chamberlain </p>
-          </div>
-  </div>
     
   
     
@@ -259,39 +243,14 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<section id="welcome" class="level1 unnumbered">
-<h1 class="unnumbered">Welcome</h1>
-<div class="callout callout-style-default callout-warning callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Warning
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>This guide is under construction - content changes often.</p>
-</div>
-</div>
-<p>This book is a resource for the community of people using, contributing to, and maintaining software within the WILDS GitHub organization (<a href="https://github.com/getwilds" class="uri">https://github.com/getwilds</a>) at the Fred Hutch Cancer Center Data Science Lab (<a href="https://hutchdatascience.org/">DaSL</a>).</p>
-<p>The book covers important aspects of software development, including how to get involved in software as a user or contributor, code style, code review, package documentation, and more. It includes both internal facing guidelines as well as for any contributions from folks other than DaSL staff.</p>
-<p>In the WILDS we primarily develop software in the <a href="https://www.r-project.org/">R</a> and <a href="https://www.python.org/">Python</a> programming languages. Where necessary, we’ll discuss a topic with respect to both languages.</p>
-<section id="inspiration" class="level2">
-<h2 class="anchored" data-anchor-id="inspiration">Inspiration</h2>
-<p>Inspiration for this guide is taken in part from:</p>
 <ul>
-<li><a href="https://style.tidyverse.org/">Tidyverse Style Guide</a></li>
-<li><a href="https://devguide.ropensci.org/">rOpenSci Dev Guide</a></li>
+<li>All <a href="conventions.html#statuses"><strong>Stable</strong></a> projects need automated software testing set up via GitHub Actions with a status badge in the README.md</li>
+<li>Software that interacts with the internet should use the <a href="https://docs.ropensci.org/vcr">vcr</a> or <a href="https://docs.ropensci.org/webmockr">webmockr</a> package for testing whenever possible and appropriate.</li>
+<li>When writing a test suite, you should aspire to as much <a href="https://en.wikipedia.org/wiki/Code_coverage">code coverage</a> as is appropriate, although usually higher code coverage is better. When thinking about code coverage, consider this blog post from Google Engineering <a href="https://testing.googleblog.com/2020/08/code-coverage-best-practices.html">Code Coverage Best Practices</a> and the <a href="https://www.artima.com/forums/flat.jsp?forum=106&amp;thread=204677">advice of the ancient master Testivus</a>.</li>
+<li>Whenever possible use a well established testing framework like <a href="https://docs.pytest.org">pytest</a> for Python, or <a href="https://testthat.r-lib.org/">testthat</a> for R.</li>
 </ul>
-</section>
-<section id="license" class="level2">
-<h2 class="anchored" data-anchor-id="license">License</h2>
-<p>This book is licensed to you under <a href="https://creativecommons.org/publicdomain/zero/1.0/">Creative Commons CC0 1.0 Universal (CC0 1.0)</a>, i.e.&nbsp;public domain.</p>
 
 
-</section>
-</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
@@ -865,10 +824,13 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
+      <a href="./packagedocs.html" class="pagination-link" aria-label="Documentation {{< iconify fa6-solid book >}}">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Documentation <iconify-icon inline="" icon="fa6-solid:book"></iconify-icon></span></span>
+      </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./contributing.html" class="pagination-link" aria-label="Contributing {{< iconify fa6-solid hammer >}}">
-        <span class="nav-page-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Contributing <iconify-icon inline="" icon="fa6-solid:hammer"></iconify-icon></span></span> <i class="bi bi-arrow-right-short"></i>
+      <a href="./maintenance.html" class="pagination-link" aria-label="Package maintenance {{< iconify fa6-solid code-compare >}}">
+        <span class="nav-page-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Package maintenance <iconify-icon inline="" icon="fa6-solid:code-compare"></iconify-icon></span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>
@@ -880,7 +842,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     </div>   
     <div class="nav-footer-center">
       &nbsp;
-    <div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/getwilds/guide/edit/main/index.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/getwilds/guide/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div>
+    <div class="toc-actions"><ul><li><a href="https://github.com/getwilds/guide/edit/main/testing.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/getwilds/guide/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div>
     <div class="nav-footer-right">
 <p>This book was built with <a href="https://quarto.org/">Quarto</a>.</p>
 </div>

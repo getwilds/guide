@@ -2,12 +2,12 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.4.553">
+<meta name="generator" content="quarto-1.5.56">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>WILDS Contributor Guide - 12&nbsp; Standards </title>
+<title>13&nbsp; Standards  – WILDS Contributor Guide</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -80,13 +80,13 @@ ul.task-list li input[type="checkbox"] {
   <header id="quarto-header" class="headroom fixed-top">
   <nav class="quarto-secondary-nav">
     <div class="container-fluid d-flex">
-      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <a class="flex-grow-1 no-decor" role="button" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
-          <h1 class="quarto-secondary-nav-title"><span id="sec-standards" class="quarto-section-identifier"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">Standards <iconify-icon inline="" icon="fa6-solid:scale-balanced"></iconify-icon></span></span></h1>
+        <a class="flex-grow-1 no-decor" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+          <h1 class="quarto-secondary-nav-title"><span id="sec-standards" class="quarto-section-identifier"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">Standards <iconify-icon inline="" icon="fa6-solid:scale-balanced"></iconify-icon></span></span></h1>
         </a>     
-      <button type="button" class="btn quarto-search-button" aria-label="" onclick="window.quartoOpenSearch();">
+      <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
         <i class="bi bi-search"></i>
       </button>
     </div>
@@ -139,7 +139,7 @@ ul.task-list li input[type="checkbox"] {
       <div class="sidebar-item-container"> 
             <a href="./codereview.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Code review </span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="true" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
@@ -178,32 +178,38 @@ ul.task-list li input[type="checkbox"] {
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
+  <a href="./testing.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Testing </span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
   <a href="./maintenance.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Package maintenance </span></span></a>
+ <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Package maintenance </span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./wdlconfig.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">WDL Configuration Guide </span></span></a>
+ <span class="menu-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">WDL Configuration Guide </span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./docker.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Docker Configuration Guide </span></span></a>
+ <span class="menu-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Docker Configuration Guide </span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./conventions.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Conventions </span></span></a>
+ <span class="menu-text"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">Conventions </span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./standards.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">Standards </span></span></a>
+ <span class="menu-text"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">Standards </span></span></a>
   </div>
 </li>
     </ul>
@@ -216,13 +222,13 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">Table of contents</h2>
    
   <ul>
-  <li><a href="#r" id="toc-r" class="nav-link active" data-scroll-target="#r"><span class="header-section-number">12.1</span> R</a></li>
-  <li><a href="#python" id="toc-python" class="nav-link" data-scroll-target="#python"><span class="header-section-number">12.2</span> Python</a></li>
-  <li><a href="#docker" id="toc-docker" class="nav-link" data-scroll-target="#docker"><span class="header-section-number">12.3</span> Docker</a></li>
-  <li><a href="#research-compendia" id="toc-research-compendia" class="nav-link" data-scroll-target="#research-compendia"><span class="header-section-number">12.4</span> Research Compendia</a></li>
-  <li><a href="#wdl" id="toc-wdl" class="nav-link" data-scroll-target="#wdl"><span class="header-section-number">12.5</span> WDL</a></li>
-  <li><a href="#nextflow" id="toc-nextflow" class="nav-link" data-scroll-target="#nextflow"><span class="header-section-number">12.6</span> NextFlow</a></li>
-  <li><a href="#compliance-with-standards" id="toc-compliance-with-standards" class="nav-link" data-scroll-target="#compliance-with-standards"><span class="header-section-number">12.7</span> Compliance with standards</a></li>
+  <li><a href="#r" id="toc-r" class="nav-link active" data-scroll-target="#r"><span class="header-section-number">13.1</span> R</a></li>
+  <li><a href="#python" id="toc-python" class="nav-link" data-scroll-target="#python"><span class="header-section-number">13.2</span> Python</a></li>
+  <li><a href="#docker" id="toc-docker" class="nav-link" data-scroll-target="#docker"><span class="header-section-number">13.3</span> Docker</a></li>
+  <li><a href="#research-compendia" id="toc-research-compendia" class="nav-link" data-scroll-target="#research-compendia"><span class="header-section-number">13.4</span> Research Compendia</a></li>
+  <li><a href="#wdl" id="toc-wdl" class="nav-link" data-scroll-target="#wdl"><span class="header-section-number">13.5</span> WDL</a></li>
+  <li><a href="#nextflow" id="toc-nextflow" class="nav-link" data-scroll-target="#nextflow"><span class="header-section-number">13.6</span> NextFlow</a></li>
+  <li><a href="#compliance-with-standards" id="toc-compliance-with-standards" class="nav-link" data-scroll-target="#compliance-with-standards"><span class="header-section-number">13.7</span> Compliance with standards</a></li>
   </ul>
 <div class="toc-actions"><ul><li><a href="https://github.com/getwilds/guide/edit/main/standards.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/getwilds/guide/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
     </div>
@@ -231,7 +237,7 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title d-none d-lg-block"><span id="sec-standards" class="quarto-section-identifier"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">Standards <iconify-icon inline="" icon="fa6-solid:scale-balanced"></iconify-icon></span></span></h1>
+<h1 class="title d-none d-lg-block"><span id="sec-standards" class="quarto-section-identifier"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">Standards <iconify-icon inline="" icon="fa6-solid:scale-balanced"></iconify-icon></span></span></h1>
 </div>
 
 
@@ -263,58 +269,58 @@ Note
 </div>
 <p>Standards for each repository type …</p>
 <p>In order to keep the standards easily digestable, for each repo type below we keep each standard short and simple and link out to other sections of the book for more information.</p>
-<section id="r" class="level2" data-number="12.1">
-<h2 data-number="12.1" class="anchored" data-anchor-id="r"><span class="header-section-number">12.1</span> R</h2>
+<section id="r" class="level2" data-number="13.1">
+<h2 data-number="13.1" class="anchored" data-anchor-id="r"><span class="header-section-number">13.1</span> R</h2>
 <p>Each R package in WILDS should follow the following standards:</p>
 <ul>
 <li>Use package <code>pkgdown</code> to create package documentation (see <a href="packagedocs.html#sec-docs-r" class="quarto-xref"><span>Section 7.1</span></a>)</li>
-<li>Use an open source license; in most cases that means MIT (see <a href="maintenance.html#sec-license-r" class="quarto-xref"><span>Section 8.1.1</span></a>)</li>
-<li>Follow our package versioning guidelines (see <a href="maintenance.html#sec-versioning" class="quarto-xref"><span>Section 8.2</span></a>)</li>
-<li>Follow our package releases guidelines (see <a href="maintenance.html#sec-releases" class="quarto-xref"><span>Section 8.3</span></a>)</li>
-<li>Follow all conventions in <a href="conventions.html" class="quarto-xref"><span>Chapter 11</span></a></li>
+<li>Use an open source license; in most cases that means MIT (see <a href="maintenance.html#sec-license-r" class="quarto-xref"><span>Section 9.1.1</span></a>)</li>
+<li>Follow our package versioning guidelines (see <a href="maintenance.html#sec-versioning" class="quarto-xref"><span>Section 9.2</span></a>)</li>
+<li>Follow our package releases guidelines (see <a href="maintenance.html#sec-releases" class="quarto-xref"><span>Section 9.4</span></a>)</li>
+<li>Follow all conventions in <a href="conventions.html" class="quarto-xref"><span>Chapter 12</span></a></li>
 </ul>
 </section>
-<section id="python" class="level2" data-number="12.2">
-<h2 data-number="12.2" class="anchored" data-anchor-id="python"><span class="header-section-number">12.2</span> Python</h2>
+<section id="python" class="level2" data-number="13.2">
+<h2 data-number="13.2" class="anchored" data-anchor-id="python"><span class="header-section-number">13.2</span> Python</h2>
 <p>Each Python package in WILDS should follow the following standards:</p>
 <ul>
 <li>Maintain package documentation (see <a href="packagedocs.html#sec-docs-python" class="quarto-xref"><span>Section 7.2</span></a>)</li>
-<li>Use an open source license; in most cases that means MIT (see <a href="maintenance.html#sec-license-python" class="quarto-xref"><span>Section 8.1.2</span></a>)</li>
-<li>Follow our package versioning guidelines (see <a href="maintenance.html#sec-versioning" class="quarto-xref"><span>Section 8.2</span></a>)</li>
-<li>Follow our package releases guidelines (see <a href="maintenance.html#sec-releases" class="quarto-xref"><span>Section 8.3</span></a>)</li>
-<li>Follow all conventions in <a href="conventions.html" class="quarto-xref"><span>Chapter 11</span></a></li>
+<li>Use an open source license; in most cases that means MIT (see <a href="maintenance.html#sec-license-python" class="quarto-xref"><span>Section 9.1.2</span></a>)</li>
+<li>Follow our package versioning guidelines (see <a href="maintenance.html#sec-versioning" class="quarto-xref"><span>Section 9.2</span></a>)</li>
+<li>Follow our package releases guidelines (see <a href="maintenance.html#sec-releases" class="quarto-xref"><span>Section 9.4</span></a>)</li>
+<li>Follow all conventions in <a href="conventions.html" class="quarto-xref"><span>Chapter 12</span></a></li>
 </ul>
 </section>
-<section id="docker" class="level2" data-number="12.3">
-<h2 data-number="12.3" class="anchored" data-anchor-id="docker"><span class="header-section-number">12.3</span> Docker</h2>
+<section id="docker" class="level2" data-number="13.3">
+<h2 data-number="13.3" class="anchored" data-anchor-id="docker"><span class="header-section-number">13.3</span> Docker</h2>
 <p>Each Docker container in WILDS should follow the following standards:</p>
 <ul>
-<li>Maintain necessary <a href="https://docs.docker.com/reference/dockerfile/#label">labels</a> within the Dockerfile (see <a href="docker.html#sec-dockerfile" class="quarto-xref"><span>Section 10.2</span></a>)</li>
-<li>Use an open source license; in most cases that means MIT (see <a href="maintenance.html#sec-license-docker" class="quarto-xref"><span>Section 8.1.4</span></a>)</li>
-<li>Keep containers as minimal and specific as possible (see <a href="docker.html#sec-docker-image" class="quarto-xref"><span>Section 10.1</span></a>)</li>
-<li>Follow all conventions in <a href="docker.html" class="quarto-xref"><span>Chapter 10</span></a></li>
+<li>Maintain necessary <a href="https://docs.docker.com/reference/dockerfile/#label">labels</a> within the Dockerfile (see <a href="docker.html#sec-dockerfile" class="quarto-xref"><span>Section 11.2</span></a>)</li>
+<li>Use an open source license; in most cases that means MIT (see <a href="maintenance.html#sec-license-docker" class="quarto-xref"><span>Section 9.1.4</span></a>)</li>
+<li>Keep containers as minimal and specific as possible (see <a href="docker.html#sec-docker-image" class="quarto-xref"><span>Section 11.1</span></a>)</li>
+<li>Follow all conventions in <a href="docker.html" class="quarto-xref"><span>Chapter 11</span></a></li>
 </ul>
 </section>
-<section id="research-compendia" class="level2" data-number="12.4">
-<h2 data-number="12.4" class="anchored" data-anchor-id="research-compendia"><span class="header-section-number">12.4</span> Research Compendia</h2>
+<section id="research-compendia" class="level2" data-number="13.4">
+<h2 data-number="13.4" class="anchored" data-anchor-id="research-compendia"><span class="header-section-number">13.4</span> Research Compendia</h2>
 <p>Coming soon!</p>
 </section>
-<section id="wdl" class="level2" data-number="12.5">
-<h2 data-number="12.5" class="anchored" data-anchor-id="wdl"><span class="header-section-number">12.5</span> WDL</h2>
+<section id="wdl" class="level2" data-number="13.5">
+<h2 data-number="13.5" class="anchored" data-anchor-id="wdl"><span class="header-section-number">13.5</span> WDL</h2>
 <p>Each WDL workflow in WILDS should follow the following standards:</p>
 <ul>
 <li>Maintain package documentation in the README of the repository at a minimum</li>
-<li>Use an open source license; in most cases that means MIT (see <a href="maintenance.html#sec-license-wdl" class="quarto-xref"><span>Section 8.1.3</span></a>)</li>
-<li>Follow our package versioning guidelines (see <a href="maintenance.html#sec-versioning" class="quarto-xref"><span>Section 8.2</span></a>)</li>
-<li>Follow all conventions in <a href="wdlconfig.html" class="quarto-xref"><span>Chapter 9</span></a></li>
+<li>Use an open source license; in most cases that means MIT (see <a href="maintenance.html#sec-license-wdl" class="quarto-xref"><span>Section 9.1.3</span></a>)</li>
+<li>Follow our package versioning guidelines (see <a href="maintenance.html#sec-versioning" class="quarto-xref"><span>Section 9.2</span></a>)</li>
+<li>Follow all conventions in <a href="wdlconfig.html" class="quarto-xref"><span>Chapter 10</span></a></li>
 </ul>
 </section>
-<section id="nextflow" class="level2" data-number="12.6">
-<h2 data-number="12.6" class="anchored" data-anchor-id="nextflow"><span class="header-section-number">12.6</span> NextFlow</h2>
+<section id="nextflow" class="level2" data-number="13.6">
+<h2 data-number="13.6" class="anchored" data-anchor-id="nextflow"><span class="header-section-number">13.6</span> NextFlow</h2>
 <p>Coming soon!</p>
 </section>
-<section id="compliance-with-standards" class="level2" data-number="12.7">
-<h2 data-number="12.7" class="anchored" data-anchor-id="compliance-with-standards"><span class="header-section-number">12.7</span> Compliance with standards</h2>
+<section id="compliance-with-standards" class="level2" data-number="13.7">
+<h2 data-number="13.7" class="anchored" data-anchor-id="compliance-with-standards"><span class="header-section-number">13.7</span> Compliance with standards</h2>
 <p>We’re not sure how this will be done exactly. For now, we’ll do compliance manually. Ideally the end state will be completely automated.</p>
 
 
@@ -500,18 +506,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     }
     return false;
   }
-  const clipboard = new window.ClipboardJS('.code-copy-button', {
-    text: function(trigger) {
-      const codeEl = trigger.previousElementSibling.cloneNode(true);
-      for (const childEl of codeEl.children) {
-        if (isCodeAnnotation(childEl)) {
-          childEl.remove();
-        }
-      }
-      return codeEl.innerText;
-    }
-  });
-  clipboard.on('success', function(e) {
+  const onCopySuccess = function(e) {
     // button target
     const button = e.trigger;
     // don't keep focus
@@ -543,7 +538,29 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     }, 1000);
     // clear code selection
     e.clearSelection();
+  }
+  const getTextToCopy = function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+    text: getTextToCopy
   });
+  clipboard.on('success', onCopySuccess);
+  if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+    // For code content inside modals, clipBoardJS needs to be initialized with a container option
+    // TODO: Check when it could be a function (https://github.com/zenorocha/clipboard.js/issues/860)
+    const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+      text: getTextToCopy,
+      container: window.document.getElementById('quarto-embedded-source-code-modal')
+    });
+    clipboardModal.on('success', onCopySuccess);
+  }
     var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
     var mailtoRegex = new RegExp(/^mailto:/);
       var filterRegex = new RegExp("https:\/\/getwilds\.org\/guide\/");
@@ -551,7 +568,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
         return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
     }
     // Inspect non-navigation links and adorn them if external
- 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool)');
+ 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
     for (var i=0; i<links.length; i++) {
       const link = links[i];
       if (!isInternal(link.href)) {
@@ -882,7 +899,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
       <a href="./conventions.html" class="pagination-link" aria-label="Conventions {{< iconify fa6-solid person-digging >}}">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Conventions <iconify-icon inline="" icon="fa6-solid:person-digging"></iconify-icon></span></span>
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">Conventions <iconify-icon inline="" icon="fa6-solid:person-digging"></iconify-icon></span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
