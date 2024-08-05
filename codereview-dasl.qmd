@@ -4,13 +4,20 @@
 
 At a high level we use the following approach:
 
-- Code review whenever possible - review is generally not required for every code change
+<!-- Code review whenever possible - review is generally not required for every code change
   - As a team grows, add in more code review
-  - Some projects in the WILDS may have changess pushed directly to main, while others may follow a pull request only approach
-- Follow our code review guidelines (@sec-review-guidelines)
+  - Some projects in the WILDS may have changess pushed directly to main, while others may follow a pull request only approach -->
+
+- Follow our code review guidelines (@sec-review-guidelines). Other great resources for code review:
+  - [Google’s Code Review Practices](https://google.github.io/eng-practices/)
+  - [Respectful Changes](https://chromium.googlesource.com/chromium/src/+/refs/heads/main/docs/cl_respect.md)
+  - [Respectful Code Reviews](https://chromium.googlesource.com/chromium/src/+/refs/heads/main/docs/cr_respect.md)
 - Testing must be used
   - With a small team testing is crucial to ensuring software does what it is expected to do, AND facilitates code changes in the future
   - When making a code contribution, make sure it is covered by existing tests, or write a new test if not
+- Code should not make it into the codebase without being reviewed, no matter the project status.
+- For projects with [**Experimental**](#statuses) status and above, the only way code should make it into the codebase is via pull request, with a review from at least one of the project leads.
+- All [**Stable**](#statuses) projects need branch protection on the `main` branch so that the `main` branch can only be updated via pull requests from `dev` or `hotfix-` branches with the approval of a project lead.
 - Automate the boring work / Have bots tell us to follow our own rules
   - Styling
   - Linting
@@ -44,7 +51,7 @@ External contributions may be one-off drive by contributions from someone that m
 
 ## What else?
 
-::: {.callout-warning}
+::: {.callout-note}
 What else should we cover in this chapter?
 :::
 

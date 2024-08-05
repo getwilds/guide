@@ -55,7 +55,21 @@ package_version("2.0") > package_version("10.0")
 
 With that example, please do think about your package versions before setting them.
 
-#### WILDS Conventions
+### WILDS Conventions
+
+All of the software development work we do is versioned at every status.
+
+In general we try to follow the principles of [Semantic Versioning 2.0.0](https://semver.org/):
+
+- All software starts as version 0.1.0.
+- Bug fixes and hotfixes cause the patch number to increment: 0.1.0 → 0.1.1
+- Adding backwards compatible functionality causes the minor number to increment: 0.1.0 → 0.2.0
+- Adding non-backwards compatible functionality causes the major number to increment: 0.1.0 → 1.0.0
+- Minor number incrementation resets the patch number to zero: 0.1.3 → 0.2.0
+- Major number incrementation resets the minor and patch numbers to zero: 2.4.16 → 3.0.0
+- Developmental/incremental/fix/hotfix versions of software end with a fourth number starting with 9000. For example: 0.1.0.9000. The purpose of this number is that it can be incremented rapidly during the development process. For example, an individual working on a branch might increment the version from 0.1.0.9050 to 0.1.0.9061 over the course of multiple commits. This fourth number should be removed whenever we merge from `dev` to `main` (see the [Branching](#branching) section).
+
+Note that project status and version numbers are unrelated.
 
 Following the [Tidyverse package version conventions](https://r-pkgs.org/lifecycle.html#sec-lifecycle-version-number-tidyverse), WILDS packages will use the following conventions (see the link for more details):
 
@@ -68,16 +82,47 @@ Following the [Tidyverse package version conventions](https://r-pkgs.org/lifecyc
 
 We are not following or enforcing any rules about changes at the function/class/etc level below the package level. For example, the R Packages book [talks about][funcx] using the `lifecycle` package to deal with function changes.
 
+## Branching
+
+Overall the branching lifecycle can be summed up by the following:
+
+1. Make sure your local `dev` branch is up to date with the remote `dev` branch. When you want to add new content to a repository, you create a new branch from the `dev` branch.
+2. Make changes to that branch, then open a pull request against the `dev` branch.
+3. Once the contributions are reviewed and you get approval from a project lead, your pull request will be merged into the `dev` branch.
+4. Whenever project leads want to create a new release, they merge the `dev` branch into the `main` branch and tag a new release.
+5. Urgent fixes to the `main` branch can be made by creating a branch from `main` that begins with the hotfix- prefix, which is then merged directly into `main` via pull request and code review. The `dev` branch will then be updated to reflect the changes on `main` via pull request. We should do our best to avoid this pattern. Since this changes the `main` branch, there will be a new tagged release.
+
+We try to follow the principles set out in [Git Flow](https://nvie.com/posts/a-successful-git-branching-model/) with a few modifications:
+
+  - We use the `main` branch instead of the `master` branch, and we use the `dev` branch instead of the `develop` branch.
+  - We don’t use release branches, we create release tags from the `main` branch. Therefore we shouldn’t use the `release-` prefix at all.
+
+Every project should have a `main` branch which contains the most stable version of the software, or the version of the software that corresponds to the most recent release of the software.
+
+[**Prototype**](#statuses) status projects must have all of the above and the following:
+
+  - At least two but no more than three designated project leads (specified in the [CODEOWNERS file][codeowners]).
+  - `main` branch protections such that `main` can only be updated by a pull request from `dev` or a branch that begins with `hotfix-`, and a review from at least one project lead.
+
+[**Stable**](#statuses) status projects must have all of the above and the following:
+
+  - Code releases that correspond to specific git tags.
+
 ## Package releases {#sec-releases}
 
 In general follow the [Releasing to CRAN chapter](https://r-pkgs.org/release.html) in the book [R Packages][rpkgs] for R, and the [Releasing and versioning chapter](https://py-pkgs.org/07-releasing-versioning) in the book [Python Packages][pypkgs] for Python. Those chapters don't have to be followed to the letter, but in general they provide really good guidance.
 
 There are a few aspects of releases we are opinionated about and would like all WILDS R and Python packages to follow:
 
-- Use the MIT license unless there's good reason not to
-- Follow our versioning guidelines above
-- Git tag released versions, and push the tag to GitHub
-- Add the associated NEWS/Changelog items to a release associated with the tag on GitHub
+- Follow our versioning guidelines above (@sec-versioning).
+- Every merge from `dev` into `main` should constitute a release, which should generate a tagged version of the software and an increment to the version number.
+- Every time the version number is incremented, the `NEWS.md` file should be updated describing what changes to the software have been made in the new version.
+- If a software package is distributed on an archive like CRAN or PyPI, wait to update the main branch until that software has been accepted by the archive.
+- How we create tagged releases on GitHub:
+    - The tag itself should be called `v[Version Number]` (like `v0.1.0` or `v2.4.1`).
+    - Describe each update and change in the release in a bullet point.
+    - To the greatest extent possible, link each update or change to an issue, pull request, and to the developers that led the implementation.
+    - See <https://github.com/getwilds/proof/releases/tag/v1.0> for a great example of how to structure a release.
 
 
 [rpkgs]: https://r-pkgs.org
@@ -85,3 +130,4 @@ There are a few aspects of releases we are opinionated about and would like all 
 [lifecycle]: https://r-pkgs.org/lifecycle.html
 [funcx]:https://r-pkgs.org/lifecycle.html#sec-lifecycle-stages-and-package
 [mit]: https://choosealicense.com/licenses/mit/
+[codeowners]: https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/about-code-owners
