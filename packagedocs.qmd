@@ -26,7 +26,7 @@ For now just use the default theme that `pkgdown` provides.
 Just like there's a variety of ways to do packing in Python there's a variety of documentation options. Two of the well known options are:
 
 - [Sphinx][] - been around longer, uses [reStructuredText][rst]
-- [MkDocs][] - newcomer, used [Markdown][md]
+- [MkDocs][] - newcomer, uses [Markdown][md]
 
 For either of the options above, they can be hosted in many places, including [GitHub Pages][ghpages] and [ReadTheDocs][rtd].
 
