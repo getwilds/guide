@@ -256,7 +256,7 @@
     "href": "packagedocs.html#sec-docs-python",
     "title": "7  Documentation ",
     "section": "7.2 Python",
-    "text": "7.2 Python\nJust like there’s a variety of ways to do packing in Python there’s a variety of documentation options. Two of the well known options are:\n\nSphinx - been around longer, uses reStructuredText\nMkDocs - newcomer, used Markdown\n\nFor either of the options above, they can be hosted in many places, including GitHub Pages and ReadTheDocs.\nSphinx and MkDocs are less automatic relative to pkgdown, so just be prepared for a bit more manual work.",
+    "text": "7.2 Python\nJust like there’s a variety of ways to do packing in Python there’s a variety of documentation options. Two of the well known options are:\n\nSphinx - been around longer, uses reStructuredText\nMkDocs - newcomer, uses Markdown\nquartodoc - another newcomer, also uses Markdown (built on Quarto)\n\nFor any of the options above, they can be hosted in many places, including GitHub Pages and ReadTheDocs.\nSphinx and MkDocs are less automatic relative to pkgdown, so just be prepared for a bit more manual work. We’re not familiar with quartodoc, so not sure where it falls on the continuum between easy to use and hard to use.",
     "crumbs": [
       "<span class='chapter-number'>7</span>  <span class='chapter-title'>Documentation {{< iconify fa6-solid book >}}</span>"
     ]
