@@ -15,6 +15,7 @@ At a high level we use the following approach:
 - Testing must be used
   - With a small team testing is crucial to ensuring software does what it is expected to do, AND facilitates code changes in the future
   - When making a code contribution, make sure it is covered by existing tests, or write a new test if not
+  - See also @sec-testing
 - Code should not make it into the codebase without being reviewed, no matter the project status.
 - For projects with [**Experimental**](#statuses) status and above, the only way code should make it into the codebase is via pull request, with a review from at least one of the project leads.
 - All [**Stable**](#statuses) projects need branch protection on the `main` branch so that the `main` branch can only be updated via pull requests from `dev` or `hotfix-` branches with the approval of a project lead.
