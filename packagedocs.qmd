@@ -27,10 +27,11 @@ Just like there's a variety of ways to do packing in Python there's a variety of
 
 - [Sphinx][] - been around longer, uses [reStructuredText][rst]
 - [MkDocs][] - newcomer, uses [Markdown][md]
+- [quartodoc][] - another newcomer, also uses [Markdown][md] (built on [Quarto](https://quarto.org/))
 
-For either of the options above, they can be hosted in many places, including [GitHub Pages][ghpages] and [ReadTheDocs][rtd].
+For any of the options above, they can be hosted in many places, including [GitHub Pages][ghpages] and [ReadTheDocs][rtd].
 
-`Sphinx` and `MkDocs` are less automatic relative to `pkgdown`, so just be prepared for a bit more manual work.
+`Sphinx` and `MkDocs` are less automatic relative to `pkgdown`, so just be prepared for a bit more manual work. We're not familiar with `quartodoc`, so not sure where it falls on the continuum between easy to use and hard to use.
 
 ## Guidelines
 
@@ -56,3 +57,4 @@ Badge specific guidelines
 [ghpages]: https://pages.github.com/
 [rst]: https://docutils.sourceforge.io/rst.html
 [md]: https://www.markdownguide.org/
+[quartodoc]: https://pypi.org/project/quartodoc/
