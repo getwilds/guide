@@ -97,16 +97,17 @@ We try to follow the principles set out in [Git Flow](https://nvie.com/posts/a-s
   - We use the `main` branch instead of the `master` branch, and we use the `dev` branch instead of the `develop` branch.
   - We don’t use release branches, we create release tags from the `main` branch. Therefore we shouldn’t use the `release-` prefix at all.
 
-Every project should have a `main` branch which contains the most stable version of the software, or the version of the software that corresponds to the most recent release of the software.
+{{< include rules/main-branch.qmd >}}
 
 [**Prototype**](#statuses) status projects must have all of the above and the following:
 
-  - At least two but no more than three designated project leads (specified in the [CODEOWNERS file][codeowners]).
-  - `main` branch protections such that `main` can only be updated by a pull request from `dev` or a branch that begins with `hotfix-`, and a review from at least one project lead.
+{{< include rules/codeowners.qmd >}}
+
+{{< include rules/main-branch-protections.qmd >}}
 
 [**Stable**](#statuses) status projects must have all of the above and the following:
 
-  - Code releases that correspond to specific git tags.
+{{< include rules/releases-tags.qmd >}}
 
 ## Package releases {#sec-releases}
 

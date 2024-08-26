@@ -1,0 +1,6 @@
+::: {.callout-note icon=false}
+
+## {{< iconify carbon rule-draft >}} Rule
+
+At least two but no more than three designated project leads (specified in the [CODEOWNERS file][codeowners]).
+:::
