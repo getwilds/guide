@@ -35,7 +35,7 @@ Similarly, there is currently no universal standard for incorporating licenses w
 
 ### Docker {#sec-license-docker}
 
-License type can be specified within the corresponding Dockerfile of each container using the "license" label: 
+License type can be specified within the corresponding Dockerfile of each container using the "license" label:
 ```
 LABEL org.opencontainers.image.licenses=MIT
 ```
@@ -97,17 +97,23 @@ We try to follow the principles set out in [Git Flow](https://nvie.com/posts/a-s
   - We use the `main` branch instead of the `master` branch, and we use the `dev` branch instead of the `develop` branch.
   - We don’t use release branches, we create release tags from the `main` branch. Therefore we shouldn’t use the `release-` prefix at all.
 
-{{< include rules/main-branch.qmd >}}
+{{< var rule-badge >}} {{< var rules.main-branch >}}
+
+<!-- {{< include rules/main-branch.qmd >}} -->
 
 [**Prototype**](#statuses) status projects must have all of the above and the following:
 
-{{< include rules/codeowners.qmd >}}
+- {{< var rule-badge >}} {{< var rules.codeowners >}}
+- {{< var rule-badge >}} {{< var rules.main-branch-protections >}}
 
-{{< include rules/main-branch-protections.qmd >}}
+<!-- {{< include rules/codeowners.qmd >}}
+{{< include rules/main-branch-protections.qmd >}} -->
 
 [**Stable**](#statuses) status projects must have all of the above and the following:
 
-{{< include rules/releases-tags.qmd >}}
+- {{< var rule-badge >}} {{< var rules.release-tags >}}
+
+<!-- {{< include rules/releases-tags.qmd >}} -->
 
 ## Package releases {#sec-releases}
 
@@ -116,7 +122,7 @@ In general follow the [Releasing to CRAN chapter](https://r-pkgs.org/release.htm
 There are a few aspects of releases we are opinionated about and would like all WILDS R and Python packages to follow:
 
 - Follow our versioning guidelines above (@sec-versioning).
-- Every merge from `dev` into `main` should constitute a release, which should generate a tagged version of the software and an increment to the version number.
+- {{< var rule-badge >}} {{< var rules.merge-main-release >}}
 - Every time the version number is incremented, the `NEWS.md` file should be updated describing what changes to the software have been made in the new version.
 - If a software package is distributed on an archive like CRAN or PyPI, wait to update the main branch until that software has been accepted by the archive.
 - How we create tagged releases on GitHub:

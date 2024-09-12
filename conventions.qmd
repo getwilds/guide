@@ -2,7 +2,9 @@
 
 ## Mention our employer
 
-In all repositories in WILDS we will include mention of our employer. The following are examples for R and Python:
+{{< var rule-badge >}} {{< var rules.mention-our-employer >}}
+
+The following are examples for R and Python:
 
 - R:
   - With the `usethis` package you can add an entry of type `person` to the DESCRIPTION file of your package
@@ -40,7 +42,9 @@ gh label clone getwilds/source-repo-name \
 
 ### Badges
 
-WILDS projects will use badges to indicate their status. Badges are a widely used standard in source code repositories, and help quickly indicate to a potential user something typically important about the repository.
+{{< var rule-badge >}} {{< var rules.status-badge >}}
+
+Badges are a widely used standard in source code repositories, and help quickly indicate to a potential user something typically important about the repository.
 
 WILDS badges are maintained in a GitHub repository at <https://github.com/getwilds/badges>. There's a website for these badges and an easy click to copy interface at <https://getwilds.org/badges/>.
 
