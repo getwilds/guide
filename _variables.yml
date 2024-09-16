@@ -1,0 +1,47 @@
+version: 1.2
+
+rule-badge: >
+  <span class="badge text-bg-primary">
+    <iconify-icon inline icon="carbon:rule-draft">
+  </span>
+
+rule-eg: Example rule!
+
+rules:
+  merge-main-release: >
+    Every merge from `dev` into `main` should constitute a release, which
+    should generate a tagged version of the software and an increment to the
+    version number
+  release-tags: Code releases that correspond to specific git tags.
+  codeowners: >
+    At least two but no more than three designated project leads (specified in
+    the [CODEOWNERS file](https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/about-code-owners)).
+  main-branch: >
+    Every project should have a `main` branch which contains the most stable
+    version of the software, or the version of the software that corresponds
+    to the most recent release of the software.
+  main-branch-protections: >
+    `main` branch protections such that `main` can only be updated by a pull
+    request from `dev` or a branch that begins with `hotfix-`, and a review
+    from at least one project lead.
+  mention-our-employer: >
+    In all repositories in WILDS we will include mention of our employer.
+  status-badge: All repositories must have a project status badge.
+  automated-tests: >
+    All [**Stable**](#statuses) projects need automated software testing set
+    up via GitHub Actions with a status badge in the README.md
+  readme: All repositories must have a README.md file.
+  docs-website: >
+    a standalone website that contains more detailed information about the
+    software.
+  readme-detailed: >
+    mature, fully-featured READMEs with badges for automated testing outcomes
+    and software repository availability; detailed information about who the
+    software is intended for, how it’s intended to be used, with fully-worked
+    examples of how to install and use the software.
+  readme-egs: a README that contains examples of how to use the software.
+  readme-basic: >
+    a README that describes what the software does and how to install it. At
+    the Experimental level and above, all functions should have accompanying
+    docstrings (in the case of Python), roxygen2 comments (in the case of R),
+    or equivalent function-level documentation.

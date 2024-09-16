@@ -21,6 +21,16 @@ Inspiration for this guide is taken in part from:
 
 This book is licensed to you under [Creative Commons CC0 1.0 Universal (CC0 1.0)][cc0], i.e. public domain.
 
+## Rules
+
+Throughout this book we highlight rules that we strive to enforce for projects where deemed necessary. These rules are made more clear and easy to find by using a badge with an icon like:
+
+{{< var rule-badge >}} {{< var rule-eg >}}
+
+Why do certain things constitute a rule while others do not? We offer the following guard rails in lieu of a clear answer:
+
+- rules are likely to be concrete enough to easily allow human or ideally machine checks
+- rules are likley to be the issues we feel are most important
 
 [DaSL]: https://hutchdatascience.org/
 [R]: https://www.r-project.org/

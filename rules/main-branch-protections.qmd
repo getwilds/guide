@@ -1,0 +1,6 @@
+::: {.callout-note icon=false}
+
+## {{< iconify carbon rule-draft >}} Rule
+
+`main` branch protections such that `main` can only be updated by a pull request from `dev` or a branch that begins with `hotfix-`, and a review from at least one project lead.
+:::

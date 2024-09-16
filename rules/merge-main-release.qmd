@@ -1,0 +1,3 @@
+```{=html}
+<p><span class="badge text-bg-primary"><iconify-icon inline icon="carbon:rule-draft"></span> Every merge from `dev` into `main` should constitute a release, which should generate a tagged version of the software and an increment to the version number</p>
+```

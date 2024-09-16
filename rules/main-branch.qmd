@@ -1,0 +1,6 @@
+::: {.callout-note icon=false}
+
+## {{< iconify carbon rule-draft >}} Rule
+
+Every project should have a `main` branch which contains the most stable version of the software, or the version of the software that corresponds to the most recent release of the software.
+:::

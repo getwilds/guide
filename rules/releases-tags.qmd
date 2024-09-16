@@ -1,0 +1,6 @@
+::: {.callout-note icon=false}
+
+## {{< iconify carbon rule-draft >}} Rule
+
+Code releases that correspond to specific git tags.
+:::
