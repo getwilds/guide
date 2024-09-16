@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.5.56">
+<meta name="generator" content="quarto-1.5.57">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -382,16 +382,20 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <li>We use the <code>main</code> branch instead of the <code>master</code> branch, and we use the <code>dev</code> branch instead of the <code>develop</code> branch.</li>
 <li>We don’t use release branches, we create release tags from the <code>main</code> branch. Therefore we shouldn’t use the <code>release-</code> prefix at all.</li>
 </ul>
-<p>Every project should have a <code>main</code> branch which contains the most stable version of the software, or the version of the software that corresponds to the most recent release of the software.</p>
+<p><span class="badge text-bg-primary"> <iconify-icon inline="" icon="carbon:rule-draft"> </iconify-icon></span> Every project should have a <code>main</code> branch which contains the most stable version of the software, or the version of the software that corresponds to the most recent release of the software.</p>
+<!-- {{< include rules/main-branch.qmd >}} -->
 <p><a href="conventions.html#statuses"><strong>Prototype</strong></a> status projects must have all of the above and the following:</p>
 <ul>
-<li>At least two but no more than three designated project leads (specified in the <a href="https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/about-code-owners">CODEOWNERS file</a>).</li>
-<li><code>main</code> branch protections such that <code>main</code> can only be updated by a pull request from <code>dev</code> or a branch that begins with <code>hotfix-</code>, and a review from at least one project lead.</li>
+<li><span class="badge text-bg-primary"> <iconify-icon inline="" icon="carbon:rule-draft"> </iconify-icon></span> At least two but no more than three designated project leads (specified in the <a href="https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/about-code-owners">CODEOWNERS file</a>).</li>
+<li><span class="badge text-bg-primary"> <iconify-icon inline="" icon="carbon:rule-draft"> </iconify-icon></span> <code>main</code> branch protections such that <code>main</code> can only be updated by a pull request from <code>dev</code> or a branch that begins with <code>hotfix-</code>, and a review from at least one project lead.</li>
 </ul>
+<!-- {{< include rules/codeowners.qmd >}}
+{{< include rules/main-branch-protections.qmd >}} -->
 <p><a href="conventions.html#statuses"><strong>Stable</strong></a> status projects must have all of the above and the following:</p>
 <ul>
-<li>Code releases that correspond to specific git tags.</li>
+<li><span class="badge text-bg-primary"> <iconify-icon inline="" icon="carbon:rule-draft"> </iconify-icon></span> Code releases that correspond to specific git tags.</li>
 </ul>
+<!-- {{< include rules/releases-tags.qmd >}} -->
 </section>
 <section id="sec-releases" class="level2" data-number="9.4">
 <h2 data-number="9.4" class="anchored" data-anchor-id="sec-releases"><span class="header-section-number">9.4</span> Package releases</h2>
@@ -399,7 +403,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p>There are a few aspects of releases we are opinionated about and would like all WILDS R and Python packages to follow:</p>
 <ul>
 <li>Follow our versioning guidelines above (<a href="#sec-versioning" class="quarto-xref"><span>Section 9.2</span></a>).</li>
-<li>Every merge from <code>dev</code> into <code>main</code> should constitute a release, which should generate a tagged version of the software and an increment to the version number.</li>
+<li><span class="badge text-bg-primary"> <iconify-icon inline="" icon="carbon:rule-draft"> </iconify-icon></span> Every merge from <code>dev</code> into <code>main</code> should constitute a release, which should generate a tagged version of the software and an increment to the version number</li>
 <li>Every time the version number is incremented, the <code>NEWS.md</code> file should be updated describing what changes to the software have been made in the new version.</li>
 <li>If a software package is distributed on an archive like CRAN or PyPI, wait to update the main branch until that software has been accepted by the archive.</li>
 <li>How we create tagged releases on GitHub:
