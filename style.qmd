@@ -8,7 +8,7 @@ If you always write code by yourself and you're the only one that will ever look
 
 ### Package styler
 
-The [styler][] package allows you to interactively format your code according to the [tidyverse style guide][tidystyle].
+The [styler][] package allows you to interactively format your code according to the [tidyverse style guide][tidystyle]. In fact, the default style used by the package is called "tidyverse" - following the style they use. That's what WILDS packages use as it's good enough until we'd like to tweak things.
 
 The [lintr][] package does automated checks of your code according to the style guide.
 
@@ -64,6 +64,10 @@ Note that the above action will create commits all with the same message: `"Styl
 
 We think in most cases it makes sense to only use the `lint` action and not the `style` action, but you're free to use either or both.
 
+### Nolint
+
+Sometimes there are valid use cases for suppressing lint checks. For example, if there's a rule that says line length should be no more than 80 characters, and there's just no way to comply then you could tell `lintr` to ignore that line. The lintr [Getting Started article][lintex] has all the details on exclusions.
+
 ## Python
 
 ### Package Ruff
@@ -105,3 +109,4 @@ Some free resources for writing better code:
 [Flake8]: https://pypi.org/project/flake8/
 [isort]: https://pypi.org/project/isort/
 [ruff-lsp]: https://docs.astral.sh/ruff/integrations/#language-server-protocol-official
+[lintex]: https://lintr.r-lib.org/articles/lintr.html#exclusions
