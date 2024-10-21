@@ -6,7 +6,7 @@ Contributor guide for the WILDS GitHub organization at Fred Hutch Data Science L
 
 ## Contributing to this guide
 
-On the command line `make` commands are provided in the `Makefile` in this repo, with the following commands:
+On the command line `make` commands are provided in the `Makefile` in this repo, with the following two commands:
 
 - `make preview`
 - `make render`
