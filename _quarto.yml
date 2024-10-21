@@ -18,6 +18,7 @@ book:
     - index.qmd
     - contributing.qmd
     - style.qmd
+    - gitflow.qmd
     - part: codereview.qmd
       chapters:
         - codereview-dasl.qmd
