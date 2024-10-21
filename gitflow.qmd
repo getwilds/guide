@@ -1,0 +1,65 @@
+# Gitflow {{< iconify fa6-solid code-branch >}} {#sec-gitflow}
+
+[Git][git] is the version control system that underlies GitHub. Gitflow is an alternative git branching model that uses feature branches and multiple primary branches (vs one primary branch, e.g., "main").
+
+Gitflow was originally proposed by [Vincent Driessen in 2010 on his blog][gitflowblog]. [A tutorial][gitflowtut] by the tech company Atlassian has a nice overview of Gitflow.
+
+In Gitflow there are two primary branches: `main` and `dev` (see diagram below). Feature branches always branch off of `dev`. After feature branches merge back into `dev`, then `dev` is merged into `main`.
+
+```{mermaid}
+%%{init: { 'logLevel': 'debug', 'theme': 'default', 'themeVariables': {
+  'git0': '#57bfd3',
+  'git1': '#5F9157',
+  'git2': '#f4b840',
+  'git3': '#D26D6D'
+} } }%%
+gitGraph
+   commit tag: "v1.0"
+   commit
+   branch dev
+   checkout dev
+   commit
+   branch feature1
+   checkout feature1
+   commit
+   commit
+   checkout dev
+   branch feature2
+   checkout feature2
+   commit
+   commit
+   checkout dev
+   merge feature1
+   checkout main
+   merge dev
+   commit tag: "v2.0"
+```
+
+There are formal tools for using a Gitflow model, e.g., [nvie/gitflow](https://github.com/nvie/gitflow). However, we aren't using that tool or any others at the moment.
+
+There are components of Gitflow that we do not use. They are:
+
+- Release branches
+- Hotfix branches
+
+## WILDS considerations
+
+- One thing we may consider doing in the future is making the `dev` branch the default branch in all WILDS repos, but that is not a rule right now
+- For WILDS repos following Gitflow, have a badge or something in the readme that gives info on Gitflow so contribs know? And/or put in CONTRIBUTING.md too?
+
+## Further reading
+
+(Taken from <https://github.com/nvie/gitflow>)
+
+Reading: <http://jeffkreeftmeijer.com/2010/why-arent-you-using-git-flow/>
+
+Screen casts:
+
+* [How to use a scalable Git branching model called git-flow](http://buildamodule.com/video/change-management-and-version-control-deploying-releases-features-and-fixes-with-git-how-to-use-a-scalable-git-branching-model-called-gitflow) (by Build a Module)
+* [A short introduction to git-flow](http://vimeo.com/16018419) (by Mark Derricutt)
+
+
+
+[git]: https://git-scm.com/
+[gitflowblog]: https://nvie.com/posts/a-successful-git-branching-model/
+[gitflowtut]: https://www.atlassian.com/git/tutorials/comparing-workflows/gitflow-workflow
