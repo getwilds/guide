@@ -7,6 +7,7 @@ book:
   bread-crumbs: false
   author:
     - Scott Chamberlain
+    - Sean Kross
   page-footer:
     right: |
       This book was built with <a href="https://quarto.org/">Quarto</a>.
