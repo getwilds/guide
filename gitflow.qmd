@@ -37,14 +37,13 @@ gitGraph
 
 There are formal tools for using a Gitflow model, e.g., [nvie/gitflow](https://github.com/nvie/gitflow). However, we aren't using that tool or any others at the moment.
 
-There are components of Gitflow that we do not use. They are:
+There are components of Gitflow that we do not use right now, but could be used as needed:
 
 - Release branches
 - Hotfix branches
 
 ## WILDS considerations
 
-- One thing we may consider doing in the future is making the `dev` branch the default branch in all WILDS repos, but that is not a rule right now
 - For WILDS repos following Gitflow, have a badge or something in the readme that gives info on Gitflow so contribs know? And/or put in CONTRIBUTING.md too?
 
 ## Further reading
