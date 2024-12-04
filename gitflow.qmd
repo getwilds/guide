@@ -37,10 +37,7 @@ gitGraph
 
 There are formal tools for using a Gitflow model, e.g., [nvie/gitflow](https://github.com/nvie/gitflow). However, we aren't using that tool or any others at the moment.
 
-There are components of Gitflow that we do not use right now, but could be used as needed:
-
-- Release branches
-- Hotfix branches
+There is one component of Gitflow that we do not use right now: release branches.
 
 ## Further reading
 
