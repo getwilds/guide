@@ -42,10 +42,6 @@ There are components of Gitflow that we do not use right now, but could be used 
 - Release branches
 - Hotfix branches
 
-## WILDS considerations
-
-- For WILDS repos following Gitflow, have a badge or something in the readme that gives info on Gitflow so contribs know? And/or put in CONTRIBUTING.md too?
-
 ## Further reading
 
 (Taken from <https://github.com/nvie/gitflow>)
