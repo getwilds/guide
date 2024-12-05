@@ -2,12 +2,12 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.5.57">
+<meta name="generator" content="quarto-1.6.39">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>10&nbsp; WDL Configuration Guide  – WILDS Contributor Guide</title>
+<title>11&nbsp; WDL Configuration Guide  – WILDS Contributor Guide</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -37,12 +37,12 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="site_libs/quarto-html/anchor.min.js"></script>
 <link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-dark.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-e26003cea8cd680ca0c55a263523d882.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-dark-d166b450ba5a8e9f7a0ab969bf6592c1.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="site_libs/bootstrap/bootstrap-dark.min.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="site_libs/bootstrap/bootstrap-56ba8217715c0b69e043a09cd0492255.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-dark-f7d3b6da91cb39555473d64eaa9c75b8.min.css" rel="prefetch" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
 <script src="site_libs/quarto-contrib/iconify-1.0.7/iconify-icon.min.js"></script>
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
@@ -85,7 +85,7 @@ ul.task-list li input[type="checkbox"] {
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
         <a class="flex-grow-1 no-decor" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
-          <h1 class="quarto-secondary-nav-title"><span id="sec-wdlconfig" class="quarto-section-identifier"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">WDL Configuration Guide <iconify-icon inline="" icon="file-icons:wdl"></iconify-icon></span></span></h1>
+          <h1 class="quarto-secondary-nav-title"><span id="sec-wdlconfig" class="quarto-section-identifier"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">WDL Configuration Guide <iconify-icon inline="" icon="file-icons:wdl"></iconify-icon></span></span></h1>
         </a>     
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
         <i class="bi bi-search"></i>
@@ -136,6 +136,12 @@ ul.task-list li input[type="checkbox"] {
  <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Style </span></span></a>
   </div>
 </li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./gitflow.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Gitflow </span></span></a>
+  </div>
+</li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a href="./codereview.html" class="sidebar-item-text sidebar-link">
@@ -148,25 +154,25 @@ ul.task-list li input[type="checkbox"] {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./codereview-dasl.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">DaSL internal</span></span></a>
+ <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">DaSL internal</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./codereview-external.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">DaSL external</span></span></a>
+ <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">DaSL external</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./codereview-general.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">General</span></span></a>
+ <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">General</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./codereview-guidelines.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Guidelines</span></span></a>
+ <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Guidelines</span></span></a>
   </div>
 </li>
       </ul>
@@ -174,43 +180,43 @@ ul.task-list li input[type="checkbox"] {
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./packagedocs.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Documentation </span></span></a>
+ <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Documentation </span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./testing.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Testing </span></span></a>
+ <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Testing </span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./maintenance.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Package maintenance </span></span></a>
+ <span class="menu-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Package maintenance </span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./wdlconfig.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">WDL Configuration Guide </span></span></a>
+ <span class="menu-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">WDL Configuration Guide </span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./docker.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Docker Configuration Guide </span></span></a>
+ <span class="menu-text"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">Docker Configuration Guide </span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./conventions.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">Conventions </span></span></a>
+ <span class="menu-text"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">Conventions </span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./standards.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">Standards </span></span></a>
+ <span class="menu-text"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">Standards </span></span></a>
   </div>
 </li>
     </ul>
@@ -223,11 +229,11 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">Table of contents</h2>
    
   <ul>
-  <li><a href="#wilds-wdl-philosophy" id="toc-wilds-wdl-philosophy" class="nav-link active" data-scroll-target="#wilds-wdl-philosophy"><span class="header-section-number">10.1</span> WILDS WDL Philosophy</a></li>
-  <li><a href="#structural-guidelines" id="toc-structural-guidelines" class="nav-link" data-scroll-target="#structural-guidelines"><span class="header-section-number">10.2</span> Structural Guidelines</a></li>
-  <li><a href="#stylistic-guidelines" id="toc-stylistic-guidelines" class="nav-link" data-scroll-target="#stylistic-guidelines"><span class="header-section-number">10.3</span> Stylistic Guidelines</a></li>
-  <li><a href="#repository-guidelines" id="toc-repository-guidelines" class="nav-link" data-scroll-target="#repository-guidelines"><span class="header-section-number">10.4</span> Repository Guidelines</a></li>
-  <li><a href="#additional-resources" id="toc-additional-resources" class="nav-link" data-scroll-target="#additional-resources"><span class="header-section-number">10.5</span> Additional Resources</a></li>
+  <li><a href="#wilds-wdl-philosophy" id="toc-wilds-wdl-philosophy" class="nav-link active" data-scroll-target="#wilds-wdl-philosophy"><span class="header-section-number">11.1</span> WILDS WDL Philosophy</a></li>
+  <li><a href="#structural-guidelines" id="toc-structural-guidelines" class="nav-link" data-scroll-target="#structural-guidelines"><span class="header-section-number">11.2</span> Structural Guidelines</a></li>
+  <li><a href="#stylistic-guidelines" id="toc-stylistic-guidelines" class="nav-link" data-scroll-target="#stylistic-guidelines"><span class="header-section-number">11.3</span> Stylistic Guidelines</a></li>
+  <li><a href="#repository-guidelines" id="toc-repository-guidelines" class="nav-link" data-scroll-target="#repository-guidelines"><span class="header-section-number">11.4</span> Repository Guidelines</a></li>
+  <li><a href="#additional-resources" id="toc-additional-resources" class="nav-link" data-scroll-target="#additional-resources"><span class="header-section-number">11.5</span> Additional Resources</a></li>
   </ul>
 <div class="toc-actions"><ul><li><a href="https://github.com/getwilds/guide/edit/main/wdlconfig.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/getwilds/guide/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
     </div>
@@ -236,7 +242,7 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title d-none d-lg-block"><span id="sec-wdlconfig" class="quarto-section-identifier"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">WDL Configuration Guide <iconify-icon inline="" icon="file-icons:wdl"></iconify-icon></span></span></h1>
+<h1 class="title d-none d-lg-block"><span id="sec-wdlconfig" class="quarto-section-identifier"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">WDL Configuration Guide <iconify-icon inline="" icon="file-icons:wdl"></iconify-icon></span></span></h1>
 </div>
 
 
@@ -254,8 +260,8 @@ ul.task-list li input[type="checkbox"] {
 
 
 <p>This WILDS WDL configuration guide was inspired by the <a href="https://biowdl.github.io/styleGuidelines.html">BioWDL</a> and <a href="https://broadinstitute.github.io/warp/docs/Best_practices/suggested_formats">WARP</a> guidelines and is intended to cater to the pedagogical “proof-of-concept” nature of the WILDS.</p>
-<section id="wilds-wdl-philosophy" class="level2" data-number="10.1">
-<h2 data-number="10.1" class="anchored" data-anchor-id="wilds-wdl-philosophy"><span class="header-section-number">10.1</span> WILDS WDL Philosophy</h2>
+<section id="wilds-wdl-philosophy" class="level2" data-number="11.1">
+<h2 data-number="11.1" class="anchored" data-anchor-id="wilds-wdl-philosophy"><span class="header-section-number">11.1</span> WILDS WDL Philosophy</h2>
 <ul>
 <li>The mindset behind WILDS WDLs is for each repository to be a self-contained demonstration of a particular bioinformatic functionality. An ideal use-case would proceed as follows:
 <ol type="1">
@@ -273,8 +279,8 @@ ul.task-list li input[type="checkbox"] {
 <li>We believe the minimal nature of this setup will aid from a readability/ease-of-use standpoint.</li>
 </ul>
 </section>
-<section id="structural-guidelines" class="level2" data-number="10.2">
-<h2 data-number="10.2" class="anchored" data-anchor-id="structural-guidelines"><span class="header-section-number">10.2</span> Structural Guidelines</h2>
+<section id="structural-guidelines" class="level2" data-number="11.2">
+<h2 data-number="11.2" class="anchored" data-anchor-id="structural-guidelines"><span class="header-section-number">11.2</span> Structural Guidelines</h2>
 <ul>
 <li><a href="https://github.com/getwilds/fastq-to-cram/blob/489ccdf0697ab902ca6f775b8e51d4f0603c0c01/fastq-to-cram.wdl#L5">Structs</a> should be at the top of the WDL script, followed by the <a href="https://github.com/getwilds/fastq-to-cram/blob/489ccdf0697ab902ca6f775b8e51d4f0603c0c01/fastq-to-cram.wdl#L21">workflow</a> itself, followed by all of its corresponding <a href="https://github.com/getwilds/fastq-to-cram/blob/489ccdf0697ab902ca6f775b8e51d4f0603c0c01/fastq-to-cram.wdl#L80">tasks</a>.
 <ul>
@@ -295,8 +301,8 @@ ul.task-list li input[type="checkbox"] {
 </ul></li>
 </ul>
 </section>
-<section id="stylistic-guidelines" class="level2" data-number="10.3">
-<h2 data-number="10.3" class="anchored" data-anchor-id="stylistic-guidelines"><span class="header-section-number">10.3</span> Stylistic Guidelines</h2>
+<section id="stylistic-guidelines" class="level2" data-number="11.3">
+<h2 data-number="11.3" class="anchored" data-anchor-id="stylistic-guidelines"><span class="header-section-number">11.3</span> Stylistic Guidelines</h2>
 <ul>
 <li><strong>Indentation</strong>: <a href="https://github.com/getwilds/fastq-to-cram/blob/489ccdf0697ab902ca6f775b8e51d4f0603c0c01/fastq-to-cram.wdl#L7C23-L11C2">braces contents</a>, <a href="https://github.com/getwilds/fastq-to-cram/blob/489ccdf0697ab902ca6f775b8e51d4f0603c0c01/fastq-to-cram.wdl#L36C9-L44C31">inputs</a>, and <a href="https://github.com/getwilds/fastq-to-cram/blob/489ccdf0697ab902ca6f775b8e51d4f0603c0c01/fastq-to-cram.wdl#L143C5-L147C67">line continuations</a> should all be indented by two spaces (not four).</li>
 <li><strong>White Space</strong>: different <a href="https://github.com/getwilds/fastq-to-cram/blob/489ccdf0697ab902ca6f775b8e51d4f0603c0c01/fastq-to-cram.wdl#L36C1-L44C31">input groups</a> and <a href="https://github.com/getwilds/fastq-to-cram/blob/489ccdf0697ab902ca6f775b8e51d4f0603c0c01/fastq-to-cram.wdl#L95C11-L107C6">code blocks</a> should be separated by a single blank line.</li>
@@ -328,8 +334,8 @@ ul.task-list li input[type="checkbox"] {
 </ul></li>
 </ul>
 </section>
-<section id="repository-guidelines" class="level2" data-number="10.4">
-<h2 data-number="10.4" class="anchored" data-anchor-id="repository-guidelines"><span class="header-section-number">10.4</span> Repository Guidelines</h2>
+<section id="repository-guidelines" class="level2" data-number="11.4">
+<h2 data-number="11.4" class="anchored" data-anchor-id="repository-guidelines"><span class="header-section-number">11.4</span> Repository Guidelines</h2>
 <ul>
 <li>As with all repositories, each workflow should include a detailed <a href="https://github.com/getwilds/fastq-to-cram/blob/489ccdf0697ab902ca6f775b8e51d4f0603c0c01/README.md">README</a> containing:
 <ul>
@@ -348,8 +354,8 @@ ul.task-list li input[type="checkbox"] {
 </ul></li>
 </ul>
 </section>
-<section id="additional-resources" class="level2" data-number="10.5">
-<h2 data-number="10.5" class="anchored" data-anchor-id="additional-resources"><span class="header-section-number">10.5</span> Additional Resources</h2>
+<section id="additional-resources" class="level2" data-number="11.5">
+<h2 data-number="11.5" class="anchored" data-anchor-id="additional-resources"><span class="header-section-number">11.5</span> Additional Resources</h2>
 <ul>
 <li><a href="https://hutchdatascience.org/WDL_Workflows_Guide/introduction-to-wdl.html">Fred Hutch DaSL WDL 101 Online Course</a></li>
 <li><a href="https://docs.openwdl.org/en/latest/">OpenWDL Documentation</a></li>
@@ -585,8 +591,6 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   });
   clipboard.on('success', onCopySuccess);
   if (window.document.getElementById('quarto-embedded-source-code-modal')) {
-    // For code content inside modals, clipBoardJS needs to be initialized with a container option
-    // TODO: Check when it could be a function (https://github.com/zenorocha/clipboard.js/issues/860)
     const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
       text: getTextToCopy,
       container: window.document.getElementById('quarto-embedded-source-code-modal')
@@ -702,7 +706,6 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       if (window.Quarto?.typesetMath) {
         window.Quarto.typesetMath(note);
       }
-      // TODO in 1.5, we should make sure this works without a callout special case
       if (note.classList.contains("callout")) {
         return note.outerHTML;
       } else {
@@ -931,12 +934,12 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
       <a href="./maintenance.html" class="pagination-link" aria-label="Package maintenance {{< iconify fa6-solid code-compare >}}">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Package maintenance <iconify-icon inline="" icon="fa6-solid:code-compare"></iconify-icon></span></span>
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Package maintenance <iconify-icon inline="" icon="fa6-solid:code-compare"></iconify-icon></span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
       <a href="./docker.html" class="pagination-link" aria-label="Docker Configuration Guide {{< iconify mdi docker >}}">
-        <span class="nav-page-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Docker Configuration Guide <iconify-icon inline="" icon="mdi:docker"></iconify-icon></span></span> <i class="bi bi-arrow-right-short"></i>
+        <span class="nav-page-text"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">Docker Configuration Guide <iconify-icon inline="" icon="mdi:docker"></iconify-icon></span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>

@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>6&nbsp; General – WILDS Contributor Guide</title>
+<title>3&nbsp; Gitflow  – WILDS Contributor Guide</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -30,8 +30,8 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
-<link href="./codereview-guidelines.html" rel="next">
-<link href="./codereview-external.html" rel="prev">
+<link href="./codereview.html" rel="next">
+<link href="./style.html" rel="prev">
 <script src="site_libs/quarto-html/quarto.js"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
@@ -71,6 +71,9 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Search"
   }
 }</script>
+<script src="site_libs/quarto-diagram/mermaid.min.js"></script>
+<script src="site_libs/quarto-diagram/mermaid-init.js"></script>
+<link href="site_libs/quarto-diagram/mermaid.css" rel="stylesheet">
 
 
 </head>
@@ -85,7 +88,7 @@ ul.task-list li input[type="checkbox"] {
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
         <a class="flex-grow-1 no-decor" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
-          <h1 class="quarto-secondary-nav-title"><span id="sec-review-general" class="quarto-section-identifier"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">General</span></span></h1>
+          <h1 class="quarto-secondary-nav-title"><span id="sec-gitflow" class="quarto-section-identifier"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Gitflow <iconify-icon inline="" icon="fa6-solid:code-branch"></iconify-icon></span></span></h1>
         </a>     
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
         <i class="bi bi-search"></i>
@@ -138,7 +141,7 @@ ul.task-list li input[type="checkbox"] {
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./gitflow.html" class="sidebar-item-text sidebar-link">
+  <a href="./gitflow.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Gitflow </span></span></a>
   </div>
 </li>
@@ -165,7 +168,7 @@ ul.task-list li input[type="checkbox"] {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./codereview-general.html" class="sidebar-item-text sidebar-link active">
+  <a href="./codereview-general.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">General</span></span></a>
   </div>
 </li>
@@ -224,15 +227,21 @@ ul.task-list li input[type="checkbox"] {
 </nav>
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
-        
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Table of contents</h2>
+   
+  <ul>
+  <li><a href="#further-reading" id="toc-further-reading" class="nav-link active" data-scroll-target="#further-reading"><span class="header-section-number">3.1</span> Further reading</a></li>
+  </ul>
+<div class="toc-actions"><ul><li><a href="https://github.com/getwilds/guide/edit/main/gitflow.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/getwilds/guide/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title d-none d-lg-block"><span id="sec-review-general" class="quarto-section-identifier"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">General</span></span></h1>
+<h1 class="title d-none d-lg-block"><span id="sec-gitflow" class="quarto-section-identifier"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Gitflow <iconify-icon inline="" icon="fa6-solid:code-branch"></iconify-icon></span></span></h1>
 </div>
 
 
@@ -249,15 +258,60 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<p>We have code review guidance for labs at <a href="https://hutchdatascience.org/code_review/" class="uri">https://hutchdatascience.org/code_review/</a>. The site contains higher level code review guidance broken down by lab roles, including lab leader, lab manager and lab developer.</p>
-<p>If you want lower level code review guidance, the <a href="https://jhudatascience.org/Adv_Reproducibility_in_Cancer_Informatics/">Advanced Reproducibility in Cancer Informatics</a> course has two chapters that will be helpful:</p>
+<p><a href="https://git-scm.com/">Git</a> is the version control system that underlies GitHub. Gitflow is an alternative git branching model that uses feature branches and multiple primary branches (vs one primary branch, e.g., “main”).</p>
+<p>Gitflow was originally proposed by <a href="https://nvie.com/posts/a-successful-git-branching-model/">Vincent Driessen in 2010 on his blog</a>. <a href="https://www.atlassian.com/git/tutorials/comparing-workflows/gitflow-workflow">A tutorial</a> by the tech company Atlassian has a nice overview of Gitflow.</p>
+<p>In Gitflow there are two primary branches: <code>main</code> and <code>dev</code> (see diagram below). Feature branches always branch off of <code>dev</code>. After feature branches merge back into <code>dev</code>, then <code>dev</code> is merged into <code>main</code>.</p>
+<div class="cell" data-layout-align="default">
+<div class="cell-output-display">
+<div>
+<p></p><figure class="figure"><p></p>
+<div>
+<pre class="mermaid mermaid-js">%%{init: { 'logLevel': 'debug', 'theme': 'default', 'themeVariables': {
+  'git0': '#57bfd3',
+  'git1': '#5F9157',
+  'git2': '#f4b840',
+  'git3': '#D26D6D'
+} } }%%
+gitGraph
+   commit tag: "v1.0"
+   commit
+   branch dev
+   checkout dev
+   commit
+   branch feature1
+   checkout feature1
+   commit
+   commit
+   checkout dev
+   branch feature2
+   checkout feature2
+   commit
+   commit
+   checkout dev
+   merge feature1
+   checkout main
+   merge dev
+   commit tag: "v2.0"
+</pre>
+</div>
+<p></p></figure><p></p>
+</div>
+</div>
+</div>
+<p>There are formal tools for using a Gitflow model, e.g., <a href="https://github.com/nvie/gitflow">nvie/gitflow</a>. However, we aren’t using that tool or any others at the moment.</p>
+<p>There is one component of Gitflow that we do not use right now: release branches.</p>
+<section id="further-reading" class="level2" data-number="3.1">
+<h2 data-number="3.1" class="anchored" data-anchor-id="further-reading"><span class="header-section-number">3.1</span> Further reading</h2>
+<p>(Taken from <a href="https://github.com/nvie/gitflow" class="uri">https://github.com/nvie/gitflow</a>)</p>
+<p>Reading: <a href="http://jeffkreeftmeijer.com/2010/why-arent-you-using-git-flow/" class="uri">http://jeffkreeftmeijer.com/2010/why-arent-you-using-git-flow/</a></p>
+<p>Screen casts:</p>
 <ul>
-<li><a href="https://jhudatascience.org/Adv_Reproducibility_in_Cancer_Informatics/engaging-in-code-review---as-an-author.html">Engaging in Code Review - as an author</a></li>
-<li><a href="https://jhudatascience.org/Adv_Reproducibility_in_Cancer_Informatics/engaging-in-code-review---as-a-reviewer.html">Engaging in Code Review - as a reviewer</a></li>
+<li><a href="http://buildamodule.com/video/change-management-and-version-control-deploying-releases-features-and-fixes-with-git-how-to-use-a-scalable-git-branching-model-called-gitflow">How to use a scalable Git branching model called git-flow</a> (by Build a Module)</li>
+<li><a href="http://vimeo.com/16018419">A short introduction to git-flow</a> (by Mark Derricutt)</li>
 </ul>
-<p>The Tidyverse team at Posit (that makes the R packages <code>dplyr</code>, <code>purrr</code> and so on) has made public their code review principles. Check it out at <a href="https://code-review.tidyverse.org/" class="uri">https://code-review.tidyverse.org/</a></p>
 
 
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
@@ -828,13 +882,13 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="./codereview-external.html" class="pagination-link" aria-label="DaSL external">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">DaSL external</span></span>
+      <a href="./style.html" class="pagination-link" aria-label="Style {{< iconify fa6-solid code >}}">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Style <iconify-icon inline="" icon="fa6-solid:code"></iconify-icon></span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./codereview-guidelines.html" class="pagination-link" aria-label="Guidelines">
-        <span class="nav-page-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Guidelines</span></span> <i class="bi bi-arrow-right-short"></i>
+      <a href="./codereview.html" class="pagination-link" aria-label="Code review {{< iconify fa6-solid pencil >}}">
+        <span class="nav-page-text">Code review <iconify-icon inline="" icon="fa6-solid:pencil"></iconify-icon></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>
@@ -846,7 +900,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     </div>   
     <div class="nav-footer-center">
       &nbsp;
-    <div class="toc-actions"><ul><li><a href="https://github.com/getwilds/guide/edit/main/codereview-general.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/getwilds/guide/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div>
+    <div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/getwilds/guide/edit/main/gitflow.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/getwilds/guide/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div>
     <div class="nav-footer-right">
 <p>This book was built with <a href="https://quarto.org/">Quarto</a>.</p>
 </div>

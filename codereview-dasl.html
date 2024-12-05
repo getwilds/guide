@@ -2,12 +2,12 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.5.57">
+<meta name="generator" content="quarto-1.6.39">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>3&nbsp; DaSL internal – WILDS Contributor Guide</title>
+<title>4&nbsp; DaSL internal – WILDS Contributor Guide</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -37,12 +37,12 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="site_libs/quarto-html/anchor.min.js"></script>
 <link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-dark.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-e26003cea8cd680ca0c55a263523d882.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-dark-d166b450ba5a8e9f7a0ab969bf6592c1.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="site_libs/bootstrap/bootstrap-dark.min.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="site_libs/bootstrap/bootstrap-56ba8217715c0b69e043a09cd0492255.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-dark-f7d3b6da91cb39555473d64eaa9c75b8.min.css" rel="prefetch" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
 <script src="site_libs/quarto-contrib/iconify-1.0.7/iconify-icon.min.js"></script>
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
@@ -85,7 +85,7 @@ ul.task-list li input[type="checkbox"] {
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
         <a class="flex-grow-1 no-decor" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
-          <h1 class="quarto-secondary-nav-title"><span id="sec-review-dasl" class="quarto-section-identifier"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">DaSL internal</span></span></h1>
+          <h1 class="quarto-secondary-nav-title"><span id="sec-review-dasl" class="quarto-section-identifier"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">DaSL internal</span></span></h1>
         </a>     
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
         <i class="bi bi-search"></i>
@@ -136,6 +136,12 @@ ul.task-list li input[type="checkbox"] {
  <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Style </span></span></a>
   </div>
 </li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./gitflow.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Gitflow </span></span></a>
+  </div>
+</li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a href="./codereview.html" class="sidebar-item-text sidebar-link">
@@ -148,25 +154,25 @@ ul.task-list li input[type="checkbox"] {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./codereview-dasl.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">DaSL internal</span></span></a>
+ <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">DaSL internal</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./codereview-external.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">DaSL external</span></span></a>
+ <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">DaSL external</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./codereview-general.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">General</span></span></a>
+ <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">General</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./codereview-guidelines.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Guidelines</span></span></a>
+ <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Guidelines</span></span></a>
   </div>
 </li>
       </ul>
@@ -174,43 +180,43 @@ ul.task-list li input[type="checkbox"] {
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./packagedocs.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Documentation </span></span></a>
+ <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Documentation </span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./testing.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Testing </span></span></a>
+ <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Testing </span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./maintenance.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Package maintenance </span></span></a>
+ <span class="menu-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Package maintenance </span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./wdlconfig.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">WDL Configuration Guide </span></span></a>
+ <span class="menu-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">WDL Configuration Guide </span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./docker.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Docker Configuration Guide </span></span></a>
+ <span class="menu-text"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">Docker Configuration Guide </span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./conventions.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">Conventions </span></span></a>
+ <span class="menu-text"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">Conventions </span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./standards.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">Standards </span></span></a>
+ <span class="menu-text"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">Standards </span></span></a>
   </div>
 </li>
     </ul>
@@ -223,15 +229,15 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">Table of contents</h2>
    
   <ul>
-  <li><a href="#high-level-approach" id="toc-high-level-approach" class="nav-link active" data-scroll-target="#high-level-approach"><span class="header-section-number">3.1</span> High level approach</a></li>
-  <li><a href="#patterns-of-collaboration" id="toc-patterns-of-collaboration" class="nav-link" data-scroll-target="#patterns-of-collaboration"><span class="header-section-number">3.2</span> Patterns of collaboration</a>
+  <li><a href="#high-level-approach" id="toc-high-level-approach" class="nav-link active" data-scroll-target="#high-level-approach"><span class="header-section-number">4.1</span> High level approach</a></li>
+  <li><a href="#patterns-of-collaboration" id="toc-patterns-of-collaboration" class="nav-link" data-scroll-target="#patterns-of-collaboration"><span class="header-section-number">4.2</span> Patterns of collaboration</a>
   <ul class="collapse">
-  <li><a href="#close-knit-collaboration" id="toc-close-knit-collaboration" class="nav-link" data-scroll-target="#close-knit-collaboration"><span class="header-section-number">3.2.1</span> Close-knit collaboration</a></li>
-  <li><a href="#solo-developer" id="toc-solo-developer" class="nav-link" data-scroll-target="#solo-developer"><span class="header-section-number">3.2.2</span> Solo developer</a></li>
-  <li><a href="#understudy" id="toc-understudy" class="nav-link" data-scroll-target="#understudy"><span class="header-section-number">3.2.3</span> Understudy</a></li>
-  <li><a href="#external" id="toc-external" class="nav-link" data-scroll-target="#external"><span class="header-section-number">3.2.4</span> External</a></li>
+  <li><a href="#close-knit-collaboration" id="toc-close-knit-collaboration" class="nav-link" data-scroll-target="#close-knit-collaboration"><span class="header-section-number">4.2.1</span> Close-knit collaboration</a></li>
+  <li><a href="#solo-developer" id="toc-solo-developer" class="nav-link" data-scroll-target="#solo-developer"><span class="header-section-number">4.2.2</span> Solo developer</a></li>
+  <li><a href="#understudy" id="toc-understudy" class="nav-link" data-scroll-target="#understudy"><span class="header-section-number">4.2.3</span> Understudy</a></li>
+  <li><a href="#external" id="toc-external" class="nav-link" data-scroll-target="#external"><span class="header-section-number">4.2.4</span> External</a></li>
   </ul></li>
-  <li><a href="#what-else" id="toc-what-else" class="nav-link" data-scroll-target="#what-else"><span class="header-section-number">3.3</span> What else?</a></li>
+  <li><a href="#what-else" id="toc-what-else" class="nav-link" data-scroll-target="#what-else"><span class="header-section-number">4.3</span> What else?</a></li>
   </ul>
 <div class="toc-actions"><ul><li><a href="https://github.com/getwilds/guide/edit/main/codereview-dasl.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/getwilds/guide/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
     </div>
@@ -240,7 +246,7 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title d-none d-lg-block"><span id="sec-review-dasl" class="quarto-section-identifier"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">DaSL internal</span></span></h1>
+<h1 class="title d-none d-lg-block"><span id="sec-review-dasl" class="quarto-section-identifier"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">DaSL internal</span></span></h1>
 </div>
 
 
@@ -257,14 +263,14 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<section id="high-level-approach" class="level2" data-number="3.1">
-<h2 data-number="3.1" class="anchored" data-anchor-id="high-level-approach"><span class="header-section-number">3.1</span> High level approach</h2>
+<section id="high-level-approach" class="level2" data-number="4.1">
+<h2 data-number="4.1" class="anchored" data-anchor-id="high-level-approach"><span class="header-section-number">4.1</span> High level approach</h2>
 <p>At a high level we use the following approach:</p>
 <!-- Code review whenever possible - review is generally not required for every code change
   - As a team grows, add in more code review
   - Some projects in the WILDS may have changess pushed directly to main, while others may follow a pull request only approach -->
 <ul>
-<li>Follow our code review guidelines (<a href="codereview-guidelines.html" class="quarto-xref"><span>Chapter 6</span></a>). Other great resources for code review:
+<li>Follow our code review guidelines (<a href="codereview-guidelines.html" class="quarto-xref"><span>Chapter 7</span></a>). Other great resources for code review:
 <ul>
 <li><a href="https://google.github.io/eng-practices/">Google’s Code Review Practices</a></li>
 <li><a href="https://chromium.googlesource.com/chromium/src/+/refs/heads/main/docs/cl_respect.md">Respectful Changes</a></li>
@@ -274,7 +280,7 @@ ul.task-list li input[type="checkbox"] {
 <ul>
 <li>With a small team testing is crucial to ensuring software does what it is expected to do, AND facilitates code changes in the future</li>
 <li>When making a code contribution, make sure it is covered by existing tests, or write a new test if not</li>
-<li>See also <a href="testing.html" class="quarto-xref"><span>Chapter 8</span></a></li>
+<li>See also <a href="testing.html" class="quarto-xref"><span>Chapter 9</span></a></li>
 </ul></li>
 <li>Code should not make it into the codebase without being reviewed, no matter the project status.</li>
 <li>For projects with <a href="conventions.html#statuses"><strong>Experimental</strong></a> status and above, the only way code should make it into the codebase is via pull request, with a review from at least one of the project leads.</li>
@@ -289,29 +295,29 @@ ul.task-list li input[type="checkbox"] {
 <p>The approach above may change as the portion of the team grows that works on WILDS projects. In particular, our guidelines around human code review should change as we have more team members. For example, where we strive for just one reviewer of a pull request now, if we add a few new team members we may expect two reviewers.</p>
 <p>Another factor that may change the above approach is if a project gains significant external contributors - making it possible to do more human code review. We cannot however expect rapid response times for external contributors.</p>
 </section>
-<section id="patterns-of-collaboration" class="level2" data-number="3.2">
-<h2 data-number="3.2" class="anchored" data-anchor-id="patterns-of-collaboration"><span class="header-section-number">3.2</span> Patterns of collaboration</h2>
+<section id="patterns-of-collaboration" class="level2" data-number="4.2">
+<h2 data-number="4.2" class="anchored" data-anchor-id="patterns-of-collaboration"><span class="header-section-number">4.2</span> Patterns of collaboration</h2>
 <p>The tidyverse team has a nice chapter in their code review guide on <a href="https://code-review.tidyverse.org/collaboration/">patterns of collaboration</a>. The exact scenarios may not apply here, but in general we need to consider different scenarios of how we work together, who the players are and what we can expect from them.</p>
-<section id="close-knit-collaboration" class="level3" data-number="3.2.1">
-<h3 data-number="3.2.1" class="anchored" data-anchor-id="close-knit-collaboration"><span class="header-section-number">3.2.1</span> Close-knit collaboration</h3>
+<section id="close-knit-collaboration" class="level3" data-number="4.2.1">
+<h3 data-number="4.2.1" class="anchored" data-anchor-id="close-knit-collaboration"><span class="header-section-number">4.2.1</span> Close-knit collaboration</h3>
 <p>On some projects there may be 2 or more contributors that are heavily involved in work on the project. In these cases, code review of PRs should be swift.</p>
 </section>
-<section id="solo-developer" class="level3" data-number="3.2.2">
-<h3 data-number="3.2.2" class="anchored" data-anchor-id="solo-developer"><span class="header-section-number">3.2.2</span> Solo developer</h3>
+<section id="solo-developer" class="level3" data-number="4.2.2">
+<h3 data-number="4.2.2" class="anchored" data-anchor-id="solo-developer"><span class="header-section-number">4.2.2</span> Solo developer</h3>
 <p>There will be many cases within the WILDS where there is only one person working on the project - and there isn’t anyone available within DASL to review code. In these cases, tests and automation are particularly important.</p>
 <p>These projects should strive to get other DASL staff to review code, but turnaround times on reviews are not likely to be fast.</p>
 </section>
-<section id="understudy" class="level3" data-number="3.2.3">
-<h3 data-number="3.2.3" class="anchored" data-anchor-id="understudy"><span class="header-section-number">3.2.3</span> Understudy</h3>
+<section id="understudy" class="level3" data-number="4.2.3">
+<h3 data-number="4.2.3" class="anchored" data-anchor-id="understudy"><span class="header-section-number">4.2.3</span> Understudy</h3>
 <p>This could be a more junior DASL staff member, or an external contributor that’s still “learning the ropes”. In these cases PR reviews should be swift to make sure the understudy is getting feedback quickly so they know the lead maintainer is interested in their work.</p>
 </section>
-<section id="external" class="level3" data-number="3.2.4">
-<h3 data-number="3.2.4" class="anchored" data-anchor-id="external"><span class="header-section-number">3.2.4</span> External</h3>
+<section id="external" class="level3" data-number="4.2.4">
+<h3 data-number="4.2.4" class="anchored" data-anchor-id="external"><span class="header-section-number">4.2.4</span> External</h3>
 <p>External contributions may be one-off drive by contributions from someone that may not contribute again, or contributions from a regular external contributor. Although DASL staff need not fully address these immediately, we should make every effort to reply quickly so the external contributor knows a human at DASL is aware of their contribution and will address it soon.</p>
 </section>
 </section>
-<section id="what-else" class="level2" data-number="3.3">
-<h2 data-number="3.3" class="anchored" data-anchor-id="what-else"><span class="header-section-number">3.3</span> What else?</h2>
+<section id="what-else" class="level2" data-number="4.3">
+<h2 data-number="4.3" class="anchored" data-anchor-id="what-else"><span class="header-section-number">4.3</span> What else?</h2>
 <div class="callout callout-style-default callout-note callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -556,8 +562,6 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   });
   clipboard.on('success', onCopySuccess);
   if (window.document.getElementById('quarto-embedded-source-code-modal')) {
-    // For code content inside modals, clipBoardJS needs to be initialized with a container option
-    // TODO: Check when it could be a function (https://github.com/zenorocha/clipboard.js/issues/860)
     const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
       text: getTextToCopy,
       container: window.document.getElementById('quarto-embedded-source-code-modal')
@@ -673,7 +677,6 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       if (window.Quarto?.typesetMath) {
         window.Quarto.typesetMath(note);
       }
-      // TODO in 1.5, we should make sure this works without a callout special case
       if (note.classList.contains("callout")) {
         return note.outerHTML;
       } else {
@@ -907,7 +910,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   </div>
   <div class="nav-page nav-page-next">
       <a href="./codereview-external.html" class="pagination-link" aria-label="DaSL external">
-        <span class="nav-page-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">DaSL external</span></span> <i class="bi bi-arrow-right-short"></i>
+        <span class="nav-page-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">DaSL external</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>

@@ -2,12 +2,12 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.5.57">
+<meta name="generator" content="quarto-1.6.39">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>9&nbsp; Package maintenance  – WILDS Contributor Guide</title>
+<title>10&nbsp; Package maintenance  – WILDS Contributor Guide</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -71,12 +71,12 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="site_libs/quarto-html/anchor.min.js"></script>
 <link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-dark.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-e26003cea8cd680ca0c55a263523d882.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-dark-d166b450ba5a8e9f7a0ab969bf6592c1.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="site_libs/bootstrap/bootstrap-dark.min.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="site_libs/bootstrap/bootstrap-56ba8217715c0b69e043a09cd0492255.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-dark-f7d3b6da91cb39555473d64eaa9c75b8.min.css" rel="prefetch" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
 <script src="site_libs/quarto-contrib/iconify-1.0.7/iconify-icon.min.js"></script>
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
@@ -119,7 +119,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
         <a class="flex-grow-1 no-decor" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
-          <h1 class="quarto-secondary-nav-title"><span id="sec-maintenance" class="quarto-section-identifier"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Package maintenance <iconify-icon inline="" icon="fa6-solid:code-compare"></iconify-icon></span></span></h1>
+          <h1 class="quarto-secondary-nav-title"><span id="sec-maintenance" class="quarto-section-identifier"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Package maintenance <iconify-icon inline="" icon="fa6-solid:code-compare"></iconify-icon></span></span></h1>
         </a>     
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
         <i class="bi bi-search"></i>
@@ -170,6 +170,12 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
  <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Style </span></span></a>
   </div>
 </li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./gitflow.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Gitflow </span></span></a>
+  </div>
+</li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a href="./codereview.html" class="sidebar-item-text sidebar-link">
@@ -182,25 +188,25 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./codereview-dasl.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">DaSL internal</span></span></a>
+ <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">DaSL internal</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./codereview-external.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">DaSL external</span></span></a>
+ <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">DaSL external</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./codereview-general.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">General</span></span></a>
+ <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">General</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./codereview-guidelines.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Guidelines</span></span></a>
+ <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Guidelines</span></span></a>
   </div>
 </li>
       </ul>
@@ -208,43 +214,43 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./packagedocs.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Documentation </span></span></a>
+ <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Documentation </span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./testing.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Testing </span></span></a>
+ <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Testing </span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./maintenance.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Package maintenance </span></span></a>
+ <span class="menu-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Package maintenance </span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./wdlconfig.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">WDL Configuration Guide </span></span></a>
+ <span class="menu-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">WDL Configuration Guide </span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./docker.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Docker Configuration Guide </span></span></a>
+ <span class="menu-text"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">Docker Configuration Guide </span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./conventions.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">Conventions </span></span></a>
+ <span class="menu-text"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">Conventions </span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./standards.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">Standards </span></span></a>
+ <span class="menu-text"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">Standards </span></span></a>
   </div>
 </li>
     </ul>
@@ -257,21 +263,21 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <h2 id="toc-title">Table of contents</h2>
    
   <ul>
-  <li><a href="#licenses" id="toc-licenses" class="nav-link active" data-scroll-target="#licenses"><span class="header-section-number">9.1</span> Licenses</a>
+  <li><a href="#licenses" id="toc-licenses" class="nav-link active" data-scroll-target="#licenses"><span class="header-section-number">10.1</span> Licenses</a>
   <ul class="collapse">
-  <li><a href="#sec-license-r" id="toc-sec-license-r" class="nav-link" data-scroll-target="#sec-license-r"><span class="header-section-number">9.1.1</span> R</a></li>
-  <li><a href="#sec-license-python" id="toc-sec-license-python" class="nav-link" data-scroll-target="#sec-license-python"><span class="header-section-number">9.1.2</span> Python</a></li>
-  <li><a href="#sec-license-wdl" id="toc-sec-license-wdl" class="nav-link" data-scroll-target="#sec-license-wdl"><span class="header-section-number">9.1.3</span> WDL</a></li>
-  <li><a href="#sec-license-docker" id="toc-sec-license-docker" class="nav-link" data-scroll-target="#sec-license-docker"><span class="header-section-number">9.1.4</span> Docker</a></li>
+  <li><a href="#sec-license-r" id="toc-sec-license-r" class="nav-link" data-scroll-target="#sec-license-r"><span class="header-section-number">10.1.1</span> R</a></li>
+  <li><a href="#sec-license-python" id="toc-sec-license-python" class="nav-link" data-scroll-target="#sec-license-python"><span class="header-section-number">10.1.2</span> Python</a></li>
+  <li><a href="#sec-license-wdl" id="toc-sec-license-wdl" class="nav-link" data-scroll-target="#sec-license-wdl"><span class="header-section-number">10.1.3</span> WDL</a></li>
+  <li><a href="#sec-license-docker" id="toc-sec-license-docker" class="nav-link" data-scroll-target="#sec-license-docker"><span class="header-section-number">10.1.4</span> Docker</a></li>
   </ul></li>
-  <li><a href="#sec-versioning" id="toc-sec-versioning" class="nav-link" data-scroll-target="#sec-versioning"><span class="header-section-number">9.2</span> Package versioning</a>
+  <li><a href="#sec-versioning" id="toc-sec-versioning" class="nav-link" data-scroll-target="#sec-versioning"><span class="header-section-number">10.2</span> Package versioning</a>
   <ul class="collapse">
-  <li><a href="#package-version-numbers" id="toc-package-version-numbers" class="nav-link" data-scroll-target="#package-version-numbers"><span class="header-section-number">9.2.1</span> Package version numbers</a></li>
-  <li><a href="#wilds-conventions" id="toc-wilds-conventions" class="nav-link" data-scroll-target="#wilds-conventions"><span class="header-section-number">9.2.2</span> WILDS Conventions</a></li>
-  <li><a href="#ignore-these" id="toc-ignore-these" class="nav-link" data-scroll-target="#ignore-these"><span class="header-section-number">9.2.3</span> Ignore these</a></li>
+  <li><a href="#package-version-numbers" id="toc-package-version-numbers" class="nav-link" data-scroll-target="#package-version-numbers"><span class="header-section-number">10.2.1</span> Package version numbers</a></li>
+  <li><a href="#wilds-conventions" id="toc-wilds-conventions" class="nav-link" data-scroll-target="#wilds-conventions"><span class="header-section-number">10.2.2</span> WILDS Conventions</a></li>
+  <li><a href="#ignore-these" id="toc-ignore-these" class="nav-link" data-scroll-target="#ignore-these"><span class="header-section-number">10.2.3</span> Ignore these</a></li>
   </ul></li>
-  <li><a href="#branching" id="toc-branching" class="nav-link" data-scroll-target="#branching"><span class="header-section-number">9.3</span> Branching</a></li>
-  <li><a href="#sec-releases" id="toc-sec-releases" class="nav-link" data-scroll-target="#sec-releases"><span class="header-section-number">9.4</span> Package releases</a></li>
+  <li><a href="#branching" id="toc-branching" class="nav-link" data-scroll-target="#branching"><span class="header-section-number">10.3</span> Branching</a></li>
+  <li><a href="#sec-releases" id="toc-sec-releases" class="nav-link" data-scroll-target="#sec-releases"><span class="header-section-number">10.4</span> Package releases</a></li>
   </ul>
 <div class="toc-actions"><ul><li><a href="https://github.com/getwilds/guide/edit/main/maintenance.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/getwilds/guide/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
     </div>
@@ -280,7 +286,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title d-none d-lg-block"><span id="sec-maintenance" class="quarto-section-identifier"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Package maintenance <iconify-icon inline="" icon="fa6-solid:code-compare"></iconify-icon></span></span></h1>
+<h1 class="title d-none d-lg-block"><span id="sec-maintenance" class="quarto-section-identifier"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Package maintenance <iconify-icon inline="" icon="fa6-solid:code-compare"></iconify-icon></span></span></h1>
 </div>
 
 
@@ -298,12 +304,12 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 
 <p>The following discussions on this page apply to both R and Python software unless otherwise noted.</p>
-<section id="licenses" class="level2" data-number="9.1">
-<h2 data-number="9.1" class="anchored" data-anchor-id="licenses"><span class="header-section-number">9.1</span> Licenses</h2>
+<section id="licenses" class="level2" data-number="10.1">
+<h2 data-number="10.1" class="anchored" data-anchor-id="licenses"><span class="header-section-number">10.1</span> Licenses</h2>
 <p>All software (R, Python, etc.) in the WILDS should by default use the <a href="https://choosealicense.com/licenses/mit/">MIT license</a>.</p>
 <p>If there are circumstances which prevent using MIT, please do discuss with Sean or Scott.</p>
-<section id="sec-license-r" class="level3" data-number="9.1.1">
-<h3 data-number="9.1.1" class="anchored" data-anchor-id="sec-license-r"><span class="header-section-number">9.1.1</span> R</h3>
+<section id="sec-license-r" class="level3" data-number="10.1.1">
+<h3 data-number="10.1.1" class="anchored" data-anchor-id="sec-license-r"><span class="header-section-number">10.1.1</span> R</h3>
 <p>In R, you can add the MIT license to your repository with the following code:</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> (<span class="sc">!</span><span class="fu">requireNamespace</span>(<span class="st">"usethis"</span>, <span class="at">quietly =</span> <span class="cn">TRUE</span>)) {</span>
@@ -313,25 +319,25 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 <p>Note that <code>usethis::use_mit_license</code> adds two files to your repository (<code>LICENSE</code> and <code>LICENSE.md</code>, and adds entries to the <code>.Rbuildignore</code> file so that <code>R CMD CHECK</code> doesn’t complain).</p>
 </section>
-<section id="sec-license-python" class="level3" data-number="9.1.2">
-<h3 data-number="9.1.2" class="anchored" data-anchor-id="sec-license-python"><span class="header-section-number">9.1.2</span> Python</h3>
+<section id="sec-license-python" class="level3" data-number="10.1.2">
+<h3 data-number="10.1.2" class="anchored" data-anchor-id="sec-license-python"><span class="header-section-number">10.1.2</span> Python</h3>
 <p>There’s no widely accepted single tool for dealing with licenses in Python similar to the above for R. For Python packages, simply include the license type (e.g., <code>MIT</code>) in your setup.py, setup.cfg, pyproject.toml, etc., and include the text of the license in a <code>LICENSE</code> file in the root of your repository.</p>
 </section>
-<section id="sec-license-wdl" class="level3" data-number="9.1.3">
-<h3 data-number="9.1.3" class="anchored" data-anchor-id="sec-license-wdl"><span class="header-section-number">9.1.3</span> WDL</h3>
+<section id="sec-license-wdl" class="level3" data-number="10.1.3">
+<h3 data-number="10.1.3" class="anchored" data-anchor-id="sec-license-wdl"><span class="header-section-number">10.1.3</span> WDL</h3>
 <p>Similarly, there is currently no universal standard for incorporating licenses within WDL packages. We recommend stating the license type in a comment at the top of the workflow script, and including the text of the license in a <code>LICENSE</code> file in the root of your repository.</p>
 </section>
-<section id="sec-license-docker" class="level3" data-number="9.1.4">
-<h3 data-number="9.1.4" class="anchored" data-anchor-id="sec-license-docker"><span class="header-section-number">9.1.4</span> Docker</h3>
+<section id="sec-license-docker" class="level3" data-number="10.1.4">
+<h3 data-number="10.1.4" class="anchored" data-anchor-id="sec-license-docker"><span class="header-section-number">10.1.4</span> Docker</h3>
 <p>License type can be specified within the corresponding Dockerfile of each container using the “license” label:</p>
 <pre><code>LABEL org.opencontainers.image.licenses=MIT</code></pre>
 </section>
 </section>
-<section id="sec-versioning" class="level2" data-number="9.2">
-<h2 data-number="9.2" class="anchored" data-anchor-id="sec-versioning"><span class="header-section-number">9.2</span> Package versioning</h2>
+<section id="sec-versioning" class="level2" data-number="10.2">
+<h2 data-number="10.2" class="anchored" data-anchor-id="sec-versioning"><span class="header-section-number">10.2</span> Package versioning</h2>
 <p>There is a detailed discussion of versioning R packages in the <a href="https://r-pkgs.org/lifecycle.html">lifecycle</a> chapter of the <a href="https://r-pkgs.org">R Packages book</a> by Hadley Wickham and Jenny Bryan. Please follow that chapter in general for versioning of R and Python packages within the WILDS. To make it easier to grok, below are some of the highlights, and some exceptions to that chapter.</p>
-<section id="package-version-numbers" class="level3" data-number="9.2.1">
-<h3 data-number="9.2.1" class="anchored" data-anchor-id="package-version-numbers"><span class="header-section-number">9.2.1</span> Package version numbers</h3>
+<section id="package-version-numbers" class="level3" data-number="10.2.1">
+<h3 data-number="10.2.1" class="anchored" data-anchor-id="package-version-numbers"><span class="header-section-number">10.2.1</span> Package version numbers</h3>
 <p>There’s quite a bit of nuance - and surprises - to package version numbers - see the <a href="https://r-pkgs.org/lifecycle.html#sec-lifecycle-version-number">Package version number section</a> for details. For example, using the <code>utils::package_version()</code> function, which parses package version strings into S3 classes, we get a suprising result:</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="st">"2.0"</span> <span class="sc">&gt;</span> <span class="st">"10.0"</span></span>
@@ -341,8 +347,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 <p>With that example, please do think about your package versions before setting them.</p>
 </section>
-<section id="wilds-conventions" class="level3" data-number="9.2.2">
-<h3 data-number="9.2.2" class="anchored" data-anchor-id="wilds-conventions"><span class="header-section-number">9.2.2</span> WILDS Conventions</h3>
+<section id="wilds-conventions" class="level3" data-number="10.2.2">
+<h3 data-number="10.2.2" class="anchored" data-anchor-id="wilds-conventions"><span class="header-section-number">10.2.2</span> WILDS Conventions</h3>
 <p>All of the software development work we do is versioned at every status.</p>
 <p>In general we try to follow the principles of <a href="https://semver.org/">Semantic Versioning 2.0.0</a>:</p>
 <ul>
@@ -362,13 +368,13 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <li>While a package is in between releases, there is a fourth component: the development version, starting at 9000 (e.g., <code>0.2.2.9000</code>), and incrementing from there until the package has another release at which point return to three components.</li>
 </ul>
 </section>
-<section id="ignore-these" class="level3" data-number="9.2.3">
-<h3 data-number="9.2.3" class="anchored" data-anchor-id="ignore-these"><span class="header-section-number">9.2.3</span> Ignore these</h3>
+<section id="ignore-these" class="level3" data-number="10.2.3">
+<h3 data-number="10.2.3" class="anchored" data-anchor-id="ignore-these"><span class="header-section-number">10.2.3</span> Ignore these</h3>
 <p>We are not following or enforcing any rules about changes at the function/class/etc level below the package level. For example, the R Packages book <a href="https://r-pkgs.org/lifecycle.html#sec-lifecycle-stages-and-package">talks about</a> using the <code>lifecycle</code> package to deal with function changes.</p>
 </section>
 </section>
-<section id="branching" class="level2" data-number="9.3">
-<h2 data-number="9.3" class="anchored" data-anchor-id="branching"><span class="header-section-number">9.3</span> Branching</h2>
+<section id="branching" class="level2" data-number="10.3">
+<h2 data-number="10.3" class="anchored" data-anchor-id="branching"><span class="header-section-number">10.3</span> Branching</h2>
 <p>Overall the branching lifecycle can be summed up by the following:</p>
 <ol type="1">
 <li>Make sure your local <code>dev</code> branch is up to date with the remote <code>dev</code> branch. When you want to add new content to a repository, you create a new branch from the <code>dev</code> branch.</li>
@@ -377,7 +383,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <li>Whenever project leads want to create a new release, they merge the <code>dev</code> branch into the <code>main</code> branch and tag a new release.</li>
 <li>Urgent fixes to the <code>main</code> branch can be made by creating a branch from <code>main</code> that begins with the hotfix- prefix, which is then merged directly into <code>main</code> via pull request and code review. The <code>dev</code> branch will then be updated to reflect the changes on <code>main</code> via pull request. We should do our best to avoid this pattern. Since this changes the <code>main</code> branch, there will be a new tagged release.</li>
 </ol>
-<p>We try to follow the principles set out in <a href="https://nvie.com/posts/a-successful-git-branching-model/">Git Flow</a> with a few modifications:</p>
+<p>We try to follow the principles set out in Gitflow (<a href="gitflow.html" class="quarto-xref"><span>Chapter 3</span></a>) with a few modifications:</p>
 <ul>
 <li>We use the <code>main</code> branch instead of the <code>master</code> branch, and we use the <code>dev</code> branch instead of the <code>develop</code> branch.</li>
 <li>We don’t use release branches, we create release tags from the <code>main</code> branch. Therefore we shouldn’t use the <code>release-</code> prefix at all.</li>
@@ -397,12 +403,12 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </ul>
 <!-- {{< include rules/releases-tags.qmd >}} -->
 </section>
-<section id="sec-releases" class="level2" data-number="9.4">
-<h2 data-number="9.4" class="anchored" data-anchor-id="sec-releases"><span class="header-section-number">9.4</span> Package releases</h2>
+<section id="sec-releases" class="level2" data-number="10.4">
+<h2 data-number="10.4" class="anchored" data-anchor-id="sec-releases"><span class="header-section-number">10.4</span> Package releases</h2>
 <p>In general follow the <a href="https://r-pkgs.org/release.html">Releasing to CRAN chapter</a> in the book <a href="https://r-pkgs.org">R Packages</a> for R, and the <a href="https://py-pkgs.org/07-releasing-versioning">Releasing and versioning chapter</a> in the book <a href="https://py-pkgs.org">Python Packages</a> for Python. Those chapters don’t have to be followed to the letter, but in general they provide really good guidance.</p>
 <p>There are a few aspects of releases we are opinionated about and would like all WILDS R and Python packages to follow:</p>
 <ul>
-<li>Follow our versioning guidelines above (<a href="#sec-versioning" class="quarto-xref"><span>Section 9.2</span></a>).</li>
+<li>Follow our versioning guidelines above (<a href="#sec-versioning" class="quarto-xref"><span>Section 10.2</span></a>).</li>
 <li><span class="badge text-bg-primary"> <iconify-icon inline="" icon="carbon:rule-draft"> </iconify-icon></span> Every merge from <code>dev</code> into <code>main</code> should constitute a release, which should generate a tagged version of the software and an increment to the version number</li>
 <li>Every time the version number is incremented, the <code>NEWS.md</code> file should be updated describing what changes to the software have been made in the new version.</li>
 <li>If a software package is distributed on an archive like CRAN or PyPI, wait to update the main branch until that software has been accepted by the archive.</li>
@@ -645,8 +651,6 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   });
   clipboard.on('success', onCopySuccess);
   if (window.document.getElementById('quarto-embedded-source-code-modal')) {
-    // For code content inside modals, clipBoardJS needs to be initialized with a container option
-    // TODO: Check when it could be a function (https://github.com/zenorocha/clipboard.js/issues/860)
     const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
       text: getTextToCopy,
       container: window.document.getElementById('quarto-embedded-source-code-modal')
@@ -762,7 +766,6 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       if (window.Quarto?.typesetMath) {
         window.Quarto.typesetMath(note);
       }
-      // TODO in 1.5, we should make sure this works without a callout special case
       if (note.classList.contains("callout")) {
         return note.outerHTML;
       } else {
@@ -991,12 +994,12 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
       <a href="./testing.html" class="pagination-link" aria-label="Testing {{< iconify fa6-solid bug >}}">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Testing <iconify-icon inline="" icon="fa6-solid:bug"></iconify-icon></span></span>
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Testing <iconify-icon inline="" icon="fa6-solid:bug"></iconify-icon></span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
       <a href="./wdlconfig.html" class="pagination-link" aria-label="WDL Configuration Guide {{< iconify file-icons wdl >}}">
-        <span class="nav-page-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">WDL Configuration Guide <iconify-icon inline="" icon="file-icons:wdl"></iconify-icon></span></span> <i class="bi bi-arrow-right-short"></i>
+        <span class="nav-page-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">WDL Configuration Guide <iconify-icon inline="" icon="file-icons:wdl"></iconify-icon></span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>
