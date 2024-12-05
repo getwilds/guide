@@ -92,7 +92,7 @@ Overall the branching lifecycle can be summed up by the following:
 4. Whenever project leads want to create a new release, they merge the `dev` branch into the `main` branch and tag a new release.
 5. Urgent fixes to the `main` branch can be made by creating a branch from `main` that begins with the hotfix- prefix, which is then merged directly into `main` via pull request and code review. The `dev` branch will then be updated to reflect the changes on `main` via pull request. We should do our best to avoid this pattern. Since this changes the `main` branch, there will be a new tagged release.
 
-We try to follow the principles set out in [Git Flow](https://nvie.com/posts/a-successful-git-branching-model/) with a few modifications:
+We try to follow the principles set out in Gitflow (@sec-gitflow) with a few modifications:
 
   - We use the `main` branch instead of the `master` branch, and we use the `dev` branch instead of the `develop` branch.
   - We don’t use release branches, we create release tags from the `main` branch. Therefore we shouldn’t use the `release-` prefix at all.
