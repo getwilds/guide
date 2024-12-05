@@ -7,6 +7,18 @@ on:
 name: Deploy Preview
 
 jobs:
+  delete-bot-comments:
+    runs-on: ubuntu-latest
+    steps:
+      - name: pr-deleter
+        uses: maheshrayas/action-pr-comment-delete@v3.0
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          org: ${{ github.repository_owner }}
+          repo: ${{ github.event.repository.name }}
+          user: 'github-actions[bot]'
+          issue: ${{ github.event.number }}
+
   build-deploy-preview:
     # Deploy a preview only if
     # - the event is a PR
