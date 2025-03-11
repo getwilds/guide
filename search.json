@@ -496,7 +496,7 @@
     "href": "conventions.html",
     "title": "13  Conventions ",
     "section": "",
-    "text": "13.1 Mention our employer\nIn all repositories in WILDS we will include mention of our employer.\nThe following are examples for R and Python:\nFor other types of WILDS repositories, perhaps just add a mention to the README.",
+    "text": "13.1 Mention our employer\nIn all repositories in WILDS we will include mention of our employer.\nThe following are examples for R and Python:",
     "crumbs": [
       "<span class='chapter-number'>13</span>  <span class='chapter-title'>Conventions {{< iconify fa6-solid person-digging >}}</span>"
     ]
@@ -506,7 +506,7 @@
     "href": "conventions.html#mention-our-employer",
     "title": "13  Conventions ",
     "section": "",
-    "text": "R:\n\nWith the usethis package you can add an entry of type person to the DESCRIPTION file of your package\n\nusethis::use_author(\"Fred Hutchinson Cancer Center\", role = \"fnd\", email = \"wilds@fredhutch.org\")\nPython:\n\nAdd a dict in the authors block of the pyproject.toml file or other config file in your package\n\n{\n  name = \"Fred Hutchinson Cancer Center\"\",\n  email = \"wilds@fredhutch.org\"\n}",
+    "text": "13.1.1 R\nUse the usethis package to add an entry of type person to the DESCRIPTION file of your package\n# install.packages(\"pak\")\npak::pak(\"usethis\")\nusethis::use_author(\"Fred Hutchinson Cancer Center\", role = \"fnd\", email = \"wilds@fredhutch.org\")\nAnd use the desc package to add a Research Organization (ROR) identifier for Fred Hutch\n# `desc` version 1.4.3.9000 or greater for function `desc_add_ror`\npak::pak(\"r-lib/desc\")\ndesc::desc_add_ror(ror = \"007ps6h72\", given = \"Fred Hutchinson Cancer Center\")\nWhich should give you in your DESCRIPTION file:\n\nperson(“Fred Hutchinson Cancer Center”, , , “wilds@fredhutch.org”, role = “fnd”, comment = c(ROR = “007ps6h72”))\n\n\n\n13.1.2 Python\nAdd a dict in the authors block of the pyproject.toml file in your package:\nauthors = [\n    {\n        name = \"Fred Hutchinson Cancer Center\",\n        email = \"wilds@fredhutch.org\"\n    }\n]\nThen add the ROR identifier as:\n[tool.package-name.metadata]\nauthors = [\n    {\n        name = \"Fred Hutchinson Cancer Center\",\n        ror = \"007ps6h72\"\n    }\n]\nFor other types of WILDS repositories, perhaps just add a mention to the README.",
     "crumbs": [
       "<span class='chapter-number'>13</span>  <span class='chapter-title'>Conventions {{< iconify fa6-solid person-digging >}}</span>"
     ]

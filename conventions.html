@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.6.39">
+<meta name="generator" content="quarto-1.6.42">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -71,12 +71,12 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="site_libs/quarto-html/anchor.min.js"></script>
 <link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-e26003cea8cd680ca0c55a263523d882.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-dark-d166b450ba5a8e9f7a0ab969bf6592c1.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-2f5df379a58b258e96c21c0638c20c03.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-dark-b53751a350365c71b6c909e95f209ed1.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-56ba8217715c0b69e043a09cd0492255.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="site_libs/bootstrap/bootstrap-dark-f7d3b6da91cb39555473d64eaa9c75b8.min.css" rel="prefetch" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="site_libs/bootstrap/bootstrap-b7d54a76cbca87f172fbdde75f594999.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-dark-b495761cb1fe9d3ea0f1f398ae1d4a11.min.css" rel="prefetch" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
 <script src="site_libs/quarto-contrib/iconify-1.0.7/iconify-icon.min.js"></script>
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
@@ -263,7 +263,11 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <h2 id="toc-title">Table of contents</h2>
    
   <ul>
-  <li><a href="#mention-our-employer" id="toc-mention-our-employer" class="nav-link active" data-scroll-target="#mention-our-employer"><span class="header-section-number">13.1</span> Mention our employer</a></li>
+  <li><a href="#mention-our-employer" id="toc-mention-our-employer" class="nav-link active" data-scroll-target="#mention-our-employer"><span class="header-section-number">13.1</span> Mention our employer</a>
+  <ul class="collapse">
+  <li><a href="#r" id="toc-r" class="nav-link" data-scroll-target="#r"><span class="header-section-number">13.1.1</span> R</a></li>
+  <li><a href="#python" id="toc-python" class="nav-link" data-scroll-target="#python"><span class="header-section-number">13.1.2</span> Python</a></li>
+  </ul></li>
   <li><a href="#sec-conventions-repos" id="toc-sec-conventions-repos" class="nav-link" data-scroll-target="#sec-conventions-repos"><span class="header-section-number">13.2</span> GitHub Repositories</a>
   <ul class="collapse">
   <li><a href="#issue-labels" id="toc-issue-labels" class="nav-link" data-scroll-target="#issue-labels"><span class="header-section-number">13.2.1</span> Issue labels</a></li>
@@ -303,22 +307,40 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <h2 data-number="13.1" class="anchored" data-anchor-id="mention-our-employer"><span class="header-section-number">13.1</span> Mention our employer</h2>
 <p><span class="badge text-bg-primary"> <iconify-icon inline="" icon="carbon:rule-draft"> </iconify-icon></span> In all repositories in WILDS we will include mention of our employer.</p>
 <p>The following are examples for R and Python:</p>
-<ul>
-<li>R:
-<ul>
-<li>With the <code>usethis</code> package you can add an entry of type <code>person</code> to the DESCRIPTION file of your package</li>
-</ul>
-<div class="sourceCode" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>usethis<span class="sc">::</span><span class="fu">use_author</span>(<span class="st">"Fred Hutchinson Cancer Center"</span>, <span class="at">role =</span> <span class="st">"fnd"</span>, <span class="at">email =</span> <span class="st">"wilds@fredhutch.org"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div></li>
-<li>Python:
-<ul>
-<li>Add a dict in the authors block of the pyproject.toml file or other config file in your package</li>
-</ul>
-<pre class="python3"><code>{
-  name = "Fred Hutchinson Cancer Center"",
-  email = "wilds@fredhutch.org"
-}</code></pre></li>
-</ul>
+<section id="r" class="level3" data-number="13.1.1">
+<h3 data-number="13.1.1" class="anchored" data-anchor-id="r"><span class="header-section-number">13.1.1</span> R</h3>
+<p>Use the <code>usethis</code> package to add an entry of type <code>person</code> to the DESCRIPTION file of your package</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co"># install.packages("pak")</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>pak<span class="sc">::</span><span class="fu">pak</span>(<span class="st">"usethis"</span>)</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>usethis<span class="sc">::</span><span class="fu">use_author</span>(<span class="st">"Fred Hutchinson Cancer Center"</span>, <span class="at">role =</span> <span class="st">"fnd"</span>, <span class="at">email =</span> <span class="st">"wilds@fredhutch.org"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>And use the <code>desc</code> package to add a Research Organization (ROR) identifier for Fred Hutch</p>
+<div class="sourceCode" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="co"># `desc` version 1.4.3.9000 or greater for function `desc_add_ror`</span></span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>pak<span class="sc">::</span><span class="fu">pak</span>(<span class="st">"r-lib/desc"</span>)</span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>desc<span class="sc">::</span><span class="fu">desc_add_ror</span>(<span class="at">ror =</span> <span class="st">"007ps6h72"</span>, <span class="at">given =</span> <span class="st">"Fred Hutchinson Cancer Center"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Which should give you in your <code>DESCRIPTION</code> file:</p>
+<blockquote class="blockquote">
+<p>person(“Fred Hutchinson Cancer Center”, , , “wilds@fredhutch.org”, role = “fnd”, comment = c(ROR = “007ps6h72”))</p>
+</blockquote>
+</section>
+<section id="python" class="level3" data-number="13.1.2">
+<h3 data-number="13.1.2" class="anchored" data-anchor-id="python"><span class="header-section-number">13.1.2</span> Python</h3>
+<p>Add a dict in the authors block of the pyproject.toml file in your package:</p>
+<div class="sourceCode" id="cb3"><pre class="sourceCode toml code-with-copy"><code class="sourceCode toml"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="dt">authors</span> <span class="op">=</span> <span class="op">[</span></span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>    <span class="op">{</span></span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="op">        </span><span class="dt">name</span><span class="op"> =</span> <span class="st">"Fred Hutchinson Cancer Center"</span><span class="op">,</span></span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a><span class="op">        </span><span class="dt">email</span><span class="op"> =</span> <span class="st">"wilds@fredhutch.org"</span></span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a><span class="op">    }</span></span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a><span class="op">]</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Then add the ROR identifier as:</p>
+<div class="sourceCode" id="cb4"><pre class="sourceCode toml code-with-copy"><code class="sourceCode toml"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="kw">[tool.package-name.metadata]</span></span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="dt">authors</span> <span class="op">=</span> <span class="op">[</span></span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>    <span class="op">{</span></span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a><span class="op">        </span><span class="dt">name</span><span class="op"> =</span> <span class="st">"Fred Hutchinson Cancer Center"</span><span class="op">,</span></span>
+<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a><span class="op">        </span><span class="dt">ror</span><span class="op"> =</span> <span class="st">"007ps6h72"</span></span>
+<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a><span class="op">    }</span></span>
+<span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a><span class="op">]</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>For other types of WILDS repositories, perhaps just add a mention to the README.</p>
+</section>
 </section>
 <section id="sec-conventions-repos" class="level2" data-number="13.2">
 <h2 data-number="13.2" class="anchored" data-anchor-id="sec-conventions-repos"><span class="header-section-number">13.2</span> GitHub Repositories</h2>
@@ -327,9 +349,9 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p>In the WILDS repo <code>sixtyfour</code> there’s <a href="https://github.com/getwilds/sixtyfour/labels">a set of 9 labels</a> that have been proposed as common labels across WILDS repos. These aren’t necessarily enforced across WILDS repos, but can be used.</p>
 <p>Though we have not done this, one can set default labels for all repositories in WILDS - <a href="https://docs.github.com/en/organizations/managing-organization-settings/managing-default-labels-for-repositories-in-your-organization">instructions here</a>.</p>
 <p>A <a href="https://napjose.ph/posts/copy-issue-labels-from-another-github-repository">blogpost</a> shows how to copy labels from one repository to another using the <a href="https://cli.github.com/">gh command line tool</a> from GitHub. This command line method may be a better choice if we’re not sure we want to go all in on default labels for every new repo. Here’s the command:</p>
-<div class="sourceCode" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>gh label clone getwilds<span class="sc">/</span>source<span class="sc">-</span>repo<span class="sc">-</span>name \</span>
-<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>  <span class="sc">--</span>repo getwilds<span class="sc">/</span>destination<span class="sc">-</span>repo<span class="sc">-</span>name \</span>
-<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>  <span class="sc">--</span>force</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>gh label clone getwilds<span class="sc">/</span>source<span class="sc">-</span>repo<span class="sc">-</span>name \</span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>  <span class="sc">--</span>repo getwilds<span class="sc">/</span>destination<span class="sc">-</span>repo<span class="sc">-</span>name \</span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>  <span class="sc">--</span>force</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </section>
 <section id="badges" class="level3" data-number="13.2.2">
 <h3 data-number="13.2.2" class="anchored" data-anchor-id="badges"><span class="header-section-number">13.2.2</span> Badges</h3>
